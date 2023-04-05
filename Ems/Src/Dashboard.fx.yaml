@@ -33,6 +33,7 @@ Dashboard As screen:
             Component2_9 As Component2_8:
                 LayoutMinHeight: =640
                 LayoutMinWidth: =640
+                Visible: =true
                 Width: =Parent.Width
                 X: =0.00
                 ZIndex: =1
@@ -111,6 +112,18 @@ Dashboard As screen:
                                 X: =63
                                 Y: =26
                                 ZIndex: =4
+
+                            Button14 As button:
+                                Color: =RGBA(0, 0, 0, 0)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =218
+                                HoverBorderColor: =
+                                HoverColor: =RGBA(0, 0, 0, 0)
+                                HoverFill: =
+                                OnSelect: =Set(addexpensepop,true)
+                                Text: =""
+                                Width: =226
+                                ZIndex: =5
 
                         Container12 As groupContainer.manualLayoutContainer:
                             LayoutMinHeight: =100
@@ -502,6 +515,7 @@ Dashboard As screen:
     Container5 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(0, 0, 0, 0.24)
         Height: =1080
+        Visible: =addexpensepop
         Width: =1920
         ZIndex: =2
 
@@ -616,7 +630,7 @@ Dashboard As screen:
                 Text: ="Expense Category"
                 Width: =170
                 X: =32
-                Y: =310
+                Y: =298
                 ZIndex: =10
 
             Gallery4 As gallery.galleryHorizontal:
@@ -626,12 +640,12 @@ Dashboard As screen:
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplateSize: =104
                 Width: =464
-                X: =40
-                Y: =350
+                X: =32
+                Y: =338
                 ZIndex: =11
 
                 Button10 As button:
-                    Fill: =RGBA(242, 242, 242, 1)
+                    Fill: =If(ThisItem.IsSelected,RGBA(0, 136, 209, 1),RGBA(242, 242, 242, 1))
                     OnSelect: =Select(Parent)
                     Text: =""
                     Width: =94
@@ -641,8 +655,47 @@ Dashboard As screen:
             Icon7 As icon.Cancel:
                 Height: =46
                 Icon: =Icon.Cancel
+                OnSelect: =Set(addexpensepop,false)
                 Width: =51
                 X: =741
                 Y: =22
                 ZIndex: =12
+
+            Label13_4 As label:
+                Height: =38
+                Text: ="Attachment Reciept"
+                Width: =170
+                X: =32
+                Y: =398
+                ZIndex: =13
+
+            HtmlText3 As htmlViewer:
+                Height: =54
+                HtmlText: ="<font color=grey>Drag and drop <b><font color=black>or browse your device</font></b>."
+                Size: =20
+                Width: =528
+                X: =143
+                Y: =447
+                ZIndex: =14
+
+            Import1 As import:
+                Color: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =55
+                HoverBorderColor: =
+                HoverColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =
+                Text: ="Import Data"
+                Width: =523
+                X: =148
+                Y: =447
+                ZIndex: =15
+
+            Button13 As button:
+                Height: =51
+                Text: ="ADD EXPENSE"
+                Width: =315
+                X: =477
+                Y: =542
+                ZIndex: =16
 
