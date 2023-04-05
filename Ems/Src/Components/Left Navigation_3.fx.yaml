@@ -53,3 +53,16 @@
             Y: =15
             ZIndex: =2
 
+        Button11 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =69
+            HoverFill: =
+            OnSelect: =Navigate(ThisItem.Screen,ScreenTransition.Fade)
+            Text: =""
+            Width: =250
+            ZIndex: =3
+
