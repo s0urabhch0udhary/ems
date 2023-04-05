@@ -1,5 +1,5 @@
 Statistics As screen:
-    Fill: =RGBA(248, 248, 248,1)
+    Fill: =RGBA(248, 248, 248, 1)
 
     Container1_2 As groupContainer.horizontalAutoLayoutContainer:
         Height: =Parent.Height
