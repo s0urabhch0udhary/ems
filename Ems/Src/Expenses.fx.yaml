@@ -448,7 +448,7 @@ Expenses As screen:
                             TemplatePadding: =0
                             TemplateSize: =Self.Width/7-4
                             Visible: =_calendarVisible
-                            Width: =390
+                            Width: =440
                             X: =60
                             Y: =53
                             ZIndex: =4
@@ -474,7 +474,7 @@ Expenses As screen:
                             TemplatePadding: =0
                             TemplateSize: =60
                             Visible: =_calendarVisible
-                            Width: =380
+                            Width: =417
                             WrapCount: =7
                             X: =60
                             Y: =101
