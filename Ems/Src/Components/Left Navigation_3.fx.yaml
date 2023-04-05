@@ -1,0 +1,86 @@
+"'Left Navigation_3' As CanvasComponent":
+    Fill: =RGBA(255, 255, 255, 1) 
+    Height: =Max(App.Height,App.DesignHeight)
+    MenuWidth: =If(App.ActiveScreen.Size=1||App.ActiveScreen.Size=2,70,220)
+    NavItems: =emsnav
+    Width: ='Left Navigation_3'.MenuWidth
+    X: =0
+    Y: =0
+    ZIndex: =6
+
+    Image1_1 As image:
+        Height: =Parent.Height/12
+        Image: =sketchwireLogo
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Visible: =If(App.ActiveScreen.Size=1||App.ActiveScreen.Size=2,false,true)
+        Width: =382.54
+        X: =0.00
+        Y: =22
+        ZIndex: =2
+
+    Gallery1_1 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =946
+        Items: ='Left Navigation_3'.NavItems
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        ShowScrollbar: =false
+        TemplateFill: =
+        TemplateSize: =74
+        Transition: =Transition.Pop
+        Width: =483.08
+        X: =0.00
+        Y: =134
+        ZIndex: =3
+
+        Group1_1 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =4
+
+            Label1_1 As label:
+                Height: =52
+                OnSelect: =Navigate(ThisItem.Screen)
+                PaddingRight: =13.83
+                PaddingTop: =13.83
+                Size: =25.93
+                Text: =ThisItem.Title
+                Visible: =If(App.ActiveScreen.Size=1||App.ActiveScreen.Size=2,false,true)
+                Width: =324.98
+                X: =120.77
+                Y: =13
+                ZIndex: =1
+
+            Image3_1 As image:
+                Height: =52
+                Image: =ThisItem.Icon
+                OnSelect: =Navigate(ThisItem.Screen)
+                PaddingBottom: =1
+                PaddingLeft: =1
+                PaddingRight: =2.19
+                PaddingTop: =2.19
+                Width: =68.07
+                X: =24.15
+                Y: =13
+                ZIndex: =2
+
+            Button1_1 As button:
+                BorderThickness: =0
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =52
+                HoverFill: =RGBA(206, 206, 206, 0.1)
+                OnSelect: =Navigate(ThisItem.Screen,ScreenTransition.Fade)
+                PaddingRight: =13.83
+                PaddingTop: =13.83
+                Size: =41.51
+                Text: =""
+                Visible: =If(App.ActiveScreen.Size=1||App.ActiveScreen.Size=2,false,true)
+                Width: =446.48
+                X: =0.00
+                Y: =13
+                ZIndex: =3
+

@@ -1,0 +1,79 @@
+Component2_8 As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =180
+    Width: =Max(App.Width, App.MinScreenWidth)
+    X: =0
+    Y: =0
+    ZIndex: =12
+
+    Image2_3 As image:
+        DisplayMode: =DisplayMode.View
+        Height: =164
+        Image: =User().Image
+        ImagePosition: =ImagePosition.Fill
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Width: =193.24
+        X: =Parent.Width-Self.Width-10
+        Y: =16
+        ZIndex: =1
+
+    Label5_3 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =46
+        PaddingRight: =13.83
+        PaddingTop: =13.83
+        Size: =39.50
+        Text: ="Sourabh Choudhary"
+        Width: =610.44
+        X: =Image2_3.X-Self.Width-10
+        Y: =96
+        ZIndex: =3
+
+    Label4 As label:
+        PaddingRight: =10.98
+        PaddingTop: =10.98
+        Size: =28.55
+        Text: ="Hello,"
+        Width: =329.38
+        X: =Label5_3.X
+        Y: =30
+        ZIndex: =4
+
+    HtmlText1 As htmlViewer:
+        Height: =121
+        HtmlText: |-
+            ="<div style='margin:10px;width:300px;height:60px;background-color:#;box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
+        PaddingRight: =10.98
+        PaddingTop: =10.98
+        Size: =24.15
+        Width: =639
+        Y: =3
+        ZIndex: =5
+
+    Icon3 As icon.Search:
+        Height: =38
+        Icon: =Icon.Search
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Width: =81.24
+        X: =17
+        Y: =44
+        ZIndex: =6
+
+    Label6 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =55
+        PaddingRight: =10.98
+        PaddingTop: =10.98
+        Size: =24
+        Text: =App.ActiveScreen.Name
+        Width: =749.88
+        X: =120.77
+        Y: =108
+        ZIndex: =7
+

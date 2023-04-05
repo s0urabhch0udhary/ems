@@ -1,0 +1,34 @@
+Component1_3 As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Max(App.Height, App.MinScreenHeight)
+    Width: =400
+    X: =0
+    Y: =0
+    ZIndex: =7
+
+    Button2 As button:
+        BorderColor: =RGBA(128, 128, 128, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =Parent.Height/3
+        PaddingRight: =10.98
+        PaddingTop: =10.98
+        Size: =32.93
+        Text: =""
+        Width: =746.58
+        X: =65.88
+        Y: =30
+        ZIndex: =1
+
+    Button3 As button:
+        BorderColor: =RGBA(128, 128, 128, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =Parent.Height*2/3-150
+        PaddingRight: =10.98
+        PaddingTop: =10.98
+        Size: =32.93
+        Text: =""
+        Width: =746.58
+        X: =65.88
+        Y: =90+Button2.Height
+        ZIndex: =2
+

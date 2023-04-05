@@ -1,0 +1,76 @@
+Component2_6 As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =110
+    Width: =Max(App.Width, App.MinScreenWidth)
+    X: =0
+    Y: =0
+    ZIndex: =11
+
+    Icon1_1 As icon.Help:
+        Color: =RGBA(0, 0, 0, 1)
+        Icon: =Icon.Help
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Visible: =If(App.ActiveScreen.Size=1||App.ActiveScreen.Size=2,false,true)
+        Width: =109.82
+        X: =2692.09
+        Y: =28
+        ZIndex: =5
+
+    UserWelcometext_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =5
+
+        Image2_2 As image:
+            DisplayMode: =DisplayMode.View
+            Height: =87
+            Image: =User().Image
+            ImagePosition: =ImagePosition.Fill
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Width: =202.02
+            X: =52.69
+            Y: =17
+            ZIndex: =1
+
+        Label5_2 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =44
+            PaddingRight: =13.83
+            PaddingTop: =13.83
+            Size: =37.75
+            Text: ="Hello, "&User().FullName
+            Width: =1429.49
+            X: =283.26
+            Y: =17
+            ZIndex: =3
+
+        HtmlText2_1 As htmlViewer:
+            Height: =43
+            HtmlText: ="Welcome to <b>Expense Management System</b>"
+            PaddingRight: =13.83
+            PaddingTop: =13.83
+            Size: =30.22
+            Width: =942.01
+            X: =283.26
+            Y: =61
+            ZIndex: =4
+
+    Icon2_1 As icon.Bell:
+        Color: =RGBA(0, 0, 0, 1)
+        Icon: =Icon.Bell
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Visible: =If(App.ActiveScreen.Size=1||App.ActiveScreen.Size=2,false,true)
+        Width: =109.82
+        X: =2845.80
+        Y: =28
+        ZIndex: =6
+

@@ -1,0 +1,64 @@
+Component3 As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =
+    Width: =500
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Gallery2 As gallery.galleryHorizontal:
+        DelayItemLoading: =true
+        Height: =296
+        Items: =CustomGallerySample
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =10.98
+        TemplateSize: =344.74
+        Width: =1097.91
+        X: =0.00
+        ZIndex: =1
+
+        Button4 As button:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =122
+            OnSelect: =Select(Parent)
+            PaddingRight: =10.98
+            PaddingTop: =10.98
+            Size: =32.93
+            Text: =""
+            Width: =344.74
+            X: =0.00
+            Y: =5
+            ZIndex: =1
+
+        Label2 As label:
+            OnSelect: =Select(Parent)
+            PaddingRight: =10.98
+            PaddingTop: =10.98
+            Size: =28.55
+            Text: =ThisItem.SampleHeading
+            Width: =329.38
+            X: =0.00
+            Y: =5
+            ZIndex: =2
+
+        Label3 As label:
+            OnSelect: =Select(Parent)
+            PaddingRight: =10.98
+            PaddingTop: =10.98
+            Size: =28.55
+            Text: =ThisItem.SampleText
+            Width: =329.38
+            X: =6.59
+            Y: =46
+            ZIndex: =3
+
+        Image6 As image:
+            Height: =47
+            OnSelect: =Select(Parent)
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Width: =208.60
+            X: =6.59
+            Y: =100
+            ZIndex: =4
+

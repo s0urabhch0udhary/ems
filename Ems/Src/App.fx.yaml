@@ -1,0 +1,29 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =ClearCollect(
+            emsnav,
+            Table(
+                {
+                    Title: "Home",
+                    Screen: Dashboard,
+                    Icon: 'Group 9068'
+                },
+                {
+                    Title: "Expenses",
+                    Screen: Expenses,
+                    Icon: 'Group 9085'
+                },
+                {
+                    Title: "Statistics",
+                    Screen: Statistics,
+                    Icon: '341b12fc185db6a7fd79aced917e51a2'
+                },
+                {
+                    Title: "Profile",
+                    Screen: Profile,
+                    Icon: 'Icon ionic-ios-settings'
+                }
+            )
+        );
+
