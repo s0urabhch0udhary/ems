@@ -1250,7 +1250,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(255, 255, 255, 1)",
+            "InvariantScript": "RGBA(0, 0, 0, 0)",
             "Property": "BorderColor",
             "RuleProviderType": "Unknown"
           },
@@ -1684,7 +1684,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "120.77",
+            "InvariantScript": "0",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -1831,7 +1831,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638162997709352760",
+    "LastModifiedTimestamp": "638162998369117515",
     "Name": "Component2_8",
     "Rules": [
       {
@@ -1890,7 +1890,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638162997709352760",
+  "LastModifiedTimestamp": "638162998369117515",
   "Name": "1a0c18c15f3d4538b2a44920ed7b0270",
   "OverridableProperties": {},
   "TemplateOriginalName": "cbb39dca364b4c88b4fd510bf929de01",

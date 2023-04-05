@@ -66,12 +66,11 @@ Component2_8 As CanvasComponent:
         Size: =24
         Text: =App.ActiveScreen.Name
         Width: =749.88
-        X: =120.77
         Y: =121
         ZIndex: =7
 
     TextInput1 As text:
-        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderColor: =RGBA(0, 0, 0, 0)
         Default: =""
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)

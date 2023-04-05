@@ -30,7 +30,7 @@ Statistics As screen:
             X: =414.64
             ZIndex: =2
 
-            Component2_12 As Component2_11:
+            Component2_12 As Component2_8:
                 LayoutMinHeight: =640
                 LayoutMinWidth: =640
                 Width: =Parent.Width
