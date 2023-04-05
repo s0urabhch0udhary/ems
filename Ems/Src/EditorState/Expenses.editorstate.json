@@ -10161,7 +10161,15 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "NavItems"
+        "NavItems",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"Text\"",
+          "InvariantPropertyName": "CurrentScreen",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "DynamicProperties": [
         {
@@ -10228,6 +10236,11 @@
           "Category": "Data",
           "PropertyName": "NavItems",
           "RuleProviderType": "System"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "CurrentScreen",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",

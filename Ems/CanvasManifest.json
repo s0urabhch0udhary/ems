@@ -105,11 +105,11 @@
     "Id": "89a7b94e-4904-4825-a575-ee5143d1abe3",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "EMS(backup)",
+    "Name": "EMS(backup) 2",
     "OriginatingVersion": "1.330"
   },
   "PublishInfo": {
-    "AppName": "EMS(backup)",
+    "AppName": "EMS(backup) 2",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
@@ -120,7 +120,7 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "Dashboard",
+    "Home",
     "Expenses",
     "Statistics",
     "Profile",

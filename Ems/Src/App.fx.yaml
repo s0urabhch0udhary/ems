@@ -6,7 +6,7 @@ App As appinfo:
             Table(
                 {
                     Title: "Home",
-                    Screen: Dashboard,
+                    Screen: Home,
                     Icon: 'Group 9068'
                 },
                 {

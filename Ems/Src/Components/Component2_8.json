@@ -48,7 +48,7 @@
         "Name": "HtmlText1",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 240,
+        "PublishOrderIndex": 241,
         "Rules": [
           {
             "Category": "Data",
@@ -298,7 +298,7 @@
         "Name": "Image2_3",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 241,
+        "PublishOrderIndex": 242,
         "Rules": [
           {
             "Category": "Data",
@@ -590,7 +590,7 @@
         "Name": "Label5_3",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 242,
+        "PublishOrderIndex": 243,
         "Rules": [
           {
             "Category": "Data",
@@ -908,7 +908,7 @@
         "Name": "Icon3",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 243,
+        "PublishOrderIndex": 244,
         "Rules": [
           {
             "Category": "Design",
@@ -1210,7 +1210,7 @@
         "Name": "TextInput1",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 244,
+        "PublishOrderIndex": 245,
         "Rules": [
           {
             "Category": "Data",
@@ -1548,7 +1548,7 @@
         "Name": "Label6",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 245,
+        "PublishOrderIndex": 246,
         "Rules": [
           {
             "Category": "Data",
@@ -1831,7 +1831,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638163188938255568",
+    "LastModifiedTimestamp": "638163192454586224",
     "Name": "Component2_8",
     "Rules": [
       {
@@ -1890,7 +1890,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638163188938255568",
+  "LastModifiedTimestamp": "638163192454586224",
   "Name": "1a0c18c15f3d4538b2a44920ed7b0270",
   "OverridableProperties": {},
   "TemplateOriginalName": "cbb39dca364b4c88b4fd510bf929de01",

@@ -1,4 +1,4 @@
-Dashboard As screen:
+Home As screen:
     Fill: =RGBA(248, 248, 248,1)
 
     Container1 As groupContainer.horizontalAutoLayoutContainer:
@@ -11,6 +11,7 @@ Dashboard As screen:
         ZIndex: =1
 
         "'Left Navigation_4' As 'Left Navigation_3'":
+            CurrentScreen: ="Home"
             Fill: =RGBA(0, 49, 75, 1) 
             LayoutMinHeight: =640
             LayoutMinWidth: =640
@@ -279,9 +280,9 @@ Dashboard As screen:
                             ZIndex: =1
 
                             Title3 As label:
-                                Align: =Align.Center
                                 Height: =27
-                                Text: ="Chart Title"
+                                Size: =22
+                                Text: ="Statistics"
                                 Width: =983
                                 X: =16
                                 Y: =40
@@ -292,16 +293,16 @@ Dashboard As screen:
                                 Items: =LineChartSample
                                 Width: =983
                                 X: =16
-                                Y: =72
+                                Y: =103
                                 ZIndex: =3
 
                             Legend3 As legend:
-                                Height: =86
+                                Height: =66
                                 ItemColorSet: =LineChart3.ItemColorSet
                                 Items: =LineChart3.SeriesLabels
                                 Width: =786
                                 X: =114
-                                Y: =514
+                                Y: =534
                                 ZIndex: =4
 
                 Container6 As groupContainer.verticalAutoLayoutContainer:
@@ -469,6 +470,37 @@ Dashboard As screen:
                                 Width: =MonthDayGallery1_1.TemplateWidth
                                 Wrap: =false
                                 ZIndex: =3
+
+                        dropdownCalendarSelection1_1 As dropdown:
+                            Default: =_myCalendar.DisplayName
+                            Height: =37
+                            Items: =Office365Outlook.CalendarGetTables().value
+                            OnChange: =Select(dropdownCalendarSelection1_1)
+                            OnSelect: |-
+                                =/*retrieves calendar events for all days in current month view and selected calendar 
+                                _minDate and _maxDate act as markers to prevent duplicate data collection*/         
+                                If(IsBlank(_userDomain),         
+                                	UpdateContext({_showLoading: true});         
+                                	Set(_userDomain, Right(User().Email, Len(User().Email) - Find("@", User().Email)));         
+                                	Set(_dateSelected, Today());         
+                                	Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));         
+                                	Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));         
+                                	Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days))         
+                                );         
+                                Set(_calendarVisible, false);         
+                                UpdateContext({_showLoading: true});         
+                                Set(_myCalendar, Self.Selected);         
+                                Set(_minDate, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));         
+                                Set(_maxDate, DateAdd(DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days), 40, TimeUnit.Days));         
+                                ClearCollect(MyCalendarEvents, Office365Outlook.GetEventsCalendarViewV2(_myCalendar.Name, Text(_minDate, DateTimeFormat.UTC), Text(_maxDate, DateTimeFormat.UTC)).value);         
+                                UpdateContext({_showLoading: false});         
+                                Set(_calendarVisible, true)
+                            Tooltip: ="Select a calendar"
+                            Visible: =false
+                            Width: =97
+                            X: =450
+                            Y: =12
+                            ZIndex: =6
 
                     Container7_1 As groupContainer.manualLayoutContainer:
                         FillPortions: =0
