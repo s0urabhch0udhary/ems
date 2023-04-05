@@ -1,4 +1,5 @@
 Statistics As screen:
+    Fill: =RGBA(248, 248, 248,1)
 
     Container1_2 As groupContainer.horizontalAutoLayoutContainer:
         Height: =Parent.Height
@@ -46,24 +47,132 @@ Statistics As screen:
                 X: =0.00
                 ZIndex: =2
 
-                Container4_2 As groupContainer.verticalAutoLayoutContainer:
+                Container19 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
-                    LayoutGap: =30
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    PaddingRight: =0.00
-                    PaddingTop: =0.00
-                    Width: =Parent.Width
-                    X: =0.00
                     ZIndex: =1
 
-                    Container16_2 As groupContainer.manualLayoutContainer:
+                    Container20 As groupContainer.manualLayoutContainer:
                         LayoutMinHeight: =100
                         LayoutMinWidth: =250
-                        PaddingLeft: =30
-                        PaddingRight: =30
+                        ZIndex: =1
+
+                        Button12 As button:
+                            DisabledFill: =RGBA(255, 255, 255, 1)
+                            DisplayMode: =DisplayMode.Disabled
+                            Height: =404
+                            Text: =""
+                            Width: =922
+                            X: =40
+                            Y: =22
+                            ZIndex: =1
+
+                        CompositeLineChart4 As group:
+                            Height: =5
+                            Width: =5
+                            X: =60
+                            Y: =60
+                            ZIndex: =2
+
+                            LineChart4 As lineChart:
+                                Height: =372
+                                Items: =LineChartSample
+                                Width: =888
+                                X: =60
+                                Y: =35
+                                ZIndex: =4
+
+                            Legend5 As legend:
+                                Height: =84
+                                ItemColorSet: =LineChart4.ItemColorSet
+                                Items: =LineChart4.SeriesLabels
+                                Width: =312
+                                X: =650
+                                Y: =40
+                                ZIndex: =5
+
+                    Container21 As groupContainer.manualLayoutContainer:
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
                         ZIndex: =2
+
+                        Button12_1 As button:
+                            DisabledFill: =RGBA(255, 255, 255, 1)
+                            DisplayMode: =DisplayMode.Disabled
+                            Height: =399
+                            Text: =""
+                            Width: =933
+                            X: =40
+                            Y: =20
+                            ZIndex: =1
+
+                        Label16 As label:
+                            Height: =60
+                            Size: =20
+                            Text: ="Transaction"
+                            Width: =184
+                            X: =58
+                            Y: =20
+                            ZIndex: =2
+
+                        Gallery6 As gallery.galleryVertical:
+                            DelayItemLoading: =true
+                            Height: =339
+                            Items: =CustomGallerySample
+                            Layout: =Layout.Vertical
+                            LoadingSpinner: =LoadingSpinner.Data
+                            TemplateSize: =83
+                            Width: =933
+                            X: =40
+                            Y: =80
+                            ZIndex: =3
+
+                            Image17 As image:
+                                Height: =69
+                                OnSelect: =Select(Parent)
+                                Width: =52
+                                X: =12
+                                Y: =8
+                                ZIndex: =1
+
+                            Label17 As label:
+                                OnSelect: =Select(Parent)
+                                Text: =ThisItem.SampleHeading
+                                X: =102
+                                Y: =22
+                                ZIndex: =2
+
+                            Label18 As label:
+                                OnSelect: =Select(Parent)
+                                Text: =ThisItem.SampleText
+                                X: =280
+                                Y: =22
+                                ZIndex: =3
+
+                            Label19 As label:
+                                OnSelect: =Select(Parent)
+                                Text: =ThisItem.SampleText
+                                X: =467
+                                Y: =22
+                                ZIndex: =4
+
+                            Label20 As label:
+                                OnSelect: =Select(Parent)
+                                Text: =ThisItem.SampleText
+                                X: =677
+                                Y: =22
+                                ZIndex: =5
+
+                            Icon5 As icon.More:
+                                Height: =43
+                                Icon: =Icon.More
+                                OnSelect: =Select(Parent)
+                                Width: =24
+                                X: =857
+                                Y: =20
+                                ZIndex: =6
 
                 Container6_2 As groupContainer.verticalAutoLayoutContainer:
                     FillPortions: =0
@@ -152,8 +261,8 @@ Statistics As screen:
                             TemplatePadding: =0
                             TemplateSize: =Self.Width/7-4
                             Visible: =_calendarVisible
-                            Width: =390
-                            X: =60
+                            Width: =421
+                            X: =29
                             Y: =53
                             ZIndex: =4
 
@@ -178,9 +287,9 @@ Statistics As screen:
                             TemplatePadding: =0
                             TemplateSize: =60
                             Visible: =_calendarVisible
-                            Width: =380
+                            Width: =410
                             WrapCount: =7
-                            X: =60
+                            X: =29
                             Y: =101
                             ZIndex: =5
 
