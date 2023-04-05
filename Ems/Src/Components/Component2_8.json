@@ -48,7 +48,7 @@
         "Name": "HtmlText1",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 241,
+        "PublishOrderIndex": 239,
         "Rules": [
           {
             "Category": "Data",
@@ -298,7 +298,7 @@
         "Name": "Image2_3",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 242,
+        "PublishOrderIndex": 240,
         "Rules": [
           {
             "Category": "Data",
@@ -590,7 +590,7 @@
         "Name": "Label5_3",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 243,
+        "PublishOrderIndex": 241,
         "Rules": [
           {
             "Category": "Data",
@@ -908,7 +908,7 @@
         "Name": "Icon3",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 244,
+        "PublishOrderIndex": 242,
         "Rules": [
           {
             "Category": "Design",
@@ -1210,7 +1210,7 @@
         "Name": "TextInput1",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 245,
+        "PublishOrderIndex": 243,
         "Rules": [
           {
             "Category": "Data",
@@ -1548,7 +1548,7 @@
         "Name": "Label6",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 246,
+        "PublishOrderIndex": 244,
         "Rules": [
           {
             "Category": "Data",
