@@ -14,7 +14,7 @@ Expenses As screen:
             Fill: =RGBA(0, 49, 75, 1) 
             LayoutMinHeight: =640
             LayoutMinWidth: =640
-            Width: =414.91
+            Width: =260.91
             X: =0.00
             ZIndex: =1
 
