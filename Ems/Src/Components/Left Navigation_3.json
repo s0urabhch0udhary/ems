@@ -1073,7 +1073,14 @@
                 "NameMapSourceSchema": "?"
               },
               "Role",
-              "Color",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "",
+                "InvariantPropertyName": "Color",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               "DisabledColor",
               "PressedColor",
               "HoverColor",
@@ -1201,7 +1208,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "RGBA(0, 0, 0, 1)",
+                "InvariantScript": "RGBA(255, 255, 255, 1)",
                 "Property": "Color",
                 "RuleProviderType": "Unknown"
               },
@@ -1813,7 +1820,7 @@
       },
       "NavItems"
     ],
-    "LastModifiedTimestamp": "638162962775001804",
+    "LastModifiedTimestamp": "638162999979103382",
     "Name": "Left Navigation_3",
     "Rules": [
       {
@@ -1903,7 +1910,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638162962775001804",
+  "LastModifiedTimestamp": "638162999979103382",
   "Name": "dcbd508ebb2b496ea30e192d53179576",
   "OverridableProperties": {},
   "TemplateOriginalName": "ce08b6f46174403992bb5e7a54f2c94b",
