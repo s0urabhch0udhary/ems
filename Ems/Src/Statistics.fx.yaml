@@ -453,3 +453,12 @@ Statistics As screen:
                                 Y: =20
                                 ZIndex: =4
 
+                        Label24_5 As label:
+                            Height: =96
+                            Size: =18
+                            Text: =If(IsEmpty(Filter(Expenses_1,User.Email=User().Email))=true,"No Notification","")
+                            Width: =441
+                            X: =42
+                            Y: =82
+                            ZIndex: =3
+

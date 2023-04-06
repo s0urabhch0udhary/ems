@@ -631,6 +631,15 @@ Home As screen:
                                 Y: =20
                                 ZIndex: =4
 
+                        Label24_4 As label:
+                            Height: =96
+                            Size: =18
+                            Text: =If(IsEmpty(Filter(Expenses_1,User.Email=User().Email))=true,"No Notification","")
+                            Width: =441
+                            X: =32
+                            Y: =83
+                            ZIndex: =3
+
     Container5 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(0, 0, 0, 0.24)
         Height: =1080
@@ -800,29 +809,6 @@ Home As screen:
                 Y: =398
                 ZIndex: =13
 
-            HtmlText3 As htmlViewer:
-                Height: =54
-                HtmlText: ="<font color=grey>Drag and drop <b><font color=black>or browse your device</font></b>."
-                Size: =20
-                Width: =528
-                X: =143
-                Y: =447
-                ZIndex: =14
-
-            Import1 As import:
-                Color: =RGBA(0, 0, 0, 0)
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =55
-                HoverBorderColor: =
-                HoverColor: =RGBA(0, 0, 0, 0)
-                HoverFill: =
-                PressedFill: =
-                Text: ="Import Data"
-                Width: =523
-                X: =148
-                Y: =447
-                ZIndex: =15
-
             Button13 As button:
                 Height: =51
                 OnSelect: |-
@@ -971,4 +957,14 @@ Home As screen:
                 X: =378
                 Y: =130
                 ZIndex: =23
+
+            AddMediaButton1 As addMedia:
+                ChangePictureText: ="Attachment loaded successfully"
+                Height: =58
+                Size: =16
+                Text: ="Drag and drop or browse your device."
+                Width: =670
+                X: =71
+                Y: =436
+                ZIndex: =26
 

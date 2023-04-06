@@ -687,7 +687,7 @@ Expenses As screen:
                             Text: =If(IsEmpty(Filter(Expenses_1,User.Email=User().Email))=true,"No Notification","")
                             Width: =441
                             X: =56
-                            Y: =55
+                            Y: =70
                             ZIndex: =3
 
     Container5_1 As groupContainer.manualLayoutContainer:
