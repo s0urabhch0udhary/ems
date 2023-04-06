@@ -842,38 +842,45 @@ Home As screen:
                 Y: =542
                 ZIndex: =16
 
-            Button16_1 As button:
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(255, 255, 255, 1)
-                DisabledFill: =RGBA(196, 59, 59, 0.9)
-                DisplayMode: =DisplayMode.Disabled
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =46
-                Size: =10
-                Text: =err
-                Visible: =errordisplay
-                Width: =348
-                X: =371
-                Y: =37
-                ZIndex: =17
+            errorpop As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =20
 
-            Icon6_1 As icon.Error:
-                Color: =RGBA(255, 255, 255, 1)
-                Height: =37
-                Icon: =Icon.Error
-                Visible: =errordisplay
-                Width: =30
-                X: =392
-                Y: =41
-                ZIndex: =18
+                Button16_1 As button:
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(255, 255, 255, 1)
+                    DisabledFill: =RGBA(196, 59, 59, 0.9)
+                    DisplayMode: =DisplayMode.Disabled
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =46
+                    Size: =10
+                    Text: =err
+                    Visible: =errordisplay
+                    Width: =348
+                    X: =371
+                    Y: =37
+                    ZIndex: =17
 
-            Timer1_1 As timer:
-                Duration: =1500
-                OnTimerEnd: =Set(errordisplay,false)
-                Start: =errordisplay
-                Visible: =false
-                Width: =0
-                X: =645
-                Y: =43
-                ZIndex: =19
+                Icon6_1 As icon.Error:
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =37
+                    Icon: =Icon.Error
+                    Visible: =errordisplay
+                    Width: =30
+                    X: =392
+                    Y: =41
+                    ZIndex: =18
+
+                Timer1_1 As timer:
+                    Duration: =1500
+                    OnTimerEnd: =Set(errordisplay,false)
+                    Start: =errordisplay
+                    Visible: =false
+                    Width: =0
+                    X: =645
+                    Y: =43
+                    ZIndex: =19
 

@@ -816,7 +816,30 @@ Expenses As screen:
             Button13_1 As button:
                 Height: =51
                 OnSelect: |-
-                    =Patch(
+                    =If(
+                        ExpenseTitle_1.Text="",
+                        [
+                            Set(
+                                errordisplay2,
+                                true
+                            ),
+                            Set(
+                                err,
+                                "Please Enter Expense Title"
+                            )
+                        ],
+                        amount_1.Text="",
+                        [
+                            Set(
+                                errordisplay2,
+                                true
+                            ),
+                            Set(
+                                err,
+                                "Please Enter Expense Amount"
+                            )
+                        ],
+                    Patch(
                             Expenses_1,
                             Defaults(Expenses_1),
                             {Title: ExpenseTitle_1.Text},
@@ -843,10 +866,52 @@ Expenses As screen:
                     
                         Reset(ExpenseTitle_1);
                         Reset(amount_1);
-                        Reset(DatePicker2_1)
+                        Reset(DatePicker2_1));
                 Text: ="ADD EXPENSE"
                 Width: =315
                 X: =477
                 Y: =542
                 ZIndex: =16
+
+            errorpop_1 As group:
+                Height: =5
+                Width: =5
+                X: =-331
+                Y: =3
+                ZIndex: =20
+
+                Button16_2 As button:
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(255, 255, 255, 1)
+                    DisabledFill: =RGBA(196, 59, 59, 0.9)
+                    DisplayMode: =DisplayMode.Disabled
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =46
+                    Size: =10
+                    Text: =err
+                    Visible: =errordisplay2
+                    Width: =348
+                    X: =323
+                    Y: =22
+                    ZIndex: =17
+
+                Icon6_2 As icon.Error:
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =37
+                    Icon: =Icon.Error
+                    Visible: =errordisplay2
+                    Width: =30
+                    X: =344
+                    Y: =26
+                    ZIndex: =18
+
+                Timer1_2 As timer:
+                    Duration: =1500
+                    OnTimerEnd: =Set(errordisplay2,false)
+                    Start: =errordisplay2
+                    Visible: =false
+                    Width: =0
+                    X: =597
+                    Y: =28
+                    ZIndex: =19
 
