@@ -37,13 +37,17 @@ Component2_8 As CanvasComponent:
         Y: =121
         ZIndex: =7
 
-    HtmlText4 As htmlViewer:
-        Height: =131
-        HtmlText: ="Hello<br><b><font color=black>"&User().FullName&"</font></b>"
-        Size: =15
-        Width: =267
-        X: =Parent.Width-Self.Width-Image2_3.Width-15
-        Y: =30
+    Label23 As label:
+        Align: =Align.Justify
+        FontWeight: =FontWeight.Semibold
+        Height: =85
+        Size: =20
+        Text: |-
+            ="Hello, 
+            "&User().FullName
+        Width: =327
+        X: =Parent.Width-Image2_3.Width-Self.Width-50
+        Y: =16
         ZIndex: =9
 
     Group2 As group:
