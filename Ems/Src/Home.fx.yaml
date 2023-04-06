@@ -305,7 +305,7 @@ Home As screen:
 
                             LineChart3 As lineChart:
                                 Height: =402
-                                Items: =LineChartSample
+                                Items: =Expenses_1
                                 Width: =960
                                 X: =87
                                 Y: =73

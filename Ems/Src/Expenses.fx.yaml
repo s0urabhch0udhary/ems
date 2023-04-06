@@ -87,18 +87,15 @@ Expenses As screen:
                             Button5_1 As button:
                                 BorderColor: =RGBA(0, 136, 209,1)
                                 BorderStyle: =BorderStyle.Dashed
-                                BorderThickness: =5
+                                BorderThickness: =4
                                 DisabledBorderColor: =RGBA(0, 136, 209,1)
                                 DisabledFill: =RGBA(234, 249, 254,1)
                                 DisplayMode: =DisplayMode.Disabled
                                 Fill: =RGBA(234, 249, 254, 1)
-                                Height: |
-                                    =Parent.Height-4
-                                PaddingLeft: =10
+                                Height: =Parent.Height
                                 Text: =""
-                                Width: =239
-                                X: =5
-                                Y: =2
+                                Width: =228
+                                X: =10
                                 ZIndex: =1
 
                             Label7_1 As label:
@@ -109,14 +106,27 @@ Expenses As screen:
                                 Text: ="Add Expense"
                                 Width: =188
                                 X: =30
-                                Y: =141
+                                Y: =142
                                 ZIndex: =3
 
                             Image12_1 As image:
                                 Image: ='Icon ionic-ios-add'
                                 X: =74
-                                Y: =41
+                                Y: =42
                                 ZIndex: =4
+
+                            Button14_1 As button:
+                                Color: =RGBA(0, 0, 0, 0)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =218
+                                HoverBorderColor: =
+                                HoverColor: =RGBA(0, 0, 0, 0)
+                                HoverFill: =
+                                OnSelect: =Set(addexpensepop,true)
+                                Text: =""
+                                Width: =226
+                                X: =10
+                                ZIndex: =5
 
                         Container12_3 As groupContainer.manualLayoutContainer:
                             LayoutMinHeight: =100
@@ -303,7 +313,7 @@ Expenses As screen:
 
                                 PieChart1 As pieChart:
                                     Height: =382
-                                    Items: =PieChartSample
+                                    Items: =Expenses_1
                                     LabelPosition: =
                                     Width: =432
                                     X: =73
@@ -594,4 +604,232 @@ Expenses As screen:
                             X: =12
                             Y: =237
                             ZIndex: =3
+
+    Container5_1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(0, 0, 0, 0.24)
+        Height: =1080
+        Visible: =addexpensepop
+        Width: =1920
+        ZIndex: =2
+
+        Button8_1 As button:
+            DisabledBorderColor: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =630
+            Text: ="Button"
+            Width: =816
+            X: =540
+            Y: =152
+            ZIndex: =1
+
+        Container9_1 As groupContainer.manualLayoutContainer:
+            Height: =630
+            Width: =816
+            X: =540
+            Y: =152
+            ZIndex: =2
+
+            Label4_2 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                Size: =20
+                Text: ="ADD EXPENSE"
+                Width: =210
+                X: =32
+                Y: =10
+                ZIndex: =1
+
+            Label13_5 As label:
+                Text: ="Expense Title"
+                X: =32
+                Y: =80
+                ZIndex: =2
+
+            ExpenseTitle_1 As text:
+                BorderColor: =RGBA(112, 112, 112, 1)
+                BorderThickness: =1
+                Default: =""
+                Height: =50
+                HoverBorderColor: =RGBA(112, 112, 112, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                Width: =651
+                X: =32
+                Y: =120
+                ZIndex: =3
+
+            Label13_6 As label:
+                Text: ="Expense Amount"
+                Width: =210
+                X: =32
+                Y: =188
+                ZIndex: =4
+
+            amount_1 As text:
+                BorderColor: =RGBA(112, 112, 112, 1)
+                BorderThickness: =1
+                Default: =""
+                Height: =56
+                HoverBorderColor: =RGBA(112, 112, 112, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                PressedBorderColor: =RGBA(112, 112, 112,1)
+                Width: =318
+                X: =32
+                Y: =228
+                ZIndex: =5
+
+            Label13_7 As label:
+                Text: ="Expense Date"
+                Width: =136
+                X: =404
+                Y: =188
+                ZIndex: =6
+
+            TextInput3_3 As text:
+                BorderColor: =RGBA(112, 112, 112, 1)
+                BorderThickness: =1
+                Default: =""
+                Height: =56
+                Width: =312
+                X: =371
+                Y: =229
+                ZIndex: =7
+
+            Icon4_1 As icon.CalendarBlank:
+                Color: =RGBA(102, 102, 102, 1)
+                Height: =57
+                Icon: =Icon.CalendarBlank
+                Width: =26
+                X: =645
+                Y: =229
+                ZIndex: =8
+
+            DatePicker2_1 As datepicker:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderThickness: =0
+                Fill: =RGBA(255, 255, 255, 0)
+                Format: =DateTimeFormat.LongDate
+                Height: =54
+                IconBackground: =RGBA(0,0,0,0)
+                IconFill: =RGBA(0,0,0,0)
+                PaddingTop: =5
+                Width: =312
+                X: =371
+                Y: =229
+                ZIndex: =9
+
+            Label13_8 As label:
+                Text: ="Expense Category"
+                Width: =170
+                X: =32
+                Y: =298
+                ZIndex: =10
+
+            Gallery4_1 As gallery.galleryHorizontal:
+                DelayItemLoading: =true
+                Height: =60
+                Items: =categories
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplateSize: =104
+                Width: =709
+                X: =32
+                Y: =338
+                ZIndex: =11
+
+                Button10_1 As button:
+                    Color: =
+                    Fill: =If(ThisItem.IsSelected,RGBA(0, 136, 209, 1),RGBA(242, 242, 242, 1))
+                    OnSelect: =Select(Parent)
+                    Text: =""
+                    Width: =94
+                    Y: =4
+                    ZIndex: =1
+
+                Label21_1 As label:
+                    Align: =Align.Center
+                    Color: =If(ThisItem.IsSelected,RGBA(255, 255, 255, 1),RGBA(0,0,0,1))
+                    FontWeight: =If(ThisItem.IsSelected,FontWeight.Semibold,FontWeight.Normal)
+                    OnSelect: =Select(Parent)
+                    Size: =8.5
+                    Text: =ThisItem.Tabs
+                    Width: =94
+                    Y: =4
+                    ZIndex: =2
+
+            Icon7_1 As icon.Cancel:
+                Height: =46
+                Icon: =Icon.Cancel
+                OnSelect: =Set(addexpensepop,false)
+                Width: =51
+                X: =741
+                Y: =22
+                ZIndex: =12
+
+            Label13_9 As label:
+                Height: =38
+                Text: ="Attachment Reciept"
+                Width: =170
+                X: =32
+                Y: =398
+                ZIndex: =13
+
+            HtmlText3_1 As htmlViewer:
+                Height: =54
+                HtmlText: ="<font color=grey>Drag and drop <b><font color=black>or browse your device</font></b>."
+                Size: =20
+                Width: =528
+                X: =143
+                Y: =447
+                ZIndex: =14
+
+            Import1_1 As import:
+                Color: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =55
+                HoverBorderColor: =
+                HoverColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =
+                Text: ="Import Data"
+                Width: =523
+                X: =148
+                Y: =447
+                ZIndex: =15
+
+            Button13_1 As button:
+                Height: =51
+                OnSelect: |-
+                    =Patch(
+                            Expenses_1,
+                            Defaults(Expenses_1),
+                            {Title: ExpenseTitle_1.Text},
+                            {Amount: Value(amount_1.Text)},
+                            {Date: DatePicker2_1.SelectedDate},
+                            {
+                                Category: {
+                                    Value: Gallery4_1.Selected.Tabs,
+                                    '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+                                }
+                            },
+                            {
+                                User: {
+                                    '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                                    Claims: Lower(User().Email),
+                                    Department: "",
+                                    DisplayName: User().FullName,
+                                    Email: User().Email,
+                                    JobTitle: "",
+                                    Picture: ""
+                                }
+                            }
+                        );
+                    
+                        Reset(ExpenseTitle_1);
+                        Reset(amount_1);
+                        Reset(DatePicker2_1)
+                Text: ="ADD EXPENSE"
+                Width: =315
+                X: =477
+                Y: =542
+                ZIndex: =16
 
