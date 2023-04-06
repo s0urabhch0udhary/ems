@@ -907,6 +907,17 @@ Expenses As screen:
                                 "Please Enter Expense Amount"
                             )
                         ],
+                            DatePicker2_1.SelectedDate>Today(),
+                        [
+                            Set(
+                                errordisplay2,
+                                true
+                            ),
+                            Set(
+                                err,
+                                "Please Enter Expense Amount"
+                            )
+                        ],
                     Patch(
                             Expenses_1,
                             Defaults(Expenses_1),
