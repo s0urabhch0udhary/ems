@@ -15486,7 +15486,7 @@
       "Properties": [
         {
           "Category": "Data",
-          "NameMap": "{\"Labels\":\"Date\",\"Series1\":\"Amount\",\"Series2\":\"ID\",\"Series3\":\"ID\",\"Series4\":\"ID\",\"Series5\":\"ID\",\"Series6\":\"ID\",\"Series7\":\"ID\",\"Series8\":\"ID\",\"Series9\":\"ID\"}",
+          "NameMap": "{\"Labels\":\"{Name}\",\"Series1\":\"Amount\",\"Series2\":\"ID\",\"Series3\":\"ID\",\"Series4\":\"ID\",\"Series5\":\"ID\",\"Series6\":\"ID\",\"Series7\":\"ID\",\"Series8\":\"ID\",\"Series9\":\"ID\"}",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
         },
