@@ -224,7 +224,7 @@ Home As screen:
                                 FontWeight: =FontWeight.Semibold
                                 Height: =54
                                 Size: =23
-                                Text: ="₹ "&Sum(Filter(Expenses_1,User.Email=User().Email),Amount)
+                                Text: ="₹ "&If(IsEmpty(Filter(Expenses_1,User.Email=User().Email)),"0",Sum(Filter(Expenses_1,User.Email=User().Email),Amount))
                                 Width: =205
                                 X: =23
                                 Y: =148
@@ -326,17 +326,17 @@ Home As screen:
                                 Height: =402
                                 Items: =Filter(Expenses_1,User.Email=User().Email)
                                 Width: =960
-                                X: =87
-                                Y: =73
+                                X: =79
+                                Y: =108
                                 ZIndex: =4
 
                             Legend3 As legend:
                                 Height: =62
                                 ItemColorSet: =LineChart3.ItemColorSet
                                 Items: =LineChart3.SeriesLabels
-                                Width: =768
-                                X: =135
-                                Y: =485
+                                Width: =192
+                                X: =870
+                                Y: =29
                                 ZIndex: =5
 
                         Button6_6 As button:
@@ -575,6 +575,7 @@ Home As screen:
                             Items: =Filter(Expenses_1,User.Email=User().Email)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
+                            ShowScrollbar: =false
                             TemplateSize: =91
                             Width: =513
                             X: =12
@@ -599,7 +600,7 @@ Home As screen:
                                 Font: =Font.Georgia
                                 Height: =42
                                 OnSelect: =Select(Parent)
-                                Size: =16
+                                Size: =14
                                 Text: ="Purchase of "&ThisItem.Title&" is done of ₹"&ThisItem.Amount&" has been done."
                                 Width: =500
                                 X: =3

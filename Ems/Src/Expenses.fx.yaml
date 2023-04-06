@@ -218,7 +218,7 @@ Expenses As screen:
                                 FontWeight: =FontWeight.Semibold
                                 Height: =54
                                 Size: =23
-                                Text: ="₹ "&Sum(Filter(Expenses_1,User.Email=User().Email),Amount)
+                                Text: ="₹ "&If(IsEmpty(Filter(Expenses_1,User.Email=User().Email)),"0",Sum(Filter(Expenses_1,User.Email=User().Email),Amount))
                                 Width: =205
                                 X: =10
                                 Y: =142
@@ -330,12 +330,12 @@ Expenses As screen:
                                     ZIndex: =3
 
                                 PieChart1 As pieChart:
-                                    Height: =382
+                                    Height: =437
                                     Items: =Filter(Expenses_1,User.Email=User().Email)
                                     LabelPosition: =
                                     Width: =432
                                     X: =73
-                                    Y: =113
+                                    Y: =57
                                     ZIndex: =4
 
                         Container18_1 As groupContainer.manualLayoutContainer:
@@ -348,7 +348,7 @@ Expenses As screen:
                                 DisabledColor: =RGBA(255, 255, 255, 1)
                                 DisabledFill: =RGBA(255, 255, 255, 1)
                                 DisplayMode: =DisplayMode.Disabled
-                                Height: =523
+                                Height: =535
                                 Text: =""
                                 Width: =521
                                 X: =15
@@ -609,7 +609,7 @@ Expenses As screen:
                             LoadingSpinner: =LoadingSpinner.Data
                             ShowScrollbar: =false
                             TemplateSize: =91
-                            Width: =495
+                            Width: =518
                             X: =32
                             Y: =70
                             ZIndex: =2
@@ -622,8 +622,9 @@ Expenses As screen:
                                 DisplayMode: =DisplayMode.Disabled
                                 Height: =76
                                 OnSelect: =Select(Parent)
+                                Size: =12
                                 Text: ="Button"
-                                Width: =500
+                                Width: =478
                                 X: =3
                                 ZIndex: =1
 
@@ -632,7 +633,7 @@ Expenses As screen:
                                 Font: =Font.Georgia
                                 Height: =52
                                 OnSelect: =Select(Parent)
-                                Size: =16
+                                Size: =14
                                 Text: ="Purchase of "&ThisItem.Title&" is done of ₹"&ThisItem.Amount&" has been done."
                                 Width: =478
                                 X: =3

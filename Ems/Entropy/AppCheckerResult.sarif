@@ -64,7 +64,7 @@
                 },
                 "region": {
                   "charLength": 54,
-                  "charOffset": 5,
+                  "charOffset": 64,
                   "snippet": {
                     "text": "Sum(Filter(Expenses_1,User.Email=User().Email),Amount)"
                   }
@@ -144,7 +144,7 @@
                 },
                 "region": {
                   "charLength": 54,
-                  "charOffset": 5,
+                  "charOffset": 64,
                   "snippet": {
                     "text": "Sum(Filter(Expenses_1,User.Email=User().Email),Amount)"
                   }
