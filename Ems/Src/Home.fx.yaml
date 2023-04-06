@@ -835,6 +835,17 @@ Home As screen:
                                 "Please Enter Expense Amount"
                             )
                         ],
+                            DatePicker2.SelectedDate>Today(),
+                        [
+                            Set(
+                                errordisplay,
+                                true
+                            ),
+                            Set(
+                                err,
+                                "Please Select Valid Date."
+                            )
+                        ],
                         Patch(
                             Expenses_1,
                             Defaults(Expenses_1),

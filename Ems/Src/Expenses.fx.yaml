@@ -915,7 +915,7 @@ Expenses As screen:
                             ),
                             Set(
                                 err,
-                                "Please Enter Expense Amount"
+                                "Please Select Valid Date."
                             )
                         ],
                     Patch(
