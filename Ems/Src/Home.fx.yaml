@@ -355,6 +355,14 @@ Home As screen:
                             Y: =4
                             ZIndex: =2
 
+                        Label24 As label:
+                            Height: =72
+                            Text: =If(Label9.Text=Label9_2.Text,"Please Add Your Data To See Category Wise Expense.","")
+                            Width: =987
+                            X: =60
+                            Y: =60
+                            ZIndex: =6
+
                 Container6 As groupContainer.verticalAutoLayoutContainer:
                     FillPortions: =0
                     LayoutDirection: =LayoutDirection.Vertical
