@@ -277,6 +277,12 @@ Home As screen:
                         PaddingRight: =30
                         ZIndex: =2
 
+                        Button15 As button:
+                            Text: ="Button"
+                            X: =40
+                            Y: =40
+                            ZIndex: =1
+
                         CompositeLineChart3 As group:
                             Height: =5
                             Width: =5
@@ -285,30 +291,42 @@ Home As screen:
                             ZIndex: =1
 
                             Title3 As label:
-                                Height: =27
+                                Height: =25
                                 Size: =22
                                 Text: ="Statistics"
-                                Width: =983
-                                X: =65
-                                Y: =57
-                                ZIndex: =2
-
-                            LineChart3 As lineChart:
-                                Height: =431
-                                Items: =LineChartSample
-                                Width: =983
-                                X: =65
-                                Y: =93
+                                Width: =960
+                                X: =87
+                                Y: =40
                                 ZIndex: =3
 
+                            LineChart3 As lineChart:
+                                Height: =402
+                                Items: =LineChartSample
+                                Width: =960
+                                X: =87
+                                Y: =73
+                                ZIndex: =4
+
                             Legend3 As legend:
-                                Height: =66
+                                Height: =62
                                 ItemColorSet: =LineChart3.ItemColorSet
                                 Items: =LineChart3.SeriesLabels
-                                Width: =786
-                                X: =114
-                                Y: =534
-                                ZIndex: =4
+                                Width: =768
+                                X: =135
+                                Y: =485
+                                ZIndex: =5
+
+                        Button6_6 As button:
+                            DisabledBorderColor: =RGBA(128, 128, 128, 0.5)
+                            DisabledColor: =RGBA(255, 255, 255, 1)
+                            DisabledFill: =RGBA(255, 255, 255, 1)
+                            DisplayMode: =DisplayMode.Disabled
+                            Height: =569
+                            Text: ="Button"
+                            Width: =1038
+                            X: =40
+                            Y: =4
+                            ZIndex: =2
 
                 Container6 As groupContainer.verticalAutoLayoutContainer:
                     FillPortions: =0

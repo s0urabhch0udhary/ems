@@ -8,7 +8,7 @@ Component2_8 As CanvasComponent:
 
     Image2_3 As image:
         DisplayMode: =DisplayMode.View
-        Height: =95
+        Height: =85
         Image: =User().Image
         ImagePosition: =ImagePosition.Fill
         PaddingRight: =0.00
@@ -17,23 +17,10 @@ Component2_8 As CanvasComponent:
         RadiusBottomRight: =50
         RadiusTopLeft: =50
         RadiusTopRight: =50
-        Width: =95
+        Width: =85
         X: =Parent.Width-Self.Width-10
         Y: =16
         ZIndex: =1
-
-    Label5_3 As label:
-        Align: =Align.Right
-        FontWeight: =FontWeight.Semibold
-        Height: =68
-        PaddingRight: =13.83
-        PaddingTop: =13.83
-        Size: =28
-        Text: ="Hello, Sourabh Choudhary"
-        Width: =660
-        X: =Parent.Width-Self.Width-Image2_3.Width-30
-        Y: =26
-        ZIndex: =3
 
     Label6 As label:
         Color: =RGBA(116, 116, 116, 1)
@@ -48,6 +35,15 @@ Component2_8 As CanvasComponent:
         Y: =121
         ZIndex: =7
 
+    HtmlText4 As htmlViewer:
+        Height: =65
+        HtmlText: ="Hello<br><b><font color=black>"&User().FullName&"</font></b>"
+        Size: =13
+        Width: =205
+        X: =1590
+        Y: =36
+        ZIndex: =9
+
     Group2 As group:
         Height: =5
         Width: =5
@@ -58,7 +54,7 @@ Component2_8 As CanvasComponent:
         HtmlText1 As htmlViewer:
             Height: =121
             HtmlText: |-
-                ="<div style='margin:10px;width:400px;height:80px;background-color:#;box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
+                ="<div style='margin:10px;width:400px;height:70px;background-color:#FFFFFF;box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
             PaddingRight: =10.98
             PaddingTop: =10.98
             Size: =24.15

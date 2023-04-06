@@ -65,7 +65,7 @@ Statistics As screen:
                             DisplayMode: =DisplayMode.Disabled
                             Height: =404
                             Text: =""
-                            Width: =922
+                            Width: =1048
                             X: =40
                             Y: =22
                             ZIndex: =1
@@ -104,12 +104,14 @@ Statistics As screen:
                             DisplayMode: =DisplayMode.Disabled
                             Height: =399
                             Text: =""
-                            Width: =933
+                            Width: =1047
                             X: =40
                             Y: =20
                             ZIndex: =1
 
                         Label16 As label:
+                            Color: =RGBA(116, 116, 116, 1)
+                            FontWeight: =FontWeight.Semibold
                             Height: =60
                             Size: =20
                             Text: ="Transaction"
@@ -125,7 +127,7 @@ Statistics As screen:
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             TemplateSize: =83
-                            Width: =933
+                            Width: =1023
                             X: =40
                             Y: =80
                             ZIndex: =3
@@ -140,9 +142,11 @@ Statistics As screen:
                                 ZIndex: =1
 
                             Label17 As label:
+                                Height: =38
                                 OnSelect: =Select(Parent)
-                                Size: =11
+                                Size: =12
                                 Text: =ThisItem.User.DisplayName
+                                Width: =177
                                 X: =102
                                 Y: =22
                                 ZIndex: =2
@@ -151,42 +155,44 @@ Statistics As screen:
                                 Color: =RGBA(149, 149, 149, 1)
                                 FontWeight: =FontWeight.Semibold
                                 OnSelect: =Select(Parent)
-                                Size: =11
+                                Size: =12
                                 Text: =ThisItem.PaymentType.Value
-                                X: =290
-                                Y: =23
+                                X: =356
+                                Y: =22
                                 ZIndex: =3
 
                             Label19 As label:
+                                Color: =RGBA(116, 116, 116, 1)
                                 OnSelect: =Select(Parent)
                                 Text: =ThisItem.Date
-                                X: =479
-                                Y: =23
+                                X: =556
+                                Y: =22
                                 ZIndex: =4
 
                             Label20 As label:
+                                Color: =RGBA(184, 0, 0, 1)
                                 Height: =41
                                 OnSelect: =Select(Parent)
                                 Text: ="- ₹"&ThisItem.Amount
                                 Width: =115
-                                X: =711
-                                Y: =22
+                                X: =781
+                                Y: =20
                                 ZIndex: =5
 
                             Icon5 As icon.More:
                                 Height: =43
                                 Icon: =Icon.More
                                 OnSelect: =Select(Parent)
-                                Width: =24
-                                X: =857
-                                Y: =20
+                                Width: =23
+                                X: =961
+                                Y: =18
                                 ZIndex: =6
 
                             Rectangle2 As rectangle:
                                 Fill: =RGBA(219, 219, 219, 1)
                                 Height: =2
                                 OnSelect: =Select(Parent)
-                                Width: =898
+                                Width: =960
                                 X: =12
                                 Y: =77
                                 ZIndex: =7
