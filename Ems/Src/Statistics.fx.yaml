@@ -89,8 +89,8 @@ Statistics As screen:
                                 Height: =84
                                 ItemColorSet: =LineChart4.ItemColorSet
                                 Items: =LineChart4.SeriesLabels
-                                Width: =140
-                                X: =948
+                                Width: =186
+                                X: =903
                                 Y: =56
                                 ZIndex: =5
 
@@ -406,7 +406,7 @@ Statistics As screen:
                             LoadingSpinner: =LoadingSpinner.Data
                             ShowScrollbar: =false
                             TemplateSize: =91
-                            Width: =513
+                            Width: =538
                             X: =12
                             Y: =82
                             ZIndex: =2
@@ -419,36 +419,37 @@ Statistics As screen:
                                 DisplayMode: =DisplayMode.Disabled
                                 Height: =76
                                 OnSelect: =Select(Parent)
+                                Size: =12
                                 Text: ="Button"
-                                Width: =500
-                                X: =3
+                                Width: =498
+                                X: =23
                                 ZIndex: =1
 
                             Label25_2 As label:
-                                Align: =Align.Center
-                                Font: =Font.Georgia
-                                Height: =42
+                                Height: =52
                                 OnSelect: =Select(Parent)
-                                Size: =16
-                                Text: ="Purchase of "&ThisItem.Title&" is done of ₹"&ThisItem.Amount&" has been done."
-                                Width: =500
-                                X: =3
+                                Size: =14
+                                Text: ="Purchase of "&ThisItem.Title&" is done for ₹"&ThisItem.Amount
+                                Width: =451
+                                X: =70
                                 ZIndex: =2
 
                             Label26_2 As label:
-                                Height: =34
+                                FontWeight: =FontWeight.Lighter
+                                Height: =23
                                 OnSelect: =Select(Parent)
                                 Text: =Text(ThisItem.Date,DateTimeFormat.LongDate)
-                                X: =88
+                                Width: =240
+                                X: =70
                                 Y: =42
                                 ZIndex: =3
 
                             Circle5_2 As circle:
                                 Fill: =RGBA(13, 179, 213, 1)
-                                Height: =12
+                                Height: =7
                                 OnSelect: =Select(Parent)
-                                Width: =12
-                                X: =70
-                                Y: =52
+                                Width: =7
+                                X: =40
+                                Y: =20
                                 ZIndex: =4
 

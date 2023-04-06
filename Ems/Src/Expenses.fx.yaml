@@ -1,5 +1,6 @@
 Expenses As screen:
     Fill: =RGBA(248, 248, 248,1)
+    OnVisible: =Refresh(Expenses_1);
 
     Container1_1 As groupContainer.horizontalAutoLayoutContainer:
         Height: =Parent.Height
@@ -345,6 +346,15 @@ Expenses As screen:
                                     Y: =57
                                     ZIndex: =4
 
+                            Label24_1 As label:
+                                Height: =301
+                                Size: =18
+                                Text: =If(Label9_3.Text=Label9_4.Text,"Please Add Your Data To See Category Wise Expense.","")
+                                Width: =454
+                                X: =62
+                                Y: =40
+                                ZIndex: =5
+
                         Container18_1 As groupContainer.manualLayoutContainer:
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
@@ -420,6 +430,15 @@ Expenses As screen:
                                 X: =40
                                 Y: =40
                                 ZIndex: =3
+
+                            Label24_2 As label:
+                                Height: =301
+                                Size: =18
+                                Text: =If(IsEmpty(Filter(Expenses_1,Date=Today()&&User.Email=User().Email))=true,"Today you haven't done any transaction","")
+                                Width: =441
+                                X: =62
+                                Y: =40
+                                ZIndex: =4
 
                 Container6_1 As groupContainer.verticalAutoLayoutContainer:
                     FillPortions: =0
@@ -661,6 +680,15 @@ Expenses As screen:
                                 X: =40
                                 Y: =20
                                 ZIndex: =4
+
+                        Label24_3 As label:
+                            Height: =96
+                            Size: =18
+                            Text: =If(IsEmpty(Filter(Expenses_1,User.Email=User().Email))=true,"No Notification","")
+                            Width: =441
+                            X: =56
+                            Y: =55
+                            ZIndex: =3
 
     Container5_1 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(0, 0, 0, 0.24)
