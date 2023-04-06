@@ -121,7 +121,7 @@ Statistics As screen:
                         Gallery6 As gallery.galleryVertical:
                             DelayItemLoading: =true
                             Height: =339
-                            Items: =CustomGallerySample
+                            Items: =Expenses_1
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             TemplateSize: =83
@@ -132,6 +132,7 @@ Statistics As screen:
 
                             Image17 As image:
                                 Height: =69
+                                Image: =ThisItem.Documents
                                 OnSelect: =Select(Parent)
                                 Width: =52
                                 X: =12
@@ -140,29 +141,35 @@ Statistics As screen:
 
                             Label17 As label:
                                 OnSelect: =Select(Parent)
-                                Text: =ThisItem.SampleHeading
+                                Size: =11
+                                Text: =ThisItem.User.DisplayName
                                 X: =102
                                 Y: =22
                                 ZIndex: =2
 
                             Label18 As label:
+                                Color: =RGBA(149, 149, 149, 1)
+                                FontWeight: =FontWeight.Semibold
                                 OnSelect: =Select(Parent)
-                                Text: =ThisItem.SampleText
-                                X: =280
-                                Y: =22
+                                Size: =11
+                                Text: =ThisItem.PaymentType.Value
+                                X: =290
+                                Y: =23
                                 ZIndex: =3
 
                             Label19 As label:
                                 OnSelect: =Select(Parent)
-                                Text: =ThisItem.SampleText
-                                X: =467
-                                Y: =22
+                                Text: =ThisItem.Date
+                                X: =479
+                                Y: =23
                                 ZIndex: =4
 
                             Label20 As label:
+                                Height: =41
                                 OnSelect: =Select(Parent)
-                                Text: =ThisItem.SampleText
-                                X: =677
+                                Text: ="- ₹"&ThisItem.Amount
+                                Width: =115
+                                X: =711
                                 Y: =22
                                 ZIndex: =5
 
@@ -174,6 +181,29 @@ Statistics As screen:
                                 X: =857
                                 Y: =20
                                 ZIndex: =6
+
+                            Rectangle2 As rectangle:
+                                Fill: =RGBA(219, 219, 219, 1)
+                                Height: =2
+                                OnSelect: =Select(Parent)
+                                Width: =898
+                                X: =12
+                                Y: =77
+                                ZIndex: =7
+
+                            Image7 As image:
+                                Height: =45
+                                Image: |
+                                    =User().Image
+                                OnSelect: =Select(Parent)
+                                RadiusBottomLeft: =50
+                                RadiusBottomRight: =50
+                                RadiusTopLeft: =50
+                                RadiusTopRight: =50
+                                Width: =45
+                                X: =36
+                                Y: =15
+                                ZIndex: =8
 
                 Container6_2 As groupContainer.verticalAutoLayoutContainer:
                     FillPortions: =0

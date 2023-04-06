@@ -8,7 +8,7 @@ Component2_8 As CanvasComponent:
 
     Image2_3 As image:
         DisplayMode: =DisplayMode.View
-        Height: =105
+        Height: =95
         Image: =User().Image
         ImagePosition: =ImagePosition.Fill
         PaddingRight: =0.00
@@ -17,7 +17,7 @@ Component2_8 As CanvasComponent:
         RadiusBottomRight: =50
         RadiusTopLeft: =50
         RadiusTopRight: =50
-        Width: =110
+        Width: =95
         X: =Parent.Width-Self.Width-10
         Y: =16
         ZIndex: =1
@@ -35,53 +35,63 @@ Component2_8 As CanvasComponent:
         Y: =26
         ZIndex: =3
 
-    HtmlText1 As htmlViewer:
-        Height: =121
-        HtmlText: |-
-            ="<div style='margin:10px;width:400px;height:80px;background-color:#;box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
-        PaddingRight: =10.98
-        PaddingTop: =10.98
-        Size: =24.15
-        Width: =639
-        X: =66
-        ZIndex: =5
-
-    Icon3 As icon.Search:
-        Color: =RGBA(0, 0, 0, 1)
-        Height: =52
-        Icon: =Icon.Search
-        PaddingBottom: =10
-        PaddingRight: =0.00
-        PaddingTop: =10
-        Width: =46
-        X: =107
-        Y: =34
-        ZIndex: =6
-
     Label6 As label:
+        Color: =RGBA(116, 116, 116, 1)
         FontWeight: =FontWeight.Semibold
-        Height: =57
+        Height: =59
         PaddingRight: =10.98
         PaddingTop: =10.98
         Size: =24
         Text: =App.ActiveScreen.Name
-        Width: =749.88
+        Width: =721
+        X: =27
         Y: =121
         ZIndex: =7
 
-    TextInput1 As text:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        Default: =""
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 0, 0, 0)
-        HintText: ="Search"
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Mode: =TextMode.MultiLine
-        PressedColor: =
-        PressedFill: =
-        Width: =244
-        X: =170
-        Y: =40
-        ZIndex: =8
+    Group2 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =9
+
+        HtmlText1 As htmlViewer:
+            Height: =121
+            HtmlText: |-
+                ="<div style='margin:10px;width:400px;height:80px;background-color:#;box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
+            PaddingRight: =10.98
+            PaddingTop: =10.98
+            Size: =24.15
+            Width: =755
+            X: =16
+            Y: =15
+            ZIndex: =5
+
+        Icon3 As icon.Search:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =52
+            Icon: =Icon.Search
+            PaddingBottom: =10
+            PaddingRight: =0.00
+            PaddingTop: =10
+            Width: =54
+            X: =57
+            Y: =49
+            ZIndex: =6
+
+        TextInput1 As text:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Default: =""
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            HintText: ="Search"
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Mode: =TextMode.MultiLine
+            PressedColor: =
+            PressedFill: =
+            Width: =288
+            X: =120
+            Y: =55
+            ZIndex: =8
 

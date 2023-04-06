@@ -13,6 +13,28 @@
     "dependents": [],
     "id": "698fae8b-41e8-457e-8e50-cc4a8e37e8dc"
   },
+  "9d15c903-09c7-4a5d-b671-8af89823c7f4": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1627/1.0.1627.3238/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://digimantra-my.sharepoint.com/personal/sourabh_choudhary_digimantra_com": {
+        "dataSources": {
+          "Expenses_1": {
+            "tableName": "16232594-c440-4b26-a0e2-fbb861ce3813"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Expenses_1"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "9d15c903-09c7-4a5d-b671-8af89823c7f4"
+  },
   "b53750f6-d589-4c19-bebb-035000e3c271": {
     "connectionRef": {
       "apiTier": "Standard",

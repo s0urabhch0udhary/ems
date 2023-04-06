@@ -26,4 +26,29 @@ App As appinfo:
                 }
             )
         );
+        ClearCollect(
+            categories,
+            Table(
+                {
+                    Tabs: "Food"
+                },
+                {
+                    Tabs: "Health"
+                },
+                {
+                    Tabs: "Grocery"
+                },
+                {
+                    Tabs: "Travel"
+                },
+                {
+                    Tabs: "Entertainment"
+                },
+                {
+                    Tabs: "Others"
+                }
+            )
+        );
+        
+        Set(budget,50000.00)
 
