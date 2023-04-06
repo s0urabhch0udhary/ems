@@ -569,43 +569,58 @@ Home As screen:
                             Y: =16
                             ZIndex: =1
 
-                        Button7 As button:
-                            DisabledBorderColor: =RGBA(255, 255, 255, 1)
-                            DisabledFill: =RGBA(255, 255, 255, 1)
-                            DisplayMode: =DisplayMode.Disabled
-                            Height: =97
-                            Text: =""
-                            Width: =472
+                        Gallery5_1 As gallery.galleryVertical:
+                            DelayItemLoading: =true
+                            Height: =287
+                            Items: =Expenses_1
+                            Layout: =Layout.Vertical
+                            LoadingSpinner: =LoadingSpinner.Data
+                            TemplateSize: =91
+                            Width: =513
                             X: =12
-                            Y: =85
+                            Y: =83
                             ZIndex: =2
 
-                        Button7_1 As button:
-                            DisabledBorderColor: =RGBA(255, 255, 255, 1)
-                            DisabledFill: =RGBA(255, 255, 255, 1)
-                            DisplayMode: =DisplayMode.Disabled
-                            Height: =97
-                            Text: =""
-                            Width: =472
-                            X: =12
-                            Y: =237
-                            ZIndex: =3
+                            Button16_3 As button:
+                                BorderThickness: =1
+                                DisabledBorderColor: =RGBA(128, 128, 128, 0.2)
+                                DisabledColor: =RGBA(255, 255, 255, 1)
+                                DisabledFill: =RGBA(255, 255, 255, 1)
+                                DisplayMode: =DisplayMode.Disabled
+                                Height: =76
+                                OnSelect: =Select(Parent)
+                                Text: ="Button"
+                                Width: =500
+                                X: =3
+                                ZIndex: =1
 
-                        Label24 As label:
-                            Height: =66
-                            Text: ="Purchase of "&
-                            Width: =414
-                            X: =42
-                            Y: =102
-                            ZIndex: =4
+                            Label25_1 As label:
+                                Align: =Align.Center
+                                Font: =Font.Georgia
+                                Height: =42
+                                OnSelect: =Select(Parent)
+                                Size: =16
+                                Text: ="Purchase of "&ThisItem.Title&" is done of ₹"&ThisItem.Amount&" has been done."
+                                Width: =500
+                                X: =3
+                                ZIndex: =2
 
-                        Label24_1 As label:
-                            Height: =66
-                            Text: ="Text"
-                            Width: =414
-                            X: =42
-                            Y: =268
-                            ZIndex: =5
+                            Label26_1 As label:
+                                Height: =34
+                                OnSelect: =Select(Parent)
+                                Text: =Text(ThisItem.Date,DateTimeFormat.LongDate)
+                                X: =88
+                                Y: =42
+                                ZIndex: =3
+
+                            Circle5_1 As circle:
+                                Fill: =RGBA(13, 179, 213, 1)
+                                Height: =12
+                                OnSelect: =Select(Parent)
+                                Width: =12
+                                X: =70
+                                Y: =52
+                                ZIndex: =4
 
     Container5 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(0, 0, 0, 0.24)
@@ -653,10 +668,10 @@ Home As screen:
                 BorderColor: =RGBA(112, 112, 112, 1)
                 BorderThickness: =1
                 Default: =""
-                Height: =50
+                Height: =68
                 HoverBorderColor: =RGBA(112, 112, 112, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                Width: =651
+                Width: =318
                 X: =32
                 Y: =120
                 ZIndex: =3
@@ -831,6 +846,7 @@ Home As screen:
                             {Title: ExpenseTitle.Text},
                             {Amount: Value(amount.Text)},
                             {Date: DatePicker2.SelectedDate},
+                            {PaymentType: Dropdown1.SelectedText},
                             {
                                 Category: {
                                     Value: Gallery4.Selected.Tabs,
@@ -860,6 +876,12 @@ Home As screen:
                 X: =477
                 Y: =542
                 ZIndex: =16
+
+            Label13_10 As label:
+                Text: ="Payment Type"
+                X: =368
+                Y: =80
+                ZIndex: =20
 
             errorpop As group:
                 Height: =5
@@ -902,4 +924,42 @@ Home As screen:
                     X: =645
                     Y: =43
                     ZIndex: =19
+
+            ExpenseTitle_2 As text:
+                BorderColor: =RGBA(112, 112, 112, 1)
+                BorderThickness: =1
+                Default: =""
+                Height: =62
+                HoverBorderColor: =RGBA(112, 112, 112, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                Width: =318
+                X: =371
+                Y: =120
+                ZIndex: =21
+
+            Icon6 As icon.ChevronDown:
+                Color: =RGBA(128, 128, 128, 1)
+                Height: =38
+                Icon: =Icon.ChevronDown
+                Width: =44
+                X: =636
+                Y: =136
+                ZIndex: =22
+
+            Dropdown1 As dropdown:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                ChevronBackground: =RGBA(0, 0, 0, 0)
+                ChevronDisabledFill: =RGBA(0, 0, 0, 0)
+                ChevronFill: =RGBA(0, 0, 0, 0)
+                ChevronHoverBackground: =
+                ChevronHoverFill: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(0, 0, 0, 0)
+                Height: =48
+                HoverFill: =RGBA(255, 255, 255, 1)
+                Items: =Choices([@Expenses_1].PaymentType)
+                SelectionFill: =RGBA(39, 67, 125, 1)
+                Width: =303
+                X: =378
+                Y: =130
+                ZIndex: =23
 

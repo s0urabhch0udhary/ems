@@ -398,25 +398,57 @@ Statistics As screen:
                             Y: =16
                             ZIndex: =1
 
-                        Button7_4 As button:
-                            DisabledBorderColor: =RGBA(255, 255, 255, 1)
-                            DisabledFill: =RGBA(255, 255, 255, 1)
-                            DisplayMode: =DisplayMode.Disabled
-                            Height: =97
-                            Text: =""
-                            Width: =472
+                        Gallery5_2 As gallery.galleryVertical:
+                            DelayItemLoading: =true
+                            Height: =287
+                            Items: =Expenses_1
+                            Layout: =Layout.Vertical
+                            LoadingSpinner: =LoadingSpinner.Data
+                            ShowScrollbar: =false
+                            TemplateSize: =91
+                            Width: =513
                             X: =12
-                            Y: =85
+                            Y: =82
                             ZIndex: =2
 
-                        Button7_5 As button:
-                            DisabledBorderColor: =RGBA(255, 255, 255, 1)
-                            DisabledFill: =RGBA(255, 255, 255, 1)
-                            DisplayMode: =DisplayMode.Disabled
-                            Height: =97
-                            Text: =""
-                            Width: =472
-                            X: =12
-                            Y: =237
-                            ZIndex: =3
+                            Button16_4 As button:
+                                BorderThickness: =1
+                                DisabledBorderColor: =RGBA(128, 128, 128, 0.2)
+                                DisabledColor: =RGBA(255, 255, 255, 1)
+                                DisabledFill: =RGBA(255, 255, 255, 1)
+                                DisplayMode: =DisplayMode.Disabled
+                                Height: =76
+                                OnSelect: =Select(Parent)
+                                Text: ="Button"
+                                Width: =500
+                                X: =3
+                                ZIndex: =1
+
+                            Label25_2 As label:
+                                Align: =Align.Center
+                                Font: =Font.Georgia
+                                Height: =42
+                                OnSelect: =Select(Parent)
+                                Size: =16
+                                Text: ="Purchase of "&ThisItem.Title&" is done of ₹"&ThisItem.Amount&" has been done."
+                                Width: =500
+                                X: =3
+                                ZIndex: =2
+
+                            Label26_2 As label:
+                                Height: =34
+                                OnSelect: =Select(Parent)
+                                Text: =Text(ThisItem.Date,DateTimeFormat.LongDate)
+                                X: =88
+                                Y: =42
+                                ZIndex: =3
+
+                            Circle5_2 As circle:
+                                Fill: =RGBA(13, 179, 213, 1)
+                                Height: =12
+                                OnSelect: =Select(Parent)
+                                Width: =12
+                                X: =70
+                                Y: =52
+                                ZIndex: =4
 

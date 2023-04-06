@@ -156,7 +156,7 @@ Expenses As screen:
                                 Text: ="Total balance"
                                 Width: =132
                                 X: =17
-                                Y: =115
+                                Y: =105
                                 ZIndex: =2
 
                             Label9_3 As label:
@@ -169,20 +169,20 @@ Expenses As screen:
                                 Y: =142
                                 ZIndex: =3
 
-                            Image14_3 As image:
-                                Height: =52
-                                Image: ='Group 9074'
+                            Image9_2 As image:
+                                Height: =82
+                                Image: ='Path 14389'
                                 Width: =70
                                 X: =17
-                                Y: =28
+                                Y: =18
                                 ZIndex: =4
 
-                            Image8 As image:
-                                Height: =75
-                                Image: ='Path 14389'
-                                Width: =92
-                                X: =4
-                                Y: =16
+                            Image14_8 As image:
+                                Height: =40
+                                Image: ='Group 9074'
+                                Width: =39
+                                X: =32
+                                Y: =39
                                 ZIndex: =5
 
                         Container12_5 As groupContainer.manualLayoutContainer:
@@ -211,7 +211,7 @@ Expenses As screen:
                                 Text: ="Total expense"
                                 Width: =132
                                 X: =17
-                                Y: =115
+                                Y: =105
                                 ZIndex: =2
 
                             Label9_5 As label:
@@ -224,19 +224,20 @@ Expenses As screen:
                                 Y: =142
                                 ZIndex: =3
 
-                            Image14_5 As image:
-                                Height: =52
-                                Image: ='Group 9079'
+                            Image9_3 As image:
+                                Height: =82
+                                Image: ='Path 14389'
                                 Width: =70
                                 X: =17
-                                Y: =28
+                                Y: =18
                                 ZIndex: =4
 
-                            Image8_1 As image:
-                                Height: =77
-                                Image: ='Path 14389'
-                                Width: =102
-                                Y: =15
+                            Image14_9 As image:
+                                Height: =40
+                                Image: ='Group 9074'
+                                Width: =39
+                                X: =32
+                                Y: =39
                                 ZIndex: =5
 
                         Container12_4 As groupContainer.manualLayoutContainer:
@@ -265,7 +266,7 @@ Expenses As screen:
                                 Text: ="Total budget"
                                 Width: =132
                                 X: =17
-                                Y: =115
+                                Y: =105
                                 ZIndex: =2
 
                             Label9_4 As label:
@@ -278,13 +279,13 @@ Expenses As screen:
                                 Y: =142
                                 ZIndex: =3
 
-                            Image14_4 As image:
-                                Height: =66
+                            Image11_1 As image:
+                                Height: =82
                                 Image: ='Group 9158'
-                                Width: =101
-                                X: =10
-                                Y: =23
-                                ZIndex: =4
+                                Width: =70
+                                X: =17
+                                Y: =18
+                                ZIndex: =5
 
                     Container17 As groupContainer.horizontalAutoLayoutContainer:
                         LayoutMinHeight: =100
@@ -330,7 +331,7 @@ Expenses As screen:
 
                                 PieChart1 As pieChart:
                                     Height: =382
-                                    Items: =Expenses_1
+                                    Items: =Filter(Expenses_1,User.Email=User().Email)
                                     LabelPosition: =
                                     Width: =432
                                     X: =73
@@ -608,8 +609,8 @@ Expenses As screen:
                             LoadingSpinner: =LoadingSpinner.Data
                             ShowScrollbar: =false
                             TemplateSize: =91
-                            Width: =513
-                            X: =14
+                            Width: =495
+                            X: =32
                             Y: =70
                             ZIndex: =2
 
@@ -700,10 +701,10 @@ Expenses As screen:
                 BorderColor: =RGBA(112, 112, 112, 1)
                 BorderThickness: =1
                 Default: =""
-                Height: =50
+                Height: =68
                 HoverBorderColor: =RGBA(112, 112, 112, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                Width: =651
+                Width: =312
                 X: =32
                 Y: =120
                 ZIndex: =3
@@ -877,6 +878,7 @@ Expenses As screen:
                             {Title: ExpenseTitle_1.Text},
                             {Amount: Value(amount_1.Text)},
                             {Date: DatePicker2_1.SelectedDate},
+                            {PaymentType: Dropdown1_1.SelectedText},
                             {
                                 Category: {
                                     Value: Gallery4_1.Selected.Tabs,
@@ -904,6 +906,12 @@ Expenses As screen:
                 X: =477
                 Y: =542
                 ZIndex: =16
+
+            Label13_11 As label:
+                Text: ="Payment Type"
+                X: =366
+                Y: =80
+                ZIndex: =20
 
             errorpop_1 As group:
                 Height: =5
@@ -946,4 +954,42 @@ Expenses As screen:
                     X: =597
                     Y: =28
                     ZIndex: =19
+
+            ExpenseTitle_3 As text:
+                BorderColor: =RGBA(112, 112, 112, 1)
+                BorderThickness: =1
+                Default: =""
+                Height: =62
+                HoverBorderColor: =RGBA(112, 112, 112, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                Width: =318
+                X: =369
+                Y: =126
+                ZIndex: =21
+
+            Icon6_3 As icon.ChevronDown:
+                Color: =RGBA(128, 128, 128, 1)
+                Height: =38
+                Icon: =Icon.ChevronDown
+                Width: =44
+                X: =634
+                Y: =136
+                ZIndex: =22
+
+            Dropdown1_1 As dropdown:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                ChevronBackground: =RGBA(0, 0, 0, 0)
+                ChevronDisabledFill: =RGBA(0, 0, 0, 0)
+                ChevronFill: =RGBA(0, 0, 0, 0)
+                ChevronHoverBackground: =
+                ChevronHoverFill: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(0, 0, 0, 0)
+                Height: =48
+                HoverFill: =RGBA(255, 255, 255, 1)
+                Items: =Choices([@Expenses_1].PaymentType)
+                SelectionFill: =RGBA(39, 67, 125, 1)
+                Width: =303
+                X: =378
+                Y: =136
+                ZIndex: =23
 
