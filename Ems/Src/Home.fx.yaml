@@ -324,7 +324,7 @@ Home As screen:
 
                             LineChart3 As lineChart:
                                 Height: =402
-                                Items: =Expenses_1
+                                Items: =Filter(Expenses_1,User.Email=User().Email)
                                 Width: =960
                                 X: =87
                                 Y: =73
@@ -572,7 +572,7 @@ Home As screen:
                         Gallery5_1 As gallery.galleryVertical:
                             DelayItemLoading: =true
                             Height: =287
-                            Items: =Expenses_1
+                            Items: =Filter(Expenses_1,User.Email=User().Email)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             TemplateSize: =91

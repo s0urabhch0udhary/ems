@@ -79,7 +79,7 @@ Statistics As screen:
 
                             LineChart4 As lineChart:
                                 Height: =385
-                                Items: =Expenses_1
+                                Items: =Filter(Expenses_1,User.Email=User().Email)
                                 Width: =926
                                 X: =60
                                 Y: =22
@@ -123,7 +123,7 @@ Statistics As screen:
                         Gallery6 As gallery.galleryVertical:
                             DelayItemLoading: =true
                             Height: =339
-                            Items: =Expenses_1
+                            Items: =Filter(Expenses_1,User.Email=User().Email)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             TemplateSize: =83
@@ -298,7 +298,7 @@ Statistics As screen:
                             TemplatePadding: =0
                             TemplateSize: =Self.Width/7-4
                             Visible: =_calendarVisible
-                            Width: =421
+                            Width: =467
                             X: =29
                             Y: =53
                             ZIndex: =4
@@ -324,7 +324,7 @@ Statistics As screen:
                             TemplatePadding: =0
                             TemplateSize: =60
                             Visible: =_calendarVisible
-                            Width: =410
+                            Width: =444
                             WrapCount: =7
                             X: =29
                             Y: =101
@@ -401,7 +401,7 @@ Statistics As screen:
                         Gallery5_2 As gallery.galleryVertical:
                             DelayItemLoading: =true
                             Height: =287
-                            Items: =Expenses_1
+                            Items: =Filter(Expenses_1,User.Email=User().Email)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             ShowScrollbar: =false

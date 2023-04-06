@@ -358,7 +358,7 @@ Expenses As screen:
                             Gallery3 As gallery.galleryVertical:
                                 DelayItemLoading: =true
                                 Height: =441
-                                Items: =Filter(Expenses_1,Date=Today())
+                                Items: =Filter(Expenses_1,Date=Today()&&User.Email=User().Email)
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data
                                 TemplateSize: =116
@@ -630,11 +630,11 @@ Expenses As screen:
                             Label25 As label:
                                 Align: =Align.Center
                                 Font: =Font.Georgia
-                                Height: =42
+                                Height: =52
                                 OnSelect: =Select(Parent)
                                 Size: =16
                                 Text: ="Purchase of "&ThisItem.Title&" is done of ₹"&ThisItem.Amount&" has been done."
-                                Width: =500
+                                Width: =478
                                 X: =3
                                 ZIndex: =2
 
