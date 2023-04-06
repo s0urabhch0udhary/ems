@@ -169,11 +169,19 @@ Expenses As screen:
 
                             Image14_3 As image:
                                 Height: =52
-                                Image: ='Group 9079'
+                                Image: ='Group 9074'
                                 Width: =70
                                 X: =17
                                 Y: =28
                                 ZIndex: =4
+
+                            Image8 As image:
+                                Height: =75
+                                Image: ='Path 14389'
+                                Width: =92
+                                X: =4
+                                Y: =16
+                                ZIndex: =5
 
                         Container12_5 As groupContainer.manualLayoutContainer:
                             LayoutMinHeight: =100
@@ -222,6 +230,13 @@ Expenses As screen:
                                 Y: =28
                                 ZIndex: =4
 
+                            Image8_1 As image:
+                                Height: =77
+                                Image: ='Path 14389'
+                                Width: =102
+                                Y: =15
+                                ZIndex: =5
+
                         Container12_4 As groupContainer.manualLayoutContainer:
                             LayoutMinHeight: =100
                             LayoutMinWidth: =100
@@ -262,11 +277,11 @@ Expenses As screen:
                                 ZIndex: =3
 
                             Image14_4 As image:
-                                Height: =52
-                                Image: ='Group 9079'
-                                Width: =70
-                                X: =17
-                                Y: =28
+                                Height: =66
+                                Image: ='Group 9158'
+                                Width: =101
+                                X: =10
+                                Y: =23
                                 ZIndex: =4
 
                     Container17 As groupContainer.horizontalAutoLayoutContainer:
