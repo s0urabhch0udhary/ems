@@ -78,20 +78,20 @@ Statistics As screen:
                             ZIndex: =2
 
                             LineChart4 As lineChart:
-                                Height: =372
-                                Items: =LineChartSample
-                                Width: =888
+                                Height: =385
+                                Items: =Expenses_1
+                                Width: =926
                                 X: =60
-                                Y: =35
+                                Y: =22
                                 ZIndex: =4
 
                             Legend5 As legend:
                                 Height: =84
                                 ItemColorSet: =LineChart4.ItemColorSet
                                 Items: =LineChart4.SeriesLabels
-                                Width: =312
-                                X: =650
-                                Y: =40
+                                Width: =140
+                                X: =948
+                                Y: =56
                                 ZIndex: =5
 
                     Container21 As groupContainer.manualLayoutContainer:

@@ -92,10 +92,12 @@ Expenses As screen:
                                 DisabledFill: =RGBA(234, 249, 254,1)
                                 DisplayMode: =DisplayMode.Disabled
                                 Fill: =RGBA(234, 249, 254, 1)
-                                Height: =Parent.Height
+                                Height: |
+                                    =Parent.Height-4
                                 Text: =""
                                 Width: =228
                                 X: =10
+                                Y: =2
                                 ZIndex: =1
 
                             Label7_1 As label:
@@ -125,7 +127,7 @@ Expenses As screen:
                                 OnSelect: =Set(addexpensepop,true)
                                 Text: =""
                                 Width: =226
-                                X: =10
+                                X: =12
                                 ZIndex: =5
 
                         Container12_3 As groupContainer.manualLayoutContainer:
@@ -594,8 +596,8 @@ Expenses As screen:
                             Size: =20
                             Text: ="Notification"
                             Width: =240
-                            X: =12
-                            Y: =16
+                            X: =45
+                            Y: =15
                             ZIndex: =1
 
                         Button7_2 As button:
@@ -605,8 +607,8 @@ Expenses As screen:
                             Height: =97
                             Text: =""
                             Width: =472
-                            X: =12
-                            Y: =85
+                            X: =45
+                            Y: =93
                             ZIndex: =2
 
                         Button7_3 As button:
@@ -616,8 +618,8 @@ Expenses As screen:
                             Height: =97
                             Text: =""
                             Width: =472
-                            X: =12
-                            Y: =237
+                            X: =45
+                            Y: =241
                             ZIndex: =3
 
     Container5_1 As groupContainer.manualLayoutContainer:

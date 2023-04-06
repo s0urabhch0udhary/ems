@@ -6423,7 +6423,14 @@
     "LineChart4": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "Items",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Items",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ItemColorSet",
         "GridStyle",
         "DisabledBorderColor",
@@ -6457,7 +6464,7 @@
       "Properties": [
         {
           "Category": "Data",
-          "NameMap": "{\"Labels\":\"City\",\"Series1\":\"Area\",\"Series2\":\"Density\",\"Series3\":\"Population\",\"Series4\":\"Population\",\"Series5\":\"Population\",\"Series6\":\"Population\",\"Series7\":\"Population\",\"Series8\":\"Population\",\"Series9\":\"Population\"}",
+          "NameMap": "{\"Labels\":\"Title\",\"Series1\":\"Amount\",\"Series2\":\"ID\",\"Series3\":\"ID\",\"Series4\":\"ID\",\"Series5\":\"ID\",\"Series6\":\"ID\",\"Series7\":\"ID\",\"Series8\":\"ID\",\"Series9\":\"ID\"}",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
         },

@@ -97,10 +97,12 @@ Home As screen:
                                 DisabledFill: =RGBA(234, 249, 254,1)
                                 DisplayMode: =DisplayMode.Disabled
                                 Fill: =RGBA(234, 249, 254, 1)
-                                Height: =Parent.Height
+                                Height: |
+                                    =Parent.Height-4
                                 Text: =""
                                 Width: =228
                                 X: =10
+                                Y: =2
                                 ZIndex: =1
 
                             Label7 As label:
@@ -155,11 +157,11 @@ Home As screen:
                                 ZIndex: =1
 
                             Label8 As label:
-                                Height: =27
+                                Height: =39
                                 Text: ="Total balance"
                                 Width: =132
                                 X: =17
-                                Y: =122
+                                Y: =105
                                 ZIndex: =2
 
                             Label9 As label:
@@ -172,13 +174,21 @@ Home As screen:
                                 Y: =149
                                 ZIndex: =3
 
-                            Image14 As image:
-                                Height: =52
-                                Image: ='Group 9079'
+                            Image9 As image:
+                                Height: =82
+                                Image: ='Path 14389'
                                 Width: =70
                                 X: =17
-                                Y: =28
+                                Y: =18
                                 ZIndex: =4
+
+                            Image14_6 As image:
+                                Height: =40
+                                Image: ='Group 9074'
+                                Width: =39
+                                X: =33
+                                Y: =38
+                                ZIndex: =5
 
                         Container12_1 As groupContainer.manualLayoutContainer:
                             LayoutMinHeight: =100
@@ -202,11 +212,11 @@ Home As screen:
                                 ZIndex: =1
 
                             Label8_1 As label:
-                                Height: =33
+                                Height: =39
                                 Text: ="Total expnse"
                                 Width: =132
-                                X: =23
-                                Y: =115
+                                X: =17
+                                Y: =105
                                 ZIndex: =2
 
                             Label9_1 As label:
@@ -219,13 +229,21 @@ Home As screen:
                                 Y: =148
                                 ZIndex: =3
 
-                            Image14_1 As image:
-                                Height: =52
-                                Image: ='Group 9079'
+                            Image9_1 As image:
+                                Height: =82
+                                Image: ='Path 14389'
                                 Width: =70
                                 X: =17
-                                Y: =28
+                                Y: =18
                                 ZIndex: =4
+
+                            Image14_7 As image:
+                                Height: =40
+                                Image: ='Group 9079'
+                                Width: =39
+                                X: =33
+                                Y: =38
+                                ZIndex: =5
 
                         Container12_2 As groupContainer.manualLayoutContainer:
                             LayoutMinHeight: =100
@@ -249,11 +267,11 @@ Home As screen:
                                 ZIndex: =1
 
                             Label8_2 As label:
-                                Height: =27
+                                Height: =39
                                 Text: ="Total budget"
                                 Width: =132
                                 X: =17
-                                Y: =124
+                                Y: =105
                                 ZIndex: =2
 
                             Label9_2 As label:
@@ -266,13 +284,13 @@ Home As screen:
                                 Y: =151
                                 ZIndex: =3
 
-                            Image14_2 As image:
-                                Height: =52
-                                Image: ='Group 9079'
+                            Image11 As image:
+                                Height: =82
+                                Image: ='Group 9158'
                                 Width: =70
                                 X: =17
-                                Y: =28
-                                ZIndex: =4
+                                Y: =18
+                                ZIndex: =6
 
                     Container16 As groupContainer.manualLayoutContainer:
                         LayoutMinHeight: =100
@@ -766,7 +784,30 @@ Home As screen:
             Button13 As button:
                 Height: =51
                 OnSelect: |-
-                    =Patch(
+                    =If(
+                        ExpenseTitle.Text="",
+                        [
+                            Set(
+                                errordisplay,
+                                true
+                            ),
+                            Set(
+                                err,
+                                "Please Enter Expense Title"
+                            )
+                        ],
+                        amount.Text="",
+                        [
+                            Set(
+                                errordisplay,
+                                true
+                            ),
+                            Set(
+                                err,
+                                "Please Enter Expense Amount"
+                            )
+                        ],
+                        Patch(
                             Expenses_1,
                             Defaults(Expenses_1),
                             {Title: ExpenseTitle.Text},
@@ -794,9 +835,45 @@ Home As screen:
                         Reset(ExpenseTitle);
                         Reset(amount);
                         Reset(DatePicker2)
+                    )
                 Text: ="ADD EXPENSE"
                 Width: =315
                 X: =477
                 Y: =542
                 ZIndex: =16
+
+            Button16_1 As button:
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(255, 255, 255, 1)
+                DisabledFill: =RGBA(196, 59, 59, 0.9)
+                DisplayMode: =DisplayMode.Disabled
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =46
+                Size: =10
+                Text: =err
+                Visible: =errordisplay
+                Width: =348
+                X: =371
+                Y: =37
+                ZIndex: =17
+
+            Icon6_1 As icon.Error:
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =37
+                Icon: =Icon.Error
+                Visible: =errordisplay
+                Width: =30
+                X: =392
+                Y: =41
+                ZIndex: =18
+
+            Timer1_1 As timer:
+                Duration: =1500
+                OnTimerEnd: =Set(errordisplay,false)
+                Start: =errordisplay
+                Visible: =false
+                Width: =0
+                X: =645
+                Y: =43
+                ZIndex: =19
 
