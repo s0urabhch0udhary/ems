@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: |-
+    OnStart: |+
         =ClearCollect(
             emsnav,
             Table(
@@ -50,5 +50,6 @@ App As appinfo:
             )
         );
         
-        Set(budget,50000.00)
+        Set(budget,50000.00);
+        
 

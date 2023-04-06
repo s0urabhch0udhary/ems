@@ -102,7 +102,7 @@ Statistics As screen:
                         Button12_1 As button:
                             DisabledFill: =RGBA(255, 255, 255, 1)
                             DisplayMode: =DisplayMode.Disabled
-                            Height: =399
+                            Height: =325
                             Text: =""
                             Width: =1047
                             X: =40
@@ -110,8 +110,8 @@ Statistics As screen:
                             ZIndex: =1
 
                         Label16 As label:
-                            Color: =RGBA(116, 116, 116, 1)
-                            FontWeight: =FontWeight.Semibold
+                            Color: =RGBA(26, 26, 26, 1)
+                            Font: =Font.'Lato Black'
                             Height: =60
                             Size: =20
                             Text: ="Transaction"
@@ -122,13 +122,13 @@ Statistics As screen:
 
                         Gallery6 As gallery.galleryVertical:
                             DelayItemLoading: =true
-                            Height: =339
+                            Height: =253
                             Items: =Filter(Expenses_1,User.Email=User().Email)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             TemplateSize: =83
                             Width: =1023
-                            X: =40
+                            X: =52
                             Y: =80
                             ZIndex: =3
 

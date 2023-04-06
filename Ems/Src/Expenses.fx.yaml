@@ -87,7 +87,7 @@ Expenses As screen:
                             Button5_1 As button:
                                 BorderColor: =RGBA(0, 136, 209,1)
                                 BorderStyle: =BorderStyle.Dashed
-                                BorderThickness: =4
+                                BorderThickness: =3
                                 DisabledBorderColor: =RGBA(0, 136, 209,1)
                                 DisabledFill: =RGBA(234, 249, 254,1)
                                 DisplayMode: =DisplayMode.Disabled
@@ -152,14 +152,16 @@ Expenses As screen:
                                 ZIndex: =1
 
                             Label8_3 As label:
+                                FontWeight: =FontWeight.Lighter
                                 Height: =27
                                 Text: ="Total balance"
                                 Width: =132
                                 X: =17
-                                Y: =105
+                                Y: =115
                                 ZIndex: =2
 
                             Label9_3 As label:
+                                Font: =Font.'Lato Black'
                                 FontWeight: =FontWeight.Semibold
                                 Height: =54
                                 Size: =23
@@ -207,14 +209,16 @@ Expenses As screen:
                                 ZIndex: =1
 
                             Label8_5 As label:
+                                FontWeight: =FontWeight.Lighter
                                 Height: =27
                                 Text: ="Total expense"
                                 Width: =132
                                 X: =17
-                                Y: =105
+                                Y: =115
                                 ZIndex: =2
 
                             Label9_5 As label:
+                                Font: =Font.'Lato Black'
                                 FontWeight: =FontWeight.Semibold
                                 Height: =54
                                 Size: =23
@@ -262,14 +266,16 @@ Expenses As screen:
                                 ZIndex: =1
 
                             Label8_4 As label:
+                                FontWeight: =FontWeight.Lighter
                                 Height: =27
                                 Text: ="Total budget"
                                 Width: =132
                                 X: =17
-                                Y: =105
+                                Y: =115
                                 ZIndex: =2
 
                             Label9_4 As label:
+                                Font: =Font.'Lato Black'
                                 FontWeight: =FontWeight.Semibold
                                 Height: =54
                                 Size: =23
@@ -299,6 +305,7 @@ Expenses As screen:
                             ZIndex: =1
 
                             Button9 As button:
+                                DisabledBorderColor: =RGBA(202, 202, 202, 1)
                                 DisabledFill: =RGBA(255, 255, 255, 1)
                                 DisplayMode: =DisplayMode.Disabled
                                 Fill: =RGBA(248, 248, 248,1)
@@ -344,15 +351,15 @@ Expenses As screen:
                             ZIndex: =2
 
                             Button9_1 As button:
-                                DisabledBorderColor: =RGBA(128, 128, 128, 1)
+                                DisabledBorderColor: =RGBA(202, 202, 202, 1)
                                 DisabledColor: =RGBA(255, 255, 255, 1)
                                 DisabledFill: =RGBA(255, 255, 255, 1)
                                 DisplayMode: =DisplayMode.Disabled
-                                Height: =535
+                                Height: =527
                                 Text: =""
                                 Width: =521
                                 X: =15
-                                Y: =15
+                                Y: =14
                                 ZIndex: =1
 
                             Gallery3 As gallery.galleryVertical:
@@ -502,7 +509,7 @@ Expenses As screen:
                             TemplateSize: =Self.Width/7-4
                             Visible: =_calendarVisible
                             Width: =440
-                            X: =60
+                            X: =37
                             Y: =53
                             ZIndex: =4
 
@@ -527,9 +534,9 @@ Expenses As screen:
                             TemplatePadding: =0
                             TemplateSize: =60
                             Visible: =_calendarVisible
-                            Width: =417
+                            Width: =437
                             WrapCount: =7
-                            X: =60
+                            X: =40
                             Y: =101
                             ZIndex: =5
 
@@ -604,13 +611,12 @@ Expenses As screen:
                         Gallery5 As gallery.galleryVertical:
                             DelayItemLoading: =true
                             Height: =287
-                            Items: =Expenses_1
+                            Items: =Filter(Expenses_1,User.Email=User().Email)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             ShowScrollbar: =false
                             TemplateSize: =91
-                            Width: =518
-                            X: =32
+                            Width: =553
                             Y: =70
                             ZIndex: =2
 
@@ -624,36 +630,36 @@ Expenses As screen:
                                 OnSelect: =Select(Parent)
                                 Size: =12
                                 Text: ="Button"
-                                Width: =478
-                                X: =3
+                                Width: =498
+                                X: =23
                                 ZIndex: =1
 
                             Label25 As label:
-                                Align: =Align.Center
-                                Font: =Font.Georgia
                                 Height: =52
                                 OnSelect: =Select(Parent)
                                 Size: =14
-                                Text: ="Purchase of "&ThisItem.Title&" is done of ₹"&ThisItem.Amount&" has been done."
-                                Width: =478
-                                X: =3
+                                Text: ="Purchase of "&ThisItem.Title&" is done for ₹"&ThisItem.Amount
+                                Width: =451
+                                X: =70
                                 ZIndex: =2
 
                             Label26 As label:
-                                Height: =34
+                                FontWeight: =FontWeight.Lighter
+                                Height: =23
                                 OnSelect: =Select(Parent)
                                 Text: =Text(ThisItem.Date,DateTimeFormat.LongDate)
-                                X: =88
+                                Width: =240
+                                X: =70
                                 Y: =42
                                 ZIndex: =3
 
                             Circle5 As circle:
                                 Fill: =RGBA(13, 179, 213, 1)
-                                Height: =12
+                                Height: =7
                                 OnSelect: =Select(Parent)
-                                Width: =12
-                                X: =70
-                                Y: =52
+                                Width: =7
+                                X: =40
+                                Y: =20
                                 ZIndex: =4
 
     Container5_1 As groupContainer.manualLayoutContainer:
