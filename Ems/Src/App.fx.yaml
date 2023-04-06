@@ -21,7 +21,7 @@ App As appinfo:
                 },
                 {
                     Title: "Profile",
-                    Screen: Profile,
+                    Screen: Home,
                     Icon: 'Icon ionic-ios-settings'
                 }
             )

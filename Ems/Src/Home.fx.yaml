@@ -1,5 +1,11 @@
 Home As screen:
     Fill: =RGBA(248, 248, 248,1)
+    OnVisible: |-
+        =/*resets calendar view and date selection to today*/
+        Set(_dateSelected, Today());
+        Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));
+        Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+        Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days))
 
     Container1 As groupContainer.horizontalAutoLayoutContainer:
         Height: =Parent.Height
