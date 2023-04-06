@@ -36,12 +36,12 @@ Component2_8 As CanvasComponent:
         ZIndex: =7
 
     HtmlText4 As htmlViewer:
-        Height: =65
+        Height: =131
         HtmlText: ="Hello<br><b><font color=black>"&User().FullName&"</font></b>"
-        Size: =13
-        Width: =205
-        X: =1590
-        Y: =36
+        Size: =15
+        Width: =267
+        X: =Parent.Width-Self.Width-Image2_3.Width-15
+        Y: =30
         ZIndex: =9
 
     Group2 As group:
