@@ -18,7 +18,9 @@ Component2_8 As CanvasComponent:
         RadiusTopLeft: =50
         RadiusTopRight: =50
         Width: =85
-        X: =Parent.Width-Self.Width-10
+        X: |-
+            =Parent.Width-Self
+            .Width-40
         Y: =16
         ZIndex: =1
 
