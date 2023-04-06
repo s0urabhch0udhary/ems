@@ -591,6 +591,22 @@ Home As screen:
                             Y: =237
                             ZIndex: =3
 
+                        Label24 As label:
+                            Height: =66
+                            Text: ="Purchase of "&
+                            Width: =414
+                            X: =42
+                            Y: =102
+                            ZIndex: =4
+
+                        Label24_1 As label:
+                            Height: =66
+                            Text: ="Text"
+                            Width: =414
+                            X: =42
+                            Y: =268
+                            ZIndex: =5
+
     Container5 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(0, 0, 0, 0.24)
         Height: =1080
