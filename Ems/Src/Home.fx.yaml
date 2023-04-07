@@ -885,7 +885,7 @@ Home As screen:
 
                 Container23 As groupContainer.manualLayoutContainer:
                     LayoutMinHeight: =220
-                    LayoutMinWidth: =200
+                    LayoutMinWidth: =400
                     ZIndex: =1
 
                     Label13_16 As label:
@@ -925,9 +925,16 @@ Home As screen:
                         Y: =154
                         ZIndex: =4
 
+                    Label29 As label:
+                        Text: =Container25.Width
+                        X: =116
+                        Y: =54
+                        ZIndex: =5
+
                 Container25 As groupContainer.manualLayoutContainer:
                     LayoutMinHeight: =220
-                    LayoutMinWidth: =200
+                    LayoutMinWidth: =400
+                    Width: =Parent.Width/2
                     ZIndex: =2
 
                     Label13_18 As label:
