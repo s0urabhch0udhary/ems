@@ -167,6 +167,7 @@ Home As screen:
                                 ZIndex: =2
 
                             Label9 As label:
+                                Font: =Font.'Lato Black'
                                 FontWeight: =FontWeight.Semibold
                                 Height: =54
                                 Size: =23
@@ -223,6 +224,7 @@ Home As screen:
                                 ZIndex: =2
 
                             Label9_1 As label:
+                                Font: =Font.'Lato Black'
                                 FontWeight: =FontWeight.Semibold
                                 Height: =54
                                 Size: =23
@@ -279,6 +281,7 @@ Home As screen:
                                 ZIndex: =2
 
                             Label9_2 As label:
+                                Font: =Font.'Lato Black'
                                 FontWeight: =FontWeight.Semibold
                                 Height: =54
                                 Size: =23
