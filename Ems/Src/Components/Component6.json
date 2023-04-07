@@ -1,12 +1,12 @@
 {
   "ComponentAllowCustomization": true,
-  "ComponentChangedSinceFileImport": false,
+  "ComponentChangedSinceFileImport": true,
   "ComponentManifest": {
     "AllowAccessToGlobals": false,
     "AllowCustomization": true,
     "Description": "",
-    "Name": "Component2_3",
-    "TemplateGuid": "e865a54328f647c2a7afda914991bbe5"
+    "Name": "Component6",
+    "TemplateGuid": "86ca2c2099a848e48b47af9681c9cc5c"
   },
   "ComponentType": "CanvasComponent",
   "CustomGroupControlTemplateName": "",
@@ -19,9 +19,8 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638164460785851775",
-  "Name": "e865a54328f647c2a7afda914991bbe5",
+  "LastModifiedTimestamp": "638164497695649366",
+  "Name": "86ca2c2099a848e48b47af9681c9cc5c",
   "OverridableProperties": {},
-  "TemplateOriginalName": "52af6f52f71f4715a9d5a5274079542f",
-  "Version": "638153512583954920"
+  "Version": "638164497528316779"
 }

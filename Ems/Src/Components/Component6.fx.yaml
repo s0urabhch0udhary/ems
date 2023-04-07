@@ -1,0 +1,13 @@
+Component6 As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Container10 As groupContainer.manualLayoutContainer:
+        Height: =636
+        Width: =640
+        ZIndex: =1
+
