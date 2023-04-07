@@ -66,6 +66,7 @@ Component2_8 As CanvasComponent:
             PaddingRight: =10.98
             PaddingTop: =10.98
             Size: =24.15
+            Visible: =If(App.ActiveScreen.Size<6,false,true)
             Width: =755
             X: =16
             Y: =15
@@ -78,6 +79,7 @@ Component2_8 As CanvasComponent:
             PaddingBottom: =10
             PaddingRight: =0.00
             PaddingTop: =10
+            Visible: =If(App.ActiveScreen.Size<6,false,true)
             Width: =54
             X: =57
             Y: =49
@@ -94,6 +96,7 @@ Component2_8 As CanvasComponent:
             Mode: =TextMode.MultiLine
             PressedColor: =
             PressedFill: =
+            Visible: =If(App.ActiveScreen.Size<6,false,true)
             Width: =288
             X: =120
             Y: =55

@@ -33,7 +33,15 @@
           },
           "Size",
           "PaddingTop",
-          "PaddingRight"
+          "PaddingRight",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "true",
+            "InvariantPropertyName": "Visible",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          }
         ],
         "ControlUniqueId": "49",
         "HasDynamicProperties": false,
@@ -162,6 +170,12 @@
             "Category": "Design",
             "InvariantScript": "10.98",
             "Property": "PaddingRight",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "If(App.ActiveScreen.Size<6,false,true)",
+            "Property": "Visible",
             "RuleProviderType": "Unknown"
           }
         ],
@@ -914,6 +928,14 @@
             "InvariantPropertyName": "PaddingBottom",
             "IsLockable": false,
             "NameMapSourceSchema": "?"
+          },
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "true",
+            "InvariantPropertyName": "Visible",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
           }
         ],
         "ControlUniqueId": "52",
@@ -1086,6 +1108,12 @@
             "InvariantScript": "10",
             "Property": "PaddingBottom",
             "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "If(App.ActiveScreen.Size<6,false,true)",
+            "Property": "Visible",
+            "RuleProviderType": "Unknown"
           }
         ],
         "StyleName": "defaultIconStyle",
@@ -1214,6 +1242,14 @@
             "AutoRuleBindingEnabled": false,
             "AutoRuleBindingString": "",
             "InvariantPropertyName": "HintText",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "true",
+            "InvariantPropertyName": "Visible",
             "IsLockable": false,
             "NameMapSourceSchema": "?"
           }
@@ -1465,6 +1501,12 @@
             "Category": "Design",
             "InvariantScript": "false",
             "Property": "Strikethrough",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "If(App.ActiveScreen.Size<6,false,true)",
+            "Property": "Visible",
             "RuleProviderType": "Unknown"
           }
         ],
@@ -1936,7 +1978,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638164584920611638",
+    "LastModifiedTimestamp": "638164610612823094",
     "Name": "Component2_8",
     "Rules": [
       {
@@ -1995,7 +2037,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638164584920611638",
+  "LastModifiedTimestamp": "638164610612823094",
   "Name": "1a0c18c15f3d4538b2a44920ed7b0270",
   "OverridableProperties": {},
   "TemplateOriginalName": "cbb39dca364b4c88b4fd510bf929de01",
