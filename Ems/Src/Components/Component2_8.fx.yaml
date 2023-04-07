@@ -45,7 +45,9 @@ Component2_8 As CanvasComponent:
         Text: |-
             ="Hello, 
             "&User().FullName
+        Visible: =If(App.ActiveScreen.Size<=4,false,true)
         Width: =327
+        Wrap: =If(App.ActiveScreen.Size<4,false,true)
         X: =Parent.Width-Image2_3.Width-Self.Width-50
         Y: =16
         ZIndex: =9
