@@ -60,7 +60,8 @@ Home As screen:
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    PaddingRight: =0.00
+                    PaddingLeft: =40
+                    PaddingRight: =40
                     PaddingTop: =0.00
                     Width: =Parent.Width
                     X: =0.00
@@ -73,8 +74,7 @@ Home As screen:
                         LayoutMinHeight: =100
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
-                        PaddingLeft: =20
-                        PaddingRight: =20
+                        LayoutWrap: =true
                         PaddingTop: =0.00
                         Width: =Parent.Width*2/3
                         X: =0.00
@@ -82,8 +82,8 @@ Home As screen:
 
                         Container11 As groupContainer.manualLayoutContainer:
                             Height: =Parent.Height
-                            LayoutMinHeight: =100
-                            LayoutMinWidth: =100
+                            LayoutMinHeight: =210
+                            LayoutMinWidth: =210
                             PaddingRight: =0.00
                             PaddingTop: =0.00
                             Width: =380.91
@@ -98,12 +98,14 @@ Home As screen:
                                 DisabledFill: =RGBA(234, 249, 254,1)
                                 DisplayMode: =DisplayMode.Disabled
                                 Fill: =RGBA(234, 249, 254, 1)
-                                Height: |
-                                    =Parent.Height-4
+                                Height: |+
+                                    =Parent.Height-8
+                                    
                                 Text: =""
-                                Width: =228
-                                X: =10
-                                Y: =2
+                                Width: |
+                                    =Parent.Width-8
+                                X: =4
+                                Y: =4
                                 ZIndex: =1
 
                             Label7 As label:
@@ -113,32 +115,32 @@ Home As screen:
                                 Size: =18
                                 Text: ="Add Expense"
                                 Width: =188
-                                X: =30
+                                X: =Parent.Width/2-Self.Width/2
                                 Y: =142
                                 ZIndex: =3
 
                             Image12 As image:
                                 Image: ='Icon ionic-ios-add'
-                                X: =74
+                                Width: =Parent.Width/2
+                                X: =Parent.Width/2-Self.Width/2
                                 Y: =42
                                 ZIndex: =4
 
                             Button14 As button:
                                 Color: =RGBA(0, 0, 0, 0)
                                 Fill: =RGBA(0, 0, 0, 0)
-                                Height: =218
+                                Height: =Parent.Height-6
                                 HoverBorderColor: =
                                 HoverColor: =RGBA(0, 0, 0, 0)
                                 HoverFill: =
                                 OnSelect: =Set(addexpensepop,true)
                                 Text: =""
-                                Width: =226
-                                X: =10
+                                Width: =Parent.Width-6
                                 ZIndex: =5
 
                         Container12 As groupContainer.manualLayoutContainer:
-                            LayoutMinHeight: =100
-                            LayoutMinWidth: =100
+                            LayoutMinHeight: =210
+                            LayoutMinWidth: =210
                             PaddingRight: =0.00
                             PaddingTop: =0.00
                             Width: =380.91
@@ -162,7 +164,8 @@ Home As screen:
                                 Height: =39
                                 Text: ="Total balance"
                                 Width: =132
-                                X: =17
+                                X: |
+                                    =23
                                 Y: =110
                                 ZIndex: =2
 
@@ -172,7 +175,7 @@ Home As screen:
                                 Height: =54
                                 Size: =23
                                 Text: ="₹ "&budget-Sum(Filter(Expenses_1,User.Email=User().Email),Amount)
-                                Width: =205
+                                Width: =Parent.Width*4/5
                                 X: =17
                                 Y: =149
                                 ZIndex: =3
@@ -180,7 +183,7 @@ Home As screen:
                             Image9 As image:
                                 Height: =82
                                 Image: ='Path 14389'
-                                Width: =70
+                                Width: =Parent.Width/4
                                 X: =17
                                 Y: =18
                                 ZIndex: =4
@@ -188,14 +191,14 @@ Home As screen:
                             Image14_6 As image:
                                 Height: =40
                                 Image: ='Group 9074'
-                                Width: =39
-                                X: =33
-                                Y: =38
+                                Width: =Parent.Width/6
+                                X: =27
+                                Y: =39
                                 ZIndex: =5
 
                         Container12_1 As groupContainer.manualLayoutContainer:
-                            LayoutMinHeight: =100
-                            LayoutMinWidth: =100
+                            LayoutMinHeight: =210
+                            LayoutMinWidth: =210
                             PaddingRight: =0.00
                             PaddingTop: =0.00
                             Width: =380.91
@@ -229,7 +232,7 @@ Home As screen:
                                 Height: =54
                                 Size: =23
                                 Text: ="₹ "&If(IsEmpty(Filter(Expenses_1,User.Email=User().Email)),"0",Sum(Filter(Expenses_1,User.Email=User().Email),Amount))
-                                Width: =205
+                                Width: =Parent.Width*4/5
                                 X: =23
                                 Y: =148
                                 ZIndex: =3
@@ -237,22 +240,22 @@ Home As screen:
                             Image9_1 As image:
                                 Height: =82
                                 Image: ='Path 14389'
-                                Width: =70
+                                Width: =Parent.Width/4
                                 X: =17
                                 Y: =18
                                 ZIndex: =4
 
                             Image14_7 As image:
-                                Height: =40
+                                Height: =35
                                 Image: ='Group 9079'
-                                Width: =39
-                                X: =33
-                                Y: =38
+                                Width: =Parent.Width/6
+                                X: =27
+                                Y: =41
                                 ZIndex: =5
 
                         Container12_2 As groupContainer.manualLayoutContainer:
-                            LayoutMinHeight: =100
-                            LayoutMinWidth: =100
+                            LayoutMinHeight: =210
+                            LayoutMinWidth: =210
                             PaddingRight: =0.00
                             PaddingTop: =0.00
                             Width: =380.91
@@ -286,7 +289,7 @@ Home As screen:
                                 Height: =54
                                 Size: =23
                                 Text: ="₹ "&budget
-                                Width: =205
+                                Width: =Parent.Width*4/5
                                 X: =17
                                 Y: =151
                                 ZIndex: =3
@@ -294,16 +297,14 @@ Home As screen:
                             Image11 As image:
                                 Height: =82
                                 Image: ='Group 9158'
-                                Width: =70
+                                Width: =Parent.Width/4
                                 X: =17
                                 Y: =18
                                 ZIndex: =6
 
                     Container16 As groupContainer.manualLayoutContainer:
                         LayoutMinHeight: =100
-                        LayoutMinWidth: =250
-                        PaddingLeft: =30
-                        PaddingRight: =30
+                        LayoutMinWidth: =200
                         ZIndex: =2
 
                         CompositeLineChart3 As group:
@@ -318,26 +319,26 @@ Home As screen:
                                 Height: =25
                                 Size: =22
                                 Text: ="Statistics"
-                                Width: =960
-                                X: =87
-                                Y: =40
+                                Width: =Parent.Width/4
+                                X: =41
+                                Y: =51
                                 ZIndex: =3
 
                             LineChart3 As lineChart:
                                 Height: =402
                                 Items: =Filter(Expenses_1,User.Email=User().Email)
-                                Width: =960
-                                X: =79
-                                Y: =108
+                                Width: =Parent.Width-60
+                                X: =30
+                                Y: =119
                                 ZIndex: =4
 
                             Legend3 As legend:
-                                Height: =62
+                                Height: =36
                                 ItemColorSet: =LineChart3.ItemColorSet
                                 Items: =LineChart3.SeriesLabels
-                                Width: =192
-                                X: =870
-                                Y: =29
+                                Width: =188
+                                X: =Parent.Width-Self.Width
+                                Y: =51
                                 ZIndex: =5
 
                         Button6_6 As button:
@@ -345,17 +346,18 @@ Home As screen:
                             DisabledColor: =RGBA(255, 255, 255, 1)
                             DisabledFill: =RGBA(255, 255, 255, 1)
                             DisplayMode: =DisplayMode.Disabled
-                            Height: =585
+                            Height: =Parent.Height-40
                             Text: ="Button"
-                            Width: =1038
-                            X: =40
-                            Y: =4
+                            Width: |
+                                =Parent.Width-6
+                            X: =3
+                            Y: =3
                             ZIndex: =2
 
                         Label24 As label:
                             Height: =72
                             Text: =If(Label9.Text=Label9_2.Text,"Please Add Your Data To See Category Wise Expense.","")
-                            Width: =987
+                            Width: =Parent.Width-120
                             X: =60
                             Y: =60
                             ZIndex: =6
