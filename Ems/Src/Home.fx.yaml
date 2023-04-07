@@ -606,23 +606,22 @@ Home As screen:
                                 ZIndex: =1
 
                             Label25_1 As label:
-                                Height: =25
+                                Height: =52
                                 OnSelect: =Select(Parent)
                                 Size: =14
                                 Text: ="Purchase of "&ThisItem.Title&" is done of ₹"&ThisItem.Amount&"."
-                                Width: =441
-                                X: =62
-                                Y: =20
+                                Width: =433
+                                X: =70
                                 ZIndex: =2
 
                             Label26_1 As label:
                                 FontWeight: =FontWeight.Lighter
-                                Height: =34
+                                Height: =23
                                 OnSelect: =Select(Parent)
                                 Text: =Text(ThisItem.Date,DateTimeFormat.LongDate)
-                                Width: =390
-                                X: =62
-                                Y: =44
+                                Width: =240
+                                X: =70
+                                Y: =42
                                 ZIndex: =3
 
                             Circle5_1 As circle:

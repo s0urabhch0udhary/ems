@@ -52,4 +52,5 @@ App As appinfo:
         
         Set(budget,50000.00);
         
+    StartScreen: =Home
 
