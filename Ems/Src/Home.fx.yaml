@@ -659,7 +659,7 @@ Home As screen:
         Fill: =RGBA(0, 0, 0, 0.24)
         Height: =1080
         Visible: =addexpensepop
-        Width: =Parent.Width
+        Width: =App.ActiveScreen.Width
         ZIndex: =2
 
         Button8 As button:
