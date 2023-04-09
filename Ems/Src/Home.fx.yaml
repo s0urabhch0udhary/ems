@@ -874,13 +874,12 @@ Home As screen:
                 ZIndex: =26
 
             Container22 As groupContainer.horizontalAutoLayoutContainer:
-                Height: =If(Self.Width<=730,500,230)
+                Height: =If(Self.Width<=730,455,230)
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowX: =LayoutOverflow.Scroll
                 LayoutOverflowY: =LayoutOverflow.Scroll
                 LayoutWrap: =true
                 Width: =Parent.Width
-                X: =2
                 Y: =80
                 ZIndex: =28
 
@@ -941,7 +940,7 @@ Home As screen:
                     Label13_18 As label:
                         Text: ="Expense Date"
                         Width: =136
-                        X: =24
+                        X: =32
                         Y: =114
                         ZIndex: =1
 
@@ -951,7 +950,7 @@ Home As screen:
                         Default: =""
                         Height: =56
                         Width: =312
-                        X: =24
+                        X: =32
                         Y: =158
                         ZIndex: =2
 
@@ -980,7 +979,7 @@ Home As screen:
 
                     Label13_19 As label:
                         Text: ="Payment Type"
-                        X: =24
+                        X: =32
                         ZIndex: =5
 
                     ExpenseTitle_7 As text:
@@ -991,7 +990,7 @@ Home As screen:
                         HoverBorderColor: =RGBA(112, 112, 112, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         Width: =318
-                        X: =24
+                        X: =32
                         Y: =40
                         ZIndex: =6
 
@@ -1017,7 +1016,7 @@ Home As screen:
                         Items: =Choices([@Expenses_1].PaymentType)
                         SelectionFill: =RGBA(39, 67, 125, 1)
                         Width: =303
-                        X: =33
+                        X: =36
                         Y: =47
                         ZIndex: =8
 
