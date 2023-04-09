@@ -64,7 +64,7 @@ Home As screen:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =30
                     LayoutMinHeight: =850
-                    LayoutMinWidth: =200
+                    LayoutMinWidth: =900
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
                     LayoutOverflowY: =LayoutOverflow.Scroll
@@ -659,7 +659,7 @@ Home As screen:
         Fill: =RGBA(0, 0, 0, 0.24)
         Height: =1080
         Visible: =addexpensepop
-        Width: =App.ActiveScreen.Width
+        Width: =Parent.Width
         ZIndex: =2
 
         Button8 As button:
@@ -671,14 +671,14 @@ Home As screen:
             Text: ="Button"
             Width: =If(App.ActiveScreen.Size<=3,Parent.Width-20,820)
             X: =If(App.ActiveScreen.Size<=3,10,Parent.Width/2-Self.Width/2)
-            Y: =152
+            Y: =Parent.Height/9
             ZIndex: =1
 
         Container9 As groupContainer.manualLayoutContainer:
-            Height: =630
+            Height: =If(App.ActiveScreen.Size,Parent.Height,630)
             Width: =If(App.ActiveScreen.Size<=3,Parent.Width-20,820)
             X: =If(App.ActiveScreen.Size<=3,10,Parent.Width/2-Self.Width/2)
-            Y: =152
+            Y: =If(App.ActiveScreen.Size<3,0,Parent.Height/9)
             ZIndex: =2
 
             Label4 As label:
@@ -695,7 +695,7 @@ Home As screen:
                 Text: ="Expense Category"
                 Width: =170
                 X: =32
-                Y: =298
+                Y: =85+Container22.Height
                 ZIndex: =10
 
             Gallery4 As gallery.galleryHorizontal:
@@ -706,7 +706,7 @@ Home As screen:
                 TemplateSize: =104
                 Width: =709
                 X: =32
-                Y: =338
+                Y: =Label13_3.Y+Label13_3.Height+2
                 ZIndex: =11
 
                 Button10 As button:
@@ -743,7 +743,7 @@ Home As screen:
                 Text: ="Attachment Reciept"
                 Width: =170
                 X: =32
-                Y: =398
+                Y: =Gallery4.Y+Gallery4.Height
                 ZIndex: =13
 
             Button13 As button:
@@ -817,7 +817,7 @@ Home As screen:
                 Text: ="ADD EXPENSE"
                 Width: =Parent.Width*3/7
                 X: =Parent.Width/2
-                Y: =542
+                Y: =AddMediaButton1.Y+AddMediaButton1.Height+40
                 ZIndex: =16
 
             errorpop As group:
@@ -864,21 +864,21 @@ Home As screen:
 
             AddMediaButton1 As addMedia:
                 ChangePictureText: ="Attachment loaded successfully"
-                Height: =58
+                Height: =40
                 Size: =16
                 Text: ="Drag and drop or browse your device."
                 Width: =Parent.Width*3/4
                 X: =Parent.Width/9
-                Y: =436
+                Y: =Label13_4.Y+Label13_4.Height
                 ZIndex: =26
 
             Container22 As groupContainer.horizontalAutoLayoutContainer:
-                Height: =229
+                Height: =If(Self.Width<=730,500,230)
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowX: =LayoutOverflow.Scroll
                 LayoutOverflowY: =LayoutOverflow.Scroll
                 LayoutWrap: =true
-                Width: =818
+                Width: =Parent.Width
                 X: =2
                 Y: =80
                 ZIndex: =28
