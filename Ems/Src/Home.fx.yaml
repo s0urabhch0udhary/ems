@@ -667,18 +667,18 @@ Home As screen:
             DisabledColor: =RGBA(255, 255, 255, 1)
             DisabledFill: =RGBA(255, 255, 255, 1)
             DisplayMode: =DisplayMode.Disabled
-            Height: =630
+            Height: =If(App.ActiveScreen.Size<=3,Parent.Height,630)
             Text: ="Button"
             Width: =If(App.ActiveScreen.Size<=3,Parent.Width-20,820)
             X: =If(App.ActiveScreen.Size<=3,10,Parent.Width/2-Self.Width/2)
-            Y: =Parent.Height/9
+            Y: =If(App.ActiveScreen.Size<=3,0,Parent.Height/9)
             ZIndex: =1
 
         Container9 As groupContainer.manualLayoutContainer:
-            Height: =If(App.ActiveScreen.Size,Parent.Height,630)
+            Height: =If(App.ActiveScreen.Size<=3,Parent.Height,630)
             Width: =If(App.ActiveScreen.Size<=3,Parent.Width-20,820)
             X: =If(App.ActiveScreen.Size<=3,10,Parent.Width/2-Self.Width/2)
-            Y: =If(App.ActiveScreen.Size<3,0,Parent.Height/9)
+            Y: =If(App.ActiveScreen.Size<=3,0,Parent.Height/9)
             ZIndex: =2
 
             Label4 As label:
@@ -700,11 +700,12 @@ Home As screen:
 
             Gallery4 As gallery.galleryHorizontal:
                 DelayItemLoading: =true
-                Height: =60
+                Height: =If(App.ActiveScreen.Size<=3,120,60)
                 Items: =categories
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplateSize: =104
                 Width: =709
+                WrapCount: =If(App.ActiveScreen.Size<=3,2,1)
                 X: =32
                 Y: =Label13_3.Y+Label13_3.Height+2
                 ZIndex: =11
