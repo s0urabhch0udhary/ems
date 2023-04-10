@@ -56,7 +56,7 @@
         "Name": "HtmlText1",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 340,
+        "PublishOrderIndex": 341,
         "Rules": [
           {
             "Category": "Data",
@@ -303,7 +303,7 @@
         "Name": "Label23",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 341,
+        "PublishOrderIndex": 342,
         "Rules": [
           {
             "Category": "Data",
@@ -685,7 +685,7 @@
         "Name": "Image2_3",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 342,
+        "PublishOrderIndex": 343,
         "Rules": [
           {
             "Category": "Data",
@@ -951,7 +951,7 @@
         "Name": "Icon3",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 343,
+        "PublishOrderIndex": 344,
         "Rules": [
           {
             "Category": "Design",
@@ -1267,7 +1267,7 @@
         "Name": "TextInput1",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 344,
+        "PublishOrderIndex": 345,
         "Rules": [
           {
             "Category": "Data",
@@ -1618,7 +1618,7 @@
         "Name": "Label6",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 346,
+        "PublishOrderIndex": 347,
         "Rules": [
           {
             "Category": "Data",
@@ -1899,7 +1899,7 @@
         "Name": "Group2",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 345,
+        "PublishOrderIndex": 346,
         "Rules": [
           {
             "Category": "Design",
@@ -1978,7 +1978,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638166960975895947",
+    "LastModifiedTimestamp": "638167080637371511",
     "Name": "Component2_8",
     "Rules": [
       {
@@ -2037,7 +2037,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638166960975895947",
+  "LastModifiedTimestamp": "638167080637371511",
   "Name": "1a0c18c15f3d4538b2a44920ed7b0270",
   "OverridableProperties": {},
   "TemplateOriginalName": "cbb39dca364b4c88b4fd510bf929de01",

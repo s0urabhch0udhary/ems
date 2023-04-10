@@ -64,7 +64,7 @@ Home As screen:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =30
                     LayoutMinHeight: =850
-                    LayoutMinWidth: =900
+                    LayoutMinWidth: =400
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
                     LayoutOverflowY: =LayoutOverflow.Scroll
@@ -77,7 +77,7 @@ Home As screen:
 
                     Container8 As groupContainer.horizontalAutoLayoutContainer:
                         FillPortions: =0
-                        Height: =If(App.ActiveScreen.Size<6,Parent.Height/2+20,Parent.Height/4+20)
+                        Height: =If(Parent.Width<=858,Parent.Height/2+20,Parent.Height/4+20)
                         LayoutGap: =20
                         LayoutMinHeight: =100
                         LayoutMinWidth: =200
@@ -375,7 +375,7 @@ Home As screen:
                 Container6 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =700
-                    LayoutMinWidth: =250
+                    LayoutMinWidth: =450
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
                     LayoutOverflowY: =LayoutOverflow.Scroll
@@ -1019,4 +1019,9 @@ Home As screen:
         X: =258
         Y: =477
         ZIndex: =3
+
+    Label13 As label:
+        Text: =Container4.Width
+        X: =258
+        ZIndex: =4
 
