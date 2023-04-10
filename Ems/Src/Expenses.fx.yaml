@@ -304,6 +304,7 @@ Expenses As screen:
                                 ZIndex: =6
 
                     Container17 As groupContainer.horizontalAutoLayoutContainer:
+                        Height: =500
                         LayoutGap: =30
                         LayoutMinHeight: =100
                         LayoutMinWidth: =250
@@ -314,7 +315,7 @@ Expenses As screen:
 
                         Container18 As groupContainer.manualLayoutContainer:
                             LayoutMinHeight: =550
-                            LayoutMinWidth: =200
+                            LayoutMinWidth: =450
                             ZIndex: =1
 
                             Button9 As button:
