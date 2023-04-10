@@ -166,7 +166,8 @@ Statistics As screen:
                                 OnSelect: =Select(Parent)
                                 Size: =12
                                 Text: =ThisItem.PaymentType.Value
-                                X: =Parent.Width/3.5
+                                Visible: =If(Parent.Width<750,false,true)
+                                X: =If(Label17.Visible=true,Parent.Width/3.5,Parent.Width/5)
                                 Y: =22
                                 ZIndex: =3
 
@@ -184,7 +185,7 @@ Statistics As screen:
                                 OnSelect: =Select(Parent)
                                 Text: ="- ₹"&ThisItem.Amount
                                 Width: =115
-                                X: =Parent.Width/1.5
+                                X: =Parent.Width/1.3
                                 Y: =20
                                 ZIndex: =5
 
