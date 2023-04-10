@@ -308,11 +308,12 @@ Expenses As screen:
                         LayoutMinHeight: =100
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
+                        LayoutWrap: =true
                         Width: =Parent.Width
                         ZIndex: =2
 
                         Container18 As groupContainer.manualLayoutContainer:
-                            LayoutMinHeight: =100
+                            LayoutMinHeight: =550
                             LayoutMinWidth: =200
                             ZIndex: =1
 
@@ -367,7 +368,7 @@ Expenses As screen:
                                 ZIndex: =5
 
                         Container18_1 As groupContainer.manualLayoutContainer:
-                            LayoutMinHeight: =100
+                            LayoutMinHeight: =500
                             LayoutMinWidth: =200
                             ZIndex: =2
 
@@ -396,10 +397,10 @@ Expenses As screen:
                                 ZIndex: =2
 
                                 Image15 As image:
-                                    Height: =74
+                                    Height: =If(App.ActiveScreen.Size<4,30,74)
                                     Image: =If(ThisItem.Category.Value="Health",health,If(ThisItem.Category.Value="Food",food,If(ThisItem.Category.Value="Entertainment",game,If(ThisItem.Category.Value="Travel",travel,If(ThisItem.Category.Value="Grocery",grocery,If(ThisItem.Category.Value="Others",others))))))
                                     OnSelect: =Select(Parent)
-                                    Width: =74
+                                    Width: =If(App.ActiveScreen.Size<4,30,74)
                                     X: =10
                                     Y: =23
                                     ZIndex: =1
