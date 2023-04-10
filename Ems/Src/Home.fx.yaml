@@ -326,8 +326,8 @@ Home As screen:
 
                             Title3 As label:
                                 Font: =Font.'Lato Black'
-                                Height: =25
-                                Size: =22
+                                Height: =36
+                                Size: =17
                                 Text: ="Statistics"
                                 Width: =Parent.Width/4
                                 X: =41
@@ -404,8 +404,8 @@ Home As screen:
                             Visible: =_calendarVisible
                             Width: =155
                             Wrap: =false
-                            X: =60
-                            Y: =8
+                            X: =61
+                            Y: =4
                             ZIndex: =1
 
                         iconPrevMonth1_1 As icon.ChevronLeft:
@@ -462,7 +462,7 @@ Home As screen:
                             Visible: =_calendarVisible
                             Width: =Parent.Width*9/10
                             X: =18
-                            Y: =49
+                            Y: =45
                             ZIndex: =4
 
                             Title4_1 As label:
@@ -489,7 +489,7 @@ Home As screen:
                             Width: =Parent.Width*9/10
                             WrapCount: =7
                             X: =18
-                            Y: =86
+                            Y: =82
                             ZIndex: =5
 
                             Circle1_1 As circle:
@@ -572,7 +572,7 @@ Home As screen:
 
                     Container7_1 As groupContainer.manualLayoutContainer:
                         FillPortions: =0
-                        Height: =Parent.Height/2-30
+                        Height: =If(App.ActiveScreen.Width<=905,Parent.Height/2,Parent.Height/2-20)
                         LayoutMinHeight: =100
                         LayoutMinWidth: =250
                         PaddingRight: =0.00
@@ -588,13 +588,13 @@ Home As screen:
                             Size: =20
                             Text: ="Notification"
                             Width: =240
-                            X: =12
-                            Y: =16
+                            X: =16
+                            Y: =4
                             ZIndex: =1
 
                         Gallery5_1 As gallery.galleryVertical:
                             DelayItemLoading: =true
-                            Height: =310
+                            Height: =317
                             Items: =Filter(Expenses_1,User.Email=User().Email)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
@@ -602,7 +602,7 @@ Home As screen:
                             TemplateSize: =96
                             Width: =Parent.Width*9/10
                             X: =32
-                            Y: =71
+                            Y: =59
                             ZIndex: =2
 
                             Button16_3 As button:
@@ -1021,7 +1021,7 @@ Home As screen:
         ZIndex: =3
 
     Label13 As label:
-        Text: =Container4.Width
+        Text: =App.ActiveScreen.Width
         X: =258
         ZIndex: =4
 
