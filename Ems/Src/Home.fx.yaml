@@ -748,7 +748,7 @@ Home As screen:
                 ZIndex: =13
 
             Button13 As button:
-                Height: =51
+                Height: =If(App.ActiveScreen.Size<=3,30,50)
                 OnSelect: |-
                     =If(
                         ExpenseTitle_6.Text="",
@@ -816,8 +816,8 @@ Home As screen:
                         Reset(DatePicker2_3)
                     )
                 Text: ="ADD EXPENSE"
-                Width: =Parent.Width*3/7
-                X: =Parent.Width/2
+                Width: =If(App.ActiveScreen.Size<=3,Parent.Width*2/7,Parent.Width*3/7)
+                X: =If(App.ActiveScreen.Size<=3,40,Parent.Width/2)
                 Y: =AddMediaButton1.Y+AddMediaButton1.Height+40
                 ZIndex: =16
 
@@ -865,16 +865,16 @@ Home As screen:
 
             AddMediaButton1 As addMedia:
                 ChangePictureText: ="Attachment loaded successfully"
-                Height: =40
-                Size: =16
+                Height: =46
+                Size: =If(App.ActiveScreen.Size<=3,10,16)
                 Text: ="Drag and drop or browse your device."
-                Width: =Parent.Width*3/4
-                X: =Parent.Width/9
+                Width: =If(App.ActiveScreen.Size<=3,280,400)
+                X: =If(App.ActiveScreen.Size<=3,Parent.Width/10,Parent.Width/5)
                 Y: =Label13_4.Y+Label13_4.Height
                 ZIndex: =26
 
             Container22 As groupContainer.horizontalAutoLayoutContainer:
-                Height: =If(Self.Width<=730,420,230)
+                Height: =If(Self.Width<=730,350,230)
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowX: =LayoutOverflow.Scroll
                 LayoutOverflowY: =LayoutOverflow.Scroll
@@ -884,7 +884,8 @@ Home As screen:
                 ZIndex: =28
 
                 Container23 As groupContainer.manualLayoutContainer:
-                    LayoutMinHeight: =200
+                    Height: =If(App.ActiveScreen.Size<=3,160,200)
+                    LayoutMinHeight: =If(App.ActiveScreen.Size<=3,180,220)
                     LayoutMinWidth: =400
                     ZIndex: =1
 
@@ -932,7 +933,8 @@ Home As screen:
                         ZIndex: =5
 
                 Container25 As groupContainer.manualLayoutContainer:
-                    LayoutMinHeight: =200
+                    Height: =If(App.ActiveScreen.Size<=3,170,200)
+                    LayoutMinHeight: =If(App.ActiveScreen.Size<=3,180,220)
                     LayoutMinWidth: =400
                     Width: =Parent.Width/2
                     ZIndex: =2
@@ -993,15 +995,6 @@ Home As screen:
                         X: =32
                         Y: =40
                         ZIndex: =6
-
-                    Icon6_5 As icon.ChevronDown:
-                        Color: =RGBA(128, 128, 128, 1)
-                        Height: =38
-                        Icon: =Icon.ChevronDown
-                        Width: =44
-                        X: =292
-                        Y: =52
-                        ZIndex: =7
 
                     Dropdown1_3 As dropdown:
                         BorderColor: =RGBA(0, 0, 0, 0)
