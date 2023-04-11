@@ -105,6 +105,7 @@
     "Id": "89a7b94e-4904-4825-a575-ee5143d1abe3",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
+    "ManualOfflineProfileId": "",
     "Name": "EMS Responsive 2",
     "OriginatingVersion": "1.330"
   },
