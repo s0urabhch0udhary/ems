@@ -60,7 +60,6 @@ Home As screen:
                 ZIndex: =2
 
                 Container4 As groupContainer.verticalAutoLayoutContainer:
-                    FillPortions: =2
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =30
                     LayoutMinHeight: =750
@@ -326,30 +325,29 @@ Home As screen:
 
                             Title3 As label:
                                 Font: =Font.'Lato Black'
-                                Height: =36
+                                Height: =29
                                 Size: =16
                                 Text: ="Statistics"
-                                Width: |
-                                    =200
+                                Width: =203
                                 X: =41
                                 Y: =51
                                 ZIndex: =3
 
                             LineChart3 As lineChart:
-                                Height: =Parent.Height*7/10
+                                Height: =287
                                 Items: =Filter(Expenses_1,User.Email=User().Email)
-                                Width: =Parent.Width-60
+                                Width: =1054
                                 X: =30
-                                Y: =100
+                                Y: =90
                                 ZIndex: =4
 
                             Legend3 As legend:
-                                Height: =27
+                                Height: =22
                                 ItemColorSet: =LineChart3.ItemColorSet
                                 Items: =LineChart3.SeriesLabels
                                 Size: =10
-                                Width: =188
-                                X: =816
+                                Width: =191
+                                X: =827
                                 Y: =51
                                 ZIndex: =5
 

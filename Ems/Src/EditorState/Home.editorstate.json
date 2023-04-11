@@ -19527,14 +19527,7 @@
         },
         "Y",
         "Font",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "938",
-          "InvariantPropertyName": "Width",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Width",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -20570,14 +20563,7 @@
         "VerticalAlign",
         "X",
         "Y",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "938",
-          "InvariantPropertyName": "Width",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Width",
         "Height",
         "DisplayMode",
         "ZIndex",
