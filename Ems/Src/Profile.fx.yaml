@@ -84,19 +84,37 @@ Profile As screen:
 
                     TextInput3 As text:
                         Default: =User().FullName
-                        DisabledBorderColor: =RGBA(102, 102, 102, 1)
+                        DisabledBorderColor: =RGBA(128, 128, 128, 1)
                         DisabledColor: =RGBA(0, 0, 0, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
                         DisplayMode: =DisplayMode.Disabled
-                        Height: =54
+                        Height: =64
                         RadiusBottomLeft: =10
                         RadiusBottomRight: =10
                         RadiusTopLeft: =10
                         RadiusTopRight: =10
-                        Width: =338
-                        X: =21
-                        Y: =154
+                        Size: =18
+                        Width: =314
+                        X: =167
+                        Y: =41
                         ZIndex: =3
+
+                    TextInput3_1 As text:
+                        Default: =User().Email
+                        DisabledBorderColor: =RGBA(128, 128, 128, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =64
+                        RadiusBottomLeft: =10
+                        RadiusBottomRight: =10
+                        RadiusTopLeft: =10
+                        RadiusTopRight: =10
+                        Size: =18
+                        Width: =462
+                        X: =548
+                        Y: =41
+                        ZIndex: =4
 
                 Container6_6 As groupContainer.verticalAutoLayoutContainer:
                     FillPortions: =0.5
