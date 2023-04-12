@@ -65,6 +65,10 @@ Profile As screen:
                         DisabledFill: =RGBA(255, 255, 255, 1)
                         DisplayMode: =DisplayMode.Disabled
                         Height: =600
+                        RadiusBottomLeft: =40
+                        RadiusBottomRight: =40
+                        RadiusTopLeft: =40
+                        RadiusTopRight: =40
                         Text: ="Button"
                         Width: =Parent.Width
                         ZIndex: =1
