@@ -986,7 +986,7 @@ Expenses As screen:
                 ZIndex: =26
 
             Container22_1 As groupContainer.horizontalAutoLayoutContainer:
-                Height: =If(Self.Width<=730,360,230)
+                Height: =If(Self.Width<=767,360,230)
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowX: =LayoutOverflow.Scroll
                 LayoutOverflowY: =LayoutOverflow.Scroll
