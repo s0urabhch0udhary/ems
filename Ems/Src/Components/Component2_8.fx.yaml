@@ -1,6 +1,6 @@
 Component2_8 As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
-    Height: =If(App.ActiveScreen.Size<4,90,180)
+    Height: =If(App.ActiveScreen.Size<4,90,150)
     Width: =Max(App.Width, App.MinScreenWidth)
     X: =0
     Y: =0
@@ -8,7 +8,7 @@ Component2_8 As CanvasComponent:
 
     Image2_3 As image:
         DisplayMode: =DisplayMode.View
-        Height: =If(App.ActiveScreen.Size>4,85,50)
+        Height: =If(App.ActiveScreen.Size>4,75,50)
         Image: =User().Image
         ImagePosition: =ImagePosition.Fill
         PaddingRight: =0.00
@@ -17,7 +17,7 @@ Component2_8 As CanvasComponent:
         RadiusBottomRight: =50
         RadiusTopLeft: =50
         RadiusTopRight: =50
-        Width: =If(App.ActiveScreen.Size>4,85,50)
+        Width: =If(App.ActiveScreen.Size>4,75,50)
         X: |-
             =Parent.Width-Self
             .Width-40
@@ -34,7 +34,7 @@ Component2_8 As CanvasComponent:
         Text: =App.ActiveScreen.Name
         Width: =721
         X: =27
-        Y: =121
+        Y: =100
         ZIndex: =7
 
     Label23 As label:
@@ -62,7 +62,7 @@ Component2_8 As CanvasComponent:
         HtmlText1 As htmlViewer:
             Height: =121
             HtmlText: |-
-                ="<div style='margin:10px;width:400px;height:70px;background-color:#FFFFFF;box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
+                ="<div style='margin:10px;width:400px;height:60px;background-color:#FFFFFF;box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
             PaddingRight: =10.98
             PaddingTop: =10.98
             Size: =24.15
@@ -81,8 +81,8 @@ Component2_8 As CanvasComponent:
             PaddingTop: =10
             Visible: =If(App.ActiveScreen.Size<6,false,true)
             Width: =54
-            X: =57
-            Y: =49
+            X: =55
+            Y: =38
             ZIndex: =6
 
         TextInput1 As text:
@@ -98,7 +98,7 @@ Component2_8 As CanvasComponent:
             PressedFill: =
             Visible: =If(App.ActiveScreen.Size<6,false,true)
             Width: =288
-            X: =120
-            Y: =55
+            X: =109
+            Y: =50
             ZIndex: =8
 

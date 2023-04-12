@@ -60,7 +60,7 @@
         "Rules": [
           {
             "Category": "Data",
-            "InvariantScript": "\"<div style='margin:10px;width:400px;height:70px;background-color:#FFFFFF;box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>\"",
+            "InvariantScript": "\"<div style='margin:10px;width:400px;height:60px;background-color:#FFFFFF;box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>\"",
             "Property": "HtmlText",
             "RuleProviderType": "Unknown"
           },
@@ -303,7 +303,7 @@
         "Name": "Label23",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 345,
+        "PublishOrderIndex": 346,
         "Rules": [
           {
             "Category": "Data",
@@ -685,7 +685,7 @@
         "Name": "Image2_3",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 346,
+        "PublishOrderIndex": 347,
         "Rules": [
           {
             "Category": "Data",
@@ -719,13 +719,13 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(App.ActiveScreen.Size>4,85,50)",
+            "InvariantScript": "If(App.ActiveScreen.Size>4,75,50)",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(App.ActiveScreen.Size>4,85,50)",
+            "InvariantScript": "If(App.ActiveScreen.Size>4,75,50)",
             "Property": "Height",
             "RuleProviderType": "Unknown"
           },
@@ -951,7 +951,7 @@
         "Name": "Icon3",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 347,
+        "PublishOrderIndex": 348,
         "Rules": [
           {
             "Category": "Design",
@@ -1015,13 +1015,13 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "57",
+            "InvariantScript": "55",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "49",
+            "InvariantScript": "38",
             "Property": "Y",
             "RuleProviderType": "Unknown"
           },
@@ -1267,7 +1267,7 @@
         "Name": "TextInput1",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 348,
+        "PublishOrderIndex": 349,
         "Rules": [
           {
             "Category": "Data",
@@ -1409,13 +1409,13 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "120",
+            "InvariantScript": "109",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "55",
+            "InvariantScript": "50",
             "Property": "Y",
             "RuleProviderType": "Unknown"
           },
@@ -1574,7 +1574,14 @@
           "Align",
           "VerticalAlign",
           "X",
-          "Y",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "121",
+            "InvariantPropertyName": "Y",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           {
             "AFDDataSourceName": "",
             "AutoRuleBindingEnabled": false,
@@ -1760,7 +1767,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "121",
+            "InvariantScript": "100",
             "Property": "Y",
             "RuleProviderType": "Unknown"
           },
@@ -1899,7 +1906,7 @@
         "Name": "Group2",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 349,
+        "PublishOrderIndex": 345,
         "Rules": [
           {
             "Category": "Design",
@@ -1978,7 +1985,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638168689162641196",
+    "LastModifiedTimestamp": "638168716434863937",
     "Name": "Component2_8",
     "Rules": [
       {
@@ -1989,7 +1996,7 @@
       },
       {
         "Category": "Design",
-        "InvariantScript": "If(App.ActiveScreen.Size<4,90,180)",
+        "InvariantScript": "If(App.ActiveScreen.Size<4,90,150)",
         "Property": "Height",
         "RuleProviderType": "System"
       },
@@ -2037,7 +2044,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638168689162641196",
+  "LastModifiedTimestamp": "638168716434863937",
   "Name": "1a0c18c15f3d4538b2a44920ed7b0270",
   "OverridableProperties": {},
   "TemplateOriginalName": "cbb39dca364b4c88b4fd510bf929de01",
