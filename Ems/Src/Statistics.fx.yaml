@@ -54,7 +54,7 @@ Statistics As screen:
                 Container19 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =15
-                    LayoutMinHeight: =600
+                    LayoutMinHeight: =650
                     LayoutMinWidth: =360
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowY: =LayoutOverflow.Scroll
