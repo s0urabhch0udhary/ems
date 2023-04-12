@@ -38,14 +38,15 @@ Screen2 As screen:
                 ZIndex: =1
 
             Container3_3 As groupContainer.horizontalAutoLayoutContainer:
+                FillPortions: =0
                 Height: =700
-                LayoutMinHeight: =700
+                LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowX: =LayoutOverflow.Scroll
                 LayoutOverflowY: =LayoutOverflow.Scroll
                 LayoutWrap: =true
-                PaddingBottom: =20
+                PaddingBottom: =50
                 PaddingRight: =0.00
                 PaddingTop: =0.00
                 Width: =Parent.Width*2/3
@@ -55,8 +56,8 @@ Screen2 As screen:
                 Container4_2 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =30
-                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,1100,Container4_2.Width<733,1500,550)
-                    LayoutMinWidth: =350
+                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,1100,Container8_2.LayoutMinHeight=410,850,650)
+                    LayoutMinWidth: =420
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
                     LayoutOverflowY: =LayoutOverflow.Scroll
@@ -72,7 +73,7 @@ Screen2 As screen:
                         FillPortions: =0.3
                         Height: =If(Parent.Width<=858,Parent.Height/2+20,Parent.Height/4+20)
                         LayoutGap: =20
-                        LayoutMinHeight: =If(App.ActiveScreen.Width<400,840,Self.Width<733,410,198)
+                        LayoutMinHeight: =If(App.ActiveScreen.Width<400,840,Self.Width<800,410,198)
                         LayoutMinWidth: =190
                         LayoutMode: =LayoutMode.Auto
                         LayoutOverflowY: =LayoutOverflow.Scroll
@@ -372,15 +373,15 @@ Screen2 As screen:
                     FillPortions: =0.5
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMinHeight: =700
-                    LayoutMinWidth: =500
+                    LayoutMinHeight: =600
+                    LayoutMinWidth: =If(App.ActiveScreen.Width<890,Parent.Width-20,500)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
                     LayoutOverflowY: =LayoutOverflow.Scroll
                     PaddingBottom: =20
                     PaddingRight: =0.00
                     PaddingTop: =0.00
-                    Width: =
+                    Width: =Parent.Width
                     X: =1678.24
                     ZIndex: =2
 
@@ -574,7 +575,8 @@ Screen2 As screen:
 
                     Container7_7 As groupContainer.manualLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
-                        Height: =If(App.ActiveScreen.Width<=905,Parent.Height/2+20,Parent.Height/2-20)
+                        FillPortions: =0
+                        Height: =If(App.ActiveScreen.Width<875,Parent.LayoutMinHeight-20,App.ActiveScreen.Width<=905,Parent.Height/2+20,Parent.Height/2-30) 
                         LayoutMinHeight: =280
                         LayoutMinWidth: =250
                         PaddingRight: =0.00
@@ -603,9 +605,9 @@ Screen2 As screen:
                             Y: =83
                             ZIndex: =3
 
-                        Gallery5_5 As gallery.galleryVertical:
+                        Gallery5_8 As gallery.galleryVertical:
                             DelayItemLoading: =true
-                            Height: =278
+                            Height: =Parent.Height*2/3
                             Items: =Filter(Expenses_1,User.Email=User().Email)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
@@ -613,10 +615,10 @@ Screen2 As screen:
                             TemplateSize: =86
                             Width: =Parent.Width*4/5
                             X: =32
-                            Y: =47
+                            Y: =59
                             ZIndex: =4
 
-                            Button16_7 As button:
+                            Button16_10 As button:
                                 BorderThickness: =1
                                 DisabledBorderColor: =RGBA(128, 128, 128, 0.2)
                                 DisabledColor: =RGBA(255, 255, 255, 1)
@@ -625,33 +627,38 @@ Screen2 As screen:
                                 Height: =85
                                 OnSelect: =Select(Parent)
                                 Text: ="Button"
-                                Width: =Parent.Width-10
+                                Width: =Parent.TemplateWidth-4
+                                X: |
+                                    =2
                                 ZIndex: =1
 
-                            Label25_5 As label:
+                            Label25_8 As label:
                                 Height: =52
                                 OnSelect: =Select(Parent)
-                                Size: =14
+                                Size: =If(App.ActiveScreen.Size<=2,9,14)
                                 Text: ="Purchase of "&ThisItem.Title&" is done of ₹"&ThisItem.Amount&"."
                                 Width: =Parent.Width*4/5
                                 X: |
-                                    =70
+                                    =If(App.ActiveScreen.Size=1,20,60)
                                 ZIndex: =2
 
-                            Label26_5 As label:
+                            Label26_8 As label:
                                 FontWeight: =FontWeight.Lighter
                                 Height: =23
                                 OnSelect: =Select(Parent)
+                                Size: =If(App.ActiveScreen.Size<=2,8,13)
                                 Text: =Text(ThisItem.Date,DateTimeFormat.LongDate)
                                 Width: =240
-                                X: =70
+                                X: |
+                                    =If(App.ActiveScreen.Size=1,20,60)
                                 Y: =50
                                 ZIndex: =3
 
-                            Circle5_5 As circle:
+                            Circle5_8 As circle:
                                 Fill: =RGBA(13, 179, 213, 1)
                                 Height: =7
                                 OnSelect: =Select(Parent)
+                                Visible: =If(App.ActiveScreen.Size=1,false,true)
                                 Width: =7
                                 X: |
                                     =30
