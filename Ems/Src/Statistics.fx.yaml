@@ -437,6 +437,7 @@ Statistics As screen:
                             ZIndex: =6
 
                     Container7_5 As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
                         FillPortions: =0
                         Height: =If(App.ActiveScreen.Width<=905,Parent.Height/2+20,Parent.Height/2-30)
                         LayoutMinHeight: =280
