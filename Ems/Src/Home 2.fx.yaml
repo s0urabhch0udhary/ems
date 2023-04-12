@@ -1,4 +1,4 @@
-Screen2 As screen:
+"'Home 2' As screen":
 
     Container1_3 As groupContainer.horizontalAutoLayoutContainer:
         Height: =Parent.Height
@@ -57,7 +57,7 @@ Screen2 As screen:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =30
                     LayoutMinHeight: =If(App.ActiveScreen.Width<405,1100,Container8_2.LayoutMinHeight=410,890,650)
-                    LayoutMinWidth: =420
+                    LayoutMinWidth: =359
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
                     LayoutOverflowY: =LayoutOverflow.Scroll
@@ -308,7 +308,7 @@ Screen2 As screen:
                         FillPortions: =0
                         Height: =400
                         LayoutMinHeight: =200
-                        LayoutMinWidth: =200
+                        LayoutMinWidth: =190
                         ZIndex: =2
 
                         CompositeLineChart3_1 As group:
@@ -374,7 +374,7 @@ Screen2 As screen:
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =600
-                    LayoutMinWidth: =If(App.ActiveScreen.Width<890,Parent.Width-20,500)
+                    LayoutMinWidth: =If(App.ActiveScreen.Width<890,Parent.Width-20,550)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
                     LayoutOverflowY: =LayoutOverflow.Scroll
