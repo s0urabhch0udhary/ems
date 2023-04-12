@@ -825,7 +825,7 @@ Home As screen:
                 Text: ="ADD EXPENSE"
                 Width: =If(App.ActiveScreen.Size<=3,Parent.Width*2/7,Parent.Width*3/7)
                 X: =If(App.ActiveScreen.Size<=3,40,Parent.Width/2)
-                Y: =AddMediaButton1.Y+AddMediaButton1.Height+40
+                Y: =AddMediaButton1.Y+AddMediaButton1.Height+20
                 ZIndex: =16
 
             errorpop As group:
@@ -881,7 +881,7 @@ Home As screen:
                 ZIndex: =26
 
             Container22 As groupContainer.horizontalAutoLayoutContainer:
-                Height: =If(Self.Width<=730,350,230)
+                Height: =If(Self.Width<=730,360,230)
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowX: =LayoutOverflow.Scroll
                 LayoutOverflowY: =LayoutOverflow.Scroll
