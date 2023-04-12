@@ -374,7 +374,7 @@ Expenses As screen:
 
                         Container18_1 As groupContainer.manualLayoutContainer:
                             LayoutMinHeight: =300
-                            LayoutMinWidth: =340
+                            LayoutMinWidth: =If(App.ActiveScreen.Size=1,180,340)
                             ZIndex: =2
 
                             Button9_1 As button:
