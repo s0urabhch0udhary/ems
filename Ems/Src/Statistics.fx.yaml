@@ -15,7 +15,7 @@ Statistics As screen:
             Fill: =RGBA(0, 49, 75, 1) 
             LayoutMinHeight: =640
             LayoutMinWidth: =640
-            Width: =260.91
+            Width: =If(App.ActiveScreen.Size<=4,0,250)
             X: =0.00
             ZIndex: =1
 
@@ -42,6 +42,7 @@ Statistics As screen:
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
+                LayoutWrap: =true
                 PaddingRight: =0.00
                 PaddingTop: =0.00
                 Width: =Parent.Width*2/3
@@ -51,9 +52,10 @@ Statistics As screen:
                 Container19 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =15
-                    LayoutMinHeight: =100
+                    LayoutMinHeight: =600
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
+                    LayoutOverflowY: =LayoutOverflow.Scroll
                     PaddingBottom: =40
                     PaddingLeft: =30
                     PaddingRight: =30
@@ -83,20 +85,21 @@ Statistics As screen:
                             ZIndex: =2
 
                             LineChart4 As lineChart:
-                                Height: =385
+                                Height: =Parent.Height-20
                                 Items: =Filter(Expenses_1,User.Email=User().Email)
-                                Width: =926
-                                X: =60
-                                Y: =22
+                                Width: =Parent.Width-60
+                                X: |
+                                    =30
+                                Y: =5
                                 ZIndex: =4
 
                             Legend5 As legend:
-                                Height: =84
+                                Height: =46
                                 ItemColorSet: =LineChart4.ItemColorSet
                                 Items: =LineChart4.SeriesLabels
-                                Width: =186
-                                X: =903
-                                Y: =56
+                                Width: =106
+                                X: =Parent.Width*3/4
+                                Y: =22
                                 ZIndex: =5
 
                     Container21 As groupContainer.manualLayoutContainer:
@@ -129,7 +132,7 @@ Statistics As screen:
 
                         Gallery6 As gallery.galleryVertical:
                             DelayItemLoading: =true
-                            Height: =260
+                            Height: =Parent.Height*3.5/5
                             Items: =Filter(Expenses_1,User.Email=User().Email)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
@@ -175,7 +178,7 @@ Statistics As screen:
                                 Color: =RGBA(116, 116, 116, 1)
                                 OnSelect: =Select(Parent)
                                 Text: =ThisItem.Date
-                                X: =Parent.Width/2
+                                X: =If(Label18.Visible=false,Parent.Width*2/5,Parent.Width/2)
                                 Y: =22
                                 ZIndex: =4
 
@@ -193,6 +196,7 @@ Statistics As screen:
                                 Height: =43
                                 Icon: =Icon.More
                                 OnSelect: =Select(Parent)
+                                Visible: =If(Parent.Width<550,false,true)
                                 Width: =23
                                 X: =Parent.Width*9/10
                                 Y: =18
