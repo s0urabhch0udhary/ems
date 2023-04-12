@@ -56,7 +56,7 @@ Screen2 As screen:
                 Container4_2 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =30
-                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,1100,Container8_2.LayoutMinHeight=410,850,650)
+                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,1100,Container8_2.LayoutMinHeight=410,890,650)
                     LayoutMinWidth: =420
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
@@ -73,7 +73,7 @@ Screen2 As screen:
                         FillPortions: =0.3
                         Height: =If(Parent.Width<=858,Parent.Height/2+20,Parent.Height/4+20)
                         LayoutGap: =20
-                        LayoutMinHeight: =If(App.ActiveScreen.Width<400,840,Self.Width<800,410,198)
+                        LayoutMinHeight: =If(App.ActiveScreen.Size=1,840,Self.Width<800,410,198)
                         LayoutMinWidth: =190
                         LayoutMode: =LayoutMode.Auto
                         LayoutOverflowY: =LayoutOverflow.Scroll
