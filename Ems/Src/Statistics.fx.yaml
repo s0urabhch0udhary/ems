@@ -42,7 +42,9 @@ Statistics As screen:
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
+                LayoutOverflowY: =LayoutOverflow.Scroll
                 LayoutWrap: =true
+                PaddingBottom: =50
                 PaddingRight: =0.00
                 PaddingTop: =0.00
                 Width: =Parent.Width*2/3
@@ -56,7 +58,7 @@ Statistics As screen:
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowY: =LayoutOverflow.Scroll
-                    PaddingBottom: =40
+                    PaddingBottom: =50
                     PaddingLeft: =30
                     PaddingRight: =30
                     ZIndex: =1
@@ -98,7 +100,7 @@ Statistics As screen:
                                 ItemColorSet: =LineChart4.ItemColorSet
                                 Items: =LineChart4.SeriesLabels
                                 Width: =106
-                                X: =Parent.Width*3/4
+                                X: =Parent.Width*3.5/4-Self.Width
                                 Y: =22
                                 ZIndex: =5
 
@@ -429,6 +431,7 @@ Statistics As screen:
                             ZIndex: =6
 
                     Container7_5 As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Start
                         FillPortions: =0
                         Height: =If(App.ActiveScreen.Width<=905,Parent.Height/2+20,Parent.Height/2-20)
                         LayoutMinHeight: =100
@@ -461,7 +464,7 @@ Statistics As screen:
 
                         Gallery5_2 As gallery.galleryVertical:
                             DelayItemLoading: =true
-                            Height: =317
+                            Height: =Parent.Height*3/5
                             Items: =Filter(Expenses_1,User.Email=User().Email)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
