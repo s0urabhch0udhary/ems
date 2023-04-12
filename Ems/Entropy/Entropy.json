@@ -488,7 +488,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "04/12/2023 10:13:48",
+  "HeaderLastSavedDateTimeUTC": "04/12/2023 10:20:54",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "698fae8b-41e8-457e-8e50-cc4a8e37e8dc": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/shared-office365-469cab2c-0fa5-419a-a551-3efe8ca8fb64\"",
@@ -1468,8 +1468,8 @@
     "Label14": 136,
     "Label15": 403,
     "Label16": 211,
-    "Label17": 218,
-    "Label18": 219,
+    "Label17": 219,
+    "Label18": 218,
     "Label19": 220,
     "Label2": 370,
     "Label20": 217,
@@ -1708,7 +1708,7 @@
       "timer": 3
     },
     "DeserializationLoadTime": 7.078118,
-    "ErrorCount": 7
+    "ErrorCount": 6
   },
   "WasLocalDatabaseReferencesEmpty": true
 }
