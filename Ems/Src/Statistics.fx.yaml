@@ -439,7 +439,7 @@ Statistics As screen:
                     Container7_5 As groupContainer.manualLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         FillPortions: =0
-                        Height: =If(App.ActiveScreen.Width<=905,Parent.Height/2+20,Parent.Height/2-30)
+                        Height: =If(App.ActiveScreen.Width<=905,Parent.Height/2+20,App.ActiveScreen.Width<875,Parent.Height-20,Parent.Height/2-30) 
                         LayoutMinHeight: =280
                         LayoutMinWidth: =250
                         PaddingRight: =0.00
@@ -496,7 +496,7 @@ Statistics As screen:
                             Label25_6 As label:
                                 Height: =52
                                 OnSelect: =Select(Parent)
-                                Size: =14
+                                Size: =If(App.ActiveScreen.Size<=2,10,14)
                                 Text: ="Purchase of "&ThisItem.Title&" is done of ₹"&ThisItem.Amount&"."
                                 Width: =Parent.Width*4/5
                                 X: |
@@ -507,6 +507,7 @@ Statistics As screen:
                                 FontWeight: =FontWeight.Lighter
                                 Height: =23
                                 OnSelect: =Select(Parent)
+                                Size: =App.ActiveScreen.Size<=2,9,13)
                                 Text: =Text(ThisItem.Date,DateTimeFormat.LongDate)
                                 Width: =240
                                 X: =70
