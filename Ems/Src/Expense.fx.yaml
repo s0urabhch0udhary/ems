@@ -73,7 +73,7 @@ Expense As screen:
                         FillPortions: =0.3
                         Height: =If(Parent.Width<=858,Parent.Height/2+20,Parent.Height/4+20)
                         LayoutGap: =20
-                        LayoutMinHeight: =If(App.ActiveScreen.Size=1,840,Self.Width<800,410,198)
+                        LayoutMinHeight: =If(App.ActiveScreen.Size=1,840,Parent.Width<799,410,198)
                         LayoutMinWidth: =190
                         LayoutMode: =LayoutMode.Auto
                         LayoutOverflowY: =LayoutOverflow.Scroll
@@ -755,13 +755,13 @@ Expense As screen:
                                 ZIndex: =4
 
     Label35 As label:
-        Text: =App.ActiveScreen.Size
+        Text: =Container8_3.Width
         X: =668
         Y: =114
         ZIndex: =2
 
     Label36 As label:
-        Text: =Container3_4.Width
+        Text: =Container4_3.Width
         X: =459
         Y: =114
         ZIndex: =3
