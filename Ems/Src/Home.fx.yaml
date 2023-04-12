@@ -336,7 +336,8 @@ Home As screen:
                             LineChart3 As lineChart:
                                 Height: =287
                                 Items: =Filter(Expenses_1,User.Email=User().Email)
-                                Width: =797
+                                Width: =Parent.Width-60
+                                X: =30
                                 Y: =90
                                 ZIndex: =4
 
@@ -372,7 +373,7 @@ Home As screen:
                             ZIndex: =6
 
                 Container6 As groupContainer.verticalAutoLayoutContainer:
-                    FillPortions: =0.75
+                    FillPortions: =0.4
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =700
                     LayoutMinWidth: =450
