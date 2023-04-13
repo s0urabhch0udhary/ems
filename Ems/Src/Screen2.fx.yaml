@@ -55,7 +55,7 @@ Screen2 As screen:
                 Container4_4 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =30
-                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,900,Container8_4.LayoutMinHeight=410,910,630)
+                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,900,Container8_4.LayoutMinHeight=410&&Container17_2.Width<680,1260,Container8_4.LayoutMinHeight=410,910,630)
                     LayoutMinWidth: =If(App.ActiveScreen.Size=1,300,430)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
@@ -306,7 +306,7 @@ Screen2 As screen:
                     Container17_2 As groupContainer.horizontalAutoLayoutContainer:
                         Height: =500
                         LayoutGap: =30
-                        LayoutMinHeight: =If(Container17_2.Width<820,680,320)
+                        LayoutMinHeight: =If(Container17_2.Width<705,780,320)
                         LayoutMinWidth: =If(App.ActiveScreen.Size=1,190,350)
                         LayoutMode: =LayoutMode.Auto
                         LayoutOverflowX: =LayoutOverflow.Scroll
@@ -486,7 +486,7 @@ Screen2 As screen:
                         PaddingRight: =0.00
                         PaddingTop: =0.00
                         Visible: =If(App.ActiveScreen.Size<4,false,true)
-                        Width: =906.59
+                        Width: =Parent.Width
                         X: =0.00
                         ZIndex: =1
 
@@ -500,7 +500,7 @@ Screen2 As screen:
                             Visible: =_calendarVisible
                             Width: =155
                             Wrap: =false
-                            X: =30
+                            X: =MonthDayGallery1_6.X
                             Y: =4
                             ZIndex: =1
 
@@ -522,7 +522,7 @@ Screen2 As screen:
                             Tooltip: ="View previous month"
                             Visible: =_calendarVisible
                             Width: =35
-                            X: =314
+                            X: =MonthDayGallery1_6.X+MonthDayGallery1_6.Width-20-2*Self.Width
                             Y: =4
                             ZIndex: =2
 
@@ -544,7 +544,7 @@ Screen2 As screen:
                             Tooltip: ="View next month"
                             Visible: =_calendarVisible
                             Width: =35
-                            X: =367
+                            X: =MonthDayGallery1_6.X+MonthDayGallery1_6.Width-10-Self.Width
                             Y: =4
                             ZIndex: =3
 
@@ -557,7 +557,7 @@ Screen2 As screen:
                             TemplateSize: =Self.Width/7
                             Visible: =_calendarVisible
                             Width: =385
-                            X: =30
+                            X: =MonthDayGallery1_6.X
                             Y: =45
                             ZIndex: =4
 
@@ -584,7 +584,7 @@ Screen2 As screen:
                             Visible: =_calendarVisible
                             Width: =385
                             WrapCount: =7
-                            X: =30
+                            X: =If(App.ActiveScreen.Width<1000,Parent.Width/2-Self.Width/2,30)
                             Y: =82
                             ZIndex: =5
 
@@ -762,7 +762,7 @@ Screen2 As screen:
         ZIndex: =2
 
     Label11 As label:
-        Text: =Container8_4.Width
+        Text: =Container17_2.Width
         X: =428
         Y: =128
         ZIndex: =3
