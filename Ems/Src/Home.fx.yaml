@@ -409,7 +409,7 @@ Home As screen:
                             Visible: =_calendarVisible
                             Width: =155
                             Wrap: =false
-                            X: =61
+                            X: =MonthDayGallery1_6.X
                             Y: =4
                             ZIndex: =1
 
@@ -431,7 +431,7 @@ Home As screen:
                             Tooltip: ="View previous month"
                             Visible: =_calendarVisible
                             Width: =35
-                            X: =314
+                            X: =WeekdayGallery1_3.X+WeekdayGallery1_3.Width-2*Self.Width-20
                             Y: =4
                             ZIndex: =2
 
@@ -453,7 +453,7 @@ Home As screen:
                             Tooltip: ="View next month"
                             Visible: =_calendarVisible
                             Width: =35
-                            X: =367
+                            X: =WeekdayGallery1_3.X+WeekdayGallery1_3.Width-Self.Width-10
                             Y: =4
                             ZIndex: =3
 
@@ -466,7 +466,7 @@ Home As screen:
                             TemplateSize: =Self.Width/7
                             Visible: =_calendarVisible
                             Width: =385
-                            X: =61
+                            X: =MonthDayGallery1_6.X
                             Y: =45
                             ZIndex: =4
 
@@ -493,7 +493,7 @@ Home As screen:
                             Visible: =_calendarVisible
                             Width: =385
                             WrapCount: =7
-                            X: =61
+                            X: =If(App.ActiveScreen.Width<1000,Parent.Width/2-Self.Width/2,30)
                             Y: =82
                             ZIndex: =5
 

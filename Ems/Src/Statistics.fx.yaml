@@ -330,7 +330,7 @@ Statistics As screen:
                             TemplateSize: =Self.Width/7
                             Visible: =_calendarVisible
                             Width: =385
-                            X: =30
+                            X: =MonthDayGallery1_3.X
                             Y: =45
                             ZIndex: =4
 
@@ -357,7 +357,7 @@ Statistics As screen:
                             Visible: =_calendarVisible
                             Width: =385
                             WrapCount: =7
-                            X: =30
+                            X: =If(App.ActiveScreen.Width<1000,Parent.Width/2-Self.Width/2,30)
                             Y: =82
                             ZIndex: =5
 
