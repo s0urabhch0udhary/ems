@@ -122,12 +122,11 @@
   },
   "ScreenOrder": [
     "Home",
-    "Expenses",
+    "Expense",
     "Statistics",
     "Profile",
     "Screen5",
     "Screen1",
-    "Expense",
     "Screen3"
   ]
 }
