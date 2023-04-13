@@ -1,7 +1,12 @@
 Statistics As screen:
     Fill: =RGBA(248, 248, 248, 1)
     LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
-    OnVisible: =Set(_calendarVisible, true)
+    OnVisible: |-
+        =Set(_dateSelected, Today());
+        Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));
+        Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+        Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
+        Set(_calendarVisible, true)
 
     Container1_2 As groupContainer.horizontalAutoLayoutContainer:
         Height: =Parent.Height

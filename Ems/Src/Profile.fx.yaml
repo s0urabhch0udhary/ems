@@ -1,6 +1,12 @@
 Profile As screen:
     Fill: =RGBA(248, 248, 248,1)
     LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
+    OnVisible: |-
+        =Set(_dateSelected, Today());
+        Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));
+        Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+        Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
+        Set(_calendarVisible, true);
 
     Container1_5 As groupContainer.horizontalAutoLayoutContainer:
         Height: =Parent.Height
@@ -12,7 +18,7 @@ Profile As screen:
         ZIndex: =1
 
         "'Left Navigation_11' As 'Left Navigation_3'":
-            CurrentScreen: ="Statistics"
+            CurrentScreen: ="Profile"
             Fill: =RGBA(0, 49, 75, 1) 
             LayoutMinHeight: =640
             LayoutMinWidth: =640
@@ -102,8 +108,9 @@ Profile As screen:
                         Default: =User().FullName
                         DisabledBorderColor: =RGBA(128, 128, 128, 1)
                         DisabledColor: =RGBA(0, 0, 0, 1)
-                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(230, 230, 230, 1)
                         DisplayMode: =DisplayMode.Disabled
+                        Fill: =RGBA(179, 179, 179, 1)
                         FocusedBorderThickness: =4
                         Height: =64
                         HoverBorderColor: =RGBA(32, 54, 71, 1)
