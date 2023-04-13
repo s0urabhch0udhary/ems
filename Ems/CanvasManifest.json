@@ -122,10 +122,8 @@
   },
   "ScreenOrder": [
     "Home",
+    "Expenses",
     "Statistics",
-    "Profile",
-    "Screen5",
-    "Screen1",
-    "Expenses"
+    "Profile"
   ]
 }

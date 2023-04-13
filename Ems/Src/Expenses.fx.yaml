@@ -56,7 +56,7 @@ Expenses As screen:
                 Container4_4 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =30
-                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,900,Container8_4.LayoutMinHeight=410&&Container17_2.Width<680,1260,Container8_4.LayoutMinHeight=410,910,630)
+                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,900,Container8_4.LayoutMinHeight=410&&Container17_2.Width<680,1200,Container8_4.LayoutMinHeight=410,910,630)
                     LayoutMinWidth: =If(App.ActiveScreen.Size=1,300,430)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
