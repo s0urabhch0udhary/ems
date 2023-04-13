@@ -529,15 +529,3 @@ Statistics As screen:
                                 Y: =20
                                 ZIndex: =4
 
-    Label26 As label:
-        Text: =App.ActiveScreen.Width
-        X: =498
-        Y: =126
-        ZIndex: =2
-
-    Label7 As label:
-        Text: =App.ActiveScreen.Height
-        X: =612
-        Y: =126
-        ZIndex: =3
-

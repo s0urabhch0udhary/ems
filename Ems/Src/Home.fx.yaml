@@ -670,12 +670,6 @@ Home As screen:
         Y: =123
         ZIndex: =2
 
-    Label33 As label:
-        Text: =App.ActiveScreen.Size
-        X: =689
-        Y: =99
-        ZIndex: =3
-
     Container5_2 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(0, 0, 0, 0.24)
         Height: =1080
