@@ -5,7 +5,8 @@ Expenses As screen:
         Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));
         Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
         Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
-        Set(_calendarVisible, true)
+        Set(_calendarVisible, true);
+        If(App.ActiveScreen.Name='Left Navigation_6'.CurrentScreen,Set(navVisible,false),Set(navVisible,true));
 
     Container1_6 As groupContainer.horizontalAutoLayoutContainer:
         Height: =Parent.Height
@@ -1374,4 +1375,39 @@ Expenses As screen:
                         X: =36
                         Y: =47
                         ZIndex: =8
+
+    Container3_1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(0, 0, 0, 0.26)
+        Height: =1080
+        Visible: =navVisible
+        Width: =1920
+        ZIndex: =3
+
+        "'Left Navigation_6' As 'Left Navigation_3'":
+            CurrentScreen: ="Expenses"
+            Width: =App.ActiveScreen.Width/2+10
+            ZIndex: =1
+
+        Icon4_1 As icon.Cancel:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Color: =RGBA(153, 153, 153, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =30
+            Icon: =Icon.Cancel
+            OnSelect: =Set(navVisible,false)
+            Width: =25
+            X: ='Left Navigation_6'.Width-Self.Width-10
+            Y: =14
+            ZIndex: =2
+
+    Icon6 As icon.Hamburger:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.Hamburger
+        OnSelect: =Set(navVisible,true);
+        Visible: =If(App.ActiveScreen.Size<=5,true,false)
+        X: =16
+        ZIndex: =4
 
