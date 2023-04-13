@@ -55,7 +55,7 @@ Home As screen:
                 Container4_2 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =30
-                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,900,Container8_2.LayoutMinHeight=410,950,630)
+                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,900,Container8_2.LayoutMinHeight=410,910,630)
                     LayoutMinWidth: =If(App.ActiveScreen.Size=1,300,430)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
@@ -304,6 +304,7 @@ Home As screen:
                                 ZIndex: =6
 
                     Container16_1 As groupContainer.manualLayoutContainer:
+                        FillPortions: =0
                         Height: =400
                         LayoutMinHeight: =200
                         LayoutMinWidth: =190
@@ -371,7 +372,7 @@ Home As screen:
                     FillPortions: =0.5
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMinHeight: =If(App.ActiveScreen.Width<1000,700,550)
+                    LayoutMinHeight: =If(App.ActiveScreen.Width<1000,700,600)
                     LayoutMinWidth: =If(App.ActiveScreen.Width<1001,Parent.Width-20,560)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
@@ -574,7 +575,6 @@ Home As screen:
 
                     Container7_7 As groupContainer.manualLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
-                        FillPortions: =0
                         Height: =If(App.ActiveScreen.Width<875,Parent.LayoutMinHeight-20,App.ActiveScreen.Width<=905,Parent.Height/2+20,Parent.Height/2-30) 
                         LayoutMinHeight: =280
                         LayoutMinWidth: =250
@@ -665,8 +665,8 @@ Home As screen:
 
     Label32 As label:
         Text: =Container4_2.Width
-        X: =539
-        Y: =99
+        X: =78
+        Y: =123
         ZIndex: =2
 
     Label33 As label:
@@ -1037,7 +1037,7 @@ Home As screen:
     Label8 As label:
         Height: =59
         Text: =App.ActiveScreen.Width
-        X: =850
-        Y: =89
+        X: =164
+        Y: =113
         ZIndex: =5
 
