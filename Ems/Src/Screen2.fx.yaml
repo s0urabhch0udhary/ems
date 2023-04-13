@@ -72,7 +72,7 @@ Screen2 As screen:
                         FillPortions: =0.3
                         Height: =If(Parent.Width<=858,Parent.Height/2+20,Parent.Height/4+20)
                         LayoutGap: =20
-                        LayoutMinHeight: =If(App.ActiveScreen.Size=1,840,Self.Width<790,410,198)
+                        LayoutMinHeight: =If(App.ActiveScreen.Size=1,840,Self.Width<770,410,198)
                         LayoutMinWidth: =If(App.ActiveScreen.Size=1,190,300)
                         LayoutMode: =LayoutMode.Auto
                         LayoutOverflowY: =LayoutOverflow.Scroll
@@ -756,13 +756,13 @@ Screen2 As screen:
                                 ZIndex: =4
 
     Label10 As label:
-        Text: ="Text"
+        Text: =App.ActiveScreen.Width
         X: =428
         Y: =57
         ZIndex: =2
 
     Label11 As label:
-        Text: ="Text"
+        Text: =Container8_4.Width
         X: =428
         Y: =128
         ZIndex: =3
