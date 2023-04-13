@@ -7,7 +7,9 @@ Component2_3 As CanvasComponent:
     ZIndex: =10
 
     Icon1 As icon.Help:
-        Color: =RGBA(0, 0, 0, 1)
+        BorderColor: =RGBA(0, 18, 107, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.Help
         PaddingRight: =0.00
         PaddingTop: =0.00
@@ -25,6 +27,9 @@ Component2_3 As CanvasComponent:
         ZIndex: =5
 
         Image2_1 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             DisplayMode: =DisplayMode.View
             Height: =87
             Image: =User().Image
@@ -41,6 +46,9 @@ Component2_3 As CanvasComponent:
             ZIndex: =1
 
         Label5_1 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
             Height: =44
             PaddingRight: =13.83
@@ -64,7 +72,9 @@ Component2_3 As CanvasComponent:
             ZIndex: =4
 
     Icon2 As icon.Bell:
-        Color: =RGBA(0, 0, 0, 1)
+        BorderColor: =RGBA(0, 18, 107, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.Bell
         PaddingRight: =0.00
         PaddingTop: =0.00

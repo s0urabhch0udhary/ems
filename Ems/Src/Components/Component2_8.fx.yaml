@@ -7,6 +7,9 @@ Component2_8 As CanvasComponent:
     ZIndex: =12
 
     Image2_3 As image:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.View
         Height: =If(App.ActiveScreen.Size>4,75,50)
         Image: =User().Image
@@ -25,7 +28,9 @@ Component2_8 As CanvasComponent:
         ZIndex: =1
 
     Label6 As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
         Color: =RGBA(116, 116, 116, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Semibold
         Height: =59
         PaddingRight: =10.98
@@ -39,6 +44,9 @@ Component2_8 As CanvasComponent:
 
     Label23 As label:
         Align: =Align.Justify
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Semibold
         Height: =85
         Size: =20
@@ -73,7 +81,9 @@ Component2_8 As CanvasComponent:
             ZIndex: =5
 
         Icon3 As icon.Search:
-            Color: =RGBA(0, 0, 0, 1)
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =52
             Icon: =Icon.Search
             PaddingBottom: =10
@@ -87,15 +97,22 @@ Component2_8 As CanvasComponent:
 
         TextInput1 As text:
             BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
             Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
             HintText: ="Search"
             HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
             Mode: =TextMode.MultiLine
             PressedColor: =
             PressedFill: =
+            Size: =13
             Visible: =If(App.ActiveScreen.Size<6,false,true)
             Width: =288
             X: =109

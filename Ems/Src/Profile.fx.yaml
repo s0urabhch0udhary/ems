@@ -1,5 +1,6 @@
 Profile As screen:
     Fill: =RGBA(248, 248, 248,1)
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
 
     Container1_5 As groupContainer.horizontalAutoLayoutContainer:
         Height: =Parent.Height
@@ -64,16 +65,24 @@ Profile As screen:
                         DisabledColor: =RGBA(0, 0, 0, 0)
                         DisabledFill: =RGBA(255, 255, 255, 1)
                         DisplayMode: =DisplayMode.Disabled
+                        Fill: =RGBA(100, 118, 132, 1)
+                        FontWeight: =FontWeight.Semibold
                         Height: =600
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
                         RadiusBottomLeft: =40
                         RadiusBottomRight: =40
                         RadiusTopLeft: =40
                         RadiusTopRight: =40
+                        Size: =15
                         Text: ="Button"
                         Width: =Parent.Width
                         ZIndex: =1
 
                     Image9 As image:
+                        BorderColor: =RGBA(32, 54, 71, 1)
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
                         Height: =92
                         Image: =User().Image
                         ImagePosition: =ImagePosition.Fill
@@ -87,12 +96,19 @@ Profile As screen:
                         ZIndex: =2
 
                     TextInput3 As text:
+                        BorderColor: =RGBA(32, 54, 71, 1)
+                        BorderThickness: =2
+                        Color: =RGBA(0, 0, 0, 1)
                         Default: =User().FullName
                         DisabledBorderColor: =RGBA(128, 128, 128, 1)
                         DisabledColor: =RGBA(0, 0, 0, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
                         DisplayMode: =DisplayMode.Disabled
+                        FocusedBorderThickness: =4
                         Height: =64
+                        HoverBorderColor: =RGBA(32, 54, 71, 1)
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =RGBA(205, 209, 213, 1)
                         RadiusBottomLeft: =10
                         RadiusBottomRight: =10
                         RadiusTopLeft: =10
@@ -104,12 +120,19 @@ Profile As screen:
                         ZIndex: =3
 
                     TextInput3_1 As text:
+                        BorderColor: =RGBA(32, 54, 71, 1)
+                        BorderThickness: =2
+                        Color: =RGBA(0, 0, 0, 1)
                         Default: =User().Email
                         DisabledBorderColor: =RGBA(128, 128, 128, 1)
                         DisabledColor: =RGBA(0, 0, 0, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
                         DisplayMode: =DisplayMode.Disabled
+                        FocusedBorderThickness: =4
                         Height: =64
+                        HoverBorderColor: =RGBA(32, 54, 71, 1)
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =RGBA(205, 209, 213, 1)
                         RadiusBottomLeft: =10
                         RadiusBottomRight: =10
                         RadiusTopLeft: =10
@@ -151,6 +174,8 @@ Profile As screen:
 
                         LblMonthSelected1_7 As label:
                             Align: =Align.Center
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
                             Font: =Font.'Lato Black'
                             FontWeight: =FontWeight.Semibold
                             Height: =41
@@ -164,6 +189,10 @@ Profile As screen:
                             ZIndex: =1
 
                         iconPrevMonth1_7 As icon.ChevronLeft:
+                            BorderColor: =RGBA(32, 54, 71, 1)
+                            Color: =RGBA(32, 54, 71, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(244, 244, 244, 1)
                             Height: =41
                             Icon: =Icon.ChevronLeft
                             OnSelect: |-
@@ -186,6 +215,10 @@ Profile As screen:
                             ZIndex: =2
 
                         iconNextMonth1_7 As icon.ChevronRight:
+                            BorderColor: =RGBA(32, 54, 71, 1)
+                            Color: =RGBA(32, 54, 71, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(244, 244, 244, 1)
                             Height: =41
                             Icon: =Icon.ChevronRight
                             OnSelect: |-
@@ -209,6 +242,7 @@ Profile As screen:
 
                         WeekdayGallery1_7 As gallery.WeekdayGallery:
                             AccessibleLabel: ="Days of the week"
+                            BorderColor: =RGBA(32, 54, 71, 1)
                             Height: =37
                             Items: =Calendar.WeekdaysShort()
                             ShowScrollbar: =false
@@ -222,6 +256,8 @@ Profile As screen:
 
                             Title4_7 As label:
                                 Align: =Align.Center
+                                Color: =RGBA(0, 0, 0, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
                                 Height: =WeekdayGallery1_7.TemplateHeight
                                 OnSelect: =Select(Parent)
                                 Size: =17 * WeekdayGallery1_7.TemplateWidth / 77
@@ -234,6 +270,7 @@ Profile As screen:
 
                         MonthDayGallery1_7 As gallery.MonthDayGallery:
                             AccessibleLabel: ="Days of selected month"
+                            BorderColor: =RGBA(32, 54, 71, 1)
                             Height: =270
                             Items: =[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19, 20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
                             Layout: =Layout.Vertical
@@ -248,6 +285,8 @@ Profile As screen:
                             ZIndex: =5
 
                             Circle1_7 As circle:
+                                BorderColor: =RGBA(32, 54, 71, 1)
+                                Fill: =RGBA(205, 209, 213, 1)
                                 Height: =Self.Width
                                 OnSelect: =Select(Parent)
                                 Visible: |-
@@ -258,6 +297,8 @@ Profile As screen:
                                 ZIndex: =1
 
                             Subcircle1_7 As circle:
+                                BorderColor: =RGBA(32, 54, 71, 1)
+                                Fill: =RGBA(100, 118, 132, 1)
                                 Height: =3 * Title5_7.Size
                                 OnSelect: =Select(Parent)
                                 Visible: =And(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, Title5_7.Visible)
@@ -270,6 +311,7 @@ Profile As screen:
                                 Align: =Align.Center
                                 BorderColor: =RGBA(0, 0, 0, 0)
                                 Color: =If(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(255, 255, 255, 1), DateAdd(_firstDayInView, ThisItem.Value) = Today(), RGBA(47, 41, 43, 1), LblMonthSelected1_7.Color)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
                                 Fill: |-
                                     =/*Fill value changes if the gallery item day = today, or if it lies outside of the current month*/             
                                     If(
@@ -294,8 +336,19 @@ Profile As screen:
                                 ZIndex: =3
 
                         dropdownCalendarSelection1_7 As dropdown:
+                            BorderColor: =RGBA(32, 54, 71, 1)
+                            ChevronBackground: =RGBA(100, 118, 132, 1)
+                            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                            ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                            ChevronHoverFill: =RGBA(255, 255, 255, 1)
                             Default: =_myCalendar.DisplayName
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
                             Height: =37
+                            HoverColor: =RGBA(0, 0, 0, 1)
+                            HoverFill: =RGBA(205, 209, 213, 1)
                             Items: =Office365Outlook.CalendarGetTables().value
                             OnChange: =Select(dropdownCalendarSelection1_7)
                             OnSelect: |-
@@ -317,6 +370,10 @@ Profile As screen:
                                 ClearCollect(MyCalendarEvents, Office365Outlook.GetEventsCalendarViewV2(_myCalendar.Name, Text(_minDate, DateTimeFormat.UTC), Text(_maxDate, DateTimeFormat.UTC)).value);         
                                 UpdateContext({_showLoading: false});         
                                 Set(_calendarVisible, true)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(32, 54, 71, 1)
+                            SelectionFill: =RGBA(100, 118, 132, 1)
+                            Size: =13
                             Tooltip: ="Select a calendar"
                             Visible: =false
                             Width: =97
@@ -337,6 +394,9 @@ Profile As screen:
                         ZIndex: =2
 
                         Label10_6 As label:
+                            BorderColor: =RGBA(32, 54, 71, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
                             Font: =Font.'Lato Black'
                             FontWeight: =FontWeight.Semibold
                             Height: =55
@@ -348,6 +408,9 @@ Profile As screen:
                             ZIndex: =1
 
                         Label24_11 As label:
+                            BorderColor: =RGBA(32, 54, 71, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
                             Height: =96
                             Size: =18
                             Text: =If(IsEmpty(Filter(Expenses_1,User.Email=User().Email))=true,"No Notification","")
@@ -357,6 +420,7 @@ Profile As screen:
                             ZIndex: =3
 
                         Gallery5_10 As gallery.galleryVertical:
+                            BorderColor: =RGBA(32, 54, 71, 1)
                             DelayItemLoading: =true
                             Height: =Parent.Height*2/3
                             Items: =Filter(Expenses_1,User.Email=User().Email)
@@ -375,8 +439,13 @@ Profile As screen:
                                 DisabledColor: =RGBA(255, 255, 255, 1)
                                 DisabledFill: =RGBA(255, 255, 255, 1)
                                 DisplayMode: =DisplayMode.Disabled
+                                Fill: =RGBA(100, 118, 132, 1)
+                                FontWeight: =FontWeight.Semibold
                                 Height: =85
+                                HoverColor: =RGBA(255, 255, 255, 1)
+                                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
                                 OnSelect: =Select(Parent)
+                                Size: =15
                                 Text: ="Button"
                                 Width: =Parent.TemplateWidth-4
                                 X: |
@@ -384,6 +453,9 @@ Profile As screen:
                                 ZIndex: =1
 
                             Label25_10 As label:
+                                BorderColor: =RGBA(32, 54, 71, 1)
+                                Color: =RGBA(0, 0, 0, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
                                 Height: =52
                                 OnSelect: =Select(Parent)
                                 Size: =If(App.ActiveScreen.Size<=2,9,14)
@@ -394,6 +466,9 @@ Profile As screen:
                                 ZIndex: =2
 
                             Label26_10 As label:
+                                BorderColor: =RGBA(32, 54, 71, 1)
+                                Color: =RGBA(0, 0, 0, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
                                 FontWeight: =FontWeight.Lighter
                                 Height: =23
                                 OnSelect: =Select(Parent)
@@ -406,6 +481,7 @@ Profile As screen:
                                 ZIndex: =3
 
                             Circle5_10 As circle:
+                                BorderColor: =RGBA(32, 54, 71, 1)
                                 Fill: =RGBA(13, 179, 213, 1)
                                 Height: =7
                                 OnSelect: =Select(Parent)
