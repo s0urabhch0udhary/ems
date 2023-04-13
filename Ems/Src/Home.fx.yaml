@@ -1,12 +1,11 @@
 Home As screen:
     LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
-    OnVisible: |-
+    OnVisible: |
         =Set(_dateSelected, Today());
         Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));
         Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
         Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
         Set(_calendarVisible, true);
-        If(App.ActiveScreen.Name='Left Navigation_4'.CurrentScreen,Set(navVisible,false),Set(navVisible,true));
 
     Container1_3 As groupContainer.horizontalAutoLayoutContainer:
         Height: =Parent.Height
@@ -1279,7 +1278,7 @@ Home As screen:
     Container3 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(0, 0, 0, 0.26)
         Height: =1080
-        Visible: =navVisible
+        Visible: =navVisible2
         Width: =1920
         ZIndex: =5
 
@@ -1295,7 +1294,7 @@ Home As screen:
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =30
             Icon: =Icon.Cancel
-            OnSelect: =Set(navVisible,false)
+            OnSelect: =Set(navVisible2,false)
             Width: =25
             X: ='Left Navigation_4'.Width-Self.Width-10
             Y: =14
@@ -1306,7 +1305,7 @@ Home As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.Hamburger
-        OnSelect: =Set(navVisible,true);
+        OnSelect: =Set(navVisible2,true);
         Visible: =If(App.ActiveScreen.Size<=5,true,false)
         X: =36
         Y: =20

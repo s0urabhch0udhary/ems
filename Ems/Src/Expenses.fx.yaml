@@ -1,12 +1,11 @@
 Expenses As screen:
     LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
-    OnVisible: |-
+    OnVisible: |
         =Set(_dateSelected, Today());
         Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));
         Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
         Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
         Set(_calendarVisible, true);
-        If(App.ActiveScreen.Name='Left Navigation_6'.CurrentScreen,Set(navVisible,false),Set(navVisible,true));
 
     Container1_6 As groupContainer.horizontalAutoLayoutContainer:
         Height: =Parent.Height
