@@ -54,17 +54,17 @@ Statistics As screen:
                 Container19 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =15
-                    LayoutMinHeight: =650
+                    LayoutMinHeight: =If(App.ActiveScreen.Size<=3,760,640)
                     LayoutMinWidth: =360
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowY: =LayoutOverflow.Scroll
                     PaddingBottom: =50
-                    PaddingLeft: =30
+                    PaddingLeft: =50
                     PaddingRight: =30
                     ZIndex: =1
 
                     Container20 As groupContainer.manualLayoutContainer:
-                        LayoutMinHeight: =100
+                        LayoutMinHeight: =If(App.ActiveScreen.Size<=3,350,300)
                         LayoutMinWidth: =200
                         ZIndex: =1
 
@@ -105,9 +105,8 @@ Statistics As screen:
                                 ZIndex: =5
 
                     Container21 As groupContainer.manualLayoutContainer:
-                        FillPortions: =0
                         Height: =Parent.Height/2-30
-                        LayoutMinHeight: =100
+                        LayoutMinHeight: =If(App.ActiveScreen.Size<=3,350,220)
                         LayoutMinWidth: =200
                         ZIndex: =2
 
@@ -126,7 +125,7 @@ Statistics As screen:
                             Font: =Font.'Lato Black'
                             Height: =60
                             Size: =20
-                            Text: ="Transaction"
+                            Text: ="Transactions"
                             Width: =184
                             X: =58
                             Y: =20
@@ -157,7 +156,7 @@ Statistics As screen:
                             Label17 As label:
                                 Height: =38
                                 OnSelect: =Select(Parent)
-                                Size: =12
+                                Size: =If(App.ActiveScreen.Size<=2,9,12)
                                 Text: =ThisItem.User.DisplayName
                                 Visible: =If(Parent.Width<750,false,true)
                                 Width: =177
@@ -169,7 +168,7 @@ Statistics As screen:
                                 Color: =RGBA(149, 149, 149, 1)
                                 FontWeight: =FontWeight.Semibold
                                 OnSelect: =Select(Parent)
-                                Size: =12
+                                Size: =If(App.ActiveScreen.Size<=2,9,12)
                                 Text: =ThisItem.PaymentType.Value
                                 Visible: =If(Parent.Width<750,false,true)
                                 X: =If(Label17.Visible=true,Parent.Width/3.5,Parent.Width/5)
@@ -179,6 +178,7 @@ Statistics As screen:
                             Label19 As label:
                                 Color: =RGBA(116, 116, 116, 1)
                                 OnSelect: =Select(Parent)
+                                Size: =If(App.ActiveScreen.Size<=2,9,12)
                                 Text: =ThisItem.Date
                                 X: =If(Label18.Visible=false,Parent.Width*2/6,Parent.Width/2)
                                 Y: =22
@@ -188,6 +188,7 @@ Statistics As screen:
                                 Color: =RGBA(184, 0, 0, 1)
                                 Height: =41
                                 OnSelect: =Select(Parent)
+                                Size: =If(App.ActiveScreen.Size<=2,9,12)
                                 Text: ="- ₹"&ThisItem.Amount
                                 Width: =115
                                 X: =Parent.Width/1.4
@@ -236,12 +237,13 @@ Statistics As screen:
                     FillPortions: =0.5
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMinHeight: =600
+                    LayoutMinHeight: =650
                     LayoutMinWidth: =If(App.ActiveScreen.Width<875,Parent.Width,500)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
                     LayoutOverflowY: =LayoutOverflow.Scroll
                     PaddingBottom: =20
+                    PaddingLeft: =40
                     PaddingRight: =0.00
                     PaddingTop: =0.00
                     Width: =Parent.Width
@@ -250,9 +252,8 @@ Statistics As screen:
 
                     Container7_4 As groupContainer.manualLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
-                        FillPortions: =0
                         Height: =Parent.Height/2+30
-                        LayoutMinHeight: =300
+                        LayoutMinHeight: =350
                         LayoutMinWidth: =250
                         PaddingRight: =0.00
                         PaddingTop: =0.00
@@ -271,8 +272,8 @@ Statistics As screen:
                             Visible: =_calendarVisible
                             Width: =155
                             Wrap: =false
-                            X: =61
-                            Y: =4
+                            X: =WeekdayGallery1_3.X
+                            Y: =8
                             ZIndex: =1
 
                         iconPrevMonth1_3 As icon.ChevronLeft:
@@ -293,7 +294,7 @@ Statistics As screen:
                             Tooltip: ="View previous month"
                             Visible: =_calendarVisible
                             Width: =35
-                            X: =314
+                            X: =WeekdayGallery1_3.X+WeekdayGallery1_3.Width-2*Self.Width-20
                             Y: =4
                             ZIndex: =2
 
@@ -315,7 +316,7 @@ Statistics As screen:
                             Tooltip: ="View next month"
                             Visible: =_calendarVisible
                             Width: =35
-                            X: =367
+                            X: =WeekdayGallery1_3.X+WeekdayGallery1_3.Width-Self.Width-10
                             Y: =4
                             ZIndex: =3
 
@@ -328,7 +329,7 @@ Statistics As screen:
                             TemplateSize: =Self.Width/7
                             Visible: =_calendarVisible
                             Width: =385
-                            X: =61
+                            X: =30
                             Y: =45
                             ZIndex: =4
 
@@ -355,7 +356,7 @@ Statistics As screen:
                             Visible: =_calendarVisible
                             Width: =385
                             WrapCount: =7
-                            X: =61
+                            X: =30
                             Y: =82
                             ZIndex: =5
 
@@ -438,7 +439,6 @@ Statistics As screen:
 
                     Container7_5 As groupContainer.manualLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
-                        FillPortions: =0
                         Height: =If(App.ActiveScreen.Width<875,Parent.LayoutMinHeight-20,App.ActiveScreen.Width<=905,Parent.Height/2+20,Parent.Height/2-30) 
                         LayoutMinHeight: =280
                         LayoutMinWidth: =250
@@ -455,7 +455,7 @@ Statistics As screen:
                             Size: =16
                             Text: ="Notifications"
                             Width: =240
-                            X: =16
+                            X: =Gallery5_6.X+10
                             Y: =4
                             ZIndex: =1
 
@@ -476,8 +476,8 @@ Statistics As screen:
                             LoadingSpinner: =LoadingSpinner.Data
                             ShowScrollbar: =false
                             TemplateSize: =86
-                            Width: =Parent.Width*4/5
-                            X: =If(App.ActiveScreen.Size=1,10,30)
+                            Width: =If(App.ActiveScreen.Size<=3,Parent.Width*8.5/10,Parent.Width*4/5)
+                            X: =If(App.ActiveScreen.Size=1,10,App.ActiveScreen.Size<=3,20,30)
                             Y: =59
                             ZIndex: =4
 
@@ -533,4 +533,10 @@ Statistics As screen:
         X: =498
         Y: =126
         ZIndex: =2
+
+    Label7 As label:
+        Text: =App.ActiveScreen.Height
+        X: =612
+        Y: =126
+        ZIndex: =3
 

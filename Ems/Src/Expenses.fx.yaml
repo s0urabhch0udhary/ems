@@ -41,7 +41,7 @@ Expenses As screen:
 
             Container3_1 As groupContainer.horizontalAutoLayoutContainer:
                 Height: =700
-                LayoutMinHeight: =700
+                LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowX: =LayoutOverflow.Scroll
@@ -463,12 +463,13 @@ Expenses As screen:
                     FillPortions: =0.5
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMinHeight: =600
+                    LayoutMinHeight: =650
                     LayoutMinWidth: =If(App.ActiveScreen.Width<875,Parent.Width,500)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
                     LayoutOverflowY: =LayoutOverflow.Scroll
                     PaddingBottom: =20
+                    PaddingLeft: =40
                     PaddingRight: =0.00
                     PaddingTop: =0.00
                     Width: =Parent.Width
@@ -477,9 +478,8 @@ Expenses As screen:
 
                     Container7_8 As groupContainer.manualLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
-                        FillPortions: =0
                         Height: =Parent.Height/2+30
-                        LayoutMinHeight: =300
+                        LayoutMinHeight: =350
                         LayoutMinWidth: =250
                         PaddingRight: =0.00
                         PaddingTop: =0.00
@@ -498,8 +498,8 @@ Expenses As screen:
                             Visible: =_calendarVisible
                             Width: =155
                             Wrap: =false
-                            X: =61
-                            Y: =4
+                            X: =WeekdayGallery1_5.X
+                            Y: =8
                             ZIndex: =1
 
                         iconPrevMonth1_5 As icon.ChevronLeft:
@@ -520,7 +520,7 @@ Expenses As screen:
                             Tooltip: ="View previous month"
                             Visible: =_calendarVisible
                             Width: =35
-                            X: =314
+                            X: =WeekdayGallery1_5.X+WeekdayGallery1_5.Width-2*Self.Width-20
                             Y: =4
                             ZIndex: =2
 
@@ -542,7 +542,7 @@ Expenses As screen:
                             Tooltip: ="View next month"
                             Visible: =_calendarVisible
                             Width: =35
-                            X: =367
+                            X: =WeekdayGallery1_5.X+WeekdayGallery1_5.Width-Self.Width-10
                             Y: =4
                             ZIndex: =3
 
@@ -555,7 +555,7 @@ Expenses As screen:
                             TemplateSize: =Self.Width/7
                             Visible: =_calendarVisible
                             Width: =385
-                            X: =61
+                            X: =30
                             Y: =45
                             ZIndex: =4
 
@@ -582,7 +582,7 @@ Expenses As screen:
                             Visible: =_calendarVisible
                             Width: =385
                             WrapCount: =7
-                            X: =61
+                            X: =30
                             Y: =82
                             ZIndex: =5
 
@@ -665,7 +665,6 @@ Expenses As screen:
 
                     Container7_9 As groupContainer.manualLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
-                        FillPortions: =0
                         Height: =If(App.ActiveScreen.Width<875,Parent.LayoutMinHeight-20,App.ActiveScreen.Width<=905,Parent.Height/2+20,Parent.Height/2-30) 
                         LayoutMinHeight: =280
                         LayoutMinWidth: =250
@@ -682,7 +681,7 @@ Expenses As screen:
                             Size: =16
                             Text: ="Notifications"
                             Width: =240
-                            X: =16
+                            X: =Gallery5_7.X+10
                             Y: =4
                             ZIndex: =1
 
@@ -703,8 +702,8 @@ Expenses As screen:
                             LoadingSpinner: =LoadingSpinner.Data
                             ShowScrollbar: =false
                             TemplateSize: =86
-                            Width: =Parent.Width*4/5
-                            X: =16
+                            Width: =If(App.ActiveScreen.Size<=3,Parent.Width*8.5/10,Parent.Width*4/5)
+                            X: =If(App.ActiveScreen.Size=1,10,App.ActiveScreen.Size<=3,20,30)
                             Y: =59
                             ZIndex: =4
 
