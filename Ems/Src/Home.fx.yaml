@@ -1,4 +1,5 @@
 Home As screen:
+    OnVisible: =Set(_calendarVisible, true)
 
     Container1_3 As groupContainer.horizontalAutoLayoutContainer:
         Height: =Parent.Height

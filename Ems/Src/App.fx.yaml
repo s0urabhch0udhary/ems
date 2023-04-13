@@ -11,7 +11,7 @@ App As appinfo:
                 },
                 {
                     Title: "Expenses",
-                    Screen: Expense,
+                    Screen: Expenses,
                     Icon: 'Group 9085'
                 },
                 {
