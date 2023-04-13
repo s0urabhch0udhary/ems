@@ -14,7 +14,7 @@ Home As screen:
             Fill: =RGBA(0, 49, 75, 1) 
             LayoutMinHeight: =640
             LayoutMinWidth: =640
-            Width: =If(App.ActiveScreen.Size<=4,0,250)
+            Width: =If(App.ActiveScreen.Size<=5,0,250)
             X: =0.00
             ZIndex: =1
 
@@ -38,7 +38,6 @@ Home As screen:
                 ZIndex: =1
 
             Container3_3 As groupContainer.horizontalAutoLayoutContainer:
-                FillPortions: =0
                 Height: =700
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
@@ -56,8 +55,8 @@ Home As screen:
                 Container4_2 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =30
-                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,1100,Container8_2.LayoutMinHeight=410,890,650)
-                    LayoutMinWidth: =359
+                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,900,Container8_2.LayoutMinHeight=410,950,630)
+                    LayoutMinWidth: =If(App.ActiveScreen.Size=1,300,430)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
                     LayoutOverflowY: =LayoutOverflow.Scroll
@@ -74,7 +73,7 @@ Home As screen:
                         Height: =If(Parent.Width<=858,Parent.Height/2+20,Parent.Height/4+20)
                         LayoutGap: =20
                         LayoutMinHeight: =If(App.ActiveScreen.Size=1,840,Self.Width<800,410,198)
-                        LayoutMinWidth: =190
+                        LayoutMinWidth: =If(App.ActiveScreen.Size=1,190,300)
                         LayoutMode: =LayoutMode.Auto
                         LayoutOverflowY: =LayoutOverflow.Scroll
                         LayoutWrap: =true
@@ -305,7 +304,6 @@ Home As screen:
                                 ZIndex: =6
 
                     Container16_1 As groupContainer.manualLayoutContainer:
-                        FillPortions: =0
                         Height: =400
                         LayoutMinHeight: =200
                         LayoutMinWidth: =190
@@ -373,11 +371,12 @@ Home As screen:
                     FillPortions: =0.5
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMinHeight: =600
-                    LayoutMinWidth: =If(App.ActiveScreen.Width<890,Parent.Width-20,550)
+                    LayoutMinHeight: =If(App.ActiveScreen.Width<1000,700,550)
+                    LayoutMinWidth: =If(App.ActiveScreen.Width<1001,Parent.Width-20,560)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
                     LayoutOverflowY: =LayoutOverflow.Scroll
+                    LayoutWrap: =If(App.ActiveScreen.Width<1000,true,false)
                     PaddingBottom: =20
                     PaddingRight: =0.00
                     PaddingTop: =0.00
@@ -592,8 +591,7 @@ Home As screen:
                             Size: =16
                             Text: ="Notifications"
                             Width: =240
-                            X: =16
-                            Y: =4
+                            X: =57
                             ZIndex: =1
 
                         Label24_8 As label:
@@ -1035,4 +1033,11 @@ Home As screen:
                         X: =36
                         Y: =47
                         ZIndex: =8
+
+    Label8 As label:
+        Height: =59
+        Text: =App.ActiveScreen.Width
+        X: =850
+        Y: =89
+        ZIndex: =5
 
