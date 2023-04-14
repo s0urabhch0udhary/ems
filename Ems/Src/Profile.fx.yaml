@@ -224,7 +224,7 @@ Profile As screen:
 
                             Container25_4 As groupContainer.manualLayoutContainer:
                                 Height: =If(App.ActiveScreen.Size<=3,170,200)
-                                LayoutMinHeight: =If(App.ActiveScreen.Size<=3,180,435)
+                                LayoutMinHeight: =If(App.ActiveScreen.Size<=3,450,435)
                                 LayoutMinWidth: =300
                                 Width: =Parent.Width/2
                                 ZIndex: =3
