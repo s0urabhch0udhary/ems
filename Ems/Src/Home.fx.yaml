@@ -481,7 +481,7 @@ Home As screen:
                         LayoutMinWidth: =250
                         PaddingRight: =0.00
                         PaddingTop: =0.00
-                        Visible: =If(App.ActiveScreen.Size<4,false,true)
+                        Visible: =If(App.ActiveScreen.Size=1,false,true)
                         Width: =906.59
                         X: =0.00
                         ZIndex: =1
@@ -564,7 +564,7 @@ Home As screen:
                             TemplateSize: =Self.Width/7
                             Visible: =_calendarVisible
                             Width: =MonthDayGallery1_4.Width
-                            X: =MonthDayGallery1_6.X
+                            X: =MonthDayGallery1_4.X
                             Y: =45
                             ZIndex: =4
 

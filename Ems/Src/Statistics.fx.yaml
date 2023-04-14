@@ -285,36 +285,37 @@ Statistics As screen:
                             Y: =20
                             ZIndex: =4
 
-                Container6_2 As groupContainer.verticalAutoLayoutContainer:
+                Container6_5 As groupContainer.verticalAutoLayoutContainer:
                     FillPortions: =0.5
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMinHeight: =650
-                    LayoutMinWidth: =If(App.ActiveScreen.Width<875,Parent.Width,500)
+                    LayoutMinHeight: =If(App.ActiveScreen.Width<1000,800,700)
+                    LayoutMinWidth: =If(App.ActiveScreen.Width<1001,Parent.Width-20,560)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
                     LayoutOverflowY: =LayoutOverflow.Scroll
+                    LayoutWrap: =If(App.ActiveScreen.Width<1000,true,false)
                     PaddingBottom: =20
-                    PaddingLeft: =40
                     PaddingRight: =0.00
                     PaddingTop: =0.00
                     Width: =Parent.Width
                     X: =1678.24
                     ZIndex: =2
 
-                    Container7_4 As groupContainer.manualLayoutContainer:
+                    Container7_10 As groupContainer.manualLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
-                        Height: =Parent.Height/2+30
-                        LayoutMinHeight: =350
+                        FillPortions: =0
+                        Height: =400
+                        LayoutMinHeight: =300
                         LayoutMinWidth: =250
                         PaddingRight: =0.00
                         PaddingTop: =0.00
-                        Visible: =If(App.ActiveScreen.Size<4,false,true)
+                        Visible: =If(App.ActiveScreen.Size=1,false,true)
                         Width: =906.59
                         X: =0.00
                         ZIndex: =1
 
-                        LblMonthSelected1_3 As label:
+                        LblMonthSelected1_6 As label:
                             Align: =Align.Center
                             Color: =RGBA(0, 0, 0, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -326,11 +327,11 @@ Statistics As screen:
                             Visible: =_calendarVisible
                             Width: =155
                             Wrap: =false
-                            X: =WeekdayGallery1_3.X
-                            Y: =8
+                            X: =MonthDayGallery1_6.X
+                            Y: =4
                             ZIndex: =1
 
-                        iconPrevMonth1_3 As icon.ChevronLeft:
+                        iconPrevMonth1_6 As icon.ChevronLeft:
                             BorderColor: =RGBA(32, 54, 71, 1)
                             Color: =RGBA(32, 54, 71, 1)
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -352,11 +353,11 @@ Statistics As screen:
                             Tooltip: ="View previous month"
                             Visible: =_calendarVisible
                             Width: =35
-                            X: =WeekdayGallery1_3.X+WeekdayGallery1_3.Width-2*Self.Width-20
+                            X: =WeekdayGallery1_6.X+WeekdayGallery1_6.Width-2*Self.Width-20
                             Y: =4
                             ZIndex: =2
 
-                        iconNextMonth1_3 As icon.ChevronRight:
+                        iconNextMonth1_6 As icon.ChevronRight:
                             BorderColor: =RGBA(32, 54, 71, 1)
                             Color: =RGBA(32, 54, 71, 1)
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -378,11 +379,11 @@ Statistics As screen:
                             Tooltip: ="View next month"
                             Visible: =_calendarVisible
                             Width: =35
-                            X: =WeekdayGallery1_3.X+WeekdayGallery1_3.Width-Self.Width-10
+                            X: =WeekdayGallery1_6.X+WeekdayGallery1_6.Width-Self.Width-10
                             Y: =4
                             ZIndex: =3
 
-                        WeekdayGallery1_3 As gallery.WeekdayGallery:
+                        WeekdayGallery1_6 As gallery.WeekdayGallery:
                             AccessibleLabel: ="Days of the week"
                             BorderColor: =RGBA(32, 54, 71, 1)
                             Height: =37
@@ -391,68 +392,91 @@ Statistics As screen:
                             TemplatePadding: =0
                             TemplateSize: =Self.Width/7
                             Visible: =_calendarVisible
-                            Width: =385
-                            X: =MonthDayGallery1_3.X
+                            Width: =MonthDayGallery1_6.Width
+                            X: =MonthDayGallery1_6.X
                             Y: =45
                             ZIndex: =4
 
-                            Title4_3 As label:
+                            Title4_6 As label:
                                 Align: =Align.Center
                                 Color: =RGBA(0, 0, 0, 1)
                                 DisabledColor: =RGBA(166, 166, 166, 1)
-                                Height: =WeekdayGallery1_3.TemplateHeight
+                                Height: =WeekdayGallery1_6.TemplateHeight
                                 OnSelect: =Select(Parent)
-                                Size: =17 * WeekdayGallery1_3.TemplateWidth / 77
+                                Size: =17 * WeekdayGallery1_6.TemplateWidth / 77
                                 Text: =ThisItem.Value
-                                Width: =WeekdayGallery1_3.TemplateWidth
+                                Width: =WeekdayGallery1_6.TemplateWidth
                                 Wrap: =false
-                                X: =WeekdayGallery1_3.TemplateWidth / 2 - Self.Width / 2
-                                Y: =WeekdayGallery1_3.TemplateHeight / 2 - Self.Height / 2
+                                X: =WeekdayGallery1_6.TemplateWidth / 2 - Self.Width / 2
+                                Y: =WeekdayGallery1_6.TemplateHeight / 2 - Self.Height / 2
                                 ZIndex: =1
 
-                        MonthDayGallery1_3 As gallery.MonthDayGallery:
+                        MonthDayGallery1_6 As gallery.MonthDayGallery:
                             AccessibleLabel: ="Days of selected month"
                             BorderColor: =RGBA(32, 54, 71, 1)
-                            Height: =270
+                            Height: =318
                             Items: =[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19, 20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
                             Layout: =Layout.Vertical
                             ShowScrollbar: =false
                             TemplatePadding: =0
-                            TemplateSize: =42
+                            TemplateSize: =54
                             Visible: =_calendarVisible
-                            Width: =385
+                            Width: =462
                             WrapCount: =7
                             X: =If(App.ActiveScreen.Width<1000,Parent.Width/2-Self.Width/2,30)
                             Y: =82
                             ZIndex: =5
 
-                            Circle1_3 As circle:
+                            "Gallery7_2 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
                                 BorderColor: =RGBA(32, 54, 71, 1)
-                                Fill: =RGBA(205, 209, 213, 1)
-                                Height: =Self.Width
-                                OnSelect: =Select(Parent)
-                                Visible: |-
-                                    =/*Visible if calendar events are found on this day*/               
-                                    CountRows(Filter(MyCalendarEvents, DateValue(Text(Start)) = DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days))) > 0 && !Subcircle1_3.Visible && Title5_3.Visible
-                                Width: =6.5
-                                Y: =MonthDayGallery1_3.TemplateHeight * (0.75)
+                                DelayItemLoading: =true
+                                Height: =19
+                                Items: =Filter(Expenses_1,Date=DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days))
+                                LoadingSpinner: =LoadingSpinner.Data
+                                TemplatePadding: =0
+                                TemplateSize: =Min(440, Self.Height - 60)
+                                Width: =64
+                                X: =1
+                                Y: =Title5_6.Height
                                 ZIndex: =1
 
-                            Subcircle1_3 As circle:
+                                Button8_4 As button:
+                                    BorderThickness: =0
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(255, 255, 255, 1)
+                                    DisabledFill: =If(Int(Self.Text)<500,RGBA(16,235,20,0.7),Color.Orange)
+                                    DisplayMode: =DisplayMode.Disabled
+                                    Fill: =RGBA(16, 235, 20, 1)
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =Parent.Height-4
+                                    HoverColor: =RGBA(255, 255, 255, 1)
+                                    HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                                    OnSelect: =Select(Parent)
+                                    RadiusBottomLeft: =2
+                                    RadiusBottomRight: =2
+                                    RadiusTopLeft: =2
+                                    RadiusTopRight: =2
+                                    Size: =8
+                                    Text: =Sum(Filter(Expenses_1,Date=ThisItem.Date),Amount)
+                                    Width: =Parent.Width
+                                    Y: =2
+                                    ZIndex: =1
+
+                            Subcircle1_6 As circle:
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 Fill: =RGBA(100, 118, 132, 1)
-                                Height: =3 * Title5_3.Size
+                                Height: = Title5_6.Height*4/5
                                 OnSelect: =Select(Parent)
-                                Visible: =And(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, Title5_3.Visible)
+                                Visible: =And(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, Title5_6.Visible)
                                 Width: =Self.Height
-                                X: =MonthDayGallery1_3.TemplateWidth/2 - Self.Width/2
-                                Y: =MonthDayGallery1_3.TemplateHeight / 2 - Self.Height / 2
+                                X: =MonthDayGallery1_6.TemplateWidth/2 - Self.Width/2
+                                Y: =Title5_6.Y+Title5_6.Height/7
                                 ZIndex: =2
 
-                            Title5_3 As label:
+                            Title5_6 As label:
                                 Align: =Align.Center
                                 BorderColor: =RGBA(0, 0, 0, 0)
-                                Color: =If(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(255, 255, 255, 1), DateAdd(_firstDayInView, ThisItem.Value) = Today(), RGBA(47, 41, 43, 1), LblMonthSelected1_3.Color)
+                                Color: =If(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(255, 255, 255, 1), DateAdd(_firstDayInView, ThisItem.Value) = Today(), RGBA(47, 41, 43, 1), LblMonthSelected1_6.Color)
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 Fill: |-
                                     =/*Fill value changes if the gallery item day = today, or if it lies outside of the current month*/             
@@ -460,24 +484,36 @@ Statistics As screen:
                                         /*Date selected is today*/
                                         DateAdd(_firstDayInView, ThisItem.Value) = Today() && DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(0,0,0,0),
                                         /*Today when it is not selected*/
-                                        DateAdd(_firstDayInView, ThisItem.Value) = Today(), ColorFade(Subcircle1_3.Fill, 0.67), 
+                                        DateAdd(_firstDayInView, ThisItem.Value) = Today(), ColorFade(Subcircle1_6.Fill, 0.67), 
                                         /*The day is outside the range of the currently selected month*/
                                         Abs(Self.Text - ThisItem.Value) > 10,RGBA(200, 200, 200, 0.3), RGBA(0, 0, 0, 0))
                                 FocusedBorderColor: =Self.Color
                                 FocusedBorderThickness: =2
-                                Height: =MonthDayGallery1_3.TemplateHeight
+                                Height: =31
                                 OnSelect: =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, TimeUnit.Days))
-                                Size: =17 * MonthDayGallery1_3.TemplateWidth / 91
+                                Size: =17 * MonthDayGallery1_6.TemplateWidth / 100
                                 TabIndex: =0
                                 Text: =Day(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days))
                                 Visible: |-
                                     =/*This item is in a row containing no days of the visible month. It is in the row after the row where the last day of the month occurs*/ 
                                      !(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days) - Weekday(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days)) + 1 > _lastDayOfMonth)
-                                Width: =MonthDayGallery1_3.TemplateWidth
+                                Width: =66
                                 Wrap: =false
                                 ZIndex: =3
 
-                        dropdownCalendarSelection1_3 As dropdown:
+                            Circle1_6 As circle:
+                                BorderColor: =RGBA(32, 54, 71, 1)
+                                Fill: =RGBA(205, 209, 213, 1)
+                                Height: =Self.Width
+                                OnSelect: =Select(Parent)
+                                Visible: |-
+                                    =/*Visible if calendar events are found on this day*/               
+                                    CountRows(Filter(MyCalendarEvents, DateValue(Text(Start)) = DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days))) > 0 && !Subcircle1_6.Visible && Title5_6.Visible
+                                Width: =6.5
+                                Y: =MonthDayGallery1_6.TemplateHeight * (0.75)
+                                ZIndex: =4
+
+                        dropdownCalendarSelection1_6 As dropdown:
                             BorderColor: =RGBA(32, 54, 71, 1)
                             ChevronBackground: =RGBA(100, 118, 132, 1)
                             ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
@@ -492,7 +528,7 @@ Statistics As screen:
                             HoverColor: =RGBA(0, 0, 0, 1)
                             HoverFill: =RGBA(205, 209, 213, 1)
                             Items: =Office365Outlook.CalendarGetTables().value
-                            OnChange: =Select(dropdownCalendarSelection1_3)
+                            OnChange: =Select(dropdownCalendarSelection1_6)
                             OnSelect: |-
                                 =/*retrieves calendar events for all days in current month view and selected calendar 
                                 _minDate and _maxDate act as markers to prevent duplicate data collection*/         
@@ -523,10 +559,10 @@ Statistics As screen:
                             Y: =12
                             ZIndex: =6
 
-                    Container7_5 As groupContainer.manualLayoutContainer:
+                    Container7_11 As groupContainer.manualLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         Height: =If(App.ActiveScreen.Width<875,Parent.LayoutMinHeight-20,App.ActiveScreen.Width<=905,Parent.Height/2+20,Parent.Height/2-30) 
-                        LayoutMinHeight: =280
+                        LayoutMinHeight: =270
                         LayoutMinWidth: =250
                         PaddingRight: =0.00
                         PaddingTop: =0.00
@@ -534,7 +570,7 @@ Statistics As screen:
                         X: =0.00
                         ZIndex: =2
 
-                        Label10_2 As label:
+                        Label10_5 As label:
                             BorderColor: =RGBA(32, 54, 71, 1)
                             Color: =RGBA(0, 0, 0, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -544,11 +580,10 @@ Statistics As screen:
                             Size: =16
                             Text: ="Notifications"
                             Width: =240
-                            X: =Gallery5_6.X+10
-                            Y: =4
+                            X: =57
                             ZIndex: =1
 
-                        Label24_7 As label:
+                        Label24_10 As label:
                             BorderColor: =RGBA(32, 54, 71, 1)
                             Color: =RGBA(0, 0, 0, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -560,7 +595,7 @@ Statistics As screen:
                             Y: =83
                             ZIndex: =3
 
-                        Gallery5_6 As gallery.galleryVertical:
+                        Gallery5_11 As gallery.galleryVertical:
                             BorderColor: =RGBA(32, 54, 71, 1)
                             DelayItemLoading: =true
                             Height: =Parent.Height*2/3
@@ -569,12 +604,12 @@ Statistics As screen:
                             LoadingSpinner: =LoadingSpinner.Data
                             ShowScrollbar: =false
                             TemplateSize: =86
-                            Width: =If(App.ActiveScreen.Size<=3,Parent.Width*8.5/10,Parent.Width*4/5)
-                            X: =If(App.ActiveScreen.Size=1,10,App.ActiveScreen.Size<=3,20,30)
-                            Y: =59
+                            Width: =Parent.Width*4.5/5
+                            X: =40
+                            Y: =40
                             ZIndex: =4
 
-                            Button16_8 As button:
+                            Button16_13 As button:
                                 BorderThickness: =1
                                 DisabledBorderColor: =RGBA(128, 128, 128, 0.2)
                                 DisabledColor: =RGBA(255, 255, 255, 1)
@@ -593,7 +628,7 @@ Statistics As screen:
                                     =2
                                 ZIndex: =1
 
-                            Label25_6 As label:
+                            Label25_11 As label:
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 Color: =RGBA(0, 0, 0, 1)
                                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -606,7 +641,7 @@ Statistics As screen:
                                     =If(App.ActiveScreen.Size=1,20,60)
                                 ZIndex: =2
 
-                            Label26_6 As label:
+                            Label26_11 As label:
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 Color: =RGBA(0, 0, 0, 1)
                                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -621,7 +656,7 @@ Statistics As screen:
                                 Y: =50
                                 ZIndex: =3
 
-                            Circle5_6 As circle:
+                            Circle5_11 As circle:
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 Fill: =RGBA(13, 179, 213, 1)
                                 Height: =7
