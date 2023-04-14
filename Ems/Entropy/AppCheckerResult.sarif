@@ -224,7 +224,7 @@
                 },
                 "region": {
                   "charLength": 49,
-                  "charOffset": 0,
+                  "charOffset": 5,
                   "snippet": {
                     "text": "Sum(Filter(Expenses_1,Date=ThisItem.Date),Amount)"
                   }

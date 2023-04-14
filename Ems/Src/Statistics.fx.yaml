@@ -457,7 +457,7 @@ Statistics As screen:
                                     RadiusTopLeft: =2
                                     RadiusTopRight: =2
                                     Size: =8
-                                    Text: =Sum(Filter(Expenses_1,Date=ThisItem.Date),Amount)
+                                    Text: =Text(Sum(Filter(Expenses_1,Date=ThisItem.Date),Amount))
                                     Width: =Parent.Width
                                     Y: =2
                                     ZIndex: =1
