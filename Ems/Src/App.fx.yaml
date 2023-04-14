@@ -61,7 +61,23 @@ App As appinfo:
                 }
             )
         );
-        
+        ClearCollect(
+            currency,
+            Table(
+                {
+                    Title: "INR"
+                },
+                {
+                    Title: "USD"
+                },
+                {
+                    Title: "CAD"
+                },
+                {
+                    Title: "EUR"
+                }
+            )
+        );
         Set(budget,50000.00);
         
     SizeBreakpoints: =[400,600, 900, 1200,1600,1800]

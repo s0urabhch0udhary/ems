@@ -212,7 +212,7 @@ Profile As screen:
                                     Height: =If(App.ActiveScreen.Size<=3,30,50)
                                     HoverColor: =RGBA(0, 0, 0, 1)
                                     HoverFill: =RGBA(255, 255, 255, 1)
-                                    Items: =Choices([@Expenses_1].PaymentType)
+                                    Items: =currency
                                     PressedColor: =RGBA(255, 255, 255, 1)
                                     PressedFill: =RGBA(32, 54, 71, 1)
                                     SelectionFill: =RGBA(39, 67, 125, 1)
