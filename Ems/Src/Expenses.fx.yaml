@@ -6,7 +6,6 @@ Expenses As screen:
         Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
         Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
         Set(_calendarVisible, true);
-        Set(navVisible,false);
 
     Container1_6 As groupContainer.horizontalAutoLayoutContainer:
         Height: =Parent.Height
@@ -1397,7 +1396,7 @@ Expenses As screen:
         ZIndex: =5
 
         "'Left Navigation_6' As 'Left Navigation_3'":
-            CurrentScreen: ="Home"
+            CurrentScreen: ="Expenses"
             Width: =280
             ZIndex: =1
 
