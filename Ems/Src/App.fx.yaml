@@ -50,6 +50,18 @@ App As appinfo:
             )
         );
         
+        ClearCollect(
+            budgetincome,
+            Table(
+                {
+                    Title: "Set Budget"
+                },
+                {
+                    Title: "Set Income"
+                }
+            )
+        );
+        
         Set(budget,50000.00);
         
     SizeBreakpoints: =[400,600, 900, 1200,1600,1800]
