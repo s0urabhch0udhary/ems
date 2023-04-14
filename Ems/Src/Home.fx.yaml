@@ -1278,13 +1278,13 @@ Home As screen:
     Container3 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(0, 0, 0, 0.26)
         Height: =1080
-        Visible: =navVisible2
+        Visible: =If(App.ActiveScreen.Size>5,false,navVisible2)
         Width: =1920
         ZIndex: =5
 
         "'Left Navigation_4' As 'Left Navigation_3'":
             CurrentScreen: ="Home"
-            Width: =App.ActiveScreen.Width/2+10
+            Width: =280
             ZIndex: =1
 
         Icon4 As icon.Cancel:
@@ -1304,9 +1304,11 @@ Home As screen:
         BorderColor: =RGBA(32, 54, 71, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =49
         Icon: =Icon.Hamburger
         OnSelect: =Set(navVisible2,true);
-        Visible: =If(App.ActiveScreen.Size<=5,true,false)
+        Visible: =If(Container3.Visible=true,false,App.ActiveScreen.Size<=5,true,false)
+        Width: =47
         X: =36
         Y: =20
         ZIndex: =6
