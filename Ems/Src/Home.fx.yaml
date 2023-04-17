@@ -79,7 +79,7 @@ Home As screen:
                         FillPortions: =0.3
                         Height: =If(Parent.Width<=858,Parent.Height/2+20,Parent.Height/4+20)
                         LayoutGap: =20
-                        LayoutMinHeight: =If(App.ActiveScreen.Size=1,840,Self.Width<740,410,180)
+                        LayoutMinHeight: =If(App.ActiveScreen.Size=1,840,Self.Width<740,370,175)
                         LayoutMinWidth: =If(App.ActiveScreen.Size=1,190,300)
                         LayoutMode: =LayoutMode.Auto
                         LayoutOverflowY: =LayoutOverflow.Scroll
@@ -126,12 +126,11 @@ Home As screen:
                                 Color: =RGBA(0, 136, 209, 1)
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 Font: =Font.'Segoe UI'
-                                Height: =54
                                 Size: =13.5
                                 Text: ="Add Expense"
                                 Width: =188
                                 X: =Parent.Width/2-Self.Width/2
-                                Y: =105
+                                Y: =95
                                 ZIndex: =3
 
                             Image12_5 As image:
@@ -141,8 +140,8 @@ Home As screen:
                                 Height: =65
                                 Image: ='Icon ionic-ios-add'
                                 Width: =Parent.Width/3
-                                X: =Parent.Width/2-Self.Width/2
-                                Y: =Parent.Height/2-Self.Height/2-15
+                                X: =88
+                                Y: =22
                                 ZIndex: =4
 
                             Button14_5 As button:
@@ -194,12 +193,12 @@ Home As screen:
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 Font: =Font.'Segoe UI'
                                 FontWeight: =FontWeight.Lighter
-                                Height: =39
+                                Height: =34
                                 Size: =13
                                 Text: ="Total balance"
                                 Width: =132
-                                X: =15
-                                Y: =75
+                                X: =12
+                                Y: =65
                                 ZIndex: =2
 
                             Label9_15 As label:
@@ -212,8 +211,8 @@ Home As screen:
                                 Size: =20
                                 Text: ="₹ "&budget-Sum(Filter(Expenses_1,User.Email=User().Email),Amount)
                                 Width: =Parent.Width*4/5
-                                X: =15
-                                Y: =Parent.Height-Self.Height-7
+                                X: =12
+                                Y: =Label8_15.Y+Label8_15.Height+3
                                 ZIndex: =3
 
                             Image9_10 As image:
@@ -222,7 +221,7 @@ Home As screen:
                                 DisabledFill: =RGBA(244, 244, 244, 1)
                                 Height: =82
                                 Image: ='Path 14389'
-                                Width: =Parent.Width/4
+                                Width: =Parent.Height/4
                                 X: =17
                                 Y: =5
                                 ZIndex: =4
@@ -231,11 +230,12 @@ Home As screen:
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                 DisabledFill: =RGBA(244, 244, 244, 1)
-                                Height: =40
+                                Height: |
+                                    =25
                                 Image: ='Group 9074'
                                 Width: =Parent.Width/6
-                                X: =27
-                                Y: =25
+                                X: =15
+                                Y: =33
                                 ZIndex: =5
 
                         Container12_16 As groupContainer.manualLayoutContainer:
@@ -270,12 +270,12 @@ Home As screen:
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 Font: =Font.'Segoe UI'
                                 FontWeight: =FontWeight.Lighter
-                                Height: =39
+                                Height: =34
                                 Size: =13
                                 Text: ="Total expense"
                                 Width: =132
-                                X: =15
-                                Y: =75
+                                X: =12
+                                Y: =65
                                 ZIndex: =2
 
                             Label9_16 As label:
@@ -289,8 +289,8 @@ Home As screen:
                                 Size: =20
                                 Text: ="₹ "&If(IsEmpty(Filter(Expenses_1,User.Email=User().Email)),"0",Sum(Filter(Expenses_1,User.Email=User().Email),Amount))
                                 Width: =Parent.Width*4/5
-                                X: =15
-                                Y: =Parent.Height-Self.Height-7
+                                X: =12
+                                Y: =Label8_16.Y+Label8_16.Height+3
                                 ZIndex: =3
 
                             Image9_11 As image:
@@ -299,7 +299,7 @@ Home As screen:
                                 DisabledFill: =RGBA(244, 244, 244, 1)
                                 Height: =82
                                 Image: ='Path 14389'
-                                Width: =Parent.Width/4
+                                Width: =Parent.Height/4
                                 X: =17
                                 Y: =5
                                 ZIndex: =4
@@ -308,11 +308,12 @@ Home As screen:
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                 DisabledFill: =RGBA(244, 244, 244, 1)
-                                Height: =35
+                                Height: |
+                                    =25
                                 Image: ='Group 9079'
-                                Width: =Parent.Width/6
-                                X: =27
-                                Y: =25
+                                Width: =Parent.Height/6
+                                X: =24
+                                Y: =33
                                 ZIndex: =5
 
                         Container12_17 As groupContainer.manualLayoutContainer:
@@ -347,12 +348,12 @@ Home As screen:
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 Font: =Font.'Segoe UI'
                                 FontWeight: =FontWeight.Lighter
-                                Height: =39
+                                Height: =34
                                 Size: =13
                                 Text: ="Total budget"
                                 Width: =132
-                                X: =15
-                                Y: =75
+                                X: =12
+                                Y: =65
                                 ZIndex: =2
 
                             Label9_17 As label:
@@ -367,7 +368,7 @@ Home As screen:
                                 Text: ="₹ "&budget
                                 Width: =Parent.Width*4/5
                                 X: =15
-                                Y: =Parent.Height-Self.Height-7
+                                Y: =Label8_17.Y+Label8_17.Height+3
                                 ZIndex: =3
 
                             Image11_5 As image:
@@ -376,7 +377,7 @@ Home As screen:
                                 DisabledFill: =RGBA(244, 244, 244, 1)
                                 Height: =82
                                 Image: ='Group 9158'
-                                Width: =Parent.Width/4
+                                Width: =Parent.Height/4
                                 X: =17
                                 Y: =5
                                 ZIndex: =6
@@ -465,7 +466,7 @@ Home As screen:
                     Height: =700
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMinHeight: =100
+                    LayoutMinHeight: =600
                     LayoutMinWidth: =350
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
