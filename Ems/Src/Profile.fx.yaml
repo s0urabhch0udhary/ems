@@ -123,7 +123,7 @@ Profile As screen:
                                 daily_budget As text:
                                     BorderColor: =RGBA(112, 112, 112, 1)
                                     Color: =RGBA(0, 0, 0, 1)
-                                    Default: =""
+                                    Default: =First(SortByColumns(Filter(Expenses_Profile, User.Email=User().Email), "Date", SortOrder.Descending)).'Daily Budget'
                                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                     DisabledColor: =RGBA(166, 166, 166, 1)
                                     DisabledFill: =RGBA(244, 244, 244, 1)
@@ -204,7 +204,7 @@ Profile As screen:
                                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                     DisabledFill: =RGBA(244, 244, 244, 1)
                                     Height: =17
-                                    Image: =If(Dropdown1_8.SelectedText.Value="INR",Ruppee,Dropdown1_8.SelectedText.Value="EUR",eur,dollar)
+                                    Image: =If(select_currency.SelectedText.Value="INR",Ruppee,select_currency.SelectedText.Value="EUR",eur,dollar)
                                     Width: =22
                                     X: =48
                                     Y: =TextInput3_12.Y+TextInput3_12.Height/2-Self.Height/2
@@ -222,7 +222,7 @@ Profile As screen:
                                     Y: =TextInput3_12.Y+TextInput3_12.Height/2-Self.Height/2
                                     ZIndex: =8
 
-                                Dropdown1_8 As dropdown:
+                                select_currency As dropdown:
                                     BorderColor: =RGBA(0, 0, 0, 0)
                                     ChevronBackground: =RGBA(0, 0, 0, 0)
                                     ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
@@ -329,7 +329,7 @@ Profile As screen:
                                     Y: =282
                                     ZIndex: =12
 
-                                TextInput3_11 As text:
+                                monthly_savings As text:
                                     BorderColor: =RGBA(112, 112, 112, 1)
                                     Color: =RGBA(0, 0, 0, 1)
                                     Default: =Int(monthly_income.Text)-If(IsEmpty(Filter(Expenses_1,User.Email=User().Email)),"0",Sum(Filter(Expenses_1,User.Email=User().Email),Amount))
@@ -357,9 +357,30 @@ Profile As screen:
                             Height: =60
                             HoverColor: =RGBA(255, 255, 255, 1)
                             HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-                            OnSelect: |-
+                            OnSelect: |
                                 =Set(budget,Int(monthly_budget.Text));
                                 Set(budget,Int(monthly_income.Text));
+                                Patch(
+                                        Expenses_Profile,
+                                        Defaults(Expenses_Profile),
+                                        {'Daily Budget': Value(daily_budget.Text)},
+                                        {'Monthly Budget': Value(monthly_budget.Text)},
+                                        {'Daily Income': Value(daily_income.Text)},
+                                        {'Monthly Income': Value(monthly_income.Text)},
+                                        {'Monthly Saving': Value(monthly_savings.Text)},
+                                        {Currency: select_currency.SelectedText},
+                                        {
+                                            User: {
+                                                '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                                                Claims: Lower(User().Email),
+                                                Department: "",
+                                                DisplayName: User().FullName,
+                                                Email: User().Email,
+                                                JobTitle: "",
+                                                Picture: ""
+                                            }
+                                        }
+                                    );
                             Size: =18
                             Text: ="Save & Update"
                             Width: =220

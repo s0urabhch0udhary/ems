@@ -54,12 +54,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container25_4.TextInput3_11.Default"
+                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container25_4.monthly_savings.Default"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container25_4.TextInput3_11.Default",
+                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container25_4.monthly_savings.Default",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -73,7 +73,7 @@
               "properties": {
                 "member": "Default",
                 "module": "Profile",
-                "type": "Profile.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container25_4.TextInput3_11"
+                "type": "Profile.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container25_4.monthly_savings"
               }
             }
           ],
@@ -1604,19 +1604,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container8.Dropdown1_8.AccessibleLabel"
+                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container8.select_currency.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container8.Dropdown1_8.AccessibleLabel",
+                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container8.select_currency.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Profile",
-                "type": "Profile.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container8.Dropdown1_8"
+                "type": "Profile.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container8.select_currency"
               }
             }
           ],
@@ -1694,19 +1694,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container25_4.TextInput3_11.AccessibleLabel"
+                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container25_4.monthly_savings.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container25_4.TextInput3_11.AccessibleLabel",
+                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container25_4.monthly_savings.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Profile",
-                "type": "Profile.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container25_4.TextInput3_11"
+                "type": "Profile.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container25_4.monthly_savings"
               }
             }
           ],

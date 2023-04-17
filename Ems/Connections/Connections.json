@@ -24,12 +24,16 @@
         "dataSources": {
           "Expenses_1": {
             "tableName": "16232594-c440-4b26-a0e2-fbb861ce3813"
+          },
+          "Expenses_Profile": {
+            "tableName": "b0a0c2fe-6b91-422c-aa17-a2476357b959"
           }
         }
       }
     },
     "dataSources": [
-      "Expenses_1"
+      "Expenses_1",
+      "Expenses_Profile"
     ],
     "dependencies": {},
     "dependents": [],
