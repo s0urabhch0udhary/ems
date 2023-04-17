@@ -65,16 +65,16 @@ App As appinfo:
             currency,
             Table(
                 {
-                    Title: "INR"
+                    Title: "    INR"
                 },
                 {
-                    Title: "USD"
+                    Title: "    USD"
                 },
                 {
-                    Title: "CAD"
+                    Title: "    CAD"
                 },
                 {
-                    Title: "EUR"
+                    Title: "    EUR"
                 }
             )
         );
