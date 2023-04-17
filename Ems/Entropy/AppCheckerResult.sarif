@@ -639,12 +639,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_4.Container12_12.Label9_12.Text"
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_4.Container12_12.Label9_12.Text",
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -658,7 +658,7 @@
               "properties": {
                 "member": "Text",
                 "module": "Expenses",
-                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_4.Container12_12.Label9_12"
+                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18"
               }
             }
           ],
@@ -679,12 +679,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_4.Container12_13.Label9_13.Text"
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_19.Label9_19.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_4.Container12_13.Label9_13.Text",
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_19.Label9_19.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -698,7 +698,7 @@
               "properties": {
                 "member": "Text",
                 "module": "Expenses",
-                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_4.Container12_13.Label9_13"
+                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_19.Label9_19"
               }
             }
           ],
@@ -719,12 +719,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.MonthDayGallery1_5.Gallery7_1.Button8_1.Text"
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Gallery7_5.Button8_7.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.MonthDayGallery1_5.Gallery7_1.Button8_1.Text",
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Gallery7_5.Button8_7.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -738,7 +738,7 @@
               "properties": {
                 "member": "Text",
                 "module": "Expenses",
-                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.MonthDayGallery1_5.Gallery7_1.Button8_1"
+                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Gallery7_5.Button8_7"
               }
             }
           ],
@@ -2059,19 +2059,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.iconPrevMonth1_5.AccessibleLabel"
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.iconPrevMonth1_9.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.iconPrevMonth1_5.AccessibleLabel",
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.iconPrevMonth1_9.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Expenses",
-                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.iconPrevMonth1_5"
+                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.iconPrevMonth1_9"
               }
             }
           ],
@@ -2089,19 +2089,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.iconNextMonth1_5.AccessibleLabel"
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.iconNextMonth1_9.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.iconNextMonth1_5.AccessibleLabel",
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.iconNextMonth1_9.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Expenses",
-                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.iconNextMonth1_5"
+                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.iconNextMonth1_9"
               }
             }
           ],
@@ -2119,19 +2119,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.dropdownCalendarSelection1_5.AccessibleLabel"
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.dropdownCalendarSelection1_9.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.dropdownCalendarSelection1_5.AccessibleLabel",
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.dropdownCalendarSelection1_9.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Expenses",
-                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.dropdownCalendarSelection1_5"
+                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.dropdownCalendarSelection1_9"
               }
             }
           ],
@@ -2149,19 +2149,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.WeekdayGallery1_5.TabIndex"
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.WeekdayGallery1_9.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.WeekdayGallery1_5.TabIndex",
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.WeekdayGallery1_9.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Expenses",
-                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.WeekdayGallery1_5"
+                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.WeekdayGallery1_9"
               }
             }
           ],
@@ -2179,19 +2179,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.MonthDayGallery1_5.TabIndex"
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.MonthDayGallery1_5.TabIndex",
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Expenses",
-                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.MonthDayGallery1_5"
+                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9"
               }
             }
           ],
@@ -2209,49 +2209,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.MonthDayGallery1_5.Gallery7_1.TabIndex"
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Gallery7_5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.MonthDayGallery1_5.Gallery7_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Expenses",
-                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.MonthDayGallery1_5.Gallery7_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.MonthDayGallery1_5.Gallery7_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.MonthDayGallery1_5.Gallery7_1.AccessibleLabel",
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Gallery7_5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Expenses",
-                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_8.MonthDayGallery1_5.Gallery7_1"
+                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Gallery7_5"
               }
             }
           ],
@@ -2269,19 +2239,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_9.Gallery5_9.TabIndex"
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Gallery7_5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_9.Gallery5_9.TabIndex",
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Gallery7_5.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Expenses",
-                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_9.Gallery5_9"
+                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Gallery7_5"
               }
             }
           ],
@@ -2299,19 +2269,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_9.Gallery5_9.AccessibleLabel"
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_17.Gallery5_13.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_9.Gallery5_9.AccessibleLabel",
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_17.Gallery5_13.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Expenses",
-                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_4.Container7_9.Gallery5_9"
+                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_17.Gallery5_13"
               }
             }
           ],
@@ -2323,6 +2293,36 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_17.Gallery5_13.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_17.Gallery5_13.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Expenses",
+                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_17.Gallery5_13"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -4609,6 +4609,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Subcircle1_9.X"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Subcircle1_9.X",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "X",
+                "module": "Expenses",
+                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Subcircle1_9"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Home._showLoading"
                 }
               ],
@@ -4817,6 +4847,23 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "This variable is declared but is not referenced by any control, so it is not needed."
+              }
+            },
+            {
+              "id": "app-InefficientDelayLoading",
+              "messageStrings": {
+                "issue": {
+                  "text": "Inefficient delay loading"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Use variables, collections, and navigation context to share state across screens instead."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "Controls that reference controls on other screens can slow down app loading and navigation. Doing this may force the app to load the other screens immediately, rather than waiting until the user navigates to that screen."
               }
             }
           ],
