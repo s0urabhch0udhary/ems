@@ -153,7 +153,7 @@ Profile As screen:
                                 monthly_budget As text:
                                     BorderColor: =RGBA(112, 112, 112, 1)
                                     Color: =RGBA(0, 0, 0, 1)
-                                    Default: =""
+                                    Default: =First(SortByColumns(Filter(Expenses_Profile, User.Email=User().Email), "Date", SortOrder.Descending)).'Monthly Budget'
                                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                     DisabledColor: =RGBA(166, 166, 166, 1)
                                     DisabledFill: =RGBA(244, 244, 244, 1)
@@ -259,7 +259,7 @@ Profile As screen:
                                 monthly_income As text:
                                     BorderColor: =RGBA(112, 112, 112, 1)
                                     Color: =RGBA(0, 0, 0, 1)
-                                    Default: =""
+                                    Default: =First(SortByColumns(Filter(Expenses_Profile, User.Email=User().Email), "Date", SortOrder.Descending)).'Monthly Income'
                                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                     DisabledColor: =RGBA(166, 166, 166, 1)
                                     DisabledFill: =RGBA(244, 244, 244, 1)
@@ -277,7 +277,7 @@ Profile As screen:
                                 daily_income As text:
                                     BorderColor: =RGBA(112, 112, 112, 1)
                                     Color: =RGBA(0, 0, 0, 1)
-                                    Default: =""
+                                    Default: =First(SortByColumns(Filter(Expenses_Profile, User.Email=User().Email), "Date", SortOrder.Descending)).'Daily Income'
                                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                     DisabledColor: =RGBA(166, 166, 166, 1)
                                     DisabledFill: =RGBA(244, 244, 244, 1)
