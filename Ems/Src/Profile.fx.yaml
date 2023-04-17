@@ -107,47 +107,17 @@ Profile As screen:
                                 LayoutMinWidth: =300
                                 ZIndex: =1
 
-                                Label13_34 As label:
-                                    BorderColor: =RGBA(32, 54, 71, 1)
-                                    Color: =RGBA(0, 0, 0, 1)
-                                    DisabledColor: =RGBA(166, 166, 166, 1)
-                                    Font: =Font.'Lato Black'
-                                    FontWeight: =FontWeight.Semibold
-                                    Size: =18
-                                    Text: ="Daily Budget"
-                                    Width: =198
-                                    X: =40
-                                    Y: =40
-                                    ZIndex: =1
-
-                                daily_budget As text:
-                                    BorderColor: =RGBA(112, 112, 112, 1)
-                                    Color: =RGBA(0, 0, 0, 1)
-                                    Default: =First(SortByColumns(Filter(Expenses_Profile, User.Email=User().Email), "Date", SortOrder.Descending)).'Daily Budget'
-                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                                    DisabledColor: =RGBA(166, 166, 166, 1)
-                                    DisabledFill: =RGBA(244, 244, 244, 1)
-                                    FocusedBorderThickness: =4
-                                    Height: =If(App.ActiveScreen.Size<=3,45,60)
-                                    HoverBorderColor: =RGBA(112, 112, 112, 1)
-                                    HoverColor: =RGBA(0, 0, 0, 1)
-                                    HoverFill: =RGBA(255, 255, 255, 1)
-                                    Size: =13
-                                    Width: =Parent.Width-80
-                                    X: =40
-                                    Y: =80
-                                    ZIndex: =2
-
                                 Label13_35 As label:
                                     BorderColor: =RGBA(32, 54, 71, 1)
                                     Color: =RGBA(0, 0, 0, 1)
                                     DisabledColor: =RGBA(166, 166, 166, 1)
-                                    Font: =Font.'Lato Black'
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
                                     Size: =18
                                     Text: ="Monthly Budget"
                                     Width: =210
                                     X: =40
-                                    Y: =160
+                                    Y: =34
                                     ZIndex: =3
 
                                 monthly_budget As text:
@@ -166,14 +136,15 @@ Profile As screen:
                                     Size: =13
                                     Width: =Parent.Width-80
                                     X: =40
-                                    Y: =200
+                                    Y: =74
                                     ZIndex: =4
 
                                 Label13_38 As label:
                                     BorderColor: =RGBA(32, 54, 71, 1)
                                     Color: =RGBA(0, 0, 0, 1)
                                     DisabledColor: =RGBA(166, 166, 166, 1)
-                                    Font: =Font.'Lato Black'
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
                                     Size: =18
                                     Text: ="Currency"
                                     Width: =210
@@ -243,20 +214,13 @@ Profile As screen:
                                     PressedFill: =RGBA(32, 54, 71, 1)
                                     SelectionFill: =RGBA(39, 67, 125, 1)
                                     Size: =13
-                                    Width: =423
+                                    Width: =TextInput3_12.Width-8
                                     X: =43
                                     Y: |
                                         =TextInput3_12.Y+4
                                     ZIndex: =9
 
-                            Container25_4 As groupContainer.manualLayoutContainer:
-                                Height: =If(App.ActiveScreen.Size<=3,170,200)
-                                LayoutMinHeight: =If(App.ActiveScreen.Size<=3,450,435)
-                                LayoutMinWidth: =300
-                                Width: =Parent.Width/2
-                                ZIndex: =3
-
-                                monthly_income As text:
+                                monthly_income_1 As text:
                                     BorderColor: =RGBA(112, 112, 112, 1)
                                     Color: =RGBA(0, 0, 0, 1)
                                     Default: =First(SortByColumns(Filter(Expenses_Profile, User.Email=User().Email), "Date", SortOrder.Descending)).'Monthly Income'
@@ -271,82 +235,21 @@ Profile As screen:
                                     Size: =13
                                     Width: =Parent.Width-80
                                     X: =40
-                                    Y: =200
-                                    ZIndex: =2
+                                    Y: =201
+                                    ZIndex: =10
 
-                                daily_income As text:
-                                    BorderColor: =RGBA(112, 112, 112, 1)
-                                    Color: =RGBA(0, 0, 0, 1)
-                                    Default: =First(SortByColumns(Filter(Expenses_Profile, User.Email=User().Email), "Date", SortOrder.Descending)).'Daily Income'
-                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                                    DisabledColor: =RGBA(166, 166, 166, 1)
-                                    DisabledFill: =RGBA(244, 244, 244, 1)
-                                    FocusedBorderThickness: =4
-                                    Height: =If(App.ActiveScreen.Size<=3,40,60)
-                                    HoverBorderColor: =RGBA(112, 112, 112, 1)
-                                    HoverColor: =RGBA(0, 0, 0, 1)
-                                    HoverFill: =RGBA(255, 255, 255, 1)
-                                    Size: =13
-                                    Width: =Parent.Width-80
-                                    X: =40
-                                    Y: =80
-                                    ZIndex: =6
-
-                                Label13_36 As label:
+                                Label13_40 As label:
                                     BorderColor: =RGBA(32, 54, 71, 1)
                                     Color: =RGBA(0, 0, 0, 1)
                                     DisabledColor: =RGBA(166, 166, 166, 1)
-                                    Font: =Font.'Lato Black'
+                                    Font: =Font.'Segoe UI'
                                     FontWeight: =FontWeight.Semibold
-                                    Size: =18
-                                    Text: ="Daily Income"
-                                    Width: =198
-                                    X: =40
-                                    Y: =40
-                                    ZIndex: =9
-
-                                Label13_37 As label:
-                                    BorderColor: =RGBA(32, 54, 71, 1)
-                                    Color: =RGBA(0, 0, 0, 1)
-                                    DisabledColor: =RGBA(166, 166, 166, 1)
-                                    Font: =Font.'Lato Black'
                                     Size: =18
                                     Text: ="Monthly Income"
                                     Width: =210
-                                    X: =36
-                                    Y: =160
-                                    ZIndex: =10
-
-                                Label13_39 As label:
-                                    BorderColor: =RGBA(32, 54, 71, 1)
-                                    Color: =RGBA(0, 0, 0, 1)
-                                    DisabledColor: =RGBA(166, 166, 166, 1)
-                                    Font: =Font.'Lato Black'
-                                    Size: =18
-                                    Text: ="Monthly Savings"
-                                    Width: =210
                                     X: =40
-                                    Y: =282
-                                    ZIndex: =12
-
-                                monthly_savings As text:
-                                    BorderColor: =RGBA(112, 112, 112, 1)
-                                    Color: =RGBA(0, 0, 0, 1)
-                                    Default: =Int(monthly_income.Text)-If(IsEmpty(Filter(Expenses_1,User.Email=User().Email)),"0",Sum(Filter(Expenses_1,User.Email=User().Email),Amount))
-                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                                    DisabledColor: =RGBA(166, 166, 166, 1)
-                                    DisabledFill: =RGBA(244, 244, 244, 1)
-                                    DisplayMode: =DisplayMode.Disabled
-                                    FocusedBorderThickness: =4
-                                    Height: =If(App.ActiveScreen.Size<=3,45,60)
-                                    HoverBorderColor: =RGBA(32, 54, 71, 1)
-                                    HoverColor: =RGBA(0, 0, 0, 1)
-                                    HoverFill: =RGBA(205, 209, 213, 1)
-                                    Size: =13
-                                    Width: =Parent.Width-80
-                                    X: =36
-                                    Y: =325
-                                    ZIndex: =13
+                                    Y: =161
+                                    ZIndex: =11
 
                         Button13 As button:
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -549,6 +452,7 @@ Profile As screen:
                                     DisabledFill: =If(Int(Self.Text)<500,RGBA(16,235,20,0.7),Color.Orange)
                                     DisplayMode: =DisplayMode.Disabled
                                     Fill: =RGBA(16, 235, 20, 1)
+                                    Font: =Font.'Segoe UI'
                                     FontWeight: =FontWeight.Semibold
                                     Height: =Parent.Height-4
                                     HoverColor: =RGBA(255, 255, 255, 1)
@@ -558,9 +462,10 @@ Profile As screen:
                                     RadiusBottomRight: =2
                                     RadiusTopLeft: =2
                                     RadiusTopRight: =2
-                                    Size: =8
+                                    Size: =7
                                     Text: =Text(Sum(Filter(Expenses_1,Date=ThisItem.Date),Amount))
-                                    Width: =Parent.Width
+                                    Width: =Parent.Width-5
+                                    X: =1
                                     Y: =2
                                     ZIndex: =1
 

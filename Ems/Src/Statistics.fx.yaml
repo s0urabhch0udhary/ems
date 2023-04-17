@@ -276,15 +276,6 @@ Statistics As screen:
                                 Y: =15
                                 ZIndex: =8
 
-                        Label25 As label:
-                            BorderColor: =RGBA(32, 54, 71, 1)
-                            Color: =RGBA(0, 0, 0, 1)
-                            DisabledColor: =RGBA(166, 166, 166, 1)
-                            Size: =13
-                            Text: =Gallery6.Width
-                            Y: =20
-                            ZIndex: =4
-
                 Container6_5 As groupContainer.verticalAutoLayoutContainer:
                     FillPortions: =0.5
                     LayoutAlignItems: =LayoutAlignItems.Stretch
