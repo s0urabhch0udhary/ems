@@ -61,7 +61,7 @@ Expenses As screen:
                 Container4_4 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =30
-                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,900,Container8_6.LayoutMinHeight=410&&Container17_2.Width<680,1150,Container8_6.LayoutMinHeight=410,910,630)
+                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,900,Container8_6.LayoutMinHeight=410&&Container17_2.Width<680,1150,Container8_6.LayoutMinHeight=410,910,600)
                     LayoutMinWidth: =If(App.ActiveScreen.Size=1,300,430)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
@@ -394,7 +394,7 @@ Expenses As screen:
                         ZIndex: =2
 
                         Container18_4 As groupContainer.manualLayoutContainer:
-                            LayoutMinHeight: =300
+                            LayoutMinHeight: =250
                             LayoutMinWidth: =If(App.ActiveScreen.Size=1,180,340)
                             ZIndex: =1
 
@@ -437,7 +437,7 @@ Expenses As screen:
 
                                 PieChart1_2 As pieChart:
                                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                                    Height: =285
+                                    Height: =Parent.Height
                                     ItemBorderThickness: =1
                                     ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
                                     Items: =Filter(Expenses_1,User.Email=User().Email)
@@ -459,7 +459,7 @@ Expenses As screen:
                                 ZIndex: =5
 
                         Container18_5 As groupContainer.manualLayoutContainer:
-                            LayoutMinHeight: =300
+                            LayoutMinHeight: =250
                             LayoutMinWidth: =If(App.ActiveScreen.Size=1,180,340)
                             ZIndex: =2
 
@@ -874,7 +874,7 @@ Expenses As screen:
                             Height: =96
                             Size: =18
                             Text: =If(IsEmpty(Filter(Expenses_1,User.Email=User().Email))=true,"No Notification","")
-                            Width: =441
+                            Width: =395
                             X: =32
                             Y: =83
                             ZIndex: =3
