@@ -65,9 +65,23 @@
             "NameMapSourceSchema": "?"
           },
           "VerticalAlign",
-          "X",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "0",
+            "InvariantPropertyName": "X",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "Y",
-          "Width",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "Width",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "Height",
           "DisplayMode",
           "ZIndex",
@@ -113,7 +127,7 @@
           },
           {
             "Category": "Data",
-            "InvariantScript": "\"  SKETCHWIRE\"",
+            "InvariantScript": "\"SKETCHWIRE\"",
             "Property": "Text",
             "RuleProviderType": "Unknown"
           },
@@ -215,7 +229,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "Font.'Open Sans'",
+            "InvariantScript": "Font.'Segoe UI'",
             "Property": "Font",
             "RuleProviderType": "Unknown"
           },
@@ -239,19 +253,19 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "0",
+            "InvariantScript": "Parent.Width/2-Self.Width/2",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "30",
+            "InvariantScript": "21",
             "Property": "Y",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "260",
+            "InvariantScript": "170",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -784,7 +798,14 @@
               "DisabledFill",
               "PressedFill",
               "HoverFill",
-              "Font",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "",
+                "InvariantPropertyName": "Font",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               "FontWeight",
               "Align",
               "VerticalAlign",
@@ -798,7 +819,14 @@
               "LineHeight",
               "BorderThickness",
               "FocusedBorderThickness",
-              "Size",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "",
+                "InvariantPropertyName": "Size",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               "Italic",
               "Underline",
               "Strikethrough",
@@ -932,7 +960,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Font.'Open Sans'",
+                "InvariantScript": "Font.'Segoe UI'",
                 "Property": "Font",
                 "RuleProviderType": "Unknown"
               },
@@ -1010,7 +1038,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "13",
+                "InvariantScript": "18",
                 "Property": "Size",
                 "RuleProviderType": "Unknown"
               },
@@ -1667,7 +1695,7 @@
       "NavItems",
       "CurrentScreen"
     ],
-    "LastModifiedTimestamp": "638173142978289523",
+    "LastModifiedTimestamp": "638173244242643402",
     "Name": "Left Navigation_3",
     "Rules": [
       {
@@ -1772,7 +1800,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638173142978289523",
+  "LastModifiedTimestamp": "638173244242643402",
   "Name": "dcbd508ebb2b496ea30e192d53179576",
   "OverridableProperties": {},
   "TemplateOriginalName": "ce08b6f46174403992bb5e7a54f2c94b",

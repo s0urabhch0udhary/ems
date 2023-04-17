@@ -43,8 +43,9 @@
             Color: |
                 =If(ThisItem.Title='Left Navigation_3'.CurrentScreen,RGBA(255, 255, 255, 1),RGBA(255, 255, 255, 0.4))
             DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
             OnSelect: =Select(Parent)
-            Size: =13
+            Size: =18
             Text: =ThisItem.Title
             X: =75
             Y: =15
@@ -70,11 +71,13 @@
         BorderColor: =RGBA(32, 54, 71, 1)
         Color: =RGBA(255, 255, 255, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =73
         Size: =18
-        Text: ="  SKETCHWIRE"
-        Width: =260
-        Y: =30
+        Text: ="SKETCHWIRE"
+        Width: =170
+        X: =Parent.Width/2-Self.Width/2
+        Y: =21
         ZIndex: =4
 
