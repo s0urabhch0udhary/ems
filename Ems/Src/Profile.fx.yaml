@@ -392,7 +392,7 @@ Profile As screen:
                     FillPortions: =0.5
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMinHeight: =If(App.ActiveScreen.Width<1000,800,635)
+                    LayoutMinHeight: =If(App.ActiveScreen.Width<1000,800,625)
                     LayoutMinWidth: =If(App.ActiveScreen.Width<1001,Parent.Width-20,560)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
