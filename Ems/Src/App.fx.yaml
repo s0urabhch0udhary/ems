@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: |+
+    OnStart: |
         =ClearCollect(
             emsnav,
             Table(
@@ -29,57 +29,42 @@ App As appinfo:
         ClearCollect(
             categories,
             Table(
-                {
-                    Tabs: "Food"
-                },
-                {
-                    Tabs: "Health"
-                },
-                {
-                    Tabs: "Grocery"
-                },
-                {
-                    Tabs: "Travel"
-                },
-                {
-                    Tabs: "Entertainment"
-                },
-                {
-                    Tabs: "Others"
-                }
+                {Tabs: "Food"},
+                {Tabs: "Health"},
+                {Tabs: "Grocery"},
+                {Tabs: "Travel"},
+                {Tabs: "Entertainment"},
+                {Tabs: "Others"}
             )
         );
-        
         ClearCollect(
             budgetincome,
             Table(
-                {
-                    Title: "Set Budget"
-                },
-                {
-                    Title: "Set Income"
-                }
+                {Title: "Set Budget"},
+                {Title: "Set Income"}
             )
         );
         ClearCollect(
             currency,
             Table(
                 {
-                    Title: "       INR"
+                    Title: "INR"
                 },
                 {
-                    Title: "       USD"
+                    Title: "USD"
                 },
                 {
-                    Title: "       CAD"
+                    Title: "CAD"
                 },
                 {
-                    Title: "       EUR"
+                    Title: "EUR"
                 }
             )
         );
-        Set(budget,50000.00);
-        
+        Set(
+            budget,
+            50000.00
+        );
     SizeBreakpoints: =[400,600, 900, 1200,1600,1800]
     StartScreen: =Home
 
