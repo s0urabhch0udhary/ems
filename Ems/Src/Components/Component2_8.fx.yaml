@@ -1,6 +1,6 @@
 Component2_8 As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
-    Height: =If(App.ActiveScreen.Size<4,90,150)
+    Height: =If(App.ActiveScreen.Size<4,90,130)
     Width: =Max(App.Width, App.MinScreenWidth)
     X: =0
     Y: =0
@@ -39,7 +39,7 @@ Component2_8 As CanvasComponent:
         Text: =App.ActiveScreen.Name
         Width: =721
         X: =27
-        Y: =100
+        Y: =70
         ZIndex: =7
 
     Label23 As label:
@@ -68,16 +68,16 @@ Component2_8 As CanvasComponent:
         ZIndex: =9
 
         HtmlText1 As htmlViewer:
-            Height: =121
+            Height: =100
             HtmlText: |-
-                ="<div style='margin:10px;width:400px;height:60px;background-color:#FFFFFF;box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
+                ="<div style='margin:10px;width:400px;height:50px;background-color:#FFFFFF;box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
             PaddingRight: =10.98
             PaddingTop: =10.98
             Size: =24.15
             Visible: =If(App.ActiveScreen.Size<6,false,true)
             Width: =755
             X: =16
-            Y: =15
+            Y: =5
             ZIndex: =5
 
         Icon3 As icon.Search:
@@ -92,7 +92,7 @@ Component2_8 As CanvasComponent:
             Visible: =If(App.ActiveScreen.Size<6,false,true)
             Width: =54
             X: =55
-            Y: =38
+            Y: =22
             ZIndex: =6
 
         TextInput1 As text:
@@ -116,6 +116,6 @@ Component2_8 As CanvasComponent:
             Visible: =If(App.ActiveScreen.Size<6,false,true)
             Width: =288
             X: =109
-            Y: =50
+            Y: =34
             ZIndex: =8
 
