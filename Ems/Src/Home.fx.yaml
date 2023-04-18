@@ -45,7 +45,6 @@ Home As screen:
                 ZIndex: =1
 
             Container3_3 As groupContainer.horizontalAutoLayoutContainer:
-                FillPortions: =0.7
                 Height: =500
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
@@ -62,7 +61,7 @@ Home As screen:
                 Container4_2 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =10
-                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,900,Container8_5.LayoutMinHeight=410,910,400)
+                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,900,Container8_5.Width<700,640,400)
                     LayoutMinWidth: =If(App.ActiveScreen.Size=1,300,430)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
@@ -79,7 +78,7 @@ Home As screen:
                         FillPortions: =0.3
                         Height: =If(Parent.Width<=858,Parent.Height/2+20,Parent.Height/4+20)
                         LayoutGap: =20
-                        LayoutMinHeight: =If(App.ActiveScreen.Size=1,840,Self.Width<730,370,150)
+                        LayoutMinHeight: =If(App.ActiveScreen.Size=1,840,Self.Width<730,320,150)
                         LayoutMinWidth: =If(App.ActiveScreen.Size=1,190,300)
                         LayoutMode: =LayoutMode.Auto
                         LayoutOverflowY: =LayoutOverflow.Scroll
@@ -1354,4 +1353,24 @@ Home As screen:
         X: =36
         Y: =20
         ZIndex: =6
+
+    Label8 As label:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Size: =13
+        Text: =Container4_2.Width
+        X: =265
+        Y: =24
+        ZIndex: =7
+
+    Label9 As label:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Size: =13
+        Text: =App.ActiveScreen.Width
+        X: =400
+        Y: =29
+        ZIndex: =8
 
