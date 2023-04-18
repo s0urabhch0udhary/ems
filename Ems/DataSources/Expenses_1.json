@@ -36,6 +36,7 @@
       "Editor#Claims": "Modified By Claims",
       "ID": "ID",
       "Modified": "Modified",
+      "OData__ColorTag": "Color Tag",
       "PaymentType": "PaymentType",
       "PaymentType#Id": "PaymentType Id",
       "Title": "Title",
