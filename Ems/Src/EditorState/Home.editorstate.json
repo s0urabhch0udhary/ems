@@ -16606,7 +16606,14 @@
         "DisplayMode",
         "OnSelect",
         "ZIndex",
-        "LineHeight",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "LineHeight",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "BorderThickness",
         "FocusedBorderThickness",
         {

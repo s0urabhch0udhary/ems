@@ -807,9 +807,10 @@ Home As screen:
                                 Color: =RGBA(0, 0, 0, 1)
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 Font: =Font.'Segoe UI'
-                                Height: =66
+                                Height: =48
+                                LineHeight: =1
                                 OnSelect: =Select(Parent)
-                                Size: =If(App.ActiveScreen.Size<=2,9,12)
+                                Size: =If(App.ActiveScreen.Size<=2,9,10)
                                 Text: ="Purchase of "&ThisItem.Title&" is done of ₹"&ThisItem.Amount&"."
                                 VerticalAlign: =VerticalAlign.Top
                                 Width: =Parent.Width*3.8/5
@@ -825,7 +826,7 @@ Home As screen:
                                 FontWeight: =FontWeight.Lighter
                                 Height: =23
                                 OnSelect: =Select(Parent)
-                                Size: =If(App.ActiveScreen.Size<=2,8,11)
+                                Size: =If(App.ActiveScreen.Size<=2,8,9)
                                 Text: =Text(ThisItem.Date,DateTimeFormat.LongDate)
                                 Width: =240
                                 X: |
