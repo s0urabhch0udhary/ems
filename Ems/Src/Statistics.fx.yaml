@@ -659,6 +659,13 @@ Statistics As screen:
                                 Y: =20
                                 ZIndex: =4
 
+            Container4 As groupContainer.manualLayoutContainer:
+                FillPortions: =0
+                Height: =70
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                ZIndex: =3
+
     Container3_4 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(0, 0, 0, 0.26)
         Height: =1080

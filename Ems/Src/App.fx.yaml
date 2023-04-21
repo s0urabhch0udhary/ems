@@ -65,6 +65,6 @@ App As appinfo:
             budget,
             50000.00
         );
-    SizeBreakpoints: =[400,600, 900, 1200,1600,1800]
+    SizeBreakpoints: =[400,600, 900, 1340,1550]
     StartScreen: =Home
 

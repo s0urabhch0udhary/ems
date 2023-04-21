@@ -21,7 +21,7 @@ Home As screen:
             Fill: =RGBA(0, 49, 75, 1) 
             LayoutMinHeight: =640
             LayoutMinWidth: =640
-            Width: =If(App.ActiveScreen.Size<5,0,250)
+            Width: =If(App.ActiveScreen.Size<4,0,250)
             X: =0.00
             ZIndex: =1
 
@@ -31,6 +31,7 @@ Home As screen:
             LayoutMinHeight: =900
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
+            LayoutOverflowY: =LayoutOverflow.Scroll
             PaddingRight: =0.00
             PaddingTop: =0.00
             Width: =2584.83
@@ -38,6 +39,7 @@ Home As screen:
             ZIndex: =2
 
             Component2_13 As Component2_8:
+                Height: =80
                 LayoutMinHeight: =640
                 LayoutMinWidth: =640
                 Width: =Parent.Width
@@ -61,7 +63,7 @@ Home As screen:
                 Container4_2 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =10
-                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,900,Container8_5.Width<700,640,400)
+                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,900,Container8_5.Width<700,560,400)
                     LayoutMinWidth: =If(App.ActiveScreen.Size=1,300,430)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
@@ -78,7 +80,7 @@ Home As screen:
                         FillPortions: =0.3
                         Height: =If(Parent.Width<=858,Parent.Height/2+20,Parent.Height/4+20)
                         LayoutGap: =20
-                        LayoutMinHeight: =If(App.ActiveScreen.Size=1,840,Self.Width<730,320,150)
+                        LayoutMinHeight: =If(Self.Width<660,320,150)
                         LayoutMinWidth: =If(App.ActiveScreen.Size=1,190,300)
                         LayoutMode: =LayoutMode.Auto
                         LayoutOverflowY: =LayoutOverflow.Scroll
@@ -89,7 +91,8 @@ Home As screen:
                         ZIndex: =1
 
                         Container11_5 As groupContainer.manualLayoutContainer:
-                            Height: =150
+                            AlignInContainer: =AlignInContainer.Start
+                            Height: =145
                             LayoutMinHeight: =145
                             LayoutMinWidth: =150
                             PaddingRight: =0.00
@@ -162,6 +165,8 @@ Home As screen:
                                 ZIndex: =5
 
                         Container12_15 As groupContainer.manualLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Start
+                            Height: =145
                             LayoutMinHeight: =145
                             LayoutMinWidth: =150
                             PaddingRight: =0.00
@@ -171,6 +176,8 @@ Home As screen:
                             ZIndex: =2
 
                             Button6_17 As button:
+                                BorderColor: =RGBA(237, 237, 237, 1)
+                                BorderThickness: =0.2
                                 DisabledBorderColor: =RGBA(202, 202, 202, 1)
                                 DisabledColor: =RGBA(255, 255, 255, 1)
                                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -239,6 +246,8 @@ Home As screen:
                                 ZIndex: =5
 
                         Container12_16 As groupContainer.manualLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Start
+                            Height: =145
                             LayoutMinHeight: =145
                             LayoutMinWidth: =150
                             PaddingRight: =0.00
@@ -248,6 +257,8 @@ Home As screen:
                             ZIndex: =3
 
                             Button6_18 As button:
+                                BorderColor: =RGBA(237, 237, 237, 1)
+                                BorderThickness: =0.2
                                 DisabledBorderColor: =RGBA(202, 202, 202, 1)
                                 DisabledColor: =RGBA(255, 255, 255, 1)
                                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -316,6 +327,8 @@ Home As screen:
                                 ZIndex: =5
 
                         Container12_17 As groupContainer.manualLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Start
+                            Height: =145
                             LayoutMinHeight: =145
                             LayoutMinWidth: =150
                             PaddingRight: =0.00
@@ -325,6 +338,8 @@ Home As screen:
                             ZIndex: =4
 
                             Button6_19 As button:
+                                BorderColor: =RGBA(237, 237, 237, 1)
+                                BorderThickness: =0.2
                                 DisabledBorderColor: =RGBA(219, 219, 219, 1)
                                 DisabledColor: =RGBA(255, 255, 255, 1)
                                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -383,7 +398,7 @@ Home As screen:
 
                     Container16_1 As groupContainer.manualLayoutContainer:
                         Height: =320
-                        LayoutMinHeight: =180
+                        LayoutMinHeight: =250
                         LayoutMinWidth: =190
                         ZIndex: =2
 
@@ -459,6 +474,13 @@ Home As screen:
                             Y: =60
                             ZIndex: =6
 
+                    Container5 As groupContainer.manualLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        ZIndex: =3
+
                 Container6_7 As groupContainer.verticalAutoLayoutContainer:
                     FillPortions: =0.4
                     Height: =700
@@ -479,7 +501,7 @@ Home As screen:
 
                     Container7_15 As groupContainer.manualLayoutContainer:
                         Height: =320
-                        LayoutMinHeight: =250
+                        LayoutMinHeight: =260
                         LayoutMinWidth: =250
                         PaddingRight: =0.00
                         PaddingTop: =0.00
@@ -759,14 +781,14 @@ Home As screen:
 
                         Label24_13 As label:
                             BorderColor: =RGBA(32, 54, 71, 1)
-                            Color: =RGBA(0, 0, 0, 1)
+                            Color: =RGBA(153, 153, 153, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             Height: =96
                             Size: =18
                             Text: =If(IsEmpty(Filter(Expenses_1,User.Email=User().Email))=true,"No Notification","")
                             Width: =441
                             X: =32
-                            Y: =83
+                            Y: =45
                             ZIndex: =3
 
                         Gallery5_10 As gallery.galleryVertical:
@@ -845,13 +867,6 @@ Home As screen:
                                     =30
                                 Y: =20
                                 ZIndex: =4
-
-            Container1 As groupContainer.manualLayoutContainer:
-                FillPortions: =0
-                Height: =40
-                LayoutMinHeight: =100
-                LayoutMinWidth: =250
-                ZIndex: =3
 
     Container5_2 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(0, 0, 0, 0.24)
@@ -1362,23 +1377,113 @@ Home As screen:
         Y: =20
         ZIndex: =6
 
-    Label8 As label:
+    Label7 As label:
         BorderColor: =RGBA(32, 54, 71, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         Size: =13
-        Text: =Container4_2.Width
-        X: =265
-        Y: =24
-        ZIndex: =7
+        Text: =Container8_5.Height
+        X: =386
+        Y: =94
+        ZIndex: =9
 
-    Label9 As label:
-        BorderColor: =RGBA(32, 54, 71, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Size: =13
-        Text: =App.ActiveScreen.Width
-        X: =400
-        Y: =29
-        ZIndex: =8
+    Container9 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(28, 37, 54, 0.4)
+        Height: =Parent.Height
+        Width: =Parent.Width
+        ZIndex: =10
+
+        Container11 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =500
+            Width: =310
+            X: =Parent.Width-Self.Width-70
+            Y: =66
+            ZIndex: =1
+
+            Label8 As label:
+                BorderColor: =RGBA(32, 54, 71, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Segoe UI'
+                Size: =12
+                Text: ="Notifications"
+                X: =10
+                Y: =10
+                ZIndex: =1
+
+            Gallery5_14 As gallery.galleryVertical:
+                BorderColor: =RGBA(32, 54, 71, 1)
+                DelayItemLoading: =true
+                Height: =378
+                Items: =Filter(Expenses_1,User.Email=User().Email)
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                ShowScrollbar: =false
+                TemplateSize: =70
+                Width: =285
+                X: =10
+                Y: =63
+                ZIndex: =2
+
+                Button16_16 As button:
+                    BorderThickness: =1
+                    DisabledBorderColor: =RGBA(128, 128, 128, 0.2)
+                    DisabledColor: =RGBA(255, 255, 255, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Fill: =RGBA(100, 118, 132, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =Parent.TemplateHeight-4
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                    OnSelect: =Select(Parent)
+                    Size: =15
+                    Text: ="Button"
+                    Width: =Parent.TemplateWidth-4
+                    X: |
+                        =2
+                    ZIndex: =1
+
+                Label25_14 As label:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =26
+                    LineHeight: =1
+                    OnSelect: =Select(Parent)
+                    Size: =If(App.ActiveScreen.Size<=2,7,8)
+                    Text: ="Purchase of "&ThisItem.Title&" is done of ₹"&ThisItem.Amount&"."
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =110
+                    X: =26
+                    Y: =11
+                    ZIndex: =2
+
+                Label26_14 As label:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Lighter
+                    Height: =16
+                    OnSelect: =Select(Parent)
+                    Size: =If(App.ActiveScreen.Size<=2,8,9)
+                    Text: =Text(ThisItem.Date,DateTimeFormat.LongDate)
+                    Width: =110
+                    X: =26
+                    Y: =37
+                    ZIndex: =3
+
+                Circle5_14 As circle:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Fill: =RGBA(13, 179, 213, 1)
+                    Height: =7
+                    OnSelect: =Select(Parent)
+                    Visible: =If(App.ActiveScreen.Size=1,false,true)
+                    Width: =7
+                    X: =10
+                    Y: =20
+                    ZIndex: =4
 
