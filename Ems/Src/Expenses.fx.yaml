@@ -562,12 +562,13 @@ Expenses As screen:
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 Color: =RGBA(51, 51, 51, 1)
                                 DisabledColor: =RGBA(166, 166, 166, 1)
+                                Font: =Font.'Segoe UI'
                                 Height: =65
-                                Size: =18
+                                Size: =8
                                 Text: =If(IsEmpty(Filter(Expenses_1,Date=Today()&&User.Email=User().Email))=true,"No transaction yet!","")
                                 Width: =375
-                                X: =40
-                                Y: =60
+                                X: =20
+                                Y: =40
                                 ZIndex: =4
 
                 Container6_8 As groupContainer.verticalAutoLayoutContainer:

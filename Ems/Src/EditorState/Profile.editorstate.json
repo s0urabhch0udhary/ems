@@ -658,7 +658,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button16_14",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6970,7 +6970,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label25_12",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
