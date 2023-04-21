@@ -1,6 +1,7 @@
 Component2_8 As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
     Height: =90
+    notiVis: = 
     Width: =Max(App.Width, App.MinScreenWidth)
     X: =0
     Y: =0
@@ -66,6 +67,7 @@ Component2_8 As CanvasComponent:
         DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =30
         Icon: =Icon.Bell
+        OnSelect: =Set(notiVisible,true)
         Visible: =If(App.ActiveScreen.Size<=3,true)
         Width: =30
         X: =Parent.Width-2*(Self.Width+30)

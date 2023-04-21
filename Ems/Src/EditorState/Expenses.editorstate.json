@@ -4708,7 +4708,8 @@
         },
         "X",
         "Y",
-        "ZIndex"
+        "ZIndex",
+        "notiVis"
       ],
       "DynamicProperties": [
         {
@@ -4767,6 +4768,11 @@
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
+          "Category": "Data",
+          "PropertyName": "notiVis",
+          "RuleProviderType": "System"
+        },
+        {
           "Category": "Design",
           "PropertyName": "Fill",
           "RuleProviderType": "System"
@@ -4774,7 +4780,7 @@
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",

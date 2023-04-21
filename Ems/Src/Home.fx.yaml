@@ -38,13 +38,25 @@ Home As screen:
             X: =414.64
             ZIndex: =2
 
-            Component2_13 As Component2_8:
+            Container1 As groupContainer.manualLayoutContainer:
+                FillPortions: =0
                 Height: =80
-                LayoutMinHeight: =640
-                LayoutMinWidth: =640
-                Width: =Parent.Width
-                X: =0.00
+                LayoutMinHeight: =100
+                LayoutMinWidth: =Parent.Width
                 ZIndex: =1
+
+                Component2_14 As Component2_8:
+                    Height: =80
+                    notiVis: =true
+                    Visible: =If(App.ActiveScreen.Size<=3,false,true)
+                    Width: =Parent.Width
+                    X: =0.00
+                    ZIndex: =1
+
+                Component7_1 As Component7:
+                    Visible: =If(App.ActiveScreen.Size<=3,true,false)
+                    Width: =1670
+                    ZIndex: =2
 
             Container3_3 As groupContainer.horizontalAutoLayoutContainer:
                 Height: =500
@@ -58,7 +70,7 @@ Home As screen:
                 PaddingTop: =0.00
                 Width: =Parent.Width*2/3
                 X: =0.00
-                ZIndex: =2
+                ZIndex: =3
 
                 Container4_2 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
@@ -791,21 +803,21 @@ Home As screen:
                             Y: =45
                             ZIndex: =3
 
-                        Gallery5_10 As gallery.galleryVertical:
+                        Gallery5_15 As gallery.galleryVertical:
                             BorderColor: =RGBA(32, 54, 71, 1)
                             DelayItemLoading: =true
-                            Height: =2*Self.TemplateHeight+15
+                            Height: =200
                             Items: =Filter(Expenses_1,User.Email=User().Email)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             ShowScrollbar: =false
-                            TemplateSize: =70
-                            Width: =Parent.Width*3.7/5
-                            X: =40
-                            Y: =40
+                            TemplateSize: =Self.Height/3-6
+                            Width: =Parent.Width-20
+                            X: =10
+                            Y: =45
                             ZIndex: =4
 
-                            Button16_12 As button:
+                            Button16_17 As button:
                                 BorderThickness: =1
                                 DisabledBorderColor: =RGBA(128, 128, 128, 0.2)
                                 DisabledColor: =RGBA(255, 255, 255, 1)
@@ -822,58 +834,77 @@ Home As screen:
                                 Width: =Parent.TemplateWidth-4
                                 X: |
                                     =2
+                                Y: =2
                                 ZIndex: =1
 
-                            Label25_10 As label:
+                            Label25_15 As label:
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 Color: =RGBA(0, 0, 0, 1)
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 Font: =Font.'Segoe UI'
-                                Height: =48
+                                Height: =15
                                 LineHeight: =1
                                 OnSelect: =Select(Parent)
-                                Size: =If(App.ActiveScreen.Size<=2,9,10)
-                                Text: ="Purchase of "&ThisItem.Title&" is done of ₹"&ThisItem.Amount&"."
+                                PaddingBottom: =0
+                                PaddingTop: =0
+                                Size: =If(App.ActiveScreen.Size<=2,7,8)
+                                Text: =ThisItem.Title
                                 VerticalAlign: =VerticalAlign.Top
-                                Width: =Parent.Width*3.8/5
-                                X: |
-                                    =If(App.ActiveScreen.Size=1,20,60)
+                                Width: =110
+                                X: =26
+                                Y: =Parent.TemplateHeight/2-Self.Height/2-5
                                 ZIndex: =2
 
-                            Label26_10 As label:
+                            Label26_15 As label:
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 Color: =RGBA(0, 0, 0, 1)
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 Font: =Font.'Segoe UI'
                                 FontWeight: =FontWeight.Lighter
-                                Height: =23
+                                Height: =16
                                 OnSelect: =Select(Parent)
-                                Size: =If(App.ActiveScreen.Size<=2,8,9)
+                                Size: =If(App.ActiveScreen.Size<=2,6,7)
                                 Text: =Text(ThisItem.Date,DateTimeFormat.LongDate)
-                                Width: =240
-                                X: |
-                                    =If(App.ActiveScreen.Size=1,20,60)
-                                Y: =Parent.TemplateHeight-Self.Height-10
+                                Width: =90
+                                X: =26
+                                Y: |+
+                                    =Parent.TemplateHeight/2-Self.Height/2+10
+                                    
                                 ZIndex: =3
 
-                            Circle5_10 As circle:
+                            Circle5_15 As circle:
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 Fill: =RGBA(13, 179, 213, 1)
                                 Height: =7
                                 OnSelect: =Select(Parent)
                                 Visible: =If(App.ActiveScreen.Size=1,false,true)
                                 Width: =7
-                                X: |
-                                    =30
-                                Y: =20
+                                X: =10
+                                Y: =Parent.TemplateHeight/2-Self.Height/2-5
                                 ZIndex: =4
+
+                            Label9_1 As label:
+                                BorderColor: =RGBA(32, 54, 71, 1)
+                                Color: =RGBA(0, 0, 0, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Font: =Font.'Segoe UI'
+                                Height: =13
+                                OnSelect: =Select(Parent)
+                                PaddingBottom: =0
+                                PaddingTop: =0
+                                Size: =If(App.ActiveScreen.Size<=2,6,7)
+                                Text: ="₹"&ThisItem.Amount
+                                Width: =48
+                                X: =Parent.TemplateWidth-Self.Width-5
+                                Y: =Parent.TemplateHeight/2-Self.Height/2
+                                ZIndex: =5
 
     Container5_2 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(0, 0, 0, 0.24)
         Height: =1080
         Visible: =addexpensepop2
         Width: =Parent.Width
-        ZIndex: =4
+        ZIndex: =2
 
         Button8_2 As button:
             DisabledBorderColor: =RGBA(255, 255, 255, 1)
@@ -1344,7 +1375,7 @@ Home As screen:
         Height: =1080
         Visible: =If(App.ActiveScreen.Size>5,false,navVisible2)
         Width: =1920
-        ZIndex: =5
+        ZIndex: =3
 
         "'Left Navigation_4' As 'Left Navigation_3'":
             CurrentScreen: ="Home"
@@ -1364,42 +1395,43 @@ Home As screen:
             Y: =14
             ZIndex: =2
 
-    Icon6_1 As icon.Hamburger:
-        BorderColor: =RGBA(32, 54, 71, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(244, 244, 244, 1)
-        Height: =49
-        Icon: =Icon.Hamburger
-        OnSelect: =Set(navVisible2,true);
-        Visible: =If(Container3.Visible=true,false,App.ActiveScreen.Size<5,true,false)
-        Width: =47
-        X: =36
-        Y: =20
-        ZIndex: =6
-
-    Label7 As label:
-        BorderColor: =RGBA(32, 54, 71, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Size: =13
-        Text: =Container8_5.Height
-        X: =386
-        Y: =94
-        ZIndex: =9
-
     Container9 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(28, 37, 54, 0.4)
         Height: =Parent.Height
+        Visible: =false
         Width: =Parent.Width
-        ZIndex: =10
+        ZIndex: =4
+
+        Button5 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            FontWeight: =FontWeight.Semibold
+            Height: =Parent.Height
+            HoverBorderColor: =
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =
+            OnSelect: =Set(notiVis,false)
+            PressedBorderColor: =
+            PressedColor: =
+            PressedFill: =
+            Size: =15
+            Text: =""
+            Width: =Parent.Width
+            ZIndex: =1
 
         Container11 As groupContainer.manualLayoutContainer:
             Fill: =RGBA(255, 255, 255, 1)
             Height: =500
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
             Width: =310
             X: =Parent.Width-Self.Width-70
             Y: =66
-            ZIndex: =1
+            ZIndex: =2
 
             Label8 As label:
                 BorderColor: =RGBA(32, 54, 71, 1)
@@ -1415,12 +1447,12 @@ Home As screen:
             Gallery5_14 As gallery.galleryVertical:
                 BorderColor: =RGBA(32, 54, 71, 1)
                 DelayItemLoading: =true
-                Height: =378
+                Height: =318
                 Items: =Filter(Expenses_1,User.Email=User().Email)
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 ShowScrollbar: =false
-                TemplateSize: =70
+                TemplateSize: =Self.Height/5-6
                 Width: =285
                 X: =10
                 Y: =63
@@ -1443,6 +1475,7 @@ Home As screen:
                     Width: =Parent.TemplateWidth-4
                     X: |
                         =2
+                    Y: =2
                     ZIndex: =1
 
                 Label25_14 As label:
@@ -1450,15 +1483,17 @@ Home As screen:
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     Font: =Font.'Segoe UI'
-                    Height: =26
+                    Height: =15
                     LineHeight: =1
                     OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingTop: =0
                     Size: =If(App.ActiveScreen.Size<=2,7,8)
-                    Text: ="Purchase of "&ThisItem.Title&" is done of ₹"&ThisItem.Amount&"."
+                    Text: =ThisItem.Title
                     VerticalAlign: =VerticalAlign.Top
                     Width: =110
                     X: =26
-                    Y: =11
+                    Y: =Parent.TemplateHeight/2-Self.Height/2-5
                     ZIndex: =2
 
                 Label26_14 As label:
@@ -1469,11 +1504,13 @@ Home As screen:
                     FontWeight: =FontWeight.Lighter
                     Height: =16
                     OnSelect: =Select(Parent)
-                    Size: =If(App.ActiveScreen.Size<=2,8,9)
+                    Size: =If(App.ActiveScreen.Size<=2,6,7)
                     Text: =Text(ThisItem.Date,DateTimeFormat.LongDate)
-                    Width: =110
+                    Width: =90
                     X: =26
-                    Y: =37
+                    Y: |+
+                        =Parent.TemplateHeight/2-Self.Height/2+10
+                        
                     ZIndex: =3
 
                 Circle5_14 As circle:
@@ -1484,6 +1521,22 @@ Home As screen:
                     Visible: =If(App.ActiveScreen.Size=1,false,true)
                     Width: =7
                     X: =10
-                    Y: =20
+                    Y: =Parent.TemplateHeight/2-Self.Height/2-7
                     ZIndex: =4
+
+                Label9 As label:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =13
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingTop: =0
+                    Size: =If(App.ActiveScreen.Size<=2,6,7)
+                    Text: =ThisItem.Amount
+                    Width: =48
+                    X: =Parent.TemplateWidth-Self.Width-5
+                    Y: =Parent.TemplateHeight/2-Self.Height/2
+                    ZIndex: =5
 

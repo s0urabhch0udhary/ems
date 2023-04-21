@@ -1,0 +1,24 @@
+Component7 As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =80
+    Width: =Max(App.Width, App.MinScreenWidth)
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Label6_2 As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(116, 116, 116, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =59
+        PaddingRight: =10.98
+        PaddingTop: =10.98
+        Size: =20
+        Text: =App.ActiveScreen.Name
+        Width: =721
+        X: =30
+        Y: =3
+        ZIndex: =1
+
