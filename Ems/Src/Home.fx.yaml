@@ -445,6 +445,7 @@ Home As screen:
                                 ZIndex: =6
 
                     Container16_1 As groupContainer.manualLayoutContainer:
+                        FillPortions: =0.8
                         Height: =320
                         LayoutMinHeight: =250
                         LayoutMinWidth: =190
@@ -524,7 +525,7 @@ Home As screen:
 
                     Container5 As groupContainer.manualLayoutContainer:
                         FillPortions: =0
-                        Height: =50
+                        Height: =30
                         LayoutMinHeight: =100
                         LayoutMinWidth: =250
                         ZIndex: =3
@@ -543,6 +544,7 @@ Home As screen:
                     PaddingBottom: =5
                     PaddingRight: =0.00
                     PaddingTop: =0.00
+                    Visible: =If(App.ActiveScreen.Size<=3,false,true)
                     Width: =Parent.Width
                     X: =1678.24
                     ZIndex: =2
