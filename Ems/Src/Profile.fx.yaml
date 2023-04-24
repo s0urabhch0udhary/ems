@@ -72,8 +72,8 @@ Profile As screen:
                         Icon: =Icon.CalendarBlank
                         OnSelect: =Set(calVis,true)
                         PaddingBottom: =25
-                        PaddingLeft: =10
-                        PaddingRight: =10
+                        PaddingLeft: =13
+                        PaddingRight: =13
                         PaddingTop: =25
                         Width: =Self.Height*3/5
                         X: =Parent.Width-2*(Self.Width)-20
@@ -88,7 +88,7 @@ Profile As screen:
                         Icon: =Icon.Bell
                         OnSelect: =Set(notiVis,true)
                         PaddingBottom: =25
-                        PaddingLeft: =10
+                        PaddingLeft: =13
                         PaddingRight: =10
                         PaddingTop: =25
                         Width: =Self.Height*3/5

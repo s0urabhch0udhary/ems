@@ -71,8 +71,8 @@ Expenses As screen:
                         Icon: =Icon.CalendarBlank
                         OnSelect: =Set(calVis,true)
                         PaddingBottom: =25
-                        PaddingLeft: =10
-                        PaddingRight: =10
+                        PaddingLeft: =13
+                        PaddingRight: =13
                         PaddingTop: =25
                         Width: =Self.Height*3/5
                         X: =Parent.Width-2*(Self.Width)-20
@@ -87,8 +87,8 @@ Expenses As screen:
                         Icon: =Icon.Bell
                         OnSelect: =Set(notiVis,true)
                         PaddingBottom: =25
-                        PaddingLeft: =15
-                        PaddingRight: =15
+                        PaddingLeft: =13
+                        PaddingRight: =13
                         PaddingTop: =25
                         Width: =Self.Height*3/5
                         X: =Parent.Width-Self.Width-10
@@ -101,7 +101,6 @@ Expenses As screen:
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowX: =LayoutOverflow.Scroll
-                LayoutOverflowY: =LayoutOverflow.Scroll
                 LayoutWrap: =true
                 PaddingRight: =0.00
                 PaddingTop: =0.00
@@ -820,7 +819,8 @@ Expenses As screen:
                                 Height: = Title5_9.Height*4/5
                                 OnSelect: =Select(Parent)
                                 Visible: =And(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, Title5_9.Visible)
-                                Width: =1
+                                Width: =Self.Height
+                                X: =MonthDayGallery1_9.TemplateWidth/2 - Self.Width/2
                                 Y: =Title5_9.Y+Title5_9.Height/7
                                 ZIndex: =2
 
