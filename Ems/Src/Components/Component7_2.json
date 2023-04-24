@@ -196,7 +196,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "22",
+                "InvariantScript": "23",
                 "Property": "Height",
                 "RuleProviderType": "Unknown"
               },
@@ -775,7 +775,14 @@
               },
               "VerticalAlign",
               "X",
-              "Y",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "",
+                "InvariantPropertyName": "Y",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               {
                 "AFDDataSourceName": "",
                 "AutoRuleBindingEnabled": false,
@@ -962,7 +969,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "18",
+                "InvariantScript": "22",
                 "Property": "Y",
                 "RuleProviderType": "Unknown"
               },
@@ -1010,7 +1017,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "5",
+                "InvariantScript": "6",
                 "Property": "Size",
                 "RuleProviderType": "Unknown"
               },
@@ -1335,7 +1342,7 @@
       "NavItems",
       "CurrentScreen"
     ],
-    "LastModifiedTimestamp": "638179151163639282",
+    "LastModifiedTimestamp": "638179271825125701",
     "Name": "Component7_2",
     "Rules": [
       {
@@ -1358,7 +1365,7 @@
       },
       {
         "Category": "Design",
-        "InvariantScript": "40\r\n",
+        "InvariantScript": "45\r\n",
         "Property": "Height",
         "RuleProviderType": "System"
       },
@@ -1425,7 +1432,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638179151163639282",
+  "LastModifiedTimestamp": "638179271825125701",
   "Name": "97c7bd45e1c44844bd28ac31c54bf02c",
   "OverridableProperties": {},
   "TemplateOriginalName": "36bb45c13207443c92e3283d4d2cbdcc",
