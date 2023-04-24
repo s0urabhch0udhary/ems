@@ -1,0 +1,67 @@
+Component7_2 As CanvasComponent:
+    CurrentScreen: ="Text"
+    Fill: =RGBA(28, 37, 54, 1)
+    Height: |
+        =40
+    NavItems: =emsnav
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =2
+
+    Gallery2_1 As gallery.galleryHorizontal:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        DelayItemLoading: =true
+        Height: =Parent.Height
+        Items: =Component7_2.NavItems
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =Self.Width/4-10
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Image10 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =22
+            Image: =ThisItem.Icon
+            OnSelect: =Select(Parent)
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Transparency: =If(ThisItem.Title=Component7_2.CurrentScreen,0,0.5)
+            Width: =Parent.TemplateWidth
+            ZIndex: =1
+
+        Label17_1 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =If(ThisItem.Title=Component7_2.CurrentScreen,RGBA(255, 255, 255, 1),RGBA(255, 255, 255, 0.4))
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            Height: =12
+            OnSelect: =Select(Parent)
+            Size: =5
+            Text: =ThisItem.Title
+            Width: =Parent.TemplateWidth
+            Y: =18
+            ZIndex: =2
+
+        Button8 As button:
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            FontWeight: =FontWeight.Semibold
+            Height: =Parent.TemplateHeight
+            HoverBorderColor: =
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =
+            OnSelect: =Navigate(ThisItem.Screen)
+            PressedFill: =
+            Size: =15
+            Text: =""
+            Width: =Parent.TemplateWidth
+            ZIndex: =3
+
