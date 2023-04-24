@@ -6852,7 +6852,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "dropdownCalendarSelection1_10",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9316,7 +9316,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconNextMonth1_10",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9835,7 +9835,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconPrevMonth1_10",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14558,7 +14558,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LblMonthSelected1_10",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15193,7 +15193,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "MonthDayGallery1_10",
-      "ParentIndex": 5,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16682,7 +16682,14 @@
         "BorderStyle",
         "FocusedBorderColor",
         "DisplayMode",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "0",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -16691,7 +16698,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Width",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "1",
+          "InvariantPropertyName": "Width",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -18341,7 +18355,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "WeekdayGallery1_10",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

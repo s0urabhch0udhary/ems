@@ -1784,17 +1784,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6_9.Container7_18.MonthDayGallery1_10.Gallery7_6.TabIndex"
+                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6_9.Container7_18.MonthDayGallery1_10.Gallery7_6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6_9.Container7_18.MonthDayGallery1_10.Gallery7_6.TabIndex",
+                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6_9.Container7_18.MonthDayGallery1_10.Gallery7_6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "TabIndex",
+                "member": "AccessibleLabel",
                 "module": "Profile",
                 "type": "Profile.Container1_5.Container2_5.Container3_5.Container6_9.Container7_18.MonthDayGallery1_10.Gallery7_6"
               }
@@ -1806,8 +1806,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1844,17 +1844,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6_9.Container7_18.MonthDayGallery1_10.Gallery7_6.AccessibleLabel"
+                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6_9.Container7_18.MonthDayGallery1_10.Gallery7_6.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6_9.Container7_18.MonthDayGallery1_10.Gallery7_6.AccessibleLabel",
+                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6_9.Container7_18.MonthDayGallery1_10.Gallery7_6.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
+                "member": "TabIndex",
                 "module": "Profile",
                 "type": "Profile.Container1_5.Container2_5.Container3_5.Container6_9.Container7_18.MonthDayGallery1_10.Gallery7_6"
               }
@@ -1866,8 +1866,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -6254,6 +6254,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6_9.Container7_18.MonthDayGallery1_10.Title5_10.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Profile.Container1_5.Container2_5.Container3_5.Container6_9.Container7_18.MonthDayGallery1_10.Title5_10.Color",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "Profile",
+                "type": "Profile.Container1_5.Container2_5.Container3_5.Container6_9.Container7_18.MonthDayGallery1_10.Title5_10"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Expenses"
                 }
               ],
@@ -6276,7 +6306,7 @@
             "level": "Medium"
           },
           "ruleId": "app-ScreenHasManyControls",
-          "ruleIndex": 6
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6335,7 +6365,7 @@
             "level": "Medium"
           },
           "ruleId": "app-ScreenHasManyControls",
-          "ruleIndex": 6
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6394,7 +6424,7 @@
             "level": "Medium"
           },
           "ruleId": "app-ScreenHasManyControls",
-          "ruleIndex": 6
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6454,7 +6484,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         }
       ],
       "tool": {
@@ -6567,6 +6597,23 @@
               }
             },
             {
+              "id": "app-InefficientDelayLoading",
+              "messageStrings": {
+                "issue": {
+                  "text": "Inefficient delay loading"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Use variables, collections, and navigation context to share state across screens instead."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "Controls that reference controls on other screens can slow down app loading and navigation. Doing this may force the app to load the other screens immediately, rather than waiting until the user navigates to that screen."
+              }
+            },
+            {
               "id": "app-ScreenHasManyControls",
               "messageStrings": {
                 "issue": {
@@ -6585,23 +6632,6 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Expenses\" is 373, which exceeds the maximum threshold recommended (300)."
-              }
-            },
-            {
-              "id": "app-InefficientDelayLoading",
-              "messageStrings": {
-                "issue": {
-                  "text": "Inefficient delay loading"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Use variables, collections, and navigation context to share state across screens instead."
-                ],
-                "level": "Medium",
-                "primaryCategory": "performance",
-                "whyFix": "Controls that reference controls on other screens can slow down app loading and navigation. Doing this may force the app to load the other screens immediately, rather than waiting until the user navigates to that screen."
               }
             }
           ],
