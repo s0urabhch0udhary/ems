@@ -21,7 +21,7 @@ Expenses As screen:
             Fill: =RGBA(0, 49, 75, 1) 
             LayoutMinHeight: =640
             LayoutMinWidth: =640
-            Width: =If(App.ActiveScreen.Size<=5,0,250)
+            Width: =If(App.ActiveScreen.Size<4,0,250)
             X: =0.00
             ZIndex: =1
 
@@ -95,6 +95,7 @@ Expenses As screen:
                         ZIndex: =3
 
             Container3_6 As groupContainer.horizontalAutoLayoutContainer:
+                FillPortions: =0
                 Height: =700
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
@@ -111,7 +112,7 @@ Expenses As screen:
                 Container4_4 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =30
-                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,900,Container8_6.LayoutMinHeight=410&&Container17_2.Width<680,1150,Container8_6.LayoutMinHeight=410,910,600)
+                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,900,Container8_6.LayoutMinHeight=410&&Container17_2.Width<680,1150,Container8_6.LayoutMinHeight=410,910,560)
                     LayoutMinWidth: =If(App.ActiveScreen.Size=1,300,430)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
@@ -128,7 +129,7 @@ Expenses As screen:
                         FillPortions: =0.3
                         Height: =If(Parent.Width<=858,Parent.Height/2+20,Parent.Height/4+20)
                         LayoutGap: =20
-                        LayoutMinHeight: =If(App.ActiveScreen.Size=1,840,Self.Width<740,370,175)
+                        LayoutMinHeight: =If(Self.Width<660,300,140)
                         LayoutMinWidth: =If(App.ActiveScreen.Size=1,190,300)
                         LayoutMode: =LayoutMode.Auto
                         LayoutOverflowY: =LayoutOverflow.Scroll
@@ -139,8 +140,9 @@ Expenses As screen:
                         ZIndex: =1
 
                         Container11_6 As groupContainer.manualLayoutContainer:
-                            Height: =Parent.Height
-                            LayoutMinHeight: =150
+                            AlignInContainer: =AlignInContainer.Start
+                            Height: =135
+                            LayoutMinHeight: =145
                             LayoutMinWidth: =150
                             PaddingRight: =0.00
                             PaddingTop: =0.00
@@ -175,11 +177,12 @@ Expenses As screen:
                                 Color: =RGBA(0, 136, 209, 1)
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 Font: =Font.'Segoe UI'
+                                Height: =30
                                 Size: =13.5
                                 Text: ="Add Expense"
                                 Width: =188
                                 X: =Parent.Width/2-Self.Width/2
-                                Y: =95
+                                Y: =90
                                 ZIndex: =3
 
                             Image12_6 As image:
@@ -211,7 +214,9 @@ Expenses As screen:
                                 ZIndex: =5
 
                         Container12_18 As groupContainer.manualLayoutContainer:
-                            LayoutMinHeight: =170
+                            AlignInContainer: =AlignInContainer.Start
+                            Height: =135
+                            LayoutMinHeight: =145
                             LayoutMinWidth: =150
                             PaddingRight: =0.00
                             PaddingTop: =0.00
@@ -220,6 +225,8 @@ Expenses As screen:
                             ZIndex: =2
 
                             Button6_20 As button:
+                                BorderColor: =RGBA(237, 237, 237, 1)
+                                BorderThickness: =0.2
                                 DisabledBorderColor: =RGBA(202, 202, 202, 1)
                                 DisabledColor: =RGBA(255, 255, 255, 1)
                                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -242,12 +249,12 @@ Expenses As screen:
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 Font: =Font.'Segoe UI'
                                 FontWeight: =FontWeight.Lighter
-                                Height: =34
+                                Height: =28
                                 Size: =13
                                 Text: ="Total balance"
                                 Width: =132
-                                X: =12
-                                Y: =65
+                                X: =11
+                                Y: =48
                                 ZIndex: =2
 
                             Label9_18 As label:
@@ -257,7 +264,7 @@ Expenses As screen:
                                 Font: =Font.'Segoe UI'
                                 FontWeight: =FontWeight.Semibold
                                 Height: =38
-                                Size: =20
+                                Size: =18
                                 Text: ="₹ "&budget-Sum(Filter(Expenses_1,User.Email=User().Email),Amount)
                                 Width: =Parent.Width*4/5
                                 X: =12
@@ -268,11 +275,11 @@ Expenses As screen:
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                 DisabledFill: =RGBA(244, 244, 244, 1)
-                                Height: =82
+                                Height: =40
                                 Image: ='Path 14389'
                                 Width: =Parent.Height/4
-                                X: =17
-                                Y: =5
+                                X: =16
+                                Y: =10
                                 ZIndex: =4
 
                             Image14_18 As image:
@@ -283,12 +290,14 @@ Expenses As screen:
                                     =25
                                 Image: ='Group 9074'
                                 Width: =Parent.Height/6
-                                X: =24
-                                Y: =33
+                                X: =Image9_12.X+Image9_12.Width/2-Self.Width/2
+                                Y: =17
                                 ZIndex: =5
 
                         Container12_19 As groupContainer.manualLayoutContainer:
-                            LayoutMinHeight: =150
+                            AlignInContainer: =AlignInContainer.Start
+                            Height: =135
+                            LayoutMinHeight: =145
                             LayoutMinWidth: =150
                             PaddingRight: =0.00
                             PaddingTop: =0.00
@@ -297,6 +306,8 @@ Expenses As screen:
                             ZIndex: =3
 
                             Button6_21 As button:
+                                BorderColor: =RGBA(237, 237, 237, 1)
+                                BorderThickness: =0.2
                                 DisabledBorderColor: =RGBA(202, 202, 202, 1)
                                 DisabledColor: =RGBA(255, 255, 255, 1)
                                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -323,8 +334,8 @@ Expenses As screen:
                                 Size: =13
                                 Text: ="Total expense"
                                 Width: =132
-                                X: =12
-                                Y: =65
+                                X: =11
+                                Y: =48
                                 ZIndex: =2
 
                             Label9_19 As label:
@@ -346,27 +357,28 @@ Expenses As screen:
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                 DisabledFill: =RGBA(244, 244, 244, 1)
-                                Height: =82
+                                Height: =40
                                 Image: ='Path 14389'
                                 Width: =Parent.Height/4
-                                X: =17
-                                Y: =5
+                                X: =16
+                                Y: =10
                                 ZIndex: =4
 
                             Image14_19 As image:
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                 DisabledFill: =RGBA(244, 244, 244, 1)
-                                Height: |
-                                    =25
+                                Height: =22
                                 Image: ='Group 9079'
-                                Width: =Parent.Height/6
-                                X: =24
-                                Y: =33
+                                Width: =Parent.Height/7
+                                X: =Image9_12.X+Image9_12.Width/2-Self.Width/2
+                                Y: =17
                                 ZIndex: =5
 
                         Container12_20 As groupContainer.manualLayoutContainer:
-                            LayoutMinHeight: =150
+                            AlignInContainer: =AlignInContainer.Start
+                            Height: =135
+                            LayoutMinHeight: =145
                             LayoutMinWidth: =150
                             PaddingRight: =0.00
                             PaddingTop: =0.00
@@ -375,6 +387,8 @@ Expenses As screen:
                             ZIndex: =4
 
                             Button6_22 As button:
+                                BorderColor: =RGBA(237, 237, 237, 1)
+                                BorderThickness: =0.2
                                 DisabledBorderColor: =RGBA(219, 219, 219, 1)
                                 DisabledColor: =RGBA(255, 255, 255, 1)
                                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -401,8 +415,8 @@ Expenses As screen:
                                 Size: =13
                                 Text: ="Total budget"
                                 Width: =132
-                                X: =12
-                                Y: =65
+                                X: =11
+                                Y: =48
                                 ZIndex: =2
 
                             Label9_20 As label:
@@ -424,11 +438,11 @@ Expenses As screen:
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                 DisabledFill: =RGBA(244, 244, 244, 1)
-                                Height: =82
+                                Height: =40
                                 Image: ='Group 9158'
                                 Width: =Parent.Height/4
-                                X: =17
-                                Y: =5
+                                X: =16
+                                Y: =10
                                 ZIndex: =6
 
                     Container17_2 As groupContainer.horizontalAutoLayoutContainer:

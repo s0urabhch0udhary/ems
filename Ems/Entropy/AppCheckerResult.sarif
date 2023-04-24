@@ -54,46 +54,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 54,
-                  "charOffset": 12,
-                  "snippet": {
-                    "text": "Sum(Filter(Expenses_1,User.Email=User().Email),Amount)"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "Expenses",
-                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Sum"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_19.Label9_19.Text"
                 }
               ],
@@ -114,6 +74,46 @@
                 "member": "Text",
                 "module": "Expenses",
                 "type": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_19.Label9_19"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 54,
+                  "charOffset": 12,
+                  "snippet": {
+                    "text": "Sum(Filter(Expenses_1,User.Email=User().Email),Amount)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Expenses",
+                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18"
               }
             }
           ],

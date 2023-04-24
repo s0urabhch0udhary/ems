@@ -112,12 +112,12 @@ Home As screen:
                 Container4_2 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =10
-                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,900,Container8_5.Width<700,560,400)
+                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,900,Container8_5.Width<700,599,400)
                     LayoutMinWidth: =If(App.ActiveScreen.Size=1,300,430)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
                     LayoutOverflowY: =LayoutOverflow.Scroll
-                    PaddingBottom: =40
+                    PaddingBottom: =10
                     PaddingLeft: =If(App.ActiveScreen.Size=1,20,30)
                     PaddingRight: =If(App.ActiveScreen.Size=1,20,10)
                     PaddingTop: =0.00
@@ -289,7 +289,7 @@ Home As screen:
                                 Height: |
                                     =25
                                 Image: ='Group 9074'
-                                Width: =Parent.Width/6
+                                Width: =Parent.Height/6
                                 X: =Image9_10.X+Image9_10.Width/2-Self.Width/2
                                 Y: =17
                                 ZIndex: =5
