@@ -282,8 +282,8 @@ Expenses As screen:
                                 Height: |
                                     =25
                                 Image: ='Group 9074'
-                                Width: =Parent.Width/6
-                                X: =15
+                                Width: =Parent.Height/6
+                                X: =24
                                 Y: =33
                                 ZIndex: =5
 
