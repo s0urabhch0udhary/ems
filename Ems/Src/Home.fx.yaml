@@ -206,7 +206,7 @@ Home As screen:
                                 HoverBorderColor: =
                                 HoverColor: =RGBA(0, 0, 0, 0)
                                 HoverFill: =
-                                OnSelect: =Set(addexpensepop,true)
+                                OnSelect: =Set(addexpensepop2,true)
                                 Size: =15
                                 Text: =""
                                 Width: =Parent.Width-6
@@ -972,9 +972,10 @@ Home As screen:
                 BorderColor: =RGBA(32, 54, 71, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =70
-                Size: =20
+                Height: =45
+                Size: =16
                 Text: ="ADD EXPENSE"
                 Width: =210
                 X: =32
@@ -985,20 +986,21 @@ Home As screen:
                 BorderColor: =RGBA(32, 54, 71, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =28
                 Size: =13
                 Text: ="Expense Category"
                 Width: =170
                 X: =32
-                Y: =85+Container22_2.Height
+                Y: =5+Container22_2.Height+Container22_2.Y
                 ZIndex: =10
 
             Gallery4_2 As gallery.galleryHorizontal:
                 BorderColor: =RGBA(32, 54, 71, 1)
                 DelayItemLoading: =true
-                Height: =If(App.ActiveScreen.Size<=3,120,60)
+                Height: =If(App.ActiveScreen.Size<=2,80,App.ActiveScreen.Size<=3,110,60)
                 Items: =categories
                 LoadingSpinner: =LoadingSpinner.Data
-                TemplateSize: =104
+                TemplateSize: =100
                 Width: =709
                 WrapCount: =If(App.ActiveScreen.Size<=3,2,1)
                 X: =32
@@ -1012,6 +1014,7 @@ Home As screen:
                     DisabledFill: =RGBA(244, 244, 244, 1)
                     Fill: =If(ThisItem.IsSelected,RGBA(0, 136, 209, 1),RGBA(242, 242, 242, 1))
                     FontWeight: =FontWeight.Semibold
+                    Height: =If(App.ActiveScreen.Size<=2,20,40)
                     HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
                     OnSelect: =Select(Parent)
@@ -1027,6 +1030,7 @@ Home As screen:
                     Color: =If(ThisItem.IsSelected,RGBA(255, 255, 255, 1),RGBA(0,0,0,1))
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     FontWeight: =If(ThisItem.IsSelected,FontWeight.Semibold,FontWeight.Normal)
+                    Height: =If(App.ActiveScreen.Size<=2,20,40)
                     OnSelect: =Select(Parent)
                     Size: =8.5
                     Text: =ThisItem.Tabs
@@ -1039,12 +1043,12 @@ Home As screen:
                 Color: =RGBA(32, 54, 71, 1)
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(244, 244, 244, 1)
-                Height: =46
+                Height: =33
                 Icon: =Icon.Cancel
                 OnSelect: =Set(addexpensepop2,false)
-                Width: =51
-                X: =741
-                Y: =22
+                Width: =30
+                X: =775
+                Y: =4
                 ZIndex: =12
 
             Label13_8 As label:
@@ -1065,7 +1069,7 @@ Home As screen:
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Fill: =RGBA(100, 118, 132, 1)
                 FontWeight: =FontWeight.Semibold
-                Height: =If(App.ActiveScreen.Size<=3,30,50)
+                Height: =If(App.ActiveScreen.Size<=3,30,40)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
                 OnSelect: |-
@@ -1134,11 +1138,11 @@ Home As screen:
                         Reset(amount_5);
                         Reset(DatePicker2_5)
                     )
-                Size: =If(App.ActiveScreen.Size<=3,8,15)
+                Size: =If(App.ActiveScreen.Size<=3,7,12)
                 Text: ="ADD EXPENSE"
                 Width: =If(App.ActiveScreen.Size<=3,Parent.Width*2/7,Parent.Width*3/7)
                 X: =If(App.ActiveScreen.Size<=3,40,Parent.Width/2)
-                Y: =AddMediaButton1_2.Y+AddMediaButton1_2.Height+20
+                Y: =AddMediaButton1_2.Y+AddMediaButton1_2.Height+10
                 ZIndex: =16
 
             errorpop_2 As group:
@@ -1206,18 +1210,18 @@ Home As screen:
                 ZIndex: =26
 
             Container22_2 As groupContainer.horizontalAutoLayoutContainer:
-                Height: =If(Self.Width<=767,360,230)
+                Height: =If(App.ActiveScreen.Size<4,410,210)
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowX: =LayoutOverflow.Scroll
                 LayoutOverflowY: =LayoutOverflow.Scroll
                 LayoutWrap: =true
                 Width: =Parent.Width
-                Y: =80
+                Y: =55
                 ZIndex: =28
 
                 Container23_2 As groupContainer.manualLayoutContainer:
                     Height: =If(App.ActiveScreen.Size<=3,160,200)
-                    LayoutMinHeight: =If(App.ActiveScreen.Size<=3,180,220)
+                    LayoutMinHeight: =If(App.ActiveScreen.Size<=3,180,200)
                     LayoutMinWidth: =400
                     ZIndex: =1
 
@@ -1238,7 +1242,7 @@ Home As screen:
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         FocusedBorderThickness: =4
-                        Height: =If(App.ActiveScreen.Size<=3,45,68)
+                        Height: =If(App.ActiveScreen.Size<=3,40,55)
                         HoverBorderColor: =RGBA(112, 112, 112, 1)
                         HoverColor: =RGBA(0, 0, 0, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
@@ -1252,6 +1256,7 @@ Home As screen:
                         BorderColor: =RGBA(32, 54, 71, 1)
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
+                        Height: =30
                         Size: =13
                         Text: ="Expense Amount"
                         Width: =210
@@ -1290,7 +1295,7 @@ Home As screen:
 
                 Container25_2 As groupContainer.manualLayoutContainer:
                     Height: =If(App.ActiveScreen.Size<=3,170,200)
-                    LayoutMinHeight: =If(App.ActiveScreen.Size<=3,180,220)
+                    LayoutMinHeight: =If(App.ActiveScreen.Size<=3,180,200)
                     LayoutMinWidth: =400
                     Width: =Parent.Width/2
                     ZIndex: =2
@@ -1299,6 +1304,7 @@ Home As screen:
                         BorderColor: =RGBA(32, 54, 71, 1)
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
+                        Height: =30
                         Size: =13
                         Text: ="Expense Date"
                         Width: =136
@@ -1374,7 +1380,7 @@ Home As screen:
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         FocusedBorderThickness: =4
-                        Height: =If(App.ActiveScreen.Size<=3,40,68)
+                        Height: =If(App.ActiveScreen.Size<=3,35,55)
                         HoverBorderColor: =RGBA(112, 112, 112, 1)
                         HoverColor: =RGBA(0, 0, 0, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
@@ -1395,7 +1401,7 @@ Home As screen:
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledColor: =RGBA(0, 0, 0, 0)
                         DisabledFill: =RGBA(244, 244, 244, 1)
-                        Height: =If(App.ActiveScreen.Size<=3,30,50)
+                        Height: =ExpenseTitle_11.Height-4
                         HoverColor: =RGBA(0, 0, 0, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         Items: =Choices([@Expenses_1].PaymentType)
@@ -1403,9 +1409,9 @@ Home As screen:
                         PressedFill: =RGBA(32, 54, 71, 1)
                         SelectionFill: =RGBA(39, 67, 125, 1)
                         Size: =13
-                        Width: =303
-                        X: =36
-                        Y: =47
+                        Width: =ExpenseTitle_11.Width-4
+                        X: =ExpenseTitle_11.X+2
+                        Y: =ExpenseTitle_11.Y+2
                         ZIndex: =8
 
     Container9 As groupContainer.manualLayoutContainer:
