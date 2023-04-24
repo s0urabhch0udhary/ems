@@ -72,8 +72,8 @@ Statistics As screen:
                         Icon: =Icon.CalendarBlank
                         OnSelect: =Set(calVis,true)
                         PaddingBottom: =25
-                        PaddingLeft: =10
-                        PaddingRight: =10
+                        PaddingLeft: =15
+                        PaddingRight: =15
                         PaddingTop: =25
                         Width: =Self.Height*3/5
                         X: =Parent.Width-2*(Self.Width)-20
@@ -88,8 +88,8 @@ Statistics As screen:
                         Icon: =Icon.Bell
                         OnSelect: =Set(notiVis,true)
                         PaddingBottom: =25
-                        PaddingLeft: =10
-                        PaddingRight: =10
+                        PaddingLeft: =15
+                        PaddingRight: =15
                         PaddingTop: =25
                         Width: =Self.Height*3/5
                         X: =Parent.Width-Self.Width-10
@@ -165,18 +165,19 @@ Statistics As screen:
                             Legend5 As legend:
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 Font: =Font.'Segoe UI'
-                                Height: =46
+                                Height: =22
                                 ItemColorSet: =LineChart4.ItemColorSet
                                 Items: =LineChart4.SeriesLabels
-                                Size: =9
+                                Size: =8
                                 Width: =106
-                                X: =Parent.Width*3.5/4-Self.Width
+                                X: =Parent.Width-Self.Width-3
                                 Y: =22
                                 ZIndex: =5
 
                     Container21 As groupContainer.manualLayoutContainer:
                         FillPortions: =0
-                        Height: =If(App.ActiveScreen.Size<4,200,220)
+                        Height: |
+                            =220
                         LayoutMinHeight: =If(App.ActiveScreen.Size<=3,210,240)
                         LayoutMinWidth: =200
                         ZIndex: =2
@@ -213,12 +214,13 @@ Statistics As screen:
                         Gallery6 As gallery.galleryVertical:
                             BorderColor: =RGBA(32, 54, 71, 1)
                             DelayItemLoading: =true
-                            Height: =160
+                            Height: |
+                                =155
                             Items: =Filter(Expenses_1,User.Email=User().Email)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             ShowScrollbar: =false
-                            TemplateSize: =83
+                            TemplateSize: =Self.Height/2-10
                             Width: =Parent.Width-10
                             X: =5
                             Y: =55

@@ -87,8 +87,8 @@ Expenses As screen:
                         Icon: =Icon.Bell
                         OnSelect: =Set(notiVis,true)
                         PaddingBottom: =25
-                        PaddingLeft: =10
-                        PaddingRight: =10
+                        PaddingLeft: =15
+                        PaddingRight: =15
                         PaddingTop: =25
                         Width: =Self.Height*3/5
                         X: =Parent.Width-Self.Width-10
