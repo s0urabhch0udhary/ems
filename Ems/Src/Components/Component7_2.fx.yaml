@@ -16,7 +16,7 @@ Component7_2 As CanvasComponent:
         Items: =Component7_2.NavItems
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =Self.Width/4-10
-        Width: =Parent.Width
+        Width: =App.ActiveScreen.Width
         ZIndex: =1
 
         Image10 As image:

@@ -99,7 +99,6 @@ Statistics As screen:
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                LayoutOverflowY: =LayoutOverflow.Scroll
                 LayoutWrap: =true
                 PaddingBottom: =50
                 PaddingRight: =0.00
@@ -930,9 +929,8 @@ Statistics As screen:
             RadiusBottomRight: =15
             RadiusTopLeft: =15
             RadiusTopRight: =15
-            Visible: =If(App.ActiveScreen.Size=1,false,true)
             Width: =290
-            X: =Icon8.X-Self.Width
+            X: =Icon8_2.X-Self.Width
             Y: =66
             ZIndex: =2
 
@@ -1180,4 +1178,12 @@ Statistics As screen:
                 X: =193
                 Y: =12
                 ZIndex: =6
+
+    Component7_9 As Component7_2:
+        CurrentScreen: ="Statistics"
+        Fill: =RGBA(0, 49, 75, 1) 
+        Visible: =If(App.ActiveScreen.Size<4,true,false)
+        Width: =App.ActiveScreen.Width
+        Y: =Parent.Height-Self.Height
+        ZIndex: =4
 
