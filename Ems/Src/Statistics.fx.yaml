@@ -100,7 +100,6 @@ Statistics As screen:
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 LayoutWrap: =true
-                PaddingBottom: =50
                 PaddingRight: =0.00
                 PaddingTop: =0.00
                 Width: =Parent.Width*2/3
@@ -109,18 +108,18 @@ Statistics As screen:
 
                 Container19 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
-                    LayoutGap: =15
-                    LayoutMinHeight: =If(App.ActiveScreen.Size<=3,760,600)
+                    LayoutGap: =5
+                    LayoutMinHeight: =If(App.ActiveScreen.Size<=3,760,650)
                     LayoutMinWidth: =360
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowY: =LayoutOverflow.Scroll
-                    PaddingBottom: =20
+                    PaddingBottom: =5
                     PaddingLeft: =50
                     PaddingRight: =30
                     ZIndex: =1
 
                     Container20 As groupContainer.manualLayoutContainer:
-                        LayoutMinHeight: =If(App.ActiveScreen.Size<=3,350,290)
+                        LayoutMinHeight: =200
                         LayoutMinWidth: =200
                         ZIndex: =1
 
@@ -163,9 +162,11 @@ Statistics As screen:
 
                             Legend5 As legend:
                                 DisabledColor: =RGBA(166, 166, 166, 1)
+                                Font: =Font.'Segoe UI'
                                 Height: =46
                                 ItemColorSet: =LineChart4.ItemColorSet
                                 Items: =LineChart4.SeriesLabels
+                                Size: =9
                                 Width: =106
                                 X: =Parent.Width*3.5/4-Self.Width
                                 Y: =22
@@ -173,7 +174,7 @@ Statistics As screen:
 
                     Container21 As groupContainer.manualLayoutContainer:
                         Height: =Parent.Height/2-30
-                        LayoutMinHeight: =If(App.ActiveScreen.Size<=3,350,190)
+                        LayoutMinHeight: =If(App.ActiveScreen.Size<=3,210,240)
                         LayoutMinWidth: =200
                         ZIndex: =2
 
@@ -198,9 +199,9 @@ Statistics As screen:
                             BorderColor: =RGBA(32, 54, 71, 1)
                             Color: =RGBA(26, 26, 26, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
-                            Font: =Font.'Lato Black'
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
                             Height: =60
-                            Size: =20
                             Text: ="Transactions"
                             Width: =184
                             X: =58
@@ -325,6 +326,13 @@ Statistics As screen:
                                 Y: =15
                                 ZIndex: =8
 
+                    Container4 As groupContainer.manualLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        ZIndex: =3
+
                 Container6_10 As groupContainer.verticalAutoLayoutContainer:
                     FillPortions: =0.4
                     Height: =700
@@ -345,7 +353,8 @@ Statistics As screen:
                     ZIndex: =2
 
                     Container7_24 As groupContainer.manualLayoutContainer:
-                        Height: =320
+                        FillPortions: =0
+                        Height: =260
                         LayoutMinHeight: =260
                         LayoutMinWidth: =250
                         PaddingRight: =0.00
@@ -510,7 +519,7 @@ Statistics As screen:
                                 Height: = Title5_15.Height*4/5
                                 OnSelect: =Select(Parent)
                                 Visible: =And(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, Title5_15.Visible)
-                                Width: =Self.Height
+                                Width: =1
                                 Y: =Title5_15.Y+Title5_15.Height/7
                                 ZIndex: =2
 
@@ -623,7 +632,7 @@ Statistics As screen:
                             X: =57
                             ZIndex: =1
 
-                        Label24_20 As label:
+                        Label24_15 As label:
                             BorderColor: =RGBA(32, 54, 71, 1)
                             Color: =RGBA(153, 153, 153, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -647,7 +656,7 @@ Statistics As screen:
                             Width: =Parent.Width-20
                             X: =20
                             Y: =40
-                            ZIndex: =4
+                            ZIndex: =5
 
                             Button16_23 As button:
                                 BorderThickness: =1
@@ -730,13 +739,6 @@ Statistics As screen:
                                 X: =Parent.TemplateWidth-Self.Width-5
                                 Y: =Parent.TemplateHeight/2-Self.Height/2
                                 ZIndex: =5
-
-            Container4 As groupContainer.manualLayoutContainer:
-                FillPortions: =0
-                Height: =70
-                LayoutMinHeight: =100
-                LayoutMinWidth: =250
-                ZIndex: =4
 
     Container9_6 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(28, 37, 54, 0.4)
