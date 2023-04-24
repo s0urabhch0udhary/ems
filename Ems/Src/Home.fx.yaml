@@ -111,7 +111,7 @@ Home As screen:
                 Container4_2 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =10
-                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,900,Container8_5.Width<700,599,400)
+                    LayoutMinHeight: =If(App.ActiveScreen.Width<405,950,Container8_5.Width<700,800,400)
                     LayoutMinWidth: =If(App.ActiveScreen.Size=1,300,430)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
@@ -524,9 +524,8 @@ Home As screen:
                             ZIndex: =6
 
                     Container5 As groupContainer.manualLayoutContainer:
-                        FillPortions: =0
                         Height: =30
-                        LayoutMinHeight: =100
+                        LayoutMinHeight: =50
                         LayoutMinWidth: =250
                         ZIndex: =3
 
@@ -1850,7 +1849,7 @@ Home As screen:
                 ZIndex: =6
 
     Component7_7 As Component7_2:
-        CurrentScreen: ="Hpme"
+        CurrentScreen: ="Home"
         Fill: =RGBA(0, 49, 75, 1) 
         Visible: =If(App.ActiveScreen.Size<4,true,false)
         Width: =App.ActiveScreen.Width
