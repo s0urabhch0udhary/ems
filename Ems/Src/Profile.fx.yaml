@@ -785,7 +785,7 @@ Profile As screen:
             RadiusTopLeft: =15
             RadiusTopRight: =15
             Width: =280
-            X: =Icon8.X-Self.Width
+            X: =Icon8_3.X-Self.Width
             Y: =66
             ZIndex: =2
 
