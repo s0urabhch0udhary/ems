@@ -52,12 +52,13 @@ Screen1 As screen:
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
-                Height: =160
-                Size: =40
+                Height: =258
+                Size: =If(App.ActiveScreen.Size<=3,20,40)
                 Text: =" Expense Monitoring Application"
+                VerticalAlign: =VerticalAlign.Top
                 Width: =Parent.Width-40
-                X: =20
-                Y: =135
+                X: =22
+                Y: =105
                 ZIndex: =1
 
             Container14 As groupContainer.manualLayoutContainer:
@@ -127,8 +128,8 @@ Screen1 As screen:
                 Image: ='ExpenseManagement (2)'
                 ImagePosition: =ImagePosition.Fill
                 Width: =180
-                X: =363
-                Y: =438
+                X: =Parent.Width/2-Self.Width/2
+                Y: =Label9.Y+Label9.Height+5
                 ZIndex: =3
 
             Label12 As label:
@@ -138,10 +139,11 @@ Screen1 As screen:
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =91
-                Size: =35
+                Height: =75
+                Size: =If(App.ActiveScreen.Size<=3,15,30)
                 Text: ="Welcome to"
-                Width: =366
+                VerticalAlign: =VerticalAlign.Bottom
+                Width: =280
                 X: =48
                 Y: =30
                 ZIndex: =4
