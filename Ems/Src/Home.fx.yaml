@@ -1861,6 +1861,51 @@ Home As screen:
                 Y: =12
                 ZIndex: =6
 
+            Gallery4_1 As gallery.galleryVertical:
+                BorderColor: =RGBA(32, 54, 71, 1)
+                DelayItemLoading: =true
+                Height: =144
+                Items: =Filter(Expenses_1,(_firstDayOfMonth<=Date&&_firstDayOfMonth+30>=Date))
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplateSize: =40
+                Width: =290
+                Y: =262
+                ZIndex: =7
+
+                Label14_1 As label:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =Font.'Segoe UI'
+                    OnSelect: =Select(Parent)
+                    Size: =9
+                    Text: =ThisItem.Title
+                    Width: =77
+                    ZIndex: =1
+
+                Label21_1 As label:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    OnSelect: =Select(Parent)
+                    Size: =9
+                    Text: ="₹"&ThisItem.Amount
+                    Width: =58
+                    X: =222
+                    ZIndex: =2
+
+                Label22_1 As label:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Color: =RGBA(70, 83, 92, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    OnSelect: =Select(Parent)
+                    Size: =9
+                    Text: =ThisItem.Date
+                    Width: =85
+                    X: =107
+                    ZIndex: =3
+
     Component7_7 As Component7_2:
         CurrentScreen: ="Home"
         Visible: =If(App.ActiveScreen.Size<4,true,false)
