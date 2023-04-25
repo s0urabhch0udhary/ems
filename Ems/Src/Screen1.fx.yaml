@@ -51,11 +51,11 @@ Screen1 As screen:
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
-                Height: =262
+                Height: =210
                 Size: =60
                 Text: =" Expense Monitoring Application"
                 Width: =871
-                X: =40
+                X: =30
                 Y: =183
                 ZIndex: =1
 
@@ -133,6 +133,7 @@ Screen1 As screen:
                 BorderColor: =RGBA(32, 54, 71, 1)
                 Color: =RGBA(255, 255, 255, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =123
                 Size: =40
                 Text: ="Welcome to"
