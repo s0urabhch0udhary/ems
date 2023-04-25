@@ -117,7 +117,7 @@
         "Name": "Label6",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 508,
+        "PublishOrderIndex": 510,
         "Rules": [
           {
             "Category": "Data",
@@ -499,7 +499,7 @@
         "Name": "Label23",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 509,
+        "PublishOrderIndex": 511,
         "Rules": [
           {
             "Category": "Data",
@@ -881,7 +881,7 @@
         "Name": "Image2_3",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 510,
+        "PublishOrderIndex": 512,
         "Rules": [
           {
             "Category": "Data",
@@ -1166,7 +1166,7 @@
         "Name": "Icon3",
         "Parent": "Component2_8",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 511,
+        "PublishOrderIndex": 513,
         "Rules": [
           {
             "Category": "Design",

@@ -261,7 +261,7 @@ Home As screen:
 
                             Label9_15 As label:
                                 BorderColor: =RGBA(32, 54, 71, 1)
-                                Color: =RGBA(0, 0, 0, 1)
+                                Color: =If((budget-Sum(Filter(Expenses_1,User.Email=User().Email&&  Month(Date) = Month(Today()) && Year(Date) = Year(Today())),Amount))<0,RGBA(255, 0, 0, 1),RGBA(0, 0, 0, 1))
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 Font: =Font.'Segoe UI'
                                 FontWeight: =FontWeight.Semibold

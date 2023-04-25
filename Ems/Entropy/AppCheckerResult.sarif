@@ -174,6 +174,166 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18.Color",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 60,
+                  "snippet": {
+                    "text": "Month(Date)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "Expenses",
+                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Month"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18.Color",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 72,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "Expenses",
+                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18.Color",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 56,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "Expenses",
+                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18.Color",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 89,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "Expenses",
+                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_18.Label9_18"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container4_4.Container8_6.Container12_19.Label9_19.Text"
                 }
               ],
@@ -712,6 +872,166 @@
               },
               "properties": {
                 "member": "Text",
+                "module": "Home",
+                "type": "Home.Container1_3.Container2_3.Container3_3.Container4_2.Container8_5.Container12_15.Label9_15"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Home.Container1_3.Container2_3.Container3_3.Container4_2.Container8_5.Container12_15.Label9_15.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Home.Container1_3.Container2_3.Container3_3.Container4_2.Container8_5.Container12_15.Label9_15.Color",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 60,
+                  "snippet": {
+                    "text": "Month(Date)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "Home",
+                "type": "Home.Container1_3.Container2_3.Container3_3.Container4_2.Container8_5.Container12_15.Label9_15"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Month"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Home.Container1_3.Container2_3.Container3_3.Container4_2.Container8_5.Container12_15.Label9_15.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Home.Container1_3.Container2_3.Container3_3.Container4_2.Container8_5.Container12_15.Label9_15.Color",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 72,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "Home",
+                "type": "Home.Container1_3.Container2_3.Container3_3.Container4_2.Container8_5.Container12_15.Label9_15"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Home.Container1_3.Container2_3.Container3_3.Container4_2.Container8_5.Container12_15.Label9_15.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Home.Container1_3.Container2_3.Container3_3.Container4_2.Container8_5.Container12_15.Label9_15.Color",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 56,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "Home",
+                "type": "Home.Container1_3.Container2_3.Container3_3.Container4_2.Container8_5.Container12_15.Label9_15"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Home.Container1_3.Container2_3.Container3_3.Container4_2.Container8_5.Container12_15.Label9_15.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Home.Container1_3.Container2_3.Container3_3.Container4_2.Container8_5.Container12_15.Label9_15.Color",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 89,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Color",
                 "module": "Home",
                 "type": "Home.Container1_3.Container2_3.Container3_3.Container4_2.Container8_5.Container12_15.Label9_15"
               }
