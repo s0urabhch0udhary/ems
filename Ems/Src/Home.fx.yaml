@@ -267,7 +267,7 @@ Home As screen:
                                 FontWeight: =FontWeight.Semibold
                                 Height: =38
                                 Size: =18
-                                Text: ="₹ "&budget-Sum(Filter(Expenses_1,User.Email=User().Email),Amount)
+                                Text: ="₹ "&budget-Sum(Filter(Expenses_1,User.Email=User().Email&&  Month(Date) = Month(Today()) && Year(Date) = Year(Today())),Amount)
                                 Width: =Parent.Width*4/5
                                 X: =12
                                 Y: =Label8_15.Y+Label8_15.Height+3
@@ -350,7 +350,7 @@ Home As screen:
                                 Height: |
                                     =38
                                 Size: =20
-                                Text: ="₹ "&If(IsEmpty(Filter(Expenses_1,User.Email=User().Email)),"0",Sum(Filter(Expenses_1,User.Email=User().Email),Amount))
+                                Text: ="₹ "&If(IsEmpty(Filter(Expenses_1,User.Email=User().Email&&Month(Date) = Month(Today()) && Year(Date) = Year(Today()))),"0",Sum(Filter(Expenses_1,User.Email=User().Email&&  Month(Date) = Month(Today()) && Year(Date) = Year(Today())),Amount))
                                 Width: =Parent.Width*4/5
                                 X: =12
                                 Y: =Label8_16.Y+Label8_16.Height+3
@@ -1522,7 +1522,7 @@ Home As screen:
                     OnSelect: =Select(Parent)
                     PaddingBottom: =0
                     PaddingTop: =0
-                    Size: =If(App.ActiveScreen.Size<=2,7,8)
+                    Size: =If(App.ActiveScreen.Size<=2,8,9)
                     Text: =ThisItem.Title
                     VerticalAlign: =VerticalAlign.Top
                     Width: =110
@@ -1538,7 +1538,7 @@ Home As screen:
                     FontWeight: =FontWeight.Lighter
                     Height: =16
                     OnSelect: =Select(Parent)
-                    Size: =If(App.ActiveScreen.Size<=2,6,7)
+                    Size: =If(App.ActiveScreen.Size<=2,7,8)
                     Text: =Text(ThisItem.Date,DateTimeFormat.LongDate)
                     Width: =90
                     X: =26
@@ -1567,7 +1567,7 @@ Home As screen:
                     OnSelect: =Select(Parent)
                     PaddingBottom: =0
                     PaddingTop: =0
-                    Size: =If(App.ActiveScreen.Size<=2,6,7)
+                    Size: =If(App.ActiveScreen.Size<=2,7,8)
                     Text: ="₹"&ThisItem.Amount
                     Width: =48
                     X: =Parent.TemplateWidth-Self.Width-5
