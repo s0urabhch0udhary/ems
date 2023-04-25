@@ -15,139 +15,6 @@ Screen1 As screen:
         Width: =Parent.Width
         ZIndex: =1
 
-    Container3 As groupContainer.horizontalAutoLayoutContainer:
-        Height: =Parent.Height
-        LayoutMode: =LayoutMode.Auto
-        LayoutOverflowY: =LayoutOverflow.Scroll
-        Width: =Parent.Width
-        ZIndex: =2
-
-        Container12 As groupContainer.manualLayoutContainer:
-            LayoutMinHeight: =100
-            LayoutMinWidth: =250
-            ZIndex: =1
-
-            Image15 As image:
-                BorderColor: =RGBA(32, 54, 71, 1)
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Height: =Parent.Height
-                Image: =sketchwirelogo2
-                PaddingBottom: =10
-                PaddingLeft: =30
-                PaddingRight: =30
-                PaddingTop: =10
-                Width: =Parent.Width
-                ZIndex: =1
-
-        Container13 As groupContainer.manualLayoutContainer:
-            LayoutMinHeight: =100
-            LayoutMinWidth: =400
-            ZIndex: =2
-
-            Label9 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(32, 54, 71, 1)
-                Color: =RGBA(255, 255, 255, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Bold
-                Height: =258
-                Size: =If(App.ActiveScreen.Size<=3,20,40)
-                Text: =" Expense Monitoring Application"
-                VerticalAlign: =VerticalAlign.Top
-                Width: =Parent.Width-40
-                X: =22
-                Y: =105
-                ZIndex: =1
-
-            Container14 As groupContainer.manualLayoutContainer:
-                Height: =117
-                Width: =546
-                X: =Parent.Width-Self.Width
-                Y: =Parent.Height-Self.Height-40
-                ZIndex: =2
-
-                Image11 As image:
-                    BorderColor: =RGBA(32, 54, 71, 1)
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    Height: =50
-                    Image: =User().Image
-                    RadiusBottomLeft: =70
-                    RadiusBottomRight: =70
-                    RadiusTopLeft: =70
-                    RadiusTopRight: =70
-                    Width: =50
-                    X: =40
-                    Y: =40
-                    ZIndex: =1
-
-                Label10 As label:
-                    BorderColor: =RGBA(32, 54, 71, 1)
-                    Color: =RGBA(255, 255, 255, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =Font.'Segoe UI'
-                    Height: =25
-                    Size: =12
-                    Text: =User().FullName
-                    Width: =485
-                    X: =90
-                    Y: =45
-                    ZIndex: =2
-
-                Label11 As label:
-                    BorderColor: =RGBA(32, 54, 71, 1)
-                    Color: =RGBA(255, 255, 255, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =Font.'Segoe UI'
-                    Height: =20
-                    Size: =10
-                    Text: =User().Email
-                    Width: =522
-                    X: =90
-                    Y: =65
-                    ZIndex: =3
-
-                Image14 As image:
-                    BorderColor: =RGBA(32, 54, 71, 1)
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    Height: =72
-                    Image: ='Pulse-1s-200px (3)'
-                    Width: =58
-                    X: =405
-                    Y: =29
-                    ZIndex: =4
-
-            Image19 As image:
-                BorderColor: =RGBA(32, 54, 71, 1)
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Height: =160
-                Image: ='ExpenseManagement (2)'
-                ImagePosition: =ImagePosition.Fill
-                Width: =180
-                X: =Parent.Width/2-Self.Width/2
-                Y: =Label9.Y+Label9.Height+5
-                ZIndex: =3
-
-            Label12 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(32, 54, 71, 1)
-                Color: =RGBA(255, 255, 255, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =75
-                Size: =If(App.ActiveScreen.Size<=3,15,30)
-                Text: ="Welcome to"
-                VerticalAlign: =VerticalAlign.Bottom
-                Width: =280
-                X: =48
-                Y: =30
-                ZIndex: =4
-
     Timer1 As timer:
         AutoStart: =true
         Duration: =100000
@@ -159,4 +26,79 @@ Screen1 As screen:
         X: =40
         Y: =40
         ZIndex: =3
+
+    Container16 As groupContainer.manualLayoutContainer:
+        Height: =Parent.Height
+        Width: =Parent.Width
+        ZIndex: =4
+
+        Container14_1 As groupContainer.manualLayoutContainer:
+            Height: =117
+            Width: =If(App.ActiveScreen.Size<=3,300,430)
+            X: =Parent.Width-Self.Width
+            Y: =Parent.Height-Self.Height-10
+            ZIndex: =1
+
+            Image11_1 As image:
+                BorderColor: =RGBA(32, 54, 71, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =If(App.ActiveScreen.Size<=3,35,50)
+                Image: =User().Image
+                RadiusBottomLeft: =70
+                RadiusBottomRight: =70
+                RadiusTopLeft: =70
+                RadiusTopRight: =70
+                Width: =If(App.ActiveScreen.Size<=3,35,50)
+                X: =10
+                Y: =40
+                ZIndex: =1
+
+            Label10_1 As label:
+                BorderColor: =RGBA(32, 54, 71, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Segoe UI'
+                Height: =25
+                Size: =If(App.ActiveScreen.Size<=3,8,12)
+                Text: =User().FullName
+                Width: =If(App.ActiveScreen.Size<=3,200,300)
+                X: =Image11_1.X+Image11_1.Width+4
+                Y: =40
+                ZIndex: =2
+
+            Label11_1 As label:
+                BorderColor: =RGBA(32, 54, 71, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Size: =If(App.ActiveScreen.Size<=3,8,12)
+                Text: =User().Email
+                Width: =If(App.ActiveScreen.Size<=3,200,300)
+                X: =Image11_1.X+Image11_1.Width+4
+                Y: =If(App.ActiveScreen.Size<=3,55,65)
+                ZIndex: =3
+
+            Image14_1 As image:
+                BorderColor: =RGBA(32, 54, 71, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =If(App.ActiveScreen.Size<=3,35,50)
+                Image: ='Pulse-1s-200px (3)'
+                Width: =If(App.ActiveScreen.Size<=3,35,50)
+                X: =Label11_1.X+Label11_1.Width+4
+                Y: =35
+                ZIndex: =4
+
+        Image20 As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =239
+            Image: =sketchwirelogo2
+            Width: =Parent.Width*3/10
+            X: =(Parent.Width-Self.Width)/2
+            Y: =Parent.Height/2-Self.Height/2
+            ZIndex: =2
 

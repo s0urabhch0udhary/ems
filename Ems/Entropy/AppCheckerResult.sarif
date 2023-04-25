@@ -7763,6 +7763,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.ExpenseManagement (2)"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.ExpenseManagement (2)",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "ExpenseManagement (2)",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.logout"
                 }
               ],

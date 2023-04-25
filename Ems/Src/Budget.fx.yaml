@@ -1235,6 +1235,7 @@ Budget As screen:
                 Items: =Filter(Expenses_1,(_firstDayOfMonth<=Date&&_firstDayOfMonth+30>=Date))
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
+                ShowScrollbar: =false
                 TemplateSize: =40
                 Width: =290
                 Y: =276

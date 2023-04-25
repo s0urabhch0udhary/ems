@@ -6775,7 +6775,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "dropdownCalendarSelection1_13",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7393,7 +7393,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Gallery4_4",
-      "ParentIndex": 0,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9745,7 +9745,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconNextMonth1_13",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10292,7 +10292,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconPrevMonth1_13",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16670,7 +16670,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LblMonthSelected1_13",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17646,7 +17646,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "MonthDayGallery1_13",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19623,7 +19623,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "WeekdayGallery1_13",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
