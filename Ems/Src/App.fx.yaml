@@ -20,8 +20,8 @@ App As appinfo:
                     Icon: '341b12fc185db6a7fd79aced917e51a2'
                 },
                 {
-                    Title: "Profile",
-                    Screen: Profile,
+                    Title: "Budget",
+                    Screen: Budget,
                     Icon: 'Icon ionic-ios-settings'
                 }
             )

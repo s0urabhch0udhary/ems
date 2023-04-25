@@ -53,10 +53,10 @@ Screen1 As screen:
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
                 Height: =176
-                Size: =50
+                Size: =40
                 Text: =" Expense Monitoring Application"
-                Width: =871
-                X: =15
+                Width: =Parent.Width-40
+                X: =20
                 Y: =135
                 ZIndex: =1
 
