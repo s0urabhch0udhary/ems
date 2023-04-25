@@ -19,7 +19,7 @@ Statistics As screen:
 
         "'Left Navigation_8' As 'Left Navigation_3'":
             CurrentScreen: ="Statistics"
-            Fill: =RGBA(0, 49, 75, 1) 
+            Fill: =RGBA(9, 107, 107, 1)
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Width: =If(App.ActiveScreen.Size<=4,0,250)
@@ -131,6 +131,7 @@ Statistics As screen:
                             DisabledFill: =RGBA(255, 255, 255, 1)
                             DisplayMode: =DisplayMode.Disabled
                             Fill: =RGBA(100, 118, 132, 1)
+                            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                             FontWeight: =FontWeight.Semibold
                             Height: =Parent.Height-10
                             HoverColor: =RGBA(255, 255, 255, 1)
@@ -188,6 +189,7 @@ Statistics As screen:
                             DisabledFill: =RGBA(255, 255, 255, 1)
                             DisplayMode: =DisplayMode.Disabled
                             Fill: =RGBA(100, 118, 132, 1)
+                            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                             FontWeight: =FontWeight.Semibold
                             Height: =Parent.Height-10
                             HoverColor: =RGBA(255, 255, 255, 1)
@@ -501,6 +503,7 @@ Statistics As screen:
                                     DisabledFill: =If(Int(Self.Text)<500,RGBA(16,235,20,0.7),Color.Orange)
                                     DisplayMode: =DisplayMode.Disabled
                                     Fill: =RGBA(16, 235, 20, 1)
+                                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                                     Font: =Font.'Segoe UI'
                                     FontWeight: =FontWeight.Semibold
                                     Height: =Parent.Height-4
@@ -670,6 +673,7 @@ Statistics As screen:
                                 DisabledFill: =RGBA(255, 255, 255, 1)
                                 DisplayMode: =DisplayMode.Disabled
                                 Fill: =RGBA(100, 118, 132, 1)
+                                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                                 FontWeight: =FontWeight.Semibold
                                 Height: =Parent.TemplateHeight-4
                                 HoverColor: =RGBA(255, 255, 255, 1)
@@ -757,6 +761,7 @@ Statistics As screen:
             DisabledColor: =RGBA(0, 0, 0, 0)
             DisabledFill: =RGBA(0, 0, 0, 0)
             Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             FontWeight: =FontWeight.Semibold
             Height: =Parent.Height
             HoverBorderColor: =
@@ -826,6 +831,7 @@ Statistics As screen:
                     DisabledFill: =RGBA(255, 255, 255, 1)
                     DisplayMode: =DisplayMode.Disabled
                     Fill: =RGBA(100, 118, 132, 1)
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                     FontWeight: =FontWeight.Semibold
                     Height: =Parent.TemplateHeight-4
                     HoverColor: =RGBA(255, 255, 255, 1)
@@ -913,6 +919,7 @@ Statistics As screen:
             DisabledColor: =RGBA(0, 0, 0, 0)
             DisabledFill: =RGBA(0, 0, 0, 0)
             Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             FontWeight: =FontWeight.Semibold
             Height: =Parent.Height
             HoverBorderColor: =
@@ -1073,6 +1080,7 @@ Statistics As screen:
                         DisabledFill: =If(Int(Self.Text)<500,RGBA(16,235,20,0.7),Color.Orange)
                         DisplayMode: =DisplayMode.Disabled
                         Fill: =RGBA(16, 235, 20, 1)
+                        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
                         Height: =Parent.Height-4
@@ -1188,7 +1196,6 @@ Statistics As screen:
 
     Component7_9 As Component7_2:
         CurrentScreen: ="Statistics"
-        Fill: =RGBA(0, 49, 75, 1) 
         Visible: =If(App.ActiveScreen.Size<4,true,false)
         Width: =App.ActiveScreen.Width
         Y: =Parent.Height-Self.Height

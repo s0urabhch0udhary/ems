@@ -1,8 +1,7 @@
 Component7_2 As CanvasComponent:
     CurrentScreen: ="Text"
-    Fill: =RGBA(28, 37, 54, 1)
-    Height: |
-        =45
+    Fill: =RGBA(9, 107, 107, 1)
+    Height: =50
     NavItems: =emsnav
     Width: =640
     X: =0
@@ -15,6 +14,7 @@ Component7_2 As CanvasComponent:
         Height: =Parent.Height
         Items: =Component7_2.NavItems
         LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
         TemplateSize: =Self.Width/4-10
         Width: =App.ActiveScreen.Width
         ZIndex: =1
@@ -23,7 +23,7 @@ Component7_2 As CanvasComponent:
             BorderColor: =RGBA(0, 18, 107, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Height: =23
+            Height: =30
             Image: =ThisItem.Icon
             OnSelect: =Select(Parent)
             PaddingBottom: =5
@@ -32,6 +32,7 @@ Component7_2 As CanvasComponent:
             PaddingTop: =5
             Transparency: =If(ThisItem.Title=Component7_2.CurrentScreen,0,0.5)
             Width: =Parent.TemplateWidth
+            Y: =1
             ZIndex: =1
 
         Label17_1 As label:
@@ -42,10 +43,10 @@ Component7_2 As CanvasComponent:
             Font: =Font.'Segoe UI'
             Height: =12
             OnSelect: =Select(Parent)
-            Size: =6
+            Size: =8
             Text: =ThisItem.Title
             Width: =Parent.TemplateWidth
-            Y: =22
+            Y: =31
             ZIndex: =2
 
         Button8 As button:

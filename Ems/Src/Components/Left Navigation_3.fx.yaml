@@ -1,6 +1,6 @@
 "'Left Navigation_3' As CanvasComponent":
     CurrentScreen: ="Text"
-    Fill: =RGBA(0, 49, 75, 1)
+    Fill: =RGBA(9, 130, 129, 1)
     Height: =Max(App.Height,App.DesignHeight)
     MenuWidth: =If(App.ActiveScreen.Size=1||App.ActiveScreen.Size=2,70,260)
     NavItems: =emsnav
