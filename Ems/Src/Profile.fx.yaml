@@ -244,7 +244,8 @@ Profile As screen:
                                     ZIndex: =8
 
                                 select_currency As dropdown:
-                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderColor: =RGBA(230, 230, 230, 1)
+                                    BorderThickness: =1
                                     ChevronBackground: =RGBA(0, 0, 0, 0)
                                     ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                                     ChevronDisabledFill: =RGBA(0, 0, 0, 0)
@@ -255,19 +256,19 @@ Profile As screen:
                                     DisabledColor: =RGBA(0, 0, 0, 0)
                                     DisabledFill: =RGBA(244, 244, 244, 1)
                                     Fill: =RGBA(0, 0, 0, 0)
-                                    Height: =TextInput3_12.Height-8
+                                    Height: =TextInput3_12.Height-2
                                     HoverColor: =RGBA(0, 0, 0, 1)
                                     HoverFill: =RGBA(0, 0, 0, 0)
                                     Items: =currency
                                     PaddingLeft: =40
                                     PressedColor: =RGBA(255, 255, 255, 1)
                                     PressedFill: =RGBA(32, 54, 71, 1)
-                                    SelectionFill: =RGBA(39, 67, 125, 1)
+                                    SelectionFill: =RGBA(9, 107, 107, 1)
                                     Size: =13
-                                    Width: =TextInput3_12.Width-8
-                                    X: =43
+                                    Width: =TextInput3_12.Width-2
+                                    X: =TextInput3_12.X+1
                                     Y: |
-                                        =TextInput3_12.Y+4
+                                        =TextInput3_12.Y+1
                                     ZIndex: =9
 
                                 monthly_income_1 As text:
