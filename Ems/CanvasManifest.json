@@ -125,10 +125,10 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
+    "Splash Screen",
     "Home",
     "Expenses",
     "Statistics",
-    "Budget",
-    "Screen1"
+    "Budget"
   ]
 }

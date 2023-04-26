@@ -1,4 +1,4 @@
-Screen1 As screen:
+"'Splash Screen' As screen":
     Fill: =RGBA(255,255,255,1)
     LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
 
@@ -6,7 +6,7 @@ Screen1 As screen:
         Height: =Parent.Height
         HtmlText: |-
             ="<div
-            style= 'width:"&Text(Screen1.Width)&"px;height:"&Text(Screen1.Height-1)&"px;background-image: linear-gradient(to left bottom, #038387,#1c7e6d,#0d2d2b);'
+            style= 'width:"&Text('Splash Screen'.Width)&"px;height:"&Text('Splash Screen'.Height-1)&"px;background-image: linear-gradient(to left bottom, #038387,#1c7e6d,#0d2d2b);'
             ></div>"
         PaddingBottom: =0
         PaddingLeft: =0
@@ -17,7 +17,7 @@ Screen1 As screen:
 
     Timer1 As timer:
         AutoStart: =true
-        Duration: =100000
+        Duration: =20000
         Fill: =RGBA(100, 118, 132, 1)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
@@ -59,7 +59,7 @@ Screen1 As screen:
                 Color: =RGBA(255, 255, 255, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
-                Height: =25
+                Height: =If(App.ActiveScreen.Size<=3,15,25)
                 Size: =If(App.ActiveScreen.Size<=3,8,12)
                 Text: =User().FullName
                 Width: =If(App.ActiveScreen.Size<=3,200,300)
@@ -72,12 +72,12 @@ Screen1 As screen:
                 Color: =RGBA(255, 255, 255, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
-                Height: =20
+                Height: =22
                 Size: =If(App.ActiveScreen.Size<=3,8,12)
                 Text: =User().Email
                 Width: =If(App.ActiveScreen.Size<=3,200,300)
-                X: =Image11_1.X+Image11_1.Width+4
-                Y: =If(App.ActiveScreen.Size<=3,55,65)
+                X: =Label10_1.X
+                Y: =Label10_1.Y+Label10_1.Height
                 ZIndex: =3
 
             Image14_1 As image:

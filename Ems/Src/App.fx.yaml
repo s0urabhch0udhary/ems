@@ -63,5 +63,5 @@ App As appinfo:
         );
         Set(budget,First(SortByColumns(Filter(Expenses_Profile, User.Email=User().Email), "Date", SortOrder.Descending)).'Monthly Budget');
     SizeBreakpoints: =[400,600, 900, 1340,1550]
-    StartScreen: =Home
+    StartScreen: ='Splash Screen'
 

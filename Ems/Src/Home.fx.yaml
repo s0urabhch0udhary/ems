@@ -587,7 +587,7 @@ Home As screen:
                             Color: =RGBA(32, 54, 71, 1)
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             DisabledColor: =RGBA(244, 244, 244, 1)
-                            Height: =41
+                            Height: =35
                             Icon: =Icon.ChevronLeft
                             OnSelect: |-
                                 =/*changes month view to previous month*/
@@ -596,10 +596,10 @@ Home As screen:
                                 Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
                                 /*collects calendar events for all days in current month view. Updates _minDate to prevent duplicate data collection if user returns to this month view*/
                                 If(_minDate > _firstDayOfMonth, Set(_minDate, _firstDayOfMonth);)
-                            PaddingBottom: =7
+                            PaddingBottom: =10
                             PaddingLeft: =7
                             PaddingRight: =7
-                            PaddingTop: =7
+                            PaddingTop: =10
                             TabIndex: =0
                             Tooltip: ="View previous month"
                             Visible: =_calendarVisible
@@ -613,7 +613,7 @@ Home As screen:
                             Color: =RGBA(32, 54, 71, 1)
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             DisabledColor: =RGBA(244, 244, 244, 1)
-                            Height: =41
+                            Height: =35
                             Icon: =Icon.ChevronRight
                             OnSelect: |-
                                 =/*changes month view to next month*/
@@ -622,10 +622,10 @@ Home As screen:
                                 /*collects calendar events for all days in current month view. Updates _maxDate to prevent duplicate data collection if user returns to this month view*/
                                 Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
                                 If(_lastDayOfMonth > _maxDate, Set(_maxDate, _lastDayOfMonth);)
-                            PaddingBottom: =7
+                            PaddingBottom: =10
                             PaddingLeft: =7
                             PaddingRight: =7
-                            PaddingTop: =7
+                            PaddingTop: =10
                             TabIndex: =0
                             Tooltip: ="View next month"
                             Visible: =_calendarVisible
