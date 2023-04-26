@@ -114,13 +114,13 @@ Statistics As screen:
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowY: =LayoutOverflow.Scroll
                     PaddingBottom: =5
-                    PaddingLeft: =50
+                    PaddingLeft: =30
                     PaddingRight: =30
                     ZIndex: =1
 
                     Container20 As groupContainer.manualLayoutContainer:
                         FillPortions: =0
-                        Height: =If(App.ActiveScreen.Size<4,200,250)
+                        Height: =250
                         LayoutMinHeight: =200
                         LayoutMinWidth: =200
                         ZIndex: =1

@@ -3484,19 +3484,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.Icon7_2.AccessibleLabel"
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.AddMediaButton1_4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.Icon7_2.AccessibleLabel",
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.AddMediaButton1_4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Home",
-                "type": "Home.Container5_2.Container9_2.Icon7_2"
+                "type": "Home.Container5_2.Container3.Container9_10.AddMediaButton1_4"
               }
             }
           ],
@@ -3514,19 +3514,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.Icon7_2.TabIndex"
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.Gallery4_6.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.Icon7_2.TabIndex",
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.Gallery4_6.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Home",
-                "type": "Home.Container5_2.Container9_2.Icon7_2"
+                "type": "Home.Container5_2.Container3.Container9_10.Gallery4_6"
               }
             }
           ],
@@ -3544,19 +3544,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.Container22_2.Container23_2.ExpenseTitle_10.AccessibleLabel"
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.Gallery4_6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.Container22_2.Container23_2.ExpenseTitle_10.AccessibleLabel",
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.Gallery4_6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Home",
-                "type": "Home.Container5_2.Container9_2.Container22_2.Container23_2.ExpenseTitle_10"
+                "type": "Home.Container5_2.Container3.Container9_10.Gallery4_6"
               }
             }
           ],
@@ -3574,19 +3574,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.Container22_2.Container23_2.amount_5.AccessibleLabel"
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.Container22_4.Container25_4.DatePicker2_7.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.Container22_2.Container23_2.amount_5.AccessibleLabel",
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.Container22_4.Container25_4.DatePicker2_7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Home",
-                "type": "Home.Container5_2.Container9_2.Container22_2.Container23_2.amount_5"
+                "type": "Home.Container5_2.Container3.Container9_10.Container22_4.Container25_4.DatePicker2_7"
               }
             }
           ],
@@ -3604,19 +3604,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.Container22_2.Container25_2.ExpenseTitle_11.AccessibleLabel"
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.Container22_4.Container25_4.TextInput3_9.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.Container22_2.Container25_2.ExpenseTitle_11.AccessibleLabel",
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.Container22_4.Container25_4.TextInput3_9.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Home",
-                "type": "Home.Container5_2.Container9_2.Container22_2.Container25_2.ExpenseTitle_11"
+                "type": "Home.Container5_2.Container3.Container9_10.Container22_4.Container25_4.TextInput3_9"
               }
             }
           ],
@@ -3634,19 +3634,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.Container22_2.Container25_2.Dropdown1_5.AccessibleLabel"
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.Container22_4.Container25_4.Dropdown1_7.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.Container22_2.Container25_2.Dropdown1_5.AccessibleLabel",
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.Container22_4.Container25_4.Dropdown1_7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Home",
-                "type": "Home.Container5_2.Container9_2.Container22_2.Container25_2.Dropdown1_5"
+                "type": "Home.Container5_2.Container3.Container9_10.Container22_4.Container25_4.Dropdown1_7"
               }
             }
           ],
@@ -3664,19 +3664,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.Container22_2.Container25_2.TextInput3_7.AccessibleLabel"
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.Container22_4.Container25_4.ExpenseTitle_15.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.Container22_2.Container25_2.TextInput3_7.AccessibleLabel",
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.Container22_4.Container25_4.ExpenseTitle_15.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Home",
-                "type": "Home.Container5_2.Container9_2.Container22_2.Container25_2.TextInput3_7"
+                "type": "Home.Container5_2.Container3.Container9_10.Container22_4.Container25_4.ExpenseTitle_15"
               }
             }
           ],
@@ -3694,19 +3694,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.Container22_2.Container25_2.DatePicker2_5.AccessibleLabel"
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.Container22_4.Container23_4.amount_7.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.Container22_2.Container25_2.DatePicker2_5.AccessibleLabel",
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.Container22_4.Container23_4.amount_7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Home",
-                "type": "Home.Container5_2.Container9_2.Container22_2.Container25_2.DatePicker2_5"
+                "type": "Home.Container5_2.Container3.Container9_10.Container22_4.Container23_4.amount_7"
               }
             }
           ],
@@ -3724,19 +3724,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.Gallery4_2.AccessibleLabel"
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.Container22_4.Container23_4.ExpenseTitle_14.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.Gallery4_2.AccessibleLabel",
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.Container22_4.Container23_4.ExpenseTitle_14.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Home",
-                "type": "Home.Container5_2.Container9_2.Gallery4_2"
+                "type": "Home.Container5_2.Container3.Container9_10.Container22_4.Container23_4.ExpenseTitle_14"
               }
             }
           ],
@@ -3754,19 +3754,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.Gallery4_2.TabIndex"
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.Icon7_4.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.Gallery4_2.TabIndex",
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.Icon7_4.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Home",
-                "type": "Home.Container5_2.Container9_2.Gallery4_2"
+                "type": "Home.Container5_2.Container3.Container9_10.Icon7_4"
               }
             }
           ],
@@ -3784,19 +3784,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.AddMediaButton1_2.AccessibleLabel"
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.Icon7_4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.Container5_2.Container9_2.AddMediaButton1_2.AccessibleLabel",
+                  "fullyQualifiedName": "Home.Container5_2.Container3.Container9_10.Icon7_4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Home",
-                "type": "Home.Container5_2.Container9_2.AddMediaButton1_2"
+                "type": "Home.Container5_2.Container3.Container9_10.Icon7_4"
               }
             }
           ],
@@ -6573,19 +6573,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.Icon7_3.AccessibleLabel"
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.AddMediaButton1_5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.Icon7_3.AccessibleLabel",
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.AddMediaButton1_5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Expenses",
-                "type": "Expenses.Container5_3.Container9_3.Icon7_3"
+                "type": "Expenses.Container5_3.Container3_1.Container9_11.AddMediaButton1_5"
               }
             }
           ],
@@ -6603,19 +6603,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.Icon7_3.TabIndex"
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.Gallery4_7.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.Icon7_3.TabIndex",
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.Gallery4_7.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Expenses",
-                "type": "Expenses.Container5_3.Container9_3.Icon7_3"
+                "type": "Expenses.Container5_3.Container3_1.Container9_11.Gallery4_7"
               }
             }
           ],
@@ -6633,19 +6633,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.Container22_3.Container23_3.ExpenseTitle_12.AccessibleLabel"
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.Gallery4_7.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.Container22_3.Container23_3.ExpenseTitle_12.AccessibleLabel",
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.Gallery4_7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Expenses",
-                "type": "Expenses.Container5_3.Container9_3.Container22_3.Container23_3.ExpenseTitle_12"
+                "type": "Expenses.Container5_3.Container3_1.Container9_11.Gallery4_7"
               }
             }
           ],
@@ -6663,19 +6663,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.Container22_3.Container23_3.amount_6.AccessibleLabel"
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.Container22_5.Container25_5.DatePicker2_8.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.Container22_3.Container23_3.amount_6.AccessibleLabel",
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.Container22_5.Container25_5.DatePicker2_8.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Expenses",
-                "type": "Expenses.Container5_3.Container9_3.Container22_3.Container23_3.amount_6"
+                "type": "Expenses.Container5_3.Container3_1.Container9_11.Container22_5.Container25_5.DatePicker2_8"
               }
             }
           ],
@@ -6693,19 +6693,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.Container22_3.Container25_3.ExpenseTitle_13.AccessibleLabel"
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.Container22_5.Container25_5.TextInput3_10.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.Container22_3.Container25_3.ExpenseTitle_13.AccessibleLabel",
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.Container22_5.Container25_5.TextInput3_10.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Expenses",
-                "type": "Expenses.Container5_3.Container9_3.Container22_3.Container25_3.ExpenseTitle_13"
+                "type": "Expenses.Container5_3.Container3_1.Container9_11.Container22_5.Container25_5.TextInput3_10"
               }
             }
           ],
@@ -6723,19 +6723,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.Container22_3.Container25_3.Dropdown1_6.AccessibleLabel"
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.Container22_5.Container25_5.Dropdown1_8.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.Container22_3.Container25_3.Dropdown1_6.AccessibleLabel",
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.Container22_5.Container25_5.Dropdown1_8.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Expenses",
-                "type": "Expenses.Container5_3.Container9_3.Container22_3.Container25_3.Dropdown1_6"
+                "type": "Expenses.Container5_3.Container3_1.Container9_11.Container22_5.Container25_5.Dropdown1_8"
               }
             }
           ],
@@ -6753,19 +6753,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.Container22_3.Container25_3.TextInput3_8.AccessibleLabel"
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.Container22_5.Container25_5.ExpenseTitle_17.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.Container22_3.Container25_3.TextInput3_8.AccessibleLabel",
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.Container22_5.Container25_5.ExpenseTitle_17.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Expenses",
-                "type": "Expenses.Container5_3.Container9_3.Container22_3.Container25_3.TextInput3_8"
+                "type": "Expenses.Container5_3.Container3_1.Container9_11.Container22_5.Container25_5.ExpenseTitle_17"
               }
             }
           ],
@@ -6783,19 +6783,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.Container22_3.Container25_3.DatePicker2_6.AccessibleLabel"
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.Container22_5.Container23_5.amount_8.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.Container22_3.Container25_3.DatePicker2_6.AccessibleLabel",
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.Container22_5.Container23_5.amount_8.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Expenses",
-                "type": "Expenses.Container5_3.Container9_3.Container22_3.Container25_3.DatePicker2_6"
+                "type": "Expenses.Container5_3.Container3_1.Container9_11.Container22_5.Container23_5.amount_8"
               }
             }
           ],
@@ -6813,19 +6813,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.Gallery4_3.AccessibleLabel"
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.Container22_5.Container23_5.ExpenseTitle_16.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.Gallery4_3.AccessibleLabel",
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.Container22_5.Container23_5.ExpenseTitle_16.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Expenses",
-                "type": "Expenses.Container5_3.Container9_3.Gallery4_3"
+                "type": "Expenses.Container5_3.Container3_1.Container9_11.Container22_5.Container23_5.ExpenseTitle_16"
               }
             }
           ],
@@ -6843,19 +6843,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.Gallery4_3.TabIndex"
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.Icon7_5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.Gallery4_3.TabIndex",
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.Icon7_5.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Expenses",
-                "type": "Expenses.Container5_3.Container9_3.Gallery4_3"
+                "type": "Expenses.Container5_3.Container3_1.Container9_11.Icon7_5"
               }
             }
           ],
@@ -6873,19 +6873,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.AddMediaButton1_3.AccessibleLabel"
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.Icon7_5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Expenses.Container5_3.Container9_3.AddMediaButton1_3.AccessibleLabel",
+                  "fullyQualifiedName": "Expenses.Container5_3.Container3_1.Container9_11.Icon7_5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Expenses",
-                "type": "Expenses.Container5_3.Container9_3.AddMediaButton1_3"
+                "type": "Expenses.Container5_3.Container3_1.Container9_11.Icon7_5"
               }
             }
           ],
@@ -8918,7 +8918,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Home\" is 364, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Home\" is 365, which exceeds the maximum threshold recommended (300)."
               }
             },
             {

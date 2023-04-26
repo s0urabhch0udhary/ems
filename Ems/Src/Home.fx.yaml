@@ -112,13 +112,13 @@ Home As screen:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =10
                     LayoutMinHeight: =If(App.ActiveScreen.Width<405,1050,Container8_5.Width<700,950,400)
-                    LayoutMinWidth: =If(App.ActiveScreen.Size=1,300,430)
+                    LayoutMinWidth: =If(App.ActiveScreen.Size<=2,290,430)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowX: =LayoutOverflow.Scroll
                     LayoutOverflowY: =LayoutOverflow.Scroll
                     PaddingBottom: =10
-                    PaddingLeft: =If(App.ActiveScreen.Size=1,20,30)
-                    PaddingRight: =If(App.ActiveScreen.Size=1,20,10)
+                    PaddingLeft: =If(App.ActiveScreen.Size<=2,10,30)
+                    PaddingRight: =10
                     PaddingTop: =0.00
                     Width: =Parent.Width
                     X: =0.00
@@ -127,9 +127,9 @@ Home As screen:
                     Container8_5 As groupContainer.horizontalAutoLayoutContainer:
                         FillPortions: =0.3
                         Height: =If(Parent.Width<=858,Parent.Height/2+20,Parent.Height/4+20)
-                        LayoutGap: =20
+                        LayoutGap: =If(App.ActiveScreen.Size<=2,10,20)
                         LayoutMinHeight: =If(Self.Width<660,300,140)
-                        LayoutMinWidth: =If(App.ActiveScreen.Size=1,190,300)
+                        LayoutMinWidth: =If(App.ActiveScreen.Size<=2,160,300)
                         LayoutMode: =LayoutMode.Auto
                         LayoutOverflowY: =LayoutOverflow.Scroll
                         LayoutWrap: =true
@@ -451,7 +451,7 @@ Home As screen:
 
                     Container16_1 As groupContainer.manualLayoutContainer:
                         FillPortions: =0
-                        Height: =300
+                        Height: =If(App.ActiveScreen.Size=1,370,300)
                         LayoutMinHeight: =250
                         LayoutMinWidth: =190
                         ZIndex: =2
@@ -706,6 +706,7 @@ Home As screen:
                                     HoverColor: =RGBA(255, 255, 255, 1)
                                     HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
                                     OnSelect: =Select(Parent)
+                                    PaddingTop: =2
                                     RadiusBottomLeft: =2
                                     RadiusBottomRight: =2
                                     RadiusTopLeft: =2
@@ -713,7 +714,6 @@ Home As screen:
                                     Size: =7
                                     Text: =Sum(Filter(Expenses_1,Date=ThisItem.Date),Amount)
                                     Width: =Parent.Width
-                                    Y: =2
                                     ZIndex: =1
 
                             Subcircle1_8 As circle:
@@ -960,7 +960,7 @@ Home As screen:
             Fill: =RGBA(100, 118, 132, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             FontWeight: =FontWeight.Semibold
-            Height: =546
+            Height: =Button13_4.Y+Button13_4.Height+25
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             Size: =15
@@ -970,451 +970,470 @@ Home As screen:
             Y: =If(App.ActiveScreen.Size<=3,0,10)
             ZIndex: =1
 
-        Container9_2 As groupContainer.manualLayoutContainer:
-            Height: =546
+        Container3 As groupContainer.verticalAutoLayoutContainer:
+            Height: =630
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowY: =LayoutOverflow.Scroll
             Width: =If(App.ActiveScreen.Size<=3,Parent.Width,820)
             X: =If(App.ActiveScreen.Size<=3,0,Parent.Width/2-Self.Width/2)
             Y: =If(App.ActiveScreen.Size<=3,0,10)
-            ZIndex: =2
+            ZIndex: =3
 
-            Label4_3 As label:
-                BorderColor: =RGBA(32, 54, 71, 1)
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =45
-                Size: =16
-                Text: ="ADD EXPENSE"
-                Width: =210
-                X: =32
-                Y: =10
+            Container9_10 As groupContainer.manualLayoutContainer:
+                FillPortions: =0
+                Height: =Button13_4.Y+Button13_4.Height+25
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                Width: =If(App.ActiveScreen.Size<=3,Parent.Width,820)
+                X: =If(App.ActiveScreen.Size<=3,0,Parent.Width/2-Self.Width/2)
+                Y: =If(App.ActiveScreen.Size<=3,0,10)
                 ZIndex: =1
 
-            Label13_7 As label:
-                BorderColor: =RGBA(32, 54, 71, 1)
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =28
-                Size: =13
-                Text: ="Expense Category"
-                Width: =170
-                X: =32
-                Y: =5+Container22_2.Height+Container22_2.Y
-                ZIndex: =10
+                Label4_5 As label:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =45
+                    Size: =16
+                    Text: ="ADD EXPENSE"
+                    Width: =210
+                    X: =32
+                    Y: =10
+                    ZIndex: =1
 
-            Gallery4_2 As gallery.galleryHorizontal:
-                BorderColor: =RGBA(32, 54, 71, 1)
-                DelayItemLoading: =true
-                Height: =If(App.ActiveScreen.Size<=2,80,App.ActiveScreen.Size<=3,110,60)
-                Items: =categories
-                LoadingSpinner: =LoadingSpinner.Data
-                TemplateSize: =100
-                Width: =709
-                WrapCount: =If(App.ActiveScreen.Size<=3,2,1)
-                X: =32
-                Y: =Label13_7.Y+Label13_7.Height+2
-                ZIndex: =11
+                Label13_11 As label:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =28
+                    Size: =If(App.ActiveScreen.Size<=2,10,13)
+                    Text: ="Expense Category"
+                    Width: =170
+                    X: =32
+                    Y: =Container22_4.Height+Container22_4.Y
+                    ZIndex: =10
 
-                Button10_2 As button:
-                    Color: =
+                Gallery4_6 As gallery.galleryHorizontal:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    DelayItemLoading: =true
+                    Height: =If(App.ActiveScreen.Size<=2,70,App.ActiveScreen.Size<=3,110,60)
+                    Items: =categories
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplateSize: =If(App.ActiveScreen.Size<=2,90,90)
+                    Width: =709
+                    WrapCount: =If(App.ActiveScreen.Size<=3,2,1)
+                    X: =32
+                    Y: =Label13_11.Y+Label13_11.Height+2
+                    ZIndex: =11
+
+                    Button10_4 As button:
+                        Color: =
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        Fill: =If(ThisItem.IsSelected,RGBA(0, 136, 209, 1),RGBA(242, 242, 242, 1))
+                        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =If(App.ActiveScreen.Size<=2,20,40)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                        OnSelect: =Select(Parent)
+                        Size: =15
+                        Text: =""
+                        Width: =Parent.TemplateWidth-2
+                        Y: =4
+                        ZIndex: =1
+
+                    Label21_6 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(32, 54, 71, 1)
+                        Color: =If(ThisItem.IsSelected,RGBA(255, 255, 255, 1),RGBA(0,0,0,1))
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =If(ThisItem.IsSelected,FontWeight.Semibold,FontWeight.Normal)
+                        Height: =If(App.ActiveScreen.Size<=2,20,40)
+                        OnSelect: =Select(Parent)
+                        Size: =If(App.ActiveScreen.Size<=2,6,8.5)
+                        Text: =ThisItem.Tabs
+                        Width: =Parent.TemplateWidth
+                        Y: =4
+                        ZIndex: =2
+
+                Icon7_4 As icon.Cancel:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Color: =RGBA(32, 54, 71, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(244, 244, 244, 1)
+                    Height: =If(App.ActiveScreen.Size<=3,20,30)
+                    Icon: =Icon.Cancel
+                    OnSelect: =Set(addexpensepop2,false)
+                    Width: =If(App.ActiveScreen.Size<=3,20,30)
+                    X: =Container9_10.Width-Self.Width-20
+                    Y: =10
+                    ZIndex: =12
+
+                Label13_12 As label:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =38
+                    Size: =If(App.ActiveScreen.Size<=2,10,13)
+                    Text: ="Attachment Reciept"
+                    Width: =170
+                    X: =32
+                    Y: =Gallery4_6.Y+Gallery4_6.Height
+                    ZIndex: =13
+
+                Button13_4 As button:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: =If(ThisItem.IsSelected,RGBA(0, 136, 209, 1),RGBA(242, 242, 242, 1))
-                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-                    FontWeight: =FontWeight.Semibold
-                    Height: =If(App.ActiveScreen.Size<=2,20,40)
-                    HoverColor: =RGBA(255, 255, 255, 1)
-                    HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-                    OnSelect: =Select(Parent)
-                    Size: =15
-                    Text: =""
-                    Width: =94
-                    Y: =4
-                    ZIndex: =1
-
-                Label21_2 As label:
-                    Align: =Align.Center
-                    BorderColor: =RGBA(32, 54, 71, 1)
-                    Color: =If(ThisItem.IsSelected,RGBA(255, 255, 255, 1),RGBA(0,0,0,1))
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FontWeight: =If(ThisItem.IsSelected,FontWeight.Semibold,FontWeight.Normal)
-                    Height: =If(App.ActiveScreen.Size<=2,20,40)
-                    OnSelect: =Select(Parent)
-                    Size: =8.5
-                    Text: =ThisItem.Tabs
-                    Width: =94
-                    Y: =4
-                    ZIndex: =2
-
-            Icon7_2 As icon.Cancel:
-                BorderColor: =RGBA(32, 54, 71, 1)
-                Color: =RGBA(32, 54, 71, 1)
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(244, 244, 244, 1)
-                Height: =33
-                Icon: =Icon.Cancel
-                OnSelect: =Set(addexpensepop2,false)
-                Width: =30
-                X: =775
-                Y: =4
-                ZIndex: =12
-
-            Label13_8 As label:
-                BorderColor: =RGBA(32, 54, 71, 1)
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =38
-                Size: =13
-                Text: ="Attachment Reciept"
-                Width: =170
-                X: =32
-                Y: =Gallery4_2.Y+Gallery4_2.Height
-                ZIndex: =13
-
-            Button13_2 As button:
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =RGBA(100, 118, 132, 1)
-                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-                FontWeight: =FontWeight.Semibold
-                Height: =If(App.ActiveScreen.Size<=3,30,40)
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-                OnSelect: |-
-                    =If(
-                        ExpenseTitle_10.Text="",
-                        [
-                            Set(
-                                errordisplay2,
-                                true
-                            ),
-                            Set(
-                                err,
-                                "Please Enter Expense Title"
-                            )
-                        ],
-                        amount_5.Text="",
-                        [
-                            Set(
-                                errordisplay2,
-                                true
-                            ),
-                            Set(
-                                err,
-                                "Please Enter Expense Amount"
-                            )
-                        ],
-                            DatePicker2_5.SelectedDate>Today(),
-                        [
-                            Set(
-                                errordisplay2,
-                                true
-                            ),
-                            Set(
-                                err,
-                                "Please Select Valid Date."
-                            )
-                        ],
-                        Patch(
-                            Expenses_1,
-                            Defaults(Expenses_1),
-                            {Title: ExpenseTitle_10.Text},
-                            {Amount: Value(amount_5.Text)},
-                            {Date: DatePicker2_5.SelectedDate},
-                            {PaymentType: Dropdown1_5.SelectedText},
-                            {
-                                Category: {
-                                    Value: Gallery4_2.Selected.Tabs,
-                                    '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
-                                }
-                            },
-                            {
-                                User: {
-                                    '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
-                                    Claims: Lower(User().Email),
-                                    Department: "",
-                                    DisplayName: User().FullName,
-                                    Email: User().Email,
-                                    JobTitle: "",
-                                    Picture: ""
-                                }
-                            }
-                        );
-                    Set(addexpensepop,false);
-                    
-                        Reset(ExpenseTitle_10);
-                        Reset(amount_5);
-                        Reset(DatePicker2_5)
-                    )
-                Size: =If(App.ActiveScreen.Size<=3,7,12)
-                Text: ="ADD EXPENSE"
-                Width: =If(App.ActiveScreen.Size<=3,Parent.Width*2/7,Parent.Width*3/7)
-                X: =If(App.ActiveScreen.Size<=3,40,Parent.Width/2)
-                Y: =AddMediaButton1_2.Y+AddMediaButton1_2.Height+10
-                ZIndex: =16
-
-            errorpop_2 As group:
-                Height: =5
-                Width: =5
-                X: =40
-                Y: =40
-                ZIndex: =20
-
-                Button16_3 As button:
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(255, 255, 255, 1)
-                    DisabledFill: =RGBA(196, 59, 59, 0.9)
-                    DisplayMode: =DisplayMode.Disabled
-                    Fill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-                    FontWeight: =FontWeight.Semibold
-                    Height: =46
-                    HoverColor: =RGBA(255, 255, 255, 1)
-                    HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-                    Size: =10
-                    Text: =err
-                    Visible: =errordisplay2
-                    Width: =348
-                    X: =371
-                    Y: =37
-                    ZIndex: =17
-
-                Icon6_3 As icon.Error:
-                    BorderColor: =RGBA(32, 54, 71, 1)
-                    Color: =RGBA(255, 255, 255, 1)
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(244, 244, 244, 1)
-                    Height: =37
-                    Icon: =Icon.Error
-                    Visible: =errordisplay2
-                    Width: =30
-                    X: =392
-                    Y: =41
-                    ZIndex: =18
-
-                Timer1_3 As timer:
-                    Duration: =1500
                     Fill: =RGBA(100, 118, 132, 1)
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =If(App.ActiveScreen.Size<=3,30,40)
                     HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-                    OnTimerEnd: =Set(errordisplay,false)
-                    Start: =errordisplay
-                    Visible: =false
-                    Width: =0
-                    X: =645
-                    Y: =43
-                    ZIndex: =19
+                    OnSelect: |-
+                        =If(
+                            ExpenseTitle_14.Text="",
+                            [
+                                Set(
+                                    errordisplay2,
+                                    true
+                                ),
+                                Set(
+                                    err,
+                                    "Please Enter Expense Title"
+                                )
+                            ],
+                            amount_7.Text="",
+                            [
+                                Set(
+                                    errordisplay2,
+                                    true
+                                ),
+                                Set(
+                                    err,
+                                    "Please Enter Expense Amount"
+                                )
+                            ],
+                                DatePicker2_7.SelectedDate>Today(),
+                            [
+                                Set(
+                                    errordisplay2,
+                                    true
+                                ),
+                                Set(
+                                    err,
+                                    "Please Select Valid Date."
+                                )
+                            ],
+                            Patch(
+                                Expenses_1,
+                                Defaults(Expenses_1),
+                                {Title: ExpenseTitle_14.Text},
+                                {Amount: Value(amount_7.Text)},
+                                {Date: DatePicker2_7.SelectedDate},
+                                {PaymentType: Dropdown1_7.SelectedText},
+                                {
+                                    Category: {
+                                        Value: Gallery4_6.Selected.Tabs,
+                                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+                                    }
+                                },
+                                {
+                                    User: {
+                                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                                        Claims: Lower(User().Email),
+                                        Department: "",
+                                        DisplayName: User().FullName,
+                                        Email: User().Email,
+                                        JobTitle: "",
+                                        Picture: ""
+                                    }
+                                }
+                            );
+                        Set(addexpensepop2,false);
+                        
+                            Reset(ExpenseTitle_14);
+                            Reset(amount_7);
+                            Reset(DatePicker2_7)
+                        )
+                    Size: =If(App.ActiveScreen.Size<=3,9,12)
+                    Text: ="ADD EXPENSE"
+                    Width: =If(App.ActiveScreen.Size<=3,Parent.Width*2/7,Parent.Width*3/7)
+                    X: =If(App.ActiveScreen.Size<=3,40,Parent.Width/2)
+                    Y: =AddMediaButton1_4.Y+AddMediaButton1_4.Height+10
+                    ZIndex: =16
 
-            AddMediaButton1_2 As addMedia:
-                BorderColor: =RGBA(32, 54, 71, 1)
-                ChangePictureText: ="Attachment loaded successfully"
-                Color: =RGBA(0, 0, 0, 1)
-                Fill: =RGBA(255, 255, 255, 1)
-                Height: =46
-                Size: =If(App.ActiveScreen.Size<=3,10,16)
-                Text: ="Drag and drop or browse your device."
-                Width: =If(App.ActiveScreen.Size<=3,280,400)
-                X: =If(App.ActiveScreen.Size<=3,Parent.Width/10,Parent.Width/5)
-                Y: =Label13_8.Y+Label13_8.Height
-                ZIndex: =26
+                errorpop_4 As group:
+                    Height: =5
+                    Width: =5
+                    X: =40
+                    Y: =40
+                    ZIndex: =20
 
-            Container22_2 As groupContainer.horizontalAutoLayoutContainer:
-                Height: =If(App.ActiveScreen.Size<4,410,210)
-                LayoutMode: =LayoutMode.Auto
-                LayoutOverflowX: =LayoutOverflow.Scroll
-                LayoutOverflowY: =LayoutOverflow.Scroll
-                LayoutWrap: =true
-                Width: =Parent.Width
-                Y: =55
-                ZIndex: =28
+                    Button16_5 As button:
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(255, 255, 255, 1)
+                        DisabledFill: =RGBA(196, 59, 59, 0.9)
+                        DisplayMode: =DisplayMode.Disabled
+                        Fill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =46
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                        Size: =10
+                        Text: =err
+                        Visible: =errordisplay2
+                        Width: =348
+                        X: =371
+                        Y: =37
+                        ZIndex: =17
 
-                Container23_2 As groupContainer.manualLayoutContainer:
-                    Height: =If(App.ActiveScreen.Size<=3,160,200)
-                    LayoutMinHeight: =If(App.ActiveScreen.Size<=3,180,200)
-                    LayoutMinWidth: =400
-                    ZIndex: =1
-
-                    Label13_24 As label:
+                    Icon6_5 As icon.Error:
                         BorderColor: =RGBA(32, 54, 71, 1)
-                        Color: =RGBA(0, 0, 0, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Size: =13
-                        Text: ="Expense Title"
-                        X: =32
-                        ZIndex: =1
-
-                    ExpenseTitle_10 As text:
-                        BorderColor: =RGBA(112, 112, 112, 1)
-                        Color: =RGBA(0, 0, 0, 1)
-                        Default: =""
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        FocusedBorderThickness: =4
-                        Height: =If(App.ActiveScreen.Size<=3,40,55)
-                        HoverBorderColor: =RGBA(112, 112, 112, 1)
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
-                        Size: =13
-                        Width: =318
-                        X: =32
-                        Y: =40
-                        ZIndex: =2
-
-                    Label13_25 As label:
-                        BorderColor: =RGBA(32, 54, 71, 1)
-                        Color: =RGBA(0, 0, 0, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Height: =30
-                        Size: =13
-                        Text: ="Expense Amount"
-                        Width: =210
-                        X: =32
-                        Y: =ExpenseTitle_10.Height+ExpenseTitle_10.Y+5
-                        ZIndex: =3
-
-                    amount_5 As text:
-                        BorderColor: =RGBA(112, 112, 112, 1)
-                        Color: =RGBA(0, 0, 0, 1)
-                        Default: =""
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        FocusedBorderThickness: =4
-                        Height: =If(App.ActiveScreen.Size<=3,40,56)
-                        HoverBorderColor: =RGBA(112, 112, 112, 1)
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
-                        PressedBorderColor: =RGBA(112, 112, 112,1)
-                        Size: =13
-                        Width: =318
-                        X: =32
-                        Y: =Label13_25.Y+Label13_25.Height+5
-                        ZIndex: =4
-
-                Container25_2 As groupContainer.manualLayoutContainer:
-                    Height: =If(App.ActiveScreen.Size<=3,170,200)
-                    LayoutMinHeight: =If(App.ActiveScreen.Size<=3,180,200)
-                    LayoutMinWidth: =400
-                    Width: =Parent.Width/2
-                    ZIndex: =2
-
-                    Label13_27 As label:
-                        BorderColor: =RGBA(32, 54, 71, 1)
-                        Color: =RGBA(0, 0, 0, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Height: =30
-                        Size: =13
-                        Text: ="Expense Date"
-                        Width: =136
-                        X: =32
-                        Y: =ExpenseTitle_11.Y+ExpenseTitle_11.Height+5
-                        ZIndex: =1
-
-                    TextInput3_7 As text:
-                        BorderColor: =RGBA(112, 112, 112, 1)
-                        Color: =RGBA(0, 0, 0, 1)
-                        Default: =""
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        FocusedBorderThickness: =4
-                        Height: =If(App.ActiveScreen.Size<=3,40,56)
-                        HoverBorderColor: =RGBA(32, 54, 71, 1)
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =RGBA(205, 209, 213, 1)
-                        Size: =13
-                        Width: =312
-                        X: =32
-                        Y: =Label13_27.Y+Label13_27.Height+5
-                        ZIndex: =2
-
-                    Icon4_5 As icon.CalendarBlank:
-                        BorderColor: =RGBA(32, 54, 71, 1)
-                        Color: =RGBA(102, 102, 102, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledColor: =RGBA(244, 244, 244, 1)
-                        Height: =DatePicker2_5.Height
-                        Icon: =Icon.CalendarBlank
-                        Width: =22
-                        X: =314
-                        Y: =DatePicker2_5.Y
-                        ZIndex: =3
+                        Height: =37
+                        Icon: =Icon.Error
+                        Visible: =errordisplay2
+                        Width: =30
+                        X: =392
+                        Y: =41
+                        ZIndex: =18
 
-                    DatePicker2_5 As datepicker:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderThickness: =0
-                        CalendarHeaderFill: =RGBA(100, 118, 132, 1)
-                        Color: =RGBA(0, 0, 0, 1)
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        Fill: =RGBA(255, 255, 255, 0)
-                        Format: =DateTimeFormat.LongDate
-                        Height: =If(App.ActiveScreen.Size<=3,35,54)
-                        HoverDateFill: =RGBA(205, 209, 213, 1)
-                        IconBackground: =RGBA(0,0,0,0)
-                        IconFill: =RGBA(0,0,0,0)
-                        PaddingTop: =5
-                        SelectedDateFill: =RGBA(100, 118, 132, 1)
-                        Width: =300
-                        X: =36
-                        Y: =Label13_27.Y+Label13_27.Height+7
-                        ZIndex: =4
+                    Timer1_5 As timer:
+                        Duration: =1500
+                        Fill: =RGBA(100, 118, 132, 1)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                        OnTimerEnd: =Set(errordisplay,false)
+                        Start: =errordisplay
+                        Visible: =false
+                        Width: =0
+                        X: =645
+                        Y: =43
+                        ZIndex: =19
 
-                    Label13_26 As label:
-                        BorderColor: =RGBA(32, 54, 71, 1)
-                        Color: =RGBA(0, 0, 0, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Size: =13
-                        Text: ="Payment Type"
-                        X: =32
-                        ZIndex: =5
+                AddMediaButton1_4 As addMedia:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    ChangePictureText: ="Attachment loaded successfully"
+                    Color: =RGBA(0, 0, 0, 1)
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =46
+                    Size: =If(App.ActiveScreen.Size<=3,10,14)
+                    Text: ="Drag and drop or browse your device."
+                    Width: =If(App.ActiveScreen.Size<=3,280,400)
+                    X: =If(App.ActiveScreen.Size<=3,Parent.Width/10,Parent.Width/5)
+                    Y: =Label13_12.Y+Label13_12.Height
+                    ZIndex: =26
 
-                    ExpenseTitle_11 As text:
-                        BorderColor: =RGBA(112, 112, 112, 1)
-                        Color: =RGBA(0, 0, 0, 1)
-                        Default: =""
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        FocusedBorderThickness: =4
-                        Height: =If(App.ActiveScreen.Size<=3,35,55)
-                        HoverBorderColor: =RGBA(112, 112, 112, 1)
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
-                        Size: =13
-                        Width: =318
-                        X: =32
-                        Y: =40
-                        ZIndex: =6
+                Container22_4 As groupContainer.horizontalAutoLayoutContainer:
+                    Height: =If(App.ActiveScreen.Size<4,328,210)
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutOverflowX: =LayoutOverflow.Scroll
+                    LayoutOverflowY: =LayoutOverflow.Scroll
+                    LayoutWrap: =true
+                    Width: =Parent.Width-5
+                    Y: =55
+                    ZIndex: =28
 
-                    Dropdown1_5 As dropdown:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        ChevronBackground: =RGBA(0, 0, 0, 0)
-                        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-                        ChevronDisabledFill: =RGBA(0, 0, 0, 0)
-                        ChevronFill: =RGBA(0, 0, 0, 0)
-                        ChevronHoverBackground: =
-                        ChevronHoverFill: =RGBA(0, 0, 0, 0)
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(0, 0, 0, 0)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        Height: =ExpenseTitle_11.Height-4
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
-                        Items: =Choices([@Expenses_1].PaymentType)
-                        PressedColor: =RGBA(255, 255, 255, 1)
-                        PressedFill: =RGBA(32, 54, 71, 1)
-                        SelectionFill: =RGBA(39, 67, 125, 1)
-                        Size: =13
-                        Width: =ExpenseTitle_11.Width-4
-                        X: =ExpenseTitle_11.X+2
-                        Y: =ExpenseTitle_11.Y+2
-                        ZIndex: =8
+                    Container23_4 As groupContainer.manualLayoutContainer:
+                        Height: =If(App.ActiveScreen.Size<=3,160,200)
+                        LayoutMinHeight: =If(App.ActiveScreen.Size<=3,155,200)
+                        LayoutMinWidth: =385
+                        ZIndex: =1
+
+                        Label13_32 As label:
+                            BorderColor: =RGBA(32, 54, 71, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Height: =If(App.ActiveScreen.Size<=3,32,40)
+                            Size: =If(App.ActiveScreen.Size<=2,10,13)
+                            Text: ="Expense Title"
+                            X: =32
+                            ZIndex: =1
+
+                        ExpenseTitle_14 As text:
+                            BorderColor: =RGBA(112, 112, 112, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            Default: =""
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Height: =If(App.ActiveScreen.Size<=3,40,55)
+                            HoverBorderColor: =RGBA(112, 112, 112, 1)
+                            HoverColor: =RGBA(0, 0, 0, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            Size: =13
+                            Width: =318
+                            X: =32
+                            Y: =Label13_32.Y+Label13_32.Height
+                            ZIndex: =2
+
+                        Label13_33 As label:
+                            BorderColor: =RGBA(32, 54, 71, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Height: =If(App.ActiveScreen.Size<=3,32,37)
+                            Size: =If(App.ActiveScreen.Size<=2,10,13)
+                            Text: ="Expense Amount"
+                            Width: =210
+                            X: =32
+                            Y: =ExpenseTitle_14.Height+ExpenseTitle_14.Y+5
+                            ZIndex: =3
+
+                        amount_7 As text:
+                            BorderColor: =RGBA(112, 112, 112, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            Default: =""
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Height: =If(App.ActiveScreen.Size<=3,40,56)
+                            HoverBorderColor: =RGBA(112, 112, 112, 1)
+                            HoverColor: =RGBA(0, 0, 0, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PressedBorderColor: =RGBA(112, 112, 112,1)
+                            Size: =13
+                            Width: =318
+                            X: =32
+                            Y: =Label13_33.Y+Label13_33.Height
+                            ZIndex: =4
+
+                    Container25_4 As groupContainer.manualLayoutContainer:
+                        Height: =If(App.ActiveScreen.Size<=3,170,200)
+                        LayoutMinHeight: =If(App.ActiveScreen.Size<=3,170,200)
+                        LayoutMinWidth: =385
+                        Width: =Parent.Width/2
+                        ZIndex: =2
+
+                        Label13_36 As label:
+                            BorderColor: =RGBA(32, 54, 71, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Height: =If(App.ActiveScreen.Size<=3,32,37)
+                            Size: =If(App.ActiveScreen.Size<=2,10,13)
+                            Text: ="Expense Date"
+                            Width: =136
+                            X: =32
+                            Y: =ExpenseTitle_15.Y+ExpenseTitle_15.Height+5
+                            ZIndex: =1
+
+                        TextInput3_9 As text:
+                            BorderColor: =RGBA(112, 112, 112, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            Default: =""
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Height: =If(App.ActiveScreen.Size<=3,40,56)
+                            HoverBorderColor: =RGBA(32, 54, 71, 1)
+                            HoverColor: =RGBA(0, 0, 0, 1)
+                            HoverFill: =RGBA(205, 209, 213, 1)
+                            Size: =13
+                            Width: =312
+                            X: =32
+                            Y: =Label13_36.Y+Label13_36.Height
+                            ZIndex: =2
+
+                        Icon4_7 As icon.CalendarBlank:
+                            BorderColor: =RGBA(32, 54, 71, 1)
+                            Color: =RGBA(102, 102, 102, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(244, 244, 244, 1)
+                            Height: =DatePicker2_7.Height
+                            Icon: =Icon.CalendarBlank
+                            Width: =22
+                            X: =314
+                            Y: =DatePicker2_7.Y
+                            ZIndex: =3
+
+                        DatePicker2_7 As datepicker:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderThickness: =0
+                            CalendarHeaderFill: =RGBA(100, 118, 132, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =RGBA(255, 255, 255, 0)
+                            Font: =Font.'Segoe UI'
+                            Format: =DateTimeFormat.LongDate
+                            Height: =If(App.ActiveScreen.Size<=3,35,54)
+                            HoverDateFill: =RGBA(205, 209, 213, 1)
+                            IconBackground: =RGBA(0,0,0,0)
+                            IconFill: =RGBA(0,0,0,0)
+                            PaddingTop: =5
+                            SelectedDateFill: =RGBA(100, 118, 132, 1)
+                            Size: =If(App.ActiveScreen.Size<=3,8,12)
+                            Width: =300
+                            X: =36
+                            Y: =Label13_36.Y+Label13_36.Height+2
+                            ZIndex: =4
+
+                        Label13_34 As label:
+                            BorderColor: =RGBA(32, 54, 71, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Height: =If(App.ActiveScreen.Size<=3,32,40)
+                            Size: =If(App.ActiveScreen.Size<=2,10,13)
+                            Text: ="Payment Type"
+                            X: =32
+                            ZIndex: =5
+
+                        ExpenseTitle_15 As text:
+                            BorderColor: =RGBA(112, 112, 112, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            Default: =""
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Height: =If(App.ActiveScreen.Size<=3,35,55)
+                            HoverBorderColor: =RGBA(112, 112, 112, 1)
+                            HoverColor: =RGBA(0, 0, 0, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            Size: =13
+                            Width: =318
+                            X: =32
+                            Y: =Label13_34.Y+Label13_34.Height
+                            ZIndex: =6
+
+                        Dropdown1_7 As dropdown:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            ChevronBackground: =RGBA(0, 0, 0, 0)
+                            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                            ChevronDisabledFill: =RGBA(0, 0, 0, 0)
+                            ChevronFill: =RGBA(0, 0, 0, 0)
+                            ChevronHoverBackground: =
+                            ChevronHoverFill: =RGBA(0, 0, 0, 0)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Font: =Font.'Segoe UI'
+                            Height: =ExpenseTitle_15.Height-4
+                            HoverColor: =RGBA(0, 0, 0, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            Items: =Choices([@Expenses_1].PaymentType)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(32, 54, 71, 1)
+                            SelectionFill: =RGBA(39, 67, 125, 1)
+                            Size: =If(App.ActiveScreen.Size<=3,8,12)
+                            Width: =ExpenseTitle_15.Width-4
+                            X: =ExpenseTitle_15.X+2
+                            Y: =ExpenseTitle_15.Y+2
+                            ZIndex: =8
 
     Container9 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(28, 37, 54, 0.4)
