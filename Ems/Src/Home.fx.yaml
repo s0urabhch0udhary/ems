@@ -1606,6 +1606,7 @@ Home As screen:
             DisabledFill: =RGBA(0, 0, 0, 0)
             Fill: =RGBA(0, 0, 0, 0)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =Parent.Height
             HoverBorderColor: =
@@ -1615,7 +1616,7 @@ Home As screen:
             PressedBorderColor: =
             PressedColor: =
             PressedFill: =
-            Size: =15
+            Size: =20
             Text: =""
             Width: =Parent.Width
             ZIndex: =1
@@ -1763,24 +1764,27 @@ Home As screen:
                         BorderThickness: =0
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledColor: =RGBA(255, 255, 255, 1)
-                        DisabledFill: =If(Int(Self.Text)<500,RGBA(16,235,20,0.7),Color.Orange)
+                        DisabledFill: =If(Int(Sum(Filter(Expenses_1,Date=ThisItem.Date),Amount))<500,RGBA(16,235,20,0.7),Sum(Filter(Expenses_1,Date=ThisItem.Date),Amount)>=500&&Sum(Filter(Expenses_1,Date=ThisItem.Date),Amount)<=10000,Color.Orange,Color.Red)
                         DisplayMode: =DisplayMode.Disabled
                         Fill: =RGBA(16, 235, 20, 1)
                         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
-                        Height: =Parent.Height-4
+                        Height: =Parent.Height-1
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
                         OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
                         RadiusBottomLeft: =2
                         RadiusBottomRight: =2
                         RadiusTopLeft: =2
                         RadiusTopRight: =2
-                        Size: =4.5
-                        Text: =Sum(Filter(Expenses_1,Date=ThisItem.Date),Amount)
-                        Width: =Parent.Width
-                        Y: =2
+                        Size: =6
+                        Text: ="₹"&Sum(Filter(Expenses_1,Date=ThisItem.Date),Amount)
+                        Width: =Parent.Width-1
                         ZIndex: =1
 
                 Subcircle1_11 As circle:
@@ -1810,7 +1814,7 @@ Home As screen:
                             Abs(Self.Text - ThisItem.Value) > 10,RGBA(200, 200, 200, 0.3), RGBA(0, 0, 0, 0))
                     FocusedBorderColor: =Self.Color
                     FocusedBorderThickness: =2
-                    Height: =16
+                    Height: =18
                     OnSelect: =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, TimeUnit.Days))
                     Size: =6
                     TabIndex: =0

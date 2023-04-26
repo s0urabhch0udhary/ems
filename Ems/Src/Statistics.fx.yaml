@@ -1041,111 +1041,6 @@ Statistics As screen:
                     Y: =WeekdayGallery1_13.TemplateHeight / 2 - Self.Height / 2
                     ZIndex: =1
 
-            MonthDayGallery1_13 As gallery.MonthDayGallery:
-                AccessibleLabel: ="Days of selected month"
-                BorderColor: =RGBA(32, 54, 71, 1)
-                Height: =180
-                Items: =[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19, 20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
-                Layout: =Layout.Vertical
-                ShowScrollbar: =false
-                TemplatePadding: =0
-                TemplateSize: =30
-                Visible: =_calendarVisible
-                Width: =Parent.Width-30
-                WrapCount: =7
-                X: |-
-                    =If(App.ActiveScreen.Width<1000,Parent.Width/2-Self.Width/2,10
-                    )
-                Y: =82
-                ZIndex: =5
-
-                "Gallery7_9 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
-                    BorderColor: =RGBA(32, 54, 71, 1)
-                    DelayItemLoading: =true
-                    Height: =Parent.TemplateHeight-Title5_13.Height
-                    Items: =Filter(Expenses_1,Date=DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days))
-                    LoadingSpinner: =LoadingSpinner.Data
-                    TemplatePadding: =0
-                    TemplateSize: =Min(440, Self.Height - 60)
-                    Width: =Parent.TemplateWidth
-                    Y: =Title5_13.Height
-                    ZIndex: =1
-
-                    Button8_11 As button:
-                        BorderThickness: =0
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(255, 255, 255, 1)
-                        DisabledFill: =If(Int(Self.Text)<500,RGBA(16,235,20,0.7),Color.Orange)
-                        DisplayMode: =DisplayMode.Disabled
-                        Fill: =RGBA(16, 235, 20, 1)
-                        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =Parent.Height-4
-                        HoverColor: =RGBA(255, 255, 255, 1)
-                        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-                        OnSelect: =Select(Parent)
-                        RadiusBottomLeft: =2
-                        RadiusBottomRight: =2
-                        RadiusTopLeft: =2
-                        RadiusTopRight: =2
-                        Size: =4.5
-                        Text: =Sum(Filter(Expenses_1,Date=ThisItem.Date),Amount)
-                        Width: =Parent.Width
-                        Y: =2
-                        ZIndex: =1
-
-                Subcircle1_13 As circle:
-                    BorderColor: =RGBA(32, 54, 71, 1)
-                    Fill: =RGBA(100, 118, 132, 1)
-                    Height: = Title5_13.Height*4/5
-                    OnSelect: =Select(Parent)
-                    Visible: =And(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, Title5_13.Visible)
-                    Width: =Self.Height
-                    X: =MonthDayGallery1_13.TemplateWidth/2 - Self.Width/2
-                    Y: =Title5_13.Y+Title5_13.Height/7
-                    ZIndex: =2
-
-                Title5_13 As label:
-                    Align: =Align.Center
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    Color: =If(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(255, 255, 255, 1), DateAdd(_firstDayInView, ThisItem.Value) = Today(), RGBA(47, 41, 43, 1), LblMonthSelected1_13.Color)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Fill: |-
-                        =/*Fill value changes if the gallery item day = today, or if it lies outside of the current month*/             
-                        If(
-                            /*Date selected is today*/
-                            DateAdd(_firstDayInView, ThisItem.Value) = Today() && DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(0,0,0,0),
-                            /*Today when it is not selected*/
-                            DateAdd(_firstDayInView, ThisItem.Value) = Today(), ColorFade(Subcircle1_13.Fill, 0.67), 
-                            /*The day is outside the range of the currently selected month*/
-                            Abs(Self.Text - ThisItem.Value) > 10,RGBA(200, 200, 200, 0.3), RGBA(0, 0, 0, 0))
-                    FocusedBorderColor: =Self.Color
-                    FocusedBorderThickness: =2
-                    Height: =16
-                    OnSelect: =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, TimeUnit.Days))
-                    Size: =6
-                    TabIndex: =0
-                    Text: =Day(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days))
-                    Visible: |-
-                        =/*This item is in a row containing no days of the visible month. It is in the row after the row where the last day of the month occurs*/ 
-                         !(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days) - Weekday(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days)) + 1 > _lastDayOfMonth)
-                    Width: =Parent.TemplateWidth
-                    Wrap: =false
-                    ZIndex: =3
-
-                Circle1_13 As circle:
-                    BorderColor: =RGBA(32, 54, 71, 1)
-                    Fill: =RGBA(205, 209, 213, 1)
-                    Height: =Self.Width
-                    OnSelect: =Select(Parent)
-                    Visible: |-
-                        =/*Visible if calendar events are found on this day*/               
-                        CountRows(Filter(MyCalendarEvents, DateValue(Text(Start)) = DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days))) > 0 && !Subcircle1_13.Visible && Title5_13.Visible
-                    Width: =6.5
-                    Y: =MonthDayGallery1_13.TemplateHeight * (0.75)
-                    ZIndex: =4
-
             dropdownCalendarSelection1_13 As dropdown:
                 BorderColor: =RGBA(32, 54, 71, 1)
                 ChevronBackground: =RGBA(100, 118, 132, 1)
@@ -1236,6 +1131,112 @@ Statistics As screen:
                     Width: =85
                     X: =107
                     ZIndex: =3
+
+            MonthDayGallery1_13 As gallery.MonthDayGallery:
+                AccessibleLabel: ="Days of selected month"
+                BorderColor: =RGBA(32, 54, 71, 1)
+                Height: =180
+                Items: =[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19, 20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
+                Layout: =Layout.Vertical
+                ShowScrollbar: =false
+                TemplatePadding: =0
+                TemplateSize: =30
+                Visible: =_calendarVisible
+                Width: =Parent.Width-30
+                WrapCount: =7
+                X: =10
+                Y: =75
+                ZIndex: =8
+
+                "Gallery7_9 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    DelayItemLoading: =true
+                    Height: =Parent.TemplateHeight-Title5_13.Height
+                    Items: =Filter(Expenses_1,Date=DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days))
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =0
+                    TemplateSize: =Min(440, Self.Height - 60)
+                    Width: =Parent.TemplateWidth
+                    Y: =Title5_13.Height
+                    ZIndex: =1
+
+                    Button8_11 As button:
+                        BorderThickness: =0
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(255, 255, 255, 1)
+                        DisabledFill: =If(Int(Sum(Filter(Expenses_1,Date=ThisItem.Date),Amount))<500,RGBA(16,235,20,0.7),Sum(Filter(Expenses_1,Date=ThisItem.Date),Amount)>=500&&Sum(Filter(Expenses_1,Date=ThisItem.Date),Amount)<=10000,Color.Orange,Color.Red)
+                        DisplayMode: =DisplayMode.Disabled
+                        Fill: =RGBA(16, 235, 20, 1)
+                        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height-1
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        RadiusBottomLeft: =2
+                        RadiusBottomRight: =2
+                        RadiusTopLeft: =2
+                        RadiusTopRight: =2
+                        Size: =6
+                        Text: ="₹"&Sum(Filter(Expenses_1,Date=ThisItem.Date),Amount)
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                Subcircle1_13 As circle:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Fill: =RGBA(100, 118, 132, 1)
+                    Height: = Title5_13.Height*4/5
+                    OnSelect: =Select(Parent)
+                    Visible: =And(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, Title5_13.Visible)
+                    Width: =Self.Height
+                    X: =MonthDayGallery1_13.TemplateWidth/2 - Self.Width/2
+                    Y: =Title5_13.Y+Title5_13.Height/7
+                    ZIndex: =2
+
+                Title5_13 As label:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Color: =If(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(255, 255, 255, 1), DateAdd(_firstDayInView, ThisItem.Value) = Today(), RGBA(47, 41, 43, 1), LblMonthSelected1_11.Color)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: |-
+                        =/*Fill value changes if the gallery item day = today, or if it lies outside of the current month*/             
+                        If(
+                            /*Date selected is today*/
+                            DateAdd(_firstDayInView, ThisItem.Value) = Today() && DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(0,0,0,0),
+                            /*Today when it is not selected*/
+                            DateAdd(_firstDayInView, ThisItem.Value) = Today(), ColorFade(Subcircle1_13.Fill, 0.67), 
+                            /*The day is outside the range of the currently selected month*/
+                            Abs(Self.Text - ThisItem.Value) > 10,RGBA(200, 200, 200, 0.3), RGBA(0, 0, 0, 0))
+                    FocusedBorderColor: =Self.Color
+                    FocusedBorderThickness: =2
+                    Height: =18
+                    OnSelect: =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, TimeUnit.Days))
+                    Size: =6
+                    TabIndex: =0
+                    Text: =Day(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days))
+                    Visible: |-
+                        =/*This item is in a row containing no days of the visible month. It is in the row after the row where the last day of the month occurs*/ 
+                         !(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days) - Weekday(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days)) + 1 > _lastDayOfMonth)
+                    Width: =Parent.TemplateWidth
+                    Wrap: =false
+                    ZIndex: =3
+
+                Circle1_13 As circle:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Fill: =RGBA(205, 209, 213, 1)
+                    Height: =Self.Width
+                    OnSelect: =Select(Parent)
+                    Visible: |-
+                        =/*Visible if calendar events are found on this day*/               
+                        CountRows(Filter(MyCalendarEvents, DateValue(Text(Start)) = DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days))) > 0 && !Subcircle1_13.Visible && Title5_13.Visible
+                    Width: =6.5
+                    Y: =MonthDayGallery1_13.TemplateHeight * (0.75)
+                    ZIndex: =4
 
     Component7_9 As Component7_2:
         CurrentScreen: ="Statistics"
