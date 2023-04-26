@@ -1275,7 +1275,7 @@ Budget As screen:
                     ZIndex: =4
 
     Component7_10 As Component7_2:
-        CurrentScreen: ="Profile"
+        CurrentScreen: ="Budget"
         Visible: =If(App.ActiveScreen.Size<4,true,false)
         Width: =App.ActiveScreen.Width
         Y: =Parent.Height-Self.Height
