@@ -451,7 +451,7 @@ Home As screen:
 
                     Container16_1 As groupContainer.manualLayoutContainer:
                         FillPortions: =0
-                        Height: =250
+                        Height: =300
                         LayoutMinHeight: =250
                         LayoutMinWidth: =190
                         ZIndex: =2
@@ -710,7 +710,7 @@ Home As screen:
                                     RadiusBottomRight: =2
                                     RadiusTopLeft: =2
                                     RadiusTopRight: =2
-                                    Size: =6
+                                    Size: =7
                                     Text: =Sum(Filter(Expenses_1,Date=ThisItem.Date),Amount)
                                     Width: =Parent.Width
                                     Y: =2
