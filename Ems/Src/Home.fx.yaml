@@ -706,7 +706,7 @@ Home As screen:
                                     HoverColor: =RGBA(255, 255, 255, 1)
                                     HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
                                     OnSelect: =Select(Parent)
-                                    PaddingTop: =2
+                                    PaddingTop: =4
                                     RadiusBottomLeft: =2
                                     RadiusBottomRight: =2
                                     RadiusTopLeft: =2

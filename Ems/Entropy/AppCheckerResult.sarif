@@ -4474,36 +4474,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Statistics.Container1_2.Container2_2.Container3_2.Container6_10.Container7_24.MonthDayGallery1_15.Gallery7_11.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Statistics.Container1_2.Container2_2.Container3_2.Container6_10.Container7_24.MonthDayGallery1_15.Gallery7_11.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Statistics",
-                "type": "Statistics.Container1_2.Container2_2.Container3_2.Container6_10.Container7_24.MonthDayGallery1_15.Gallery7_11"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Statistics.Container1_2.Container2_2.Container3_2.Container6_10.Container7_24.MonthDayGallery1_15.Gallery7_11.TabIndex"
                 }
               ],
@@ -4528,6 +4498,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Statistics.Container1_2.Container2_2.Container3_2.Container6_10.Container7_24.MonthDayGallery1_15.Gallery7_11.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Statistics.Container1_2.Container2_2.Container3_2.Container6_10.Container7_24.MonthDayGallery1_15.Gallery7_11.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Statistics",
+                "type": "Statistics.Container1_2.Container2_2.Container3_2.Container6_10.Container7_24.MonthDayGallery1_15.Gallery7_11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -5314,36 +5314,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Budget.Container1_5.Container2_5.Container3_5.Container6_9.Container7_18.MonthDayGallery1_10.Gallery7_6.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Budget.Container1_5.Container2_5.Container3_5.Container6_9.Container7_18.MonthDayGallery1_10.Gallery7_6.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Budget",
-                "type": "Budget.Container1_5.Container2_5.Container3_5.Container6_9.Container7_18.MonthDayGallery1_10.Gallery7_6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Budget.Container1_5.Container2_5.Container3_5.Container6_9.Container7_18.MonthDayGallery1_10.Gallery7_6.TabIndex"
                 }
               ],
@@ -5368,6 +5338,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Budget.Container1_5.Container2_5.Container3_5.Container6_9.Container7_18.MonthDayGallery1_10.Gallery7_6.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Budget.Container1_5.Container2_5.Container3_5.Container6_9.Container7_18.MonthDayGallery1_10.Gallery7_6.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Budget",
+                "type": "Budget.Container1_5.Container2_5.Container3_5.Container6_9.Container7_18.MonthDayGallery1_10.Gallery7_6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -6123,36 +6123,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Gallery7_5.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Gallery7_5.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Expenses",
-                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Gallery7_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Gallery7_5.TabIndex"
                 }
               ],
@@ -6177,6 +6147,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Gallery7_5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Gallery7_5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Expenses",
+                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Gallery7_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -6897,6 +6897,66 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Budget.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container8.Icon7.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Budget.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container8.Icon7.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Budget",
+                "type": "Budget.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container8.Icon7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Budget.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container8.Icon7.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Budget.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container8.Icon7.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Budget",
+                "type": "Budget.Container1_5.Container2_5.Container3_5.Container6.Container5_1.Container7.Container8.Icon7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -8611,6 +8671,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Statistics.Container1_2.Container2_2.Container3_2.Container6_10.Container7_24.MonthDayGallery1_15.Title5_15.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Statistics.Container1_2.Container2_2.Container3_2.Container6_10.Container7_24.MonthDayGallery1_15.Title5_15.Color",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "Statistics",
+                "type": "Statistics.Container1_2.Container2_2.Container3_2.Container6_10.Container7_24.MonthDayGallery1_15.Title5_15"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Budget"
                 }
               ],
@@ -8753,6 +8843,36 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Title5_9.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Title5_9.Color",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "Expenses",
+                "type": "Expenses.Container1_6.Container2_6.Container3_6.Container6_8.Container7_16.MonthDayGallery1_9.Title5_9"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 9
         }
       ],
       "tool": {
