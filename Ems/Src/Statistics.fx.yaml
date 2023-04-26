@@ -697,7 +697,7 @@ Statistics As screen:
                                 OnSelect: =Select(Parent)
                                 PaddingBottom: =0
                                 PaddingTop: =0
-                                Size: =If(App.ActiveScreen.Size<=2,8,9)
+                                Size: =If(App.ActiveScreen.Size<=2,9,10)
                                 Text: =ThisItem.Title
                                 VerticalAlign: =VerticalAlign.Top
                                 Width: =110
@@ -713,12 +713,12 @@ Statistics As screen:
                                 FontWeight: =FontWeight.Lighter
                                 Height: =16
                                 OnSelect: =Select(Parent)
-                                Size: =If(App.ActiveScreen.Size<=2,7,8)
+                                Size: =If(App.ActiveScreen.Size<=2,8,9)
                                 Text: =Text(ThisItem.Date,DateTimeFormat.LongDate)
-                                Width: =90
+                                Width: =130
                                 X: =26
                                 Y: |+
-                                    =Parent.TemplateHeight/2-Self.Height/2+10
+                                    =Parent.TemplateHeight/2-Self.Height/2+13
                                     
                                 ZIndex: =3
 
@@ -742,7 +742,7 @@ Statistics As screen:
                                 OnSelect: =Select(Parent)
                                 PaddingBottom: =0
                                 PaddingTop: =0
-                                Size: =If(App.ActiveScreen.Size<=2,7,8)
+                                Size: =If(App.ActiveScreen.Size<=2,8,9)
                                 Text: ="₹"&ThisItem.Amount
                                 Width: =48
                                 X: =Parent.TemplateWidth-Self.Width-5
