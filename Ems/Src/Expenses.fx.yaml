@@ -509,7 +509,7 @@ Expenses As screen:
                                     Height: =Parent.Height
                                     ItemBorderThickness: =1
                                     ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
-                                    Items: =Filter(Expenses_1,User.Email=User().Email)
+                                    Items: =Filter(Expenses_1,User.Email=User().Email&&Month(Date) = Month(Today()) && Year(Date) = Year(Today()))
                                     Width: =Parent.Width
                                     X: =1
                                     Y: =1
