@@ -453,7 +453,7 @@ Expenses As screen:
                     Container17_2 As groupContainer.horizontalAutoLayoutContainer:
                         Height: =500
                         LayoutGap: =30
-                        LayoutMinHeight: =If(Container17_2.Width<705,690,340)
+                        LayoutMinHeight: =If(Container17_2.Width<705,720,360)
                         LayoutMinWidth: =If(App.ActiveScreen.Size=1,190,350)
                         LayoutMode: =LayoutMode.Auto
                         LayoutOverflowX: =LayoutOverflow.Scroll
@@ -463,7 +463,7 @@ Expenses As screen:
                         ZIndex: =2
 
                         Container18_4 As groupContainer.manualLayoutContainer:
-                            LayoutMinHeight: =220
+                            LayoutMinHeight: =240
                             LayoutMinWidth: =If(App.ActiveScreen.Size=1,180,340)
                             ZIndex: =1
 
@@ -498,22 +498,21 @@ Expenses As screen:
                                     DisabledColor: =RGBA(166, 166, 166, 1)
                                     Font: =Font.'Segoe UI'
                                     Height: =51
-                                    Size: =16
+                                    Size: =If(App.ActiveScreen.Size<=2,12,16)
                                     Text: ="Categories"
                                     Width: =145
                                     X: =2
-                                    Y: =10
                                     ZIndex: =3
 
                                 PieChart1_2 As pieChart:
                                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                                    Height: =Parent.Height
+                                    Height: =Parent.Height-25
                                     ItemBorderThickness: =1
                                     ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
                                     Items: =Filter(Expenses_1,User.Email=User().Email&&Month(Date) = Month(Today()) && Year(Date) = Year(Today()))
                                     Width: =Parent.Width
                                     X: =1
-                                    Y: =1
+                                    Y: =25
                                     ZIndex: =4
 
                             Label24_6 As label:
@@ -622,7 +621,7 @@ Expenses As screen:
                                 Color: =RGBA(0, 0, 0, 1)
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 Font: =Font.'Segoe UI'
-                                Size: =16
+                                Size: =If(App.ActiveScreen.Size<=2,12,16)
                                 Text: ="Todays Expense"
                                 Width: =227
                                 X: =15

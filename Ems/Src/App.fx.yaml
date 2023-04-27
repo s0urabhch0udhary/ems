@@ -65,3 +65,10 @@ App As appinfo:
     SizeBreakpoints: =[400,600, 900, 1340,1550]
     StartScreen: ='Splash Screen'
 
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+
