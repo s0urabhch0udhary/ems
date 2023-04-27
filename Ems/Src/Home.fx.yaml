@@ -1236,12 +1236,11 @@ Home As screen:
                     ZIndex: =26
 
                 Container22_4 As groupContainer.horizontalAutoLayoutContainer:
-                    Height: =If(App.ActiveScreen.Size<4,328,210)
+                    Height: =If(App.ActiveScreen.Size<4,340,210)
                     LayoutMode: =LayoutMode.Auto
-                    LayoutOverflowX: =LayoutOverflow.Scroll
                     LayoutOverflowY: =LayoutOverflow.Scroll
                     LayoutWrap: =true
-                    Width: =Parent.Width-5
+                    Width: =Parent.Width
                     Y: =55
                     ZIndex: =28
 
