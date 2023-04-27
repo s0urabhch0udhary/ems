@@ -960,7 +960,7 @@ Home As screen:
             Fill: =RGBA(100, 118, 132, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             FontWeight: =FontWeight.Semibold
-            Height: =Button13_4.Y+Button13_4.Height+25
+            Height: =Button13_4.Y+Button13_4.Height+40
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             Size: =15
@@ -982,7 +982,7 @@ Home As screen:
 
             Container9_10 As groupContainer.manualLayoutContainer:
                 FillPortions: =0
-                Height: =Button13_4.Y+Button13_4.Height+25
+                Height: =Button13_4.Y+Button13_4.Height+40
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 Width: =If(App.ActiveScreen.Size<=3,Parent.Width,820)
@@ -1311,7 +1311,7 @@ Home As screen:
 
                     Container25_4 As groupContainer.manualLayoutContainer:
                         Height: =If(App.ActiveScreen.Size<=3,170,200)
-                        LayoutMinHeight: =If(App.ActiveScreen.Size<=3,170,200)
+                        LayoutMinHeight: =If(App.ActiveScreen.Size<=3,150,200)
                         LayoutMinWidth: =385
                         Width: =Parent.Width/2
                         ZIndex: =2
