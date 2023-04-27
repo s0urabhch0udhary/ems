@@ -312,16 +312,29 @@ Budget As screen:
                             Height: =38
                             HoverColor: =RGBA(255, 255, 255, 1)
                             HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-                            OnSelect: |
+                            OnSelect: |-
                                 =Set(budget,Int(monthly_budget.Text));
                                 Set(income,Int(monthly_income_1.Text));
+                                If(
+                                    CountRows(
+                                        Filter(
+                                            Expenses_Profile,
+                                            User.Email = User().Email
+                                        )
+                                    ) > 0,
                                 Patch(
+                                    Expenses_Profile, First(Filter(Expenses_Profile, User.Email = User().Email)),
+                                    {'Monthly Budget': Value(monthly_budget.Text)},
+                                    {'Monthly Income': Value(monthly_income_1.Text)},
+                                    {Currency: select_currency.SelectedText}
+                                    ),
+                                     Patch(
                                         Expenses_Profile,
                                         Defaults(Expenses_Profile),
-                                        {'Monthly Budget': Value(monthly_budget.Text)},
-                                        {'Monthly Income': Value(monthly_income_1.Text)},
-                                        {Currency: select_currency.SelectedText},
                                         {
+                                            'Monthly Budget': Value(monthly_budget.Text),
+                                            'Monthly Income': Value(monthly_income_1.Text),
+                                            Currency: select_currency.SelectedText,
                                             User: {
                                                 '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
                                                 Claims: Lower(User().Email),
@@ -332,8 +345,9 @@ Budget As screen:
                                                 Picture: ""
                                             }
                                         }
-                                    );
-                                Set(budgetsuccess,true)
+                                    )
+                                );
+                                Set(budgetsuccess,true);
                             Size: =If(App.ActiveScreen.Size<4,11,16)
                             Text: ="Save & Update"
                             Width: =220
