@@ -684,7 +684,7 @@ Home As screen:
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 DelayItemLoading: =true
                                 Height: =Parent.TemplateHeight-Title5_8.Height
-                                Items: =Filter(Expenses_1,Date=DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days))
+                                Items: =Filter(Expenses_1,Date=DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days)&&User.Email=User().Email)
                                 LoadingSpinner: =LoadingSpinner.Data
                                 TemplatePadding: =0
                                 TemplateSize: =Min(440, Self.Height - 60)
@@ -1411,7 +1411,7 @@ Home As screen:
                             ZIndex: =6
 
                         Dropdown1_7 As dropdown:
-                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderColor: =RGBA(230, 230, 230, 1)
                             ChevronBackground: =RGBA(0, 0, 0, 0)
                             ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                             ChevronDisabledFill: =RGBA(0, 0, 0, 0)
