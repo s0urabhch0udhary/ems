@@ -102,7 +102,7 @@ Budget As screen:
                 LayoutMode: =LayoutMode.Auto
                 LayoutWrap: =true
                 PaddingBottom: =50
-                PaddingLeft: =30
+                PaddingLeft: =If(App.ActiveScreen.Size<=2,15,30)
                 PaddingRight: =0.00
                 PaddingTop: =0.00
                 Width: =Parent.Width*2/3
@@ -153,7 +153,7 @@ Budget As screen:
                             ZIndex: =2
 
                             Container8 As groupContainer.manualLayoutContainer:
-                                LayoutMinHeight: =350
+                                LayoutMinHeight: =If(App.ActiveScreen.Size<=2,300,350)
                                 LayoutMinWidth: =300
                                 ZIndex: =1
 
@@ -197,7 +197,7 @@ Budget As screen:
                                     Text: ="Currency"
                                     Width: =210
                                     X: =40
-                                    Y: =210
+                                    Y: =If(App.ActiveScreen.Size<=2,180,210)
                                     ZIndex: =5
 
                                 TextInput3_12 As text:
@@ -217,7 +217,7 @@ Budget As screen:
                                     Size: =13
                                     Width: =Parent.Width-80
                                     X: =40
-                                    Y: =250
+                                    Y: =Label13_38.Y+Label13_38.Height+3
                                     ZIndex: =6
 
                                 Image8 As image:
@@ -287,7 +287,7 @@ Budget As screen:
                                     Size: =13
                                     Width: =Parent.Width-80
                                     X: =40
-                                    Y: =155
+                                    Y: =Label13_40.Y+Label13_40.Height+3
                                     ZIndex: =10
 
                                 Label13_40 As label:
@@ -299,7 +299,7 @@ Budget As screen:
                                     Text: ="Monthly Income"
                                     Width: =210
                                     X: =40
-                                    Y: =120
+                                    Y: =If(App.ActiveScreen.Size<=2,100,120)
                                     ZIndex: =11
 
                         Button13 As button:
@@ -338,7 +338,7 @@ Budget As screen:
                             Text: ="Save & Update"
                             Width: =220
                             X: =If(App.ActiveScreen.Size=1,Parent.Width/2-Self.Width/2,Parent.Width-Self.Width-50)
-                            Y: =Container7.Height
+                            Y: =Container8.Height
                             ZIndex: =3
 
                         Label13 As label:
