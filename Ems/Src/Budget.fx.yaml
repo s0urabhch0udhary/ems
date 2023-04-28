@@ -356,17 +356,17 @@ Budget As screen:
                             ZIndex: =3
 
                         Label13 As label:
-                            Align: =Align.Center
                             BorderColor: =RGBA(32, 54, 71, 1)
                             Color: =RGBA(0, 94, 146, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
                             Height: =38
                             Size: =If(App.ActiveScreen.Size<=2,10,20)
                             Text: ="Budget Updated Successfully!!"
                             Visible: =budgetsuccess
                             Width: =636
-                            X: =monthly_budget.X
-                            Y: =Button13.Y
+                            X: =40
+                            Y: =If(App.ActiveScreen.Size<=2,Button13.Y+Button13.Height+10,Button13.Y)
                             ZIndex: =4
 
                         Timer2 As timer:
