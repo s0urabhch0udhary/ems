@@ -529,7 +529,7 @@ Home As screen:
                             Size: =13
                             Text: =If(Label9_15.Text=Label9_17.Text,"Please Add Your Data To See Category Wise Expense.","")
                             Width: =Parent.Width-120
-                            X: =60
+                            X: =40
                             Y: =60
                             ZIndex: =6
 
