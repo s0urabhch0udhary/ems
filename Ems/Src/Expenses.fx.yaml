@@ -1734,6 +1734,7 @@ Expenses As screen:
                                     "Please Select Valid Date."
                                 )
                             ],
+                            Set(expensesuccess,true);
                             Patch(
                                 Expenses_1,
                                 Defaults(Expenses_1),
@@ -2036,4 +2037,32 @@ Expenses As screen:
                             X: =ExpenseTitle_17.X+2
                             Y: =ExpenseTitle_17.Y+2
                             ZIndex: =8
+
+                Label13_2 As label:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Color: =RGBA(0, 94, 146, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =Font.'Segoe UI'
+                    Size: =If(App.ActiveScreen.Size<=2,8,14)
+                    Text: ="Budget Updated Successfully!!"
+                    Visible: =expensesuccess
+                    Width: =300
+                    X: =If(App.ActiveScreen.Size=1,10,5)
+                    Y: =If(App.ActiveScreen.Size=1,Button13_4.Y+Button13_4.Height+5,Button13_4.Y)
+                    ZIndex: =29
+
+                Timer2_2 As timer:
+                    AutoStart: =expensesuccess
+                    Duration: =2000
+                    Fill: =RGBA(100, 118, 132, 1)
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                    OnTimerEnd: =Set(expensesuccess,false)
+                    Start: =budgetsuccess
+                    Visible: =false
+                    Width: =34
+                    X: =40
+                    Y: =Button13_4.Y
+                    ZIndex: =30
 
