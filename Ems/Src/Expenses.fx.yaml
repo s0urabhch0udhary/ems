@@ -1694,7 +1694,7 @@ Expenses As screen:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: =RGBA(100, 118, 132, 1)
+                    Fill: =RGBA(9, 107, 107, 1)
                     FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                     FontWeight: =FontWeight.Semibold
                     Height: =If(App.ActiveScreen.Size<=3,30,40)
