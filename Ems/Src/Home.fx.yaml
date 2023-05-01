@@ -1460,6 +1460,7 @@ Home As screen:
                     ZIndex: =29
 
                 Timer2_1 As timer:
+                    AutoStart: =expensesuccess
                     Duration: =2000
                     Fill: =RGBA(100, 118, 132, 1)
                     HoverColor: =RGBA(255, 255, 255, 1)
