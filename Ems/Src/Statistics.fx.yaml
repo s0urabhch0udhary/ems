@@ -157,6 +157,7 @@ Statistics As screen:
                                 ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
                                 Items: =Filter(Expenses_1,User.Email=User().Email&&Month(Date) = Month(Today()) && Year(Date) = Year(Today()))
                                 Size: =11
+                                Visible: =If(Label9_15.Text=Label9_17.Text,false,true)
                                 Width: =Parent.Width-60
                                 X: |
                                     =30
@@ -170,10 +171,23 @@ Statistics As screen:
                                 ItemColorSet: =LineChart4.ItemColorSet
                                 Items: =LineChart4.SeriesLabels
                                 Size: =8
+                                Visible: =If(Label9_15.Text=Label9_17.Text,false,true)
                                 Width: =106
                                 X: =Parent.Width-Self.Width-3
                                 Y: =22
                                 ZIndex: =5
+
+                        Label24_4 As label:
+                            BorderColor: =RGBA(32, 54, 71, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Height: =72
+                            Size: =13
+                            Text: =If(Label9_15.Text=Label9_17.Text,"Please Add Your Data To See Category Wise Expense.","")
+                            Width: =Parent.Width-120
+                            X: =40
+                            Y: =40
+                            ZIndex: =6
 
                     Container21 As groupContainer.manualLayoutContainer:
                         FillPortions: =0
@@ -331,6 +345,18 @@ Statistics As screen:
                                 X: =If(App.ActiveScreen.Size<5,18,36)
                                 Y: =15
                                 ZIndex: =8
+
+                        Label24_5 As label:
+                            BorderColor: =RGBA(32, 54, 71, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Height: =72
+                            Size: =13
+                            Text: =If(Label9_15.Text=Label9_17.Text,"Please Add Your Data To See Category Wise Expense.","")
+                            Width: =Parent.Width-120
+                            X: =40
+                            Y: =50
+                            ZIndex: =4
 
                     Container4 As groupContainer.manualLayoutContainer:
                         FillPortions: =0

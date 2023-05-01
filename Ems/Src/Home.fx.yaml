@@ -479,12 +479,10 @@ Home As screen:
                                 Height: =Parent.Height-60
                                 ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
                                 Items: |+
-                                    =AddColumns(Filter(Expenses_1,User.Email=User().Email&&Month(Date) = Month(Today()) && Year(Date) = Year(Today())),
-                                              "Categories",
-                                              Category.Value          
-                                    )
+                                    =Filter(Expenses_1,User.Email=User().Email&&Month(Date) = Month(Today()) && Year(Date) = Year(Today()))
                                     
                                 Size: =8
+                                Visible: =If(Label9_15.Text=Label9_17.Text,false,true)
                                 Width: =Parent.Width-70
                                 X: =35
                                 Y: |+
@@ -498,6 +496,7 @@ Home As screen:
                                 ItemColorSet: =LineChart3_1.ItemColorSet
                                 Items: =LineChart3_1.SeriesLabels
                                 Size: =8
+                                Visible: =If(Label9_15.Text=Label9_17.Text,false,true)
                                 Width: =144
                                 X: =Parent.Width*3/4
                                 Y: =22
@@ -524,7 +523,7 @@ Home As screen:
 
                         Label24_3 As label:
                             BorderColor: =RGBA(32, 54, 71, 1)
-                            Color: =RGBA(0, 0, 0, 1)
+                            Color: =RGBA(51, 51, 51, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             Height: =72
                             Size: =13
