@@ -22,7 +22,7 @@ Statistics As screen:
             Fill: =RGBA(9, 107, 107, 1)
             LayoutMinHeight: =640
             LayoutMinWidth: =640
-            Width: =If(App.ActiveScreen.Size<=4,0,250)
+            Width: =If(App.ActiveScreen.Size<4,0,250)
             X: =0.00
             ZIndex: =1
 
@@ -109,7 +109,7 @@ Statistics As screen:
                 Container19 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =5
-                    LayoutMinHeight: =If(App.ActiveScreen.Size<=3,760,550)
+                    LayoutMinHeight: =If(App.ActiveScreen.Size<=3,800,550)
                     LayoutMinWidth: =360
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowY: =LayoutOverflow.Scroll

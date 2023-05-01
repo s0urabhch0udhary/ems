@@ -115,7 +115,6 @@ Expenses As screen:
                     LayoutMinHeight: =If(App.ActiveScreen.Width<410,1100,560)
                     LayoutMinWidth: =If(App.ActiveScreen.Size=1,300,430)
                     LayoutMode: =LayoutMode.Auto
-                    LayoutOverflowX: =LayoutOverflow.Scroll
                     LayoutOverflowY: =LayoutOverflow.Scroll
                     PaddingBottom: =40
                     PaddingLeft: =If(App.ActiveScreen.Size=1,20,30)

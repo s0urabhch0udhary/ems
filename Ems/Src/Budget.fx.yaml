@@ -383,7 +383,7 @@ Budget As screen:
                             ZIndex: =5
 
                 Container6_9 As groupContainer.verticalAutoLayoutContainer:
-                    FillPortions: =0.4
+                    FillPortions: =0.5
                     Height: =700
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
