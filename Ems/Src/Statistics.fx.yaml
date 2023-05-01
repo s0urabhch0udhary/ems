@@ -183,7 +183,7 @@ Statistics As screen:
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             Height: =72
                             Size: =13
-                            Text: =If(Label9_15.Text=Label9_17.Text,"Please Add Your Data To See Category Wise Expense.","")
+                            Text: =If(Label9_15.Text=Label9_17.Text,"Please Add Your Data To See Category Wise Statistics.","")
                             Width: =Parent.Width-120
                             X: =40
                             Y: =40
@@ -351,7 +351,7 @@ Statistics As screen:
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             Height: =72
                             Size: =13
-                            Text: =If(Label9_15.Text=Label9_17.Text,"Please Add Your Data To See Category Wise Expense.","")
+                            Text: =If(IsEmpty(Filter(Expenses_1,Date=Today()&&User.Email=User().Email))=true,"No transaction yet!","")
                             Width: =Parent.Width-120
                             X: =40
                             Y: =50
