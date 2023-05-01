@@ -109,7 +109,7 @@ Statistics As screen:
                 Container19 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =5
-                    LayoutMinHeight: =If(App.ActiveScreen.Size<=3,800,550)
+                    LayoutMinHeight: =If(App.ActiveScreen.Size<=3,800,580)
                     LayoutMinWidth: =360
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowY: =LayoutOverflow.Scroll
@@ -120,7 +120,7 @@ Statistics As screen:
 
                     Container20 As groupContainer.manualLayoutContainer:
                         FillPortions: =0
-                        Height: =250
+                        Height: =260
                         LayoutMinHeight: =200
                         LayoutMinWidth: =200
                         ZIndex: =1
@@ -191,8 +191,7 @@ Statistics As screen:
 
                     Container21 As groupContainer.manualLayoutContainer:
                         FillPortions: =0
-                        Height: |
-                            =220
+                        Height: =235
                         LayoutMinHeight: =If(App.ActiveScreen.Size<=3,210,240)
                         LayoutMinWidth: =200
                         ZIndex: =2
