@@ -101,7 +101,6 @@ Expenses As screen:
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowX: =LayoutOverflow.Scroll
-                LayoutOverflowY: =LayoutOverflow.Scroll
                 LayoutWrap: =true
                 PaddingRight: =0.00
                 PaddingTop: =0.00
@@ -1699,7 +1698,7 @@ Expenses As screen:
                     FontWeight: =FontWeight.Semibold
                     Height: =If(App.ActiveScreen.Size<=3,30,40)
                     HoverColor: =RGBA(255, 255, 255, 1)
-                    HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                    HoverFill: =ColorFade(Self.Fill, -20%)
                     OnSelect: |-
                         =If(
                             ExpenseTitle_16.Text="",
@@ -1817,8 +1816,8 @@ Expenses As screen:
                         Fill: =RGBA(100, 118, 132, 1)
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-                        OnTimerEnd: =Set(errordisplay,false)
-                        Start: =errordisplay
+                        OnTimerEnd: =Set(errordisplay2,false)
+                        Start: =errordisplay2
                         Visible: =false
                         Width: =0
                         X: =645

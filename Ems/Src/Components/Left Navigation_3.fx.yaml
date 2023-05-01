@@ -18,7 +18,7 @@
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
         TemplateFill: =
-        TemplateSize: =74
+        TemplateSize: =65
         Transition: =Transition.Pop
         Width: =260
         X: =0.00
