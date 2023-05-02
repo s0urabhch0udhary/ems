@@ -2350,7 +2350,7 @@
       "NavItems",
       "CurrentScreen"
     ],
-    "LastModifiedTimestamp": "638186276124757755",
+    "LastModifiedTimestamp": "638186286266081525",
     "Name": "Left Navigation_3",
     "Rules": [
       {
@@ -2403,7 +2403,7 @@
       },
       {
         "Category": "Design",
-        "InvariantScript": "RGBA(9, 130, 129, 1)",
+        "InvariantScript": "RGBA(12, 117, 123, 1)",
         "Property": "Fill",
         "RuleProviderType": "System"
       }
@@ -2455,7 +2455,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638186276124757755",
+  "LastModifiedTimestamp": "638186286266081525",
   "Name": "dcbd508ebb2b496ea30e192d53179576",
   "OverridableProperties": {},
   "TemplateOriginalName": "ce08b6f46174403992bb5e7a54f2c94b",

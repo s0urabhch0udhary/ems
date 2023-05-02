@@ -966,7 +966,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button13_5",
-      "ParentIndex": 10,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17019,7 +17019,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon7_5",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -21575,7 +21575,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label13_2",
-      "ParentIndex": 11,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27235,7 +27235,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label4_6",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -32710,7 +32710,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Timer2_2",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
