@@ -96,10 +96,11 @@ Expenses As screen:
 
             Container3_6 As groupContainer.horizontalAutoLayoutContainer:
                 FillPortions: =0
-                Height: =650
+                Height: =If(App.ActiveScreen.Size<=2,700,650)
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
+                LayoutOverflowY: =LayoutOverflow.Scroll
                 LayoutWrap: =true
                 PaddingRight: =0.00
                 PaddingTop: =0.00
