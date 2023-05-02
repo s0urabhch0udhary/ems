@@ -575,7 +575,7 @@ Budget As screen:
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 DelayItemLoading: =true
                                 Height: =Parent.TemplateHeight-Title5_10.Height
-                                Items: =Filter(Expenses_1,Date=DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days))
+                                Items: =Filter(Expenses_1,Date=DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days)&&User.Email=User().Email)
                                 LoadingSpinner: =LoadingSpinner.Data
                                 TemplatePadding: =0
                                 TemplateSize: =Min(440, Self.Height - 60)
