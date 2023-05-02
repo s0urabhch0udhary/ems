@@ -1771,7 +1771,7 @@ Expenses As screen:
                     Text: ="ADD EXPENSE"
                     Width: =If(App.ActiveScreen.Size<=3,Parent.Width*2/7,Parent.Width*3/7)
                     X: =If(App.ActiveScreen.Size<=3,40,Parent.Width/2)
-                    Y: =AddMediaButton1_5.Y+AddMediaButton1_5.Height+10
+                    Y: =AddMediaButton1_5.Y+AddMediaButton1_5.Height+20
                     ZIndex: =16
 
                 errorpop_5 As group:
@@ -2002,7 +2002,8 @@ Expenses As screen:
                             ZIndex: =6
 
                         Dropdown1_8 As dropdown:
-                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderColor: =RGBA(255, 255, 255, 1)
+                            BorderThickness: =1
                             ChevronBackground: =RGBA(0, 0, 0, 0)
                             ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                             ChevronDisabledFill: =RGBA(0, 0, 0, 0)
@@ -2017,6 +2018,7 @@ Expenses As screen:
                             HoverColor: =RGBA(0, 0, 0, 1)
                             HoverFill: =RGBA(255, 255, 255, 1)
                             Items: =Choices([@Expenses_1].PaymentType)
+                            PressedBorderColor: =
                             PressedColor: =RGBA(255, 255, 255, 1)
                             PressedFill: =RGBA(32, 54, 71, 1)
                             SelectionFill: =RGBA(39, 67, 125, 1)
@@ -2066,25 +2068,26 @@ Expenses As screen:
                         BorderStyle: =BorderStyle.Dashed
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
-                        Height: =61
-                        Image: =If(IsBlank(AddMediaButton1_5.Media), SampleImage, AddMediaButton1_5.Media)
-                        ImagePosition: =ImagePosition.Fill
+                        Height: =48
+                        Image: =AddMediaButton1_5.Media
                         Visible: =If(IsBlank(AddMediaButton1_5.Media), false, true)
                         Width: =102
-                        X: =If(App.ActiveScreen.Size<=3,Parent.Width/10,Parent.Width/5)
-                        Y: =Label13_14.Y+Label13_14.Height
+                        X: =32
+                        Y: =Label13_14.Y+Label13_14.Height+1
                         ZIndex: =32
 
                     AddMediaButton1_5 As addMedia:
+                        BorderColor: =RGBA(162, 173, 181, 1)
                         BorderStyle: =BorderStyle.Dashed
-                        BorderThickness: =1
+                        BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(0, 0, 0, 0)
-                        Height: =61
+                        Font: =Font.'Segoe UI'
+                        Height: =50
                         Size: =If(App.ActiveScreen.Size<=3,10,14)
                         Text: ="Drag and drop or browse your device."
-                        Width: =400
-                        X: =If(UploadedImage1_1.Visible=true,UploadedImage1_1.X+UploadedImage1_1.Width,App.ActiveScreen.Size<=3,Parent.Width/10,Parent.Width/5)
+                        Width: =If(UploadedImage1_1.Visible=true,Parent.Width-60-UploadedImage1_1.Width,Parent.Width-60)
+                        X: =30
                         Y: =Label13_14.Y+Label13_14.Height
                         ZIndex: =33
 
