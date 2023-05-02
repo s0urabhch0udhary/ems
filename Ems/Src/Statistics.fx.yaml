@@ -191,7 +191,7 @@ Statistics As screen:
 
                     Container21 As groupContainer.manualLayoutContainer:
                         FillPortions: =0
-                        Height: =235
+                        Height: =210
                         LayoutMinHeight: =If(App.ActiveScreen.Size<=3,210,240)
                         LayoutMinWidth: =200
                         ZIndex: =2
@@ -229,8 +229,7 @@ Statistics As screen:
                         Gallery6 As gallery.galleryVertical:
                             BorderColor: =RGBA(32, 54, 71, 1)
                             DelayItemLoading: =true
-                            Height: |
-                                =155
+                            Height: =130
                             Items: =Filter(Expenses_1,User.Email=User().Email&&Month(Date) = Month(Today()) && Year(Date) = Year(Today()))
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
@@ -264,7 +263,7 @@ Statistics As screen:
                                 Visible: =If(Parent.Width<750,false,true)
                                 Width: =177
                                 X: =Image7.X+Image7.Width+5
-                                Y: =22
+                                Y: =(Parent.TemplateHeight-Self.Height)/2
                                 ZIndex: =2
 
                             Label18 As label:
@@ -277,7 +276,7 @@ Statistics As screen:
                                 Text: =ThisItem.PaymentType.Value
                                 Visible: =If(Parent.Width<750,false,true)
                                 X: =If(Label17.Visible=true,Label17.X+Label17.Width+20,Parent.Width/5)
-                                Y: =22
+                                Y: =(Parent.TemplateHeight-Self.Height)/2
                                 ZIndex: =3
 
                             Label19 As label:
@@ -288,7 +287,7 @@ Statistics As screen:
                                 Size: =If(App.ActiveScreen.Size<=2,9,12)
                                 Text: =ThisItem.Date
                                 X: =If(Label18.Visible=false,Parent.Width*2/6,Parent.Width/2)
-                                Y: =22
+                                Y: =(Parent.TemplateHeight-Self.Height)/2
                                 ZIndex: =4
 
                             Label20 As label:
@@ -301,7 +300,7 @@ Statistics As screen:
                                 Text: ="- ₹"&ThisItem.Amount
                                 Width: =115
                                 X: =Parent.Width/1.4
-                                Y: =20
+                                Y: =(Parent.TemplateHeight-Self.Height)/2
                                 ZIndex: =5
 
                             Icon5 As icon.More:
@@ -315,7 +314,7 @@ Statistics As screen:
                                 Visible: =If(Parent.Width<550,false,true)
                                 Width: =23
                                 X: =Parent.Width*9/10
-                                Y: =18
+                                Y: =(Parent.TemplateHeight-Self.Height)/2
                                 ZIndex: =6
 
                             Rectangle2 As rectangle:
@@ -325,7 +324,7 @@ Statistics As screen:
                                 OnSelect: =Select(Parent)
                                 Width: =Parent.Width-30
                                 X: =12
-                                Y: =77
+                                Y: =(Parent.TemplateHeight-Self.Height)
                                 ZIndex: =7
 
                             Image7 As image:
@@ -342,7 +341,7 @@ Statistics As screen:
                                 RadiusTopRight: =50
                                 Width: =45
                                 X: =If(App.ActiveScreen.Size<5,18,36)
-                                Y: =15
+                                Y: =(Parent.TemplateHeight-Self.Height)/2
                                 ZIndex: =8
 
                         Label24_5 As label:
