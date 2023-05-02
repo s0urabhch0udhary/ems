@@ -1670,7 +1670,9 @@ Expenses As screen:
                     DisabledColor: =RGBA(244, 244, 244, 1)
                     Height: =If(App.ActiveScreen.Size<=3,20,30)
                     Icon: =Icon.Cancel
-                    OnSelect: =Set(addexpensepop,false)
+                    OnSelect: |-
+                        =Set(addexpensepop,false);
+                        Reset(AddMediaButton1_5);
                     Width: =If(App.ActiveScreen.Size<=3,20,30)
                     X: =Container9_11.Width-Self.Width-20
                     Y: =10
