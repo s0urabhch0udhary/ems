@@ -94,7 +94,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 1,
+    "BindingErrorCount": 0,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -131,7 +131,6 @@
     "Home",
     "Expenses",
     "Statistics",
-    "Budget",
-    "Screen1"
+    "Budget"
   ]
 }
