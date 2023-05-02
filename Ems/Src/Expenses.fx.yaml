@@ -18,7 +18,6 @@ Expenses As screen:
 
         "'Left Navigation_12' As 'Left Navigation_3'":
             CurrentScreen: ="Expenses"
-            Fill: =RGBA(9, 107, 107, 1)
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Width: =If(App.ActiveScreen.Size<4,0,250)
@@ -1693,7 +1692,7 @@ Expenses As screen:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: =RGBA(9, 107, 107, 1)
+                    Fill: =RGBA(60, 132, 140, 1)
                     FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                     FontWeight: =FontWeight.Semibold
                     Height: =If(App.ActiveScreen.Size<=3,30,40)
@@ -1824,19 +1823,6 @@ Expenses As screen:
                         X: =645
                         Y: =43
                         ZIndex: =19
-
-                AddMediaButton1_5 As addMedia:
-                    BorderColor: =RGBA(32, 54, 71, 1)
-                    ChangePictureText: ="Attachment loaded successfully"
-                    Color: =RGBA(0, 0, 0, 1)
-                    Fill: =RGBA(255, 255, 255, 1)
-                    Height: =46
-                    Size: =If(App.ActiveScreen.Size<=3,10,14)
-                    Text: ="Drag and drop or browse your device."
-                    Width: =If(App.ActiveScreen.Size<=3,280,400)
-                    X: =If(App.ActiveScreen.Size<=3,Parent.Width/10,Parent.Width/5)
-                    Y: =Label13_14.Y+Label13_14.Height
-                    ZIndex: =26
 
                 Container22_5 As groupContainer.horizontalAutoLayoutContainer:
                     Height: =If(App.ActiveScreen.Size<4,328,210)
@@ -2065,4 +2051,39 @@ Expenses As screen:
                     X: =40
                     Y: =Button13_4.Y
                     ZIndex: =30
+
+                AddMediaWithImage1_1 As group:
+                    Height: =5
+                    Width: =5
+                    X: =-621
+                    Y: =-519
+                    ZIndex: =31
+
+                    UploadedImage1_1 As image:
+                        BorderColor: =RGBA(100, 118, 132, 1)
+                        BorderStyle: =BorderStyle.Dashed
+                        BorderThickness: =1
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        Height: =61
+                        Image: =If(IsBlank(AddMediaButton1_5.Media), SampleImage, AddMediaButton1_5.Media)
+                        ImagePosition: =ImagePosition.Fill
+                        Visible: =If(IsBlank(AddMediaButton1_5.Media), false, true)
+                        Width: =102
+                        X: =If(App.ActiveScreen.Size<=3,Parent.Width/10,Parent.Width/5)
+                        Y: =Label13_14.Y+Label13_14.Height
+                        ZIndex: =32
+
+                    AddMediaButton1_5 As addMedia:
+                        BorderStyle: =BorderStyle.Dashed
+                        BorderThickness: =1
+                        Color: =RGBA(0, 0, 0, 1)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =61
+                        Size: =If(App.ActiveScreen.Size<=3,10,14)
+                        Text: ="Drag and drop or browse your device."
+                        Width: =400
+                        X: =If(UploadedImage1_1.Visible=true,UploadedImage1_1.X+UploadedImage1_1.Width,App.ActiveScreen.Size<=3,Parent.Width/10,Parent.Width/5)
+                        Y: =Label13_14.Y+Label13_14.Height
+                        ZIndex: =33
 

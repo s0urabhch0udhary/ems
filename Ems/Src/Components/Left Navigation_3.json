@@ -117,7 +117,7 @@
         "Name": "Label4",
         "Parent": "Left Navigation_3",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 514,
+        "PublishOrderIndex": 516,
         "Rules": [
           {
             "Category": "Data",
@@ -399,7 +399,7 @@
             "Name": "galleryTemplate1_1",
             "Parent": "Gallery1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 516,
+            "PublishOrderIndex": 518,
             "Rules": [
               {
                 "Category": "Design",
@@ -534,7 +534,7 @@
             "Name": "Button11",
             "Parent": "Gallery1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 517,
+            "PublishOrderIndex": 519,
             "Rules": [
               {
                 "Category": "Data",
@@ -848,7 +848,7 @@
             "Name": "Label15",
             "Parent": "Gallery1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 518,
+            "PublishOrderIndex": 520,
             "Rules": [
               {
                 "Category": "Data",
@@ -1191,7 +1191,7 @@
             "Name": "Image4",
             "Parent": "Gallery1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 519,
+            "PublishOrderIndex": 521,
             "Rules": [
               {
                 "Category": "Data",
@@ -1487,7 +1487,7 @@
         "Name": "Gallery1_1",
         "Parent": "Left Navigation_3",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 515,
+        "PublishOrderIndex": 517,
         "Rules": [
           {
             "Category": "Data",
@@ -1745,7 +1745,7 @@
         "Name": "Image12",
         "Parent": "Left Navigation_3",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 520,
+        "PublishOrderIndex": 522,
         "Rules": [
           {
             "Category": "Data",
@@ -2075,7 +2075,7 @@
         "Name": "Button6",
         "Parent": "Left Navigation_3",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 521,
+        "PublishOrderIndex": 523,
         "Rules": [
           {
             "Category": "Data",
@@ -2350,7 +2350,7 @@
       "NavItems",
       "CurrentScreen"
     ],
-    "LastModifiedTimestamp": "638186286266081525",
+    "LastModifiedTimestamp": "638186290131540920",
     "Name": "Left Navigation_3",
     "Rules": [
       {
@@ -2403,7 +2403,7 @@
       },
       {
         "Category": "Design",
-        "InvariantScript": "RGBA(12, 117, 123, 1)",
+        "InvariantScript": "RGBA(128, 205, 214, 1)",
         "Property": "Fill",
         "RuleProviderType": "System"
       }
@@ -2455,7 +2455,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638186286266081525",
+  "LastModifiedTimestamp": "638186290131540920",
   "Name": "dcbd508ebb2b496ea30e192d53179576",
   "OverridableProperties": {},
   "TemplateOriginalName": "ce08b6f46174403992bb5e7a54f2c94b",

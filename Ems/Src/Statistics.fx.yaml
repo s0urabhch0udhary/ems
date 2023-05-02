@@ -19,7 +19,6 @@ Statistics As screen:
 
         "'Left Navigation_8' As 'Left Navigation_3'":
             CurrentScreen: ="Statistics"
-            Fill: =RGBA(9, 107, 107, 1)
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Width: =If(App.ActiveScreen.Size<4,0,250)
