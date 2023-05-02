@@ -27,7 +27,7 @@ Expenses As screen:
 
         Container2_6 As groupContainer.verticalAutoLayoutContainer:
             LayoutDirection: =LayoutDirection.Vertical
-            LayoutGap: =15
+            LayoutGap: =10
             LayoutMinHeight: =900
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
@@ -117,7 +117,7 @@ Expenses As screen:
                     LayoutOverflowY: =LayoutOverflow.Scroll
                     PaddingBottom: =40
                     PaddingLeft: =If(App.ActiveScreen.Size=1,20,30)
-                    PaddingRight: =If(App.ActiveScreen.Size=1,20,30)
+                    PaddingRight: =10
                     PaddingTop: =0.00
                     Width: =Parent.Width
                     X: =0.00
@@ -139,7 +139,7 @@ Expenses As screen:
 
                         Container11_6 As groupContainer.manualLayoutContainer:
                             AlignInContainer: =AlignInContainer.Start
-                            Height: =130
+                            Height: =135
                             LayoutMinHeight: =145
                             LayoutMinWidth: =150
                             PaddingRight: =0.00
@@ -215,7 +215,7 @@ Expenses As screen:
 
                         Container12_18 As groupContainer.manualLayoutContainer:
                             AlignInContainer: =AlignInContainer.Start
-                            Height: =130
+                            Height: =135
                             LayoutMinHeight: =145
                             LayoutMinWidth: =150
                             PaddingRight: =0.00
@@ -297,7 +297,7 @@ Expenses As screen:
 
                         Container12_19 As groupContainer.manualLayoutContainer:
                             AlignInContainer: =AlignInContainer.Start
-                            Height: =130
+                            Height: =135
                             LayoutMinHeight: =145
                             LayoutMinWidth: =150
                             PaddingRight: =0.00
@@ -379,7 +379,7 @@ Expenses As screen:
 
                         Container12_20 As groupContainer.manualLayoutContainer:
                             AlignInContainer: =AlignInContainer.Start
-                            Height: =130
+                            Height: =135
                             LayoutMinHeight: =145
                             LayoutMinWidth: =150
                             PaddingRight: =0.00
@@ -506,7 +506,7 @@ Expenses As screen:
                                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                     Height: =Parent.Height-25
                                     ItemBorderThickness: =1
-                                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                                    ItemColorSet: =[RGBA(253, 253, 211, 1),RGBA(212, 175, 185, 1),RGBA(209, 207, 226,1),RGBA(156, 173, 206,1),RGBA(151, 155, 166,1),RGBA(156, 173, 206,1),RGBA(119, 221, 119,1)]
                                     Items: =Filter(Expenses_1,User.Email=User().Email&&Month(Date) = Month(Today()) && Year(Date) = Year(Today()))
                                     Width: =Parent.Width
                                     X: =1
