@@ -1,0 +1,63 @@
+Screen1 As screen:
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
+    OnVisible: |+
+        =
+        
+        
+
+    CompositeColumnChart1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+        Title1 As label:
+            Align: =Align.Center
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =43
+            Text: ="Chart Title"
+            Width: =1748
+            X: =172
+            Y: =83
+            ZIndex: =2
+
+        ColumnChart1 As barChart:
+            BorderColor: =RGBA(56, 56, 56, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Height: =682
+            ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+            Items: |-
+                =AddColumns(
+                    Filter(
+                        Expenses_1,
+                        // add your filter criteria here, for example:
+                        User.Email = User().Email
+                    ),
+                    "Categories",
+                    Category.Value,
+                    "Total Amount",
+                    Sum(
+                Filter(
+                Expenses_1,
+                User.Email = User().Email && Category = ThisRecord.Category
+                ),
+                Amount
+                )
+                )
+            Width: =1748
+            X: =172
+            Y: =134
+            ZIndex: =3
+
+        Legend1 As legend:
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =136
+            ItemColorSet: =ColumnChart1.ItemColorSet
+            Items: =ColumnChart1.SeriesLabels
+            Width: =1486
+            X: =358
+            Y: =834
+            ZIndex: =4
+
