@@ -94,6 +94,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
+    "BindingErrorCount": 0,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -111,7 +112,8 @@
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
     "Name": "EMS Responsive 3",
-    "OriginatingVersion": "1.330"
+    "OriginatingVersion": "1.330",
+    "ParserErrorCount": 0
   },
   "PublishInfo": {
     "AppName": "EMS Responsive 3",
