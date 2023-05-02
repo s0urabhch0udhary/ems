@@ -505,7 +505,7 @@ Expenses As screen:
                                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                     Height: =Parent.Height-25
                                     ItemBorderThickness: =1
-                                    ItemColorSet: =[RGBA(253, 253, 211, 1),RGBA(212, 175, 185, 1),RGBA(209, 207, 226,1),RGBA(156, 173, 206,1),RGBA(151, 155, 166,1),RGBA(156, 173, 206,1),RGBA(119, 221, 119,1)]
+                                    ItemColorSet: =[RGBA(212, 175, 185, 1),RGBA(209, 207, 226,1),RGBA(156, 173, 206,1),RGBA(151, 155, 166,1),RGBA(156, 173, 206,1),RGBA(119, 221, 119,1)]
                                     Items: =Filter(Expenses_1,User.Email=User().Email&&Month(Date) = Month(Today()) && Year(Date) = Year(Today()))
                                     Width: =Parent.Width
                                     X: =1
@@ -554,7 +554,7 @@ Expenses As screen:
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 DelayItemLoading: =true
                                 Height: =Parent.Height-60
-                                Items: =Filter(Expenses_1,Date=Today()&&User.Email=User().Email)
+                                Items: =SortByColumns(Filter(Expenses_1,Date=Today()&&User.Email=User().Email),"Created", SortOrder.Descending)
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data
                                 TemplateSize: =70
@@ -955,7 +955,7 @@ Expenses As screen:
                             BorderColor: =RGBA(32, 54, 71, 1)
                             DelayItemLoading: =true
                             Height: =200
-                            Items: =Filter(Expenses_1,User.Email=User().Email)
+                            Items: =SortByColumns(Filter(Expenses_1,User.Email=User().Email),"Created", SortOrder.Descending)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             ShowScrollbar: =false

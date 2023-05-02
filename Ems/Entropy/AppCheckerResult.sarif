@@ -9102,7 +9102,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 43,
+                  "charOffset": 57,
                   "snippet": {
                     "text": "Month(Date)"
                   }
@@ -9142,7 +9142,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 55,
+                  "charOffset": 69,
                   "snippet": {
                     "text": "="
                   }
@@ -9182,7 +9182,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 41,
+                  "charOffset": 55,
                   "snippet": {
                     "text": "&&"
                   }
@@ -9222,7 +9222,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 72,
+                  "charOffset": 86,
                   "snippet": {
                     "text": "&&"
                   }

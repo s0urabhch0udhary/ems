@@ -855,7 +855,7 @@ Home As screen:
                             BorderColor: =RGBA(32, 54, 71, 1)
                             DelayItemLoading: =true
                             Height: =200
-                            Items: =Filter(Expenses_1,User.Email=User().Email)
+                            Items: =SortByColumns(Filter(Expenses_1,User.Email=User().Email),"Created", SortOrder.Descending)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             ShowScrollbar: =false
@@ -1072,7 +1072,9 @@ Home As screen:
                     DisabledColor: =RGBA(244, 244, 244, 1)
                     Height: =If(App.ActiveScreen.Size<=3,20,30)
                     Icon: =Icon.Cancel
-                    OnSelect: =Set(addexpensepop2,false)
+                    OnSelect: |-
+                        =Set(addexpensepop2,false);
+                        Reset(AddMediaButton1_4);
                     Width: =If(App.ActiveScreen.Size<=3,20,30)
                     X: =Container9_10.Width-Self.Width-20
                     Y: =10
@@ -1260,6 +1262,7 @@ Home As screen:
                             DisabledFill: =RGBA(244, 244, 244, 1)
                             FocusedBorderThickness: =4
                             Height: =If(App.ActiveScreen.Size<=3,40,55)
+                            HintText: ="eg dinner with john"
                             HoverBorderColor: =RGBA(112, 112, 112, 1)
                             HoverColor: =RGBA(0, 0, 0, 1)
                             HoverFill: =RGBA(255, 255, 255, 1)
@@ -1289,6 +1292,7 @@ Home As screen:
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
                             FocusedBorderThickness: =4
+                            Format: =TextFormat.Number
                             Height: =If(App.ActiveScreen.Size<=3,40,56)
                             HoverBorderColor: =RGBA(112, 112, 112, 1)
                             HoverColor: =RGBA(0, 0, 0, 1)
@@ -1424,6 +1428,7 @@ Home As screen:
                             Items: =Choices([@Expenses_1].PaymentType)
                             PressedColor: =RGBA(255, 255, 255, 1)
                             PressedFill: =RGBA(32, 54, 71, 1)
+                            SelectionColor: =RGBA(153, 153, 153, 1)
                             SelectionFill: =RGBA(39, 67, 125, 1)
                             Size: =If(App.ActiveScreen.Size<=3,8,12)
                             Width: =ExpenseTitle_15.Width-4
@@ -1471,12 +1476,12 @@ Home As screen:
                         BorderStyle: =BorderStyle.Dashed
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
-                        Height: =50
+                        Height: =48
                         Image: =AddMediaButton1_4.Media
                         Visible: =If(IsBlank(AddMediaButton1_4.Media), false, true)
                         Width: =102
-                        X: =40
-                        Y: =Label13_12.Y+Label13_12.Height
+                        X: =32
+                        Y: =Label13_12.Y+Label13_12.Height+1
                         ZIndex: =32
 
                     AddMediaButton1_4 As addMedia:
@@ -1490,7 +1495,7 @@ Home As screen:
                         Size: =If(App.ActiveScreen.Size<=3,10,14)
                         Text: ="Drag and drop or browse your device."
                         Width: =If(UploadedImage1_2.Visible=true,Parent.Width-60-UploadedImage1_2.Width,Parent.Width-60)
-                        X: =If(UploadedImage1_2.Visible=true,UploadedImage1_2.X+UploadedImage1_2.Width,30)
+                        X: =30
                         Y: =Label13_12.Y+Label13_12.Height
                         ZIndex: =33
 

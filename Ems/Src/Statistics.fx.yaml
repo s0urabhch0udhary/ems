@@ -229,7 +229,7 @@ Statistics As screen:
                             BorderColor: =RGBA(32, 54, 71, 1)
                             DelayItemLoading: =true
                             Height: =130
-                            Items: =Filter(Expenses_1,User.Email=User().Email&&Month(Date) = Month(Today()) && Year(Date) = Year(Today()))
+                            Items: =SortByColumns(Filter(Expenses_1,User.Email=User().Email&&Month(Date) = Month(Today()) && Year(Date) = Year(Today())),"Created",SortOrder.Descending)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             ShowScrollbar: =false
@@ -679,7 +679,7 @@ Statistics As screen:
                             BorderColor: =RGBA(32, 54, 71, 1)
                             DelayItemLoading: =true
                             Height: =200
-                            Items: =Filter(Expenses_1,User.Email=User().Email)
+                            Items: =SortByColumns(Filter(Expenses_1,User.Email=User().Email),"Created", SortOrder.Descending)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             ShowScrollbar: =false

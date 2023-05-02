@@ -695,7 +695,7 @@ Budget As screen:
                             BorderColor: =RGBA(32, 54, 71, 1)
                             DelayItemLoading: =true
                             Height: =200
-                            Items: =Filter(Expenses_1,User.Email=User().Email)
+                            Items: =SortByColumns(Filter(Expenses_1,User.Email=User().Email),"Created", SortOrder.Descending)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             ShowScrollbar: =false
