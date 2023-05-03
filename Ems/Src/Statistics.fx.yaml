@@ -122,7 +122,7 @@ Statistics As screen:
 
                     Container20 As groupContainer.manualLayoutContainer:
                         FillPortions: =0
-                        Height: =270
+                        Height: =260
                         LayoutMinHeight: =200
                         LayoutMinWidth: =200
                         ZIndex: =1
@@ -194,7 +194,7 @@ Statistics As screen:
 
                     Container21 As groupContainer.manualLayoutContainer:
                         FillPortions: =0
-                        Height: =240
+                        Height: =230
                         LayoutMinHeight: =If(App.ActiveScreen.Size<=3,210,240)
                         LayoutMinWidth: =200
                         ZIndex: =2
