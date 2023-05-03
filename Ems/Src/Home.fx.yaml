@@ -561,7 +561,7 @@ Home As screen:
 
                     Container7_15 As groupContainer.manualLayoutContainer:
                         FillPortions: =0
-                        Height: =330
+                        Height: =310
                         LayoutMinHeight: =260
                         LayoutMinWidth: =250
                         PaddingRight: =0.00
@@ -848,13 +848,12 @@ Home As screen:
                             BorderColor: =RGBA(32, 54, 71, 1)
                             Color: =RGBA(0, 0, 0, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
-                            Font: =Font.'Lato Black'
+                            Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Semibold
                             Height: =55
-                            Size: =16
                             Text: ="Notifications"
                             Width: =240
-                            X: =57
+                            X: =20
                             ZIndex: =1
 
                         Label24_13 As label:
