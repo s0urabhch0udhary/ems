@@ -1000,7 +1000,7 @@ Statistics As screen:
             RadiusTopLeft: =10
             RadiusTopRight: =10
             Width: =204
-            X: =Container19.Width+Container19.X+'Left Navigation_8'.Width-Self.Width
+            X: =Container19.Width+Container19.X+'Left Navigation_8'.Width-Self.Width-10
             Y: =Icon5.Y+Icon5.Height+410
             ZIndex: =2
 
