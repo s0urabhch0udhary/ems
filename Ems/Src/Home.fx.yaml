@@ -561,7 +561,7 @@ Home As screen:
 
                     Container7_15 As groupContainer.manualLayoutContainer:
                         FillPortions: =0
-                        Height: =290
+                        Height: =330
                         LayoutMinHeight: =260
                         LayoutMinWidth: =250
                         PaddingRight: =0.00
@@ -577,8 +577,8 @@ Home As screen:
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Semibold
-                            Height: =41
-                            Size: =16
+                            Height: =25
+                            PaddingTop: =0
                             Text: =Text(_firstDayOfMonth, "mmmm yyyy")
                             Visible: =_calendarVisible
                             Width: =155
@@ -592,7 +592,7 @@ Home As screen:
                             Color: =RGBA(32, 54, 71, 1)
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             DisabledColor: =RGBA(244, 244, 244, 1)
-                            Height: =35
+                            Height: =25
                             Icon: =Icon.ChevronLeft
                             OnSelect: |-
                                 =/*changes month view to previous month*/
@@ -601,10 +601,10 @@ Home As screen:
                                 Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
                                 /*collects calendar events for all days in current month view. Updates _minDate to prevent duplicate data collection if user returns to this month view*/
                                 If(_minDate > _firstDayOfMonth, Set(_minDate, _firstDayOfMonth);)
-                            PaddingBottom: =10
+                            PaddingBottom: =5
                             PaddingLeft: =7
                             PaddingRight: =7
-                            PaddingTop: =10
+                            PaddingTop: =5
                             TabIndex: =0
                             Tooltip: ="View previous month"
                             Visible: =_calendarVisible
@@ -618,7 +618,7 @@ Home As screen:
                             Color: =RGBA(32, 54, 71, 1)
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             DisabledColor: =RGBA(244, 244, 244, 1)
-                            Height: =35
+                            Height: =25
                             Icon: =Icon.ChevronRight
                             OnSelect: |-
                                 =/*changes month view to next month*/
@@ -627,10 +627,10 @@ Home As screen:
                                 /*collects calendar events for all days in current month view. Updates _maxDate to prevent duplicate data collection if user returns to this month view*/
                                 Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
                                 If(_lastDayOfMonth > _maxDate, Set(_maxDate, _lastDayOfMonth);)
-                            PaddingBottom: =10
+                            PaddingBottom: =5
                             PaddingLeft: =7
                             PaddingRight: =7
-                            PaddingTop: =10
+                            PaddingTop: =5
                             TabIndex: =0
                             Tooltip: ="View next month"
                             Visible: =_calendarVisible
@@ -642,7 +642,7 @@ Home As screen:
                         WeekdayGallery1_8 As gallery.WeekdayGallery:
                             AccessibleLabel: ="Days of the week"
                             BorderColor: =RGBA(32, 54, 71, 1)
-                            Height: =37
+                            Height: =25
                             Items: =Calendar.WeekdaysShort()
                             ShowScrollbar: =false
                             TemplatePadding: =0
@@ -650,7 +650,7 @@ Home As screen:
                             Visible: =_calendarVisible
                             Width: =MonthDayGallery1_8.Width
                             X: =MonthDayGallery1_8.X
-                            Y: =45
+                            Y: =35
                             ZIndex: =4
 
                             Title4_8 As label:
@@ -682,7 +682,7 @@ Home As screen:
                             X: |-
                                 =If(App.ActiveScreen.Width<1000,Parent.Width/2-Self.Width/2,40
                                 )
-                            Y: =82
+                            Y: =64
                             ZIndex: =5
 
                             "Gallery7_4 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
@@ -707,7 +707,7 @@ Home As screen:
                                     FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                                     Font: =Font.'Segoe UI'
                                     FontWeight: =FontWeight.Semibold
-                                    Height: =Parent.Height-4
+                                    Height: =15
                                     HoverColor: =RGBA(255, 255, 255, 1)
                                     HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
                                     OnSelect: =Select(Parent)
@@ -717,7 +717,8 @@ Home As screen:
                                     RadiusTopLeft: =2
                                     RadiusTopRight: =2
                                     Size: =7
-                                    Text: =Sum(Filter(Expenses_1,Date=ThisItem.Date),Amount)
+                                    Text: |-
+                                        =Text(123555/1000,"₹#,###.# k")
                                     Width: =Parent.Width
                                     ZIndex: =1
 
@@ -750,7 +751,7 @@ Home As screen:
                                 FocusedBorderThickness: =2
                                 Height: =20
                                 OnSelect: =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, TimeUnit.Days))
-                                Size: =8
+                                Size: =10
                                 TabIndex: =0
                                 Text: =Day(DateAdd(_firstDayInView,ThisItem.Value, TimeUnit.Days))
                                 Visible: |-
@@ -856,12 +857,12 @@ Home As screen:
                         Gallery5_15 As gallery.galleryVertical:
                             BorderColor: =RGBA(32, 54, 71, 1)
                             DelayItemLoading: =true
-                            Height: =200
+                            Height: =135
                             Items: =SortByColumns(Filter(Expenses_1,User.Email=User().Email),"Created", SortOrder.Descending)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             ShowScrollbar: =false
-                            TemplateSize: =Self.Height/3-6
+                            TemplateSize: =Self.Height/2-5
                             Width: =Parent.Width-20
                             X: =10
                             Y: =45

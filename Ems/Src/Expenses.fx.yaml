@@ -642,6 +642,7 @@ Expenses As screen:
                                 Height: =65
                                 Size: =If(App.ActiveScreen.Size<=2,8,11)
                                 Text: =If(IsEmpty(Filter(Expenses_1,Date=Today()&&User.Email=User().Email))=true,"No transaction yet!","")
+                                Visible: =If(IsEmpty(Filter(Expenses_1,Date=Today()&&User.Email=User().Email))=true,true,false)
                                 Width: =375
                                 X: =20
                                 Y: =40
@@ -952,6 +953,7 @@ Expenses As screen:
                             Height: =96
                             Size: =18
                             Text: =If(IsEmpty(Filter(Expenses_1,User.Email=User().Email))=true,"No Notification","")
+                            Visible: =If(IsEmpty(Filter(Expenses_1,User.Email=User().Email))=true,true,false)
                             Width: =441
                             X: =32
                             Y: =45

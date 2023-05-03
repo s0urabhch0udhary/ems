@@ -1314,9 +1314,7 @@ Statistics As screen:
             RadiusTopRight: =10
             Width: =204
             X: =Container21.X+Icon5.X+'Left Navigation_8'.Width+Icon5.Width
-            Y: |-
-                =Gallery6.Selected.Amount
-                                      +Icon5.Height+410
+            Y: =Icon5.Y+Icon5.Height+410
             ZIndex: =2
 
             Gallery5 As gallery.variableTemplateHeightGallery:
