@@ -964,7 +964,7 @@ Home As screen:
                                 PaddingBottom: =0
                                 PaddingRight: =10
                                 PaddingTop: =0
-                                Size: =If(App.ActiveScreen.Size<=2,8,9)
+                                Size: =If(App.ActiveScreen.Size<=2,8,10)
                                 Text: ="₹"&ThisItem.Amount
                                 Width: =100
                                 X: =Parent.TemplateWidth-Self.Width-5
