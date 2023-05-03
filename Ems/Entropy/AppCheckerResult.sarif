@@ -18642,17 +18642,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Budget.Container1_5.Container2_5.Container3_5.Container6_11.Container7_27.Gallery5_22.TabIndex"
+                  "fullyQualifiedName": "Budget.Container1_5.Container2_5.Container3_5.Container6_11.Container7_27.Gallery5_22.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Budget.Container1_5.Container2_5.Container3_5.Container6_11.Container7_27.Gallery5_22.TabIndex",
+                  "fullyQualifiedName": "Budget.Container1_5.Container2_5.Container3_5.Container6_11.Container7_27.Gallery5_22.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "TabIndex",
+                "member": "AccessibleLabel",
                 "module": "Budget",
                 "type": "Budget.Container1_5.Container2_5.Container3_5.Container6_11.Container7_27.Gallery5_22"
               }
@@ -18664,8 +18664,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -18702,17 +18702,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Budget.Container1_5.Container2_5.Container3_5.Container6_11.Container7_27.Gallery5_22.AccessibleLabel"
+                  "fullyQualifiedName": "Budget.Container1_5.Container2_5.Container3_5.Container6_11.Container7_27.Gallery5_22.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Budget.Container1_5.Container2_5.Container3_5.Container6_11.Container7_27.Gallery5_22.AccessibleLabel",
+                  "fullyQualifiedName": "Budget.Container1_5.Container2_5.Container3_5.Container6_11.Container7_27.Gallery5_22.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
+                "member": "TabIndex",
                 "module": "Budget",
                 "type": "Budget.Container1_5.Container2_5.Container3_5.Container6_11.Container7_27.Gallery5_22"
               }
@@ -18724,8 +18724,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
         },
         {
           "locations": [
