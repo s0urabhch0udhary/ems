@@ -116,7 +116,7 @@ Expenses As screen:
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowY: =LayoutOverflow.Scroll
                     PaddingBottom: =40
-                    PaddingLeft: =If(App.ActiveScreen.Size<=2,10,30)
+                    PaddingLeft: =If(App.ActiveScreen.Size<=2,10,20)
                     PaddingRight: =10
                     PaddingTop: =0.00
                     Width: =Parent.Width
@@ -496,8 +496,9 @@ Expenses As screen:
                                     Color: =RGBA(0, 13, 75, 1)
                                     DisabledColor: =RGBA(166, 166, 166, 1)
                                     Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
                                     Height: =51
-                                    Size: =If(App.ActiveScreen.Size<=2,12,16)
+                                    Size: =If(App.ActiveScreen.Size<=2,12,14)
                                     Text: ="Categories"
                                     Width: =145
                                     X: =2
@@ -627,7 +628,8 @@ Expenses As screen:
                                 Color: =RGBA(0, 0, 0, 1)
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 Font: =Font.'Segoe UI'
-                                Size: =If(App.ActiveScreen.Size<=2,12,16)
+                                FontWeight: =FontWeight.Semibold
+                                Size: =If(App.ActiveScreen.Size<=2,12,14)
                                 Text: ="Todays Expense"
                                 Width: =227
                                 X: =15
@@ -868,7 +870,7 @@ Expenses As screen:
                                     RadiusTopLeft: =2
                                     RadiusTopRight: =2
                                     Size: =7
-                                    Text: =Sum(Filter(Expenses_1,Date=ThisItem.Date),Amount)
+                                    Text: =Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount)
                                     Width: =Parent.Width
                                     ZIndex: =1
 
