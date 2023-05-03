@@ -1322,7 +1322,7 @@ Home As screen:
                             Font: =Font.'Segoe UI'
                             Format: =TextFormat.Number
                             Height: =If(App.ActiveScreen.Size<=3,40,56)
-                            HintText: ="2999"
+                            HintText: ="eg 3999.9"
                             HoverBorderColor: =RGBA(112, 112, 112, 1)
                             HoverColor: =RGBA(0, 0, 0, 1)
                             HoverFill: =RGBA(255, 255, 255, 1)

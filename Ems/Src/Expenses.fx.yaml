@@ -1894,6 +1894,7 @@ Expenses As screen:
                             DisabledFill: =RGBA(244, 244, 244, 1)
                             FocusedBorderThickness: =4
                             Height: =If(App.ActiveScreen.Size<=3,40,55)
+                            HintText: ="eg dinner with john"
                             HoverBorderColor: =RGBA(112, 112, 112, 1)
                             HoverColor: =RGBA(0, 0, 0, 1)
                             HoverFill: =RGBA(255, 255, 255, 1)
@@ -1925,6 +1926,7 @@ Expenses As screen:
                             FocusedBorderThickness: =4
                             Format: =TextFormat.Number
                             Height: =If(App.ActiveScreen.Size<=3,40,56)
+                            HintText: ="eg 3999.9"
                             HoverBorderColor: =RGBA(112, 112, 112, 1)
                             HoverColor: =RGBA(0, 0, 0, 1)
                             HoverFill: =RGBA(255, 255, 255, 1)
