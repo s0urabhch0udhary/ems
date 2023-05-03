@@ -1704,6 +1704,7 @@ Expenses As screen:
                         Reset(AddMediaButton1_5);
                         Reset(ExpenseTitle_16);
                         Reset(amount_8);
+                        Set(var,Blank());
                     Width: =If(App.ActiveScreen.Size<=3,20,30)
                     X: =Container9_11.Width-Self.Width-20
                     Y: =10
