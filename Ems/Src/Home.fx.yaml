@@ -18,6 +18,7 @@ Home As screen:
 
         "'Left Navigation_9' As 'Left Navigation_3'":
             CurrentScreen: ="Home"
+            Fill: =RGBA(58, 44, 66, 1)
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Width: =If(App.ActiveScreen.Size<4,0,250)
@@ -109,7 +110,7 @@ Home As screen:
 
                 Container4_2 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
-                    LayoutGap: =10
+                    LayoutGap: =30
                     LayoutMinHeight: =If(App.ActiveScreen.Width<405,1050,Container8_5.Width<700,950,400)
                     LayoutMinWidth: =If(App.ActiveScreen.Size<=2,290,430)
                     LayoutMode: =LayoutMode.Auto
@@ -250,7 +251,7 @@ Home As screen:
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 Font: =Font.'Segoe UI'
                                 FontWeight: =FontWeight.Lighter
-                                Height: =28
+                                Height: =34
                                 Size: =13
                                 Text: ="Total balance"
                                 Width: =132
@@ -265,7 +266,7 @@ Home As screen:
                                 Font: =Font.'Segoe UI'
                                 FontWeight: =FontWeight.Semibold
                                 Height: =38
-                                Size: =18
+                                Size: =20
                                 Text: ="₹ "&budget-Sum(Filter(Expenses_1,User.Email=User().Email&&  Month(Date) = Month(Today()) && Year(Date) = Year(Today())),Amount)
                                 Width: =Parent.Width*4/5
                                 X: =12
@@ -476,7 +477,7 @@ Home As screen:
                             LineChart3_1 As lineChart:
                                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                 Height: =Parent.Height-60
-                                ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                                ItemColorSet: =[RGBA(77, 75, 114, 1),RGBA(156, 173, 206,1),RGBA(151, 155, 166,1),RGBA(156, 173, 206,1),RGBA(119, 221, 119,1)]
                                 Items: |+
                                     =Filter(Expenses_1,User.Email=User().Email&&Month(Date) = Month(Today()) && Year(Date) = Year(Today()))
                                     
@@ -502,6 +503,7 @@ Home As screen:
                                 ZIndex: =5
 
                         Button6_10 As button:
+                            BorderThickness: =1
                             DisabledBorderColor: =RGBA(219, 219, 219, 1)
                             DisabledColor: =RGBA(255, 255, 255, 1)
                             DisabledFill: =RGBA(255, 255, 255, 1)
@@ -933,6 +935,7 @@ Home As screen:
                                 ZIndex: =4
 
                             Label9_1 As label:
+                                Align: =Align.Right
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 Color: =RGBA(0, 0, 0, 1)
                                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -940,10 +943,11 @@ Home As screen:
                                 Height: =13
                                 OnSelect: =Select(Parent)
                                 PaddingBottom: =0
+                                PaddingRight: =10
                                 PaddingTop: =0
                                 Size: =If(App.ActiveScreen.Size<=2,8,9)
                                 Text: ="₹"&ThisItem.Amount
-                                Width: =48
+                                Width: =100
                                 X: =Parent.TemplateWidth-Self.Width-5
                                 Y: =Parent.TemplateHeight/2-Self.Height/2
                                 ZIndex: =5
@@ -1261,12 +1265,13 @@ Home As screen:
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
                             FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
                             Height: =If(App.ActiveScreen.Size<=3,40,55)
                             HintText: ="eg dinner with john"
                             HoverBorderColor: =RGBA(112, 112, 112, 1)
                             HoverColor: =RGBA(0, 0, 0, 1)
                             HoverFill: =RGBA(255, 255, 255, 1)
-                            Size: =13
+                            Size: =If(App.ActiveScreen.Size<=2,10,13)
                             Width: =318
                             X: =32
                             Y: =Label13_32.Y+Label13_32.Height
@@ -1292,13 +1297,15 @@ Home As screen:
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
                             FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
                             Format: =TextFormat.Number
                             Height: =If(App.ActiveScreen.Size<=3,40,56)
+                            HintText: ="2999"
                             HoverBorderColor: =RGBA(112, 112, 112, 1)
                             HoverColor: =RGBA(0, 0, 0, 1)
                             HoverFill: =RGBA(255, 255, 255, 1)
                             PressedBorderColor: =RGBA(112, 112, 112,1)
-                            Size: =13
+                            Size: =If(App.ActiveScreen.Size<=2,10,13)
                             Width: =318
                             X: =32
                             Y: =Label13_33.Y+Label13_33.Height
@@ -1410,8 +1417,8 @@ Home As screen:
                             ZIndex: =6
 
                         Dropdown1_7 As dropdown:
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            BorderThickness: =0
+                            BorderColor: =RGBA(112, 112, 112, 1)
+                            BorderThickness: =1
                             ChevronBackground: =RGBA(0, 0, 0, 0)
                             ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
                             ChevronDisabledFill: =RGBA(0, 0, 0, 0)
@@ -1422,7 +1429,7 @@ Home As screen:
                             DisabledColor: =RGBA(0, 0, 0, 0)
                             DisabledFill: =RGBA(0, 0, 0, 0)
                             Font: =Font.'Segoe UI'
-                            Height: =ExpenseTitle_15.Height-4
+                            Height: =ExpenseTitle_15.Height
                             HoverColor: =RGBA(0, 0, 0, 1)
                             HoverFill: =RGBA(255, 255, 255, 1)
                             Items: =Choices([@Expenses_1].PaymentType)
@@ -1431,9 +1438,9 @@ Home As screen:
                             SelectionColor: =RGBA(153, 153, 153, 1)
                             SelectionFill: =RGBA(39, 67, 125, 1)
                             Size: =If(App.ActiveScreen.Size<=3,8,12)
-                            Width: =ExpenseTitle_15.Width-4
-                            X: =ExpenseTitle_15.X+2
-                            Y: =ExpenseTitle_15.Y+2
+                            Width: =ExpenseTitle_15.Width
+                            X: =ExpenseTitle_15.X
+                            Y: =ExpenseTitle_15.Y
                             ZIndex: =8
 
                 Label13_1 As label:

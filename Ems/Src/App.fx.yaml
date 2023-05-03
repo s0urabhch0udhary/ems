@@ -61,6 +61,15 @@ App As appinfo:
                 }
             )
         );
+        ClearCollect(
+            threedot,
+            Table(
+                {
+                    Title: "Delete transaction",
+                    Icon: delete1
+                }
+            )
+        );
         Set(budget,First(SortByColumns(Filter(Expenses_Profile, User.Email=User().Email), "Date", SortOrder.Descending)).'Monthly Budget');
     SizeBreakpoints: =[400,600, 900, 1340,1550]
     StartScreen: ='Splash Screen'

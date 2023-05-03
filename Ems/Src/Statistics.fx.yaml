@@ -19,6 +19,7 @@ Statistics As screen:
 
         "'Left Navigation_8' As 'Left Navigation_3'":
             CurrentScreen: ="Statistics"
+            Fill: =RGBA(130, 107, 168, 1)
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Width: =If(App.ActiveScreen.Size<4,0,250)
@@ -125,6 +126,7 @@ Statistics As screen:
                         ZIndex: =1
 
                         Button12 As button:
+                            BorderThickness: =1
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(255, 255, 255, 1)
@@ -153,7 +155,7 @@ Statistics As screen:
                             LineChart4 As lineChart:
                                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                 Height: =Parent.Height-20
-                                ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                                ItemColorSet: =[RGBA(77, 75, 114, 1),RGBA(156, 173, 206,1),RGBA(151, 155, 166,1),RGBA(156, 173, 206,1),RGBA(119, 221, 119,1)]
                                 Items: =Filter(Expenses_1,User.Email=User().Email&&Month(Date) = Month(Today()) && Year(Date) = Year(Today()))
                                 Size: =11
                                 Visible: =If(Label9_15.Text=Label9_17.Text,false,true)
@@ -190,12 +192,13 @@ Statistics As screen:
 
                     Container21 As groupContainer.manualLayoutContainer:
                         FillPortions: =0
-                        Height: =210
+                        Height: =240
                         LayoutMinHeight: =If(App.ActiveScreen.Size<=3,210,240)
                         LayoutMinWidth: =200
                         ZIndex: =2
 
                         Button12_1 As button:
+                            BorderThickness: =1
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(255, 255, 255, 1)
@@ -228,14 +231,14 @@ Statistics As screen:
                         Gallery6 As gallery.galleryVertical:
                             BorderColor: =RGBA(32, 54, 71, 1)
                             DelayItemLoading: =true
-                            Height: =130
+                            Height: =170
                             Items: =SortByColumns(Filter(Expenses_1,User.Email=User().Email&&Month(Date) = Month(Today()) && Year(Date) = Year(Today())),"Created",SortOrder.Descending)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             ShowScrollbar: =false
-                            TemplateSize: =Self.Height/2-10
-                            Width: =Parent.Width-10
-                            X: =5
+                            TemplateSize: =Self.Height/3-5
+                            Width: =Parent.Width-40
+                            X: =15
                             Y: =55
                             ZIndex: =3
 
@@ -261,7 +264,7 @@ Statistics As screen:
                                 Text: =ThisItem.User.DisplayName
                                 Visible: =If(Parent.Width<750,false,true)
                                 Width: =177
-                                X: =Image7.X+Image7.Width+5
+                                X: =Image7.X+Image7.Width+10
                                 Y: =(Parent.TemplateHeight-Self.Height)/2
                                 ZIndex: =2
 
@@ -270,6 +273,7 @@ Statistics As screen:
                                 Color: =RGBA(149, 149, 149, 1)
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 FontWeight: =FontWeight.Semibold
+                                Height: =38
                                 OnSelect: =Select(Parent)
                                 Size: =If(App.ActiveScreen.Size<=2,9,12)
                                 Text: =ThisItem.PaymentType.Value
@@ -282,6 +286,7 @@ Statistics As screen:
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 Color: =RGBA(116, 116, 116, 1)
                                 DisabledColor: =RGBA(166, 166, 166, 1)
+                                Height: =38
                                 OnSelect: =Select(Parent)
                                 Size: =If(App.ActiveScreen.Size<=2,9,12)
                                 Text: =ThisItem.Date
@@ -293,7 +298,7 @@ Statistics As screen:
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 Color: =RGBA(184, 0, 0, 1)
                                 DisabledColor: =RGBA(166, 166, 166, 1)
-                                Height: =41
+                                Height: =38
                                 OnSelect: =Select(Parent)
                                 Size: =If(App.ActiveScreen.Size<=2,9,12)
                                 Text: ="- ₹"&ThisItem.Amount
@@ -330,7 +335,7 @@ Statistics As screen:
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                 DisabledFill: =RGBA(244, 244, 244, 1)
-                                Height: =45
+                                Height: =35
                                 Image: |
                                     =User().Image
                                 OnSelect: =Select(Parent)
@@ -338,7 +343,7 @@ Statistics As screen:
                                 RadiusBottomRight: =50
                                 RadiusTopLeft: =50
                                 RadiusTopRight: =50
-                                Width: =45
+                                Width: =35
                                 X: =If(App.ActiveScreen.Size<5,18,36)
                                 Y: =(Parent.TemplateHeight-Self.Height)/2
                                 ZIndex: =8
@@ -764,10 +769,11 @@ Statistics As screen:
                                 Height: =13
                                 OnSelect: =Select(Parent)
                                 PaddingBottom: =0
+                                PaddingRight: =10
                                 PaddingTop: =0
                                 Size: =If(App.ActiveScreen.Size<=2,8,9)
                                 Text: ="₹"&ThisItem.Amount
-                                Width: =48
+                                Width: =100
                                 X: =Parent.TemplateWidth-Self.Width-5
                                 Y: =Parent.TemplateHeight/2-Self.Height/2
                                 ZIndex: =5
@@ -1269,4 +1275,94 @@ Statistics As screen:
         Width: =App.ActiveScreen.Width
         Y: =Parent.Height-Self.Height
         ZIndex: =4
+
+    Container12 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(28, 37, 54, 0.4)
+        Height: =Parent.Height
+        Width: =Parent.Width
+        ZIndex: =5
+
+        Button5_10 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =Parent.Height
+            HoverBorderColor: =
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =
+            OnSelect: =Set(calVis,false)
+            PressedBorderColor: =
+            PressedColor: =
+            PressedFill: =
+            Size: =20
+            Text: =""
+            Width: =Parent.Width
+            ZIndex: =1
+
+        Container13 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =152
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =204
+            X: =Container21.X+Icon5.X+'Left Navigation_8'.Width+Icon5.Width
+            Y: =462
+            ZIndex: =2
+
+            Gallery5 As gallery.variableTemplateHeightGallery:
+                BorderColor: =RGBA(32, 54, 71, 1)
+                DelayItemLoading: =true
+                Height: =146
+                Items: =threedot
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplateSize: =60
+                Width: =204
+                Y: =5
+                ZIndex: =1
+
+                Image11 As image:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Height: =30
+                    Image: =ThisItem.Icon
+                    OnSelect: =Select(Parent)
+                    Width: =20
+                    X: =9
+                    Y: =(Parent.TemplateHeight/2-Self.Height/2)
+                    ZIndex: =1
+
+                Label7 As label:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Color: =RGBA(70, 83, 92, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =Font.'Segoe UI'
+                    OnSelect: =Select(Parent)
+                    Size: =12
+                    Text: =ThisItem.Title
+                    X: =40
+                    Y: =(Parent.TemplateHeight/2-Self.Height/2)
+                    ZIndex: =2
+
+                Button15 As button:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =Parent.TemplateHeight
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =
+                    OnSelect: =Select(Parent)
+                    Size: =15
+                    Text: =""
+                    Width: =Parent.TemplateWidth
+                    ZIndex: =3
 

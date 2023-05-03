@@ -18,6 +18,7 @@ Expenses As screen:
 
         "'Left Navigation_12' As 'Left Navigation_3'":
             CurrentScreen: ="Expenses"
+            Fill: =RGBA(77, 75, 114, 1)
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Width: =If(App.ActiveScreen.Size<4,0,250)
@@ -95,7 +96,7 @@ Expenses As screen:
 
             Container3_6 As groupContainer.horizontalAutoLayoutContainer:
                 FillPortions: =0
-                Height: =If(App.ActiveScreen.Size<=2,700,650)
+                Height: =If(App.ActiveScreen.Size<=2,750,700)
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
@@ -110,12 +111,12 @@ Expenses As screen:
                 Container4_4 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =30
-                    LayoutMinHeight: =If(App.ActiveScreen.Width<410,1100,560)
-                    LayoutMinWidth: =If(App.ActiveScreen.Size=1,300,430)
+                    LayoutMinHeight: =If(App.ActiveScreen.Width<410,1200,560)
+                    LayoutMinWidth: =If(App.ActiveScreen.Size=1,300,400)
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowY: =LayoutOverflow.Scroll
                     PaddingBottom: =40
-                    PaddingLeft: =If(App.ActiveScreen.Size=1,20,30)
+                    PaddingLeft: =If(App.ActiveScreen.Size<=2,10,30)
                     PaddingRight: =10
                     PaddingTop: =0.00
                     Width: =Parent.Width
@@ -126,7 +127,7 @@ Expenses As screen:
                         FillPortions: =0.3
                         Height: =If(Parent.Width<=858,Parent.Height/2+20,Parent.Height/4+20)
                         LayoutGap: =20
-                        LayoutMinHeight: =If(Self.Width<660,285,140)
+                        LayoutMinHeight: =If(Self.Width<660,295,140)
                         LayoutMinWidth: =If(App.ActiveScreen.Size=1,190,300)
                         LayoutMode: =LayoutMode.Auto
                         LayoutOverflowY: =LayoutOverflow.Scroll
@@ -249,7 +250,7 @@ Expenses As screen:
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 Font: =Font.'Segoe UI'
                                 FontWeight: =FontWeight.Lighter
-                                Height: =28
+                                Height: =34
                                 Size: =13
                                 Text: ="Total balance"
                                 Width: =132
@@ -264,7 +265,7 @@ Expenses As screen:
                                 Font: =Font.'Segoe UI'
                                 FontWeight: =FontWeight.Semibold
                                 Height: =38
-                                Size: =18
+                                Size: =20
                                 Text: ="₹ "&budget-Sum(Filter(Expenses_1,User.Email=User().Email&&  Month(Date) = Month(Today()) && Year(Date) = Year(Today())),Amount)
                                 Width: =Parent.Width*4/5
                                 X: =12
@@ -449,7 +450,7 @@ Expenses As screen:
 
                     Container17_2 As groupContainer.horizontalAutoLayoutContainer:
                         Height: =500
-                        LayoutGap: =30
+                        LayoutGap: =20
                         LayoutMinHeight: =If(Container17_2.Width<705,720,360)
                         LayoutMinWidth: =If(App.ActiveScreen.Size=1,190,350)
                         LayoutMode: =LayoutMode.Auto
@@ -460,11 +461,12 @@ Expenses As screen:
                         ZIndex: =2
 
                         Container18_4 As groupContainer.manualLayoutContainer:
-                            LayoutMinHeight: =240
+                            LayoutMinHeight: =290
                             LayoutMinWidth: =If(App.ActiveScreen.Size=1,180,340)
                             ZIndex: =1
 
                             Button9_4 As button:
+                                BorderThickness: =1
                                 DisabledBorderColor: =RGBA(202, 202, 202, 1)
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -503,11 +505,13 @@ Expenses As screen:
 
                                 PieChart1_2 As pieChart:
                                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    Font: =Font.'Segoe UI'
                                     Height: =Parent.Height-25
                                     ItemBorderThickness: =1
                                     ItemColorSet: =[RGBA(212, 175, 185, 1),RGBA(209, 207, 226,1),RGBA(156, 173, 206,1),RGBA(151, 155, 166,1),RGBA(156, 173, 206,1),RGBA(119, 221, 119,1)]
                                     Items: =Filter(Expenses_1,User.Email=User().Email&&Month(Date) = Month(Today()) && Year(Date) = Year(Today()))
-                                    Width: =Parent.Width
+                                    Size: =9.5
+                                    Width: =Parent.Width-5
                                     X: =1
                                     Y: =25
                                     ZIndex: =4
@@ -528,11 +532,12 @@ Expenses As screen:
                                 ZIndex: =5
 
                         Container18_5 As groupContainer.manualLayoutContainer:
-                            LayoutMinHeight: =220
+                            LayoutMinHeight: =280
                             LayoutMinWidth: =If(App.ActiveScreen.Size=1,180,340)
                             ZIndex: =2
 
                             Button9_5 As button:
+                                BorderThickness: =1
                                 DisabledBorderColor: =RGBA(202, 202, 202, 1)
                                 DisabledColor: =RGBA(255, 255, 255, 1)
                                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -593,14 +598,14 @@ Expenses As screen:
                                     BorderColor: =RGBA(32, 54, 71, 1)
                                     Color: =RGBA(0, 0, 0, 1)
                                     DisabledColor: =RGBA(166, 166, 166, 1)
-                                    Font: =Font.'Lato Black'
+                                    Font: =Font.'Segoe UI'
                                     FontWeight: =FontWeight.Semibold
                                     Height: =25
                                     OnSelect: =Select(Parent)
                                     Size: =10
                                     Text: ="₹ "&ThisItem.Amount
-                                    Width: =102
-                                    X: =Parent.TemplateWidth-Self.Width-10
+                                    Width: =80
+                                    X: =Parent.TemplateWidth-Self.Width
                                     Y: =Parent.TemplateHeight/2-Self.Height/2
                                     ZIndex: =3
 
@@ -608,6 +613,7 @@ Expenses As screen:
                                     BorderColor: =RGBA(32, 54, 71, 1)
                                     Color: =RGBA(0, 0, 0, 1)
                                     DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =Font.'Segoe UI'
                                     Height: =20
                                     OnSelect: =Select(Parent)
                                     Size: =9
@@ -1033,6 +1039,7 @@ Expenses As screen:
                                 ZIndex: =4
 
                             Label9_6 As label:
+                                Align: =Align.Right
                                 BorderColor: =RGBA(32, 54, 71, 1)
                                 Color: =RGBA(0, 0, 0, 1)
                                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1040,10 +1047,11 @@ Expenses As screen:
                                 Height: =13
                                 OnSelect: =Select(Parent)
                                 PaddingBottom: =0
+                                PaddingRight: =10
                                 PaddingTop: =0
                                 Size: =If(App.ActiveScreen.Size<=2,8,9)
                                 Text: ="₹"&ThisItem.Amount
-                                Width: =48
+                                Width: =100
                                 X: =Parent.TemplateWidth-Self.Width-5
                                 Y: =Parent.TemplateHeight/2-Self.Height/2
                                 ZIndex: =5
@@ -1765,7 +1773,8 @@ Expenses As screen:
                         
                             Reset(ExpenseTitle_16);
                             Reset(amount_8);
-                            Reset(DatePicker2_8)
+                            Reset(DatePicker2_8);
+                            Reset(AddMediaButton1_5);
                         )
                     Size: =If(App.ActiveScreen.Size<=3,9,12)
                     Text: ="ADD EXPENSE"
@@ -1890,6 +1899,7 @@ Expenses As screen:
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
                             FocusedBorderThickness: =4
+                            Format: =TextFormat.Number
                             Height: =If(App.ActiveScreen.Size<=3,40,56)
                             HoverBorderColor: =RGBA(112, 112, 112, 1)
                             HoverColor: =RGBA(0, 0, 0, 1)

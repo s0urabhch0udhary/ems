@@ -19,6 +19,7 @@ Budget As screen:
 
         "'Left Navigation_11' As 'Left Navigation_3'":
             CurrentScreen: ="Budget"
+            Fill: =RGBA(112, 84, 127, 1)
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Width: =If(App.ActiveScreen.Size<=4,0,250)
