@@ -122,7 +122,7 @@ Statistics As screen:
 
                     Container20 As groupContainer.manualLayoutContainer:
                         FillPortions: =0
-                        Height: =260
+                        Height: =270
                         LayoutMinHeight: =200
                         LayoutMinWidth: =200
                         ZIndex: =1
@@ -1000,7 +1000,7 @@ Statistics As screen:
             RadiusTopLeft: =10
             RadiusTopRight: =10
             Width: =204
-            X: =Container21.X+Icon5.X+'Left Navigation_8'.Width+Icon5.Width
+            X: =Container19.Width+Container19.X+'Left Navigation_8'.Width-Self.Width
             Y: =Icon5.Y+Icon5.Height+410
             ZIndex: =2
 
