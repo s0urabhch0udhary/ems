@@ -6,6 +6,8 @@ Home As screen:
         Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
         Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
         Set(_calendarVisible, true);
+        Refresh(Expenses_1);
+        Refresh(Expenses_Profile);
 
     Container1_3 As groupContainer.horizontalAutoLayoutContainer:
         Height: =Parent.Height
@@ -266,7 +268,7 @@ Home As screen:
                                 Font: =Font.'Segoe UI'
                                 FontWeight: =FontWeight.Semibold
                                 Height: =38
-                                Size: =20
+                                Size: =18
                                 Text: ="₹ "&budget-Sum(Filter(Expenses_1,User.Email=User().Email&&  Month(Date) = Month(Today()) && Year(Date) = Year(Today())),Amount)
                                 Width: =Parent.Width*4/5
                                 X: =12
@@ -349,7 +351,7 @@ Home As screen:
                                 FontWeight: =FontWeight.Semibold
                                 Height: |
                                     =38
-                                Size: =20
+                                Size: =18
                                 Text: ="₹ "&If(IsEmpty(Filter(Expenses_1,User.Email=User().Email&&Month(Date) = Month(Today()) && Year(Date) = Year(Today()))),"0",Sum(Filter(Expenses_1,User.Email=User().Email&&  Month(Date) = Month(Today()) && Year(Date) = Year(Today())),Amount))
                                 Width: =Parent.Width*4/5
                                 X: =12
@@ -431,7 +433,7 @@ Home As screen:
                                 FontWeight: =FontWeight.Semibold
                                 Height: |
                                     =38
-                                Size: =20
+                                Size: =18
                                 Text: ="₹ "&budget
                                 Width: =Parent.Width*4/5
                                 X: =15
@@ -709,14 +711,16 @@ Home As screen:
                                     HoverColor: =RGBA(255, 255, 255, 1)
                                     HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
                                     OnSelect: =Select(Parent)
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
                                     PaddingTop: =4
                                     RadiusBottomLeft: =2
                                     RadiusBottomRight: =2
                                     RadiusTopLeft: =2
                                     RadiusTopRight: =2
-                                    Size: =7
+                                    Size: =8
                                     Text: |-
-                                        =If(Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount)<1000,"₹"&Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount),Text(Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount)/1000,"₹#,### k"))
+                                        =If(Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount)<1000,"₹"&Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount),Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount)<1000000,Text(Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount)/1000,"₹#,###k"),Text(Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount)/1000000,"₹#,###M"))
                                     Width: =Parent.Width-4
                                     X: =2
                                     ZIndex: =1
@@ -824,7 +828,7 @@ Home As screen:
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Semibold
-                            Height: =33
+                            Height: =27
                             PaddingLeft: =0
                             Size: =12
                             Text: |-
@@ -850,7 +854,7 @@ Home As screen:
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Semibold
-                            Height: =55
+                            Height: =45
                             Text: ="Notifications"
                             Width: =240
                             X: =20
@@ -1094,6 +1098,9 @@ Home As screen:
                     OnSelect: |-
                         =Set(addexpensepop2,false);
                         Reset(AddMediaButton1_4);
+                        Reset(ExpenseTitle_14);
+                        Reset(amount_7);
+                        Set(var2,Blank());
                     Width: =If(App.ActiveScreen.Size<=3,20,30)
                     X: =Container9_10.Width-Self.Width-20
                     Y: =10
@@ -1307,7 +1314,7 @@ Home As screen:
                         amount_7 As text:
                             BorderColor: =RGBA(112, 112, 112, 1)
                             Color: =RGBA(0, 0, 0, 1)
-                            Default: =""
+                            Default: =var2
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -1319,6 +1326,18 @@ Home As screen:
                             HoverBorderColor: =RGBA(112, 112, 112, 1)
                             HoverColor: =RGBA(0, 0, 0, 1)
                             HoverFill: =RGBA(255, 255, 255, 1)
+                            OnChange: |-
+                                =Set(
+                                    var2, /*var is my custom variable*/
+                                    Text(
+                                        Round(
+                                            Value(Self.Text),
+                                            2
+                                        ),
+                                        "[$-en]0.0"
+                                    )
+                                );
+                                Reset(Self)
                             PressedBorderColor: =RGBA(112, 112, 112,1)
                             Size: =If(App.ActiveScreen.Size<=2,10,13)
                             Width: =318

@@ -6,7 +6,9 @@ Statistics As screen:
         Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));
         Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
         Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
-        Set(_calendarVisible, true)
+        Set(_calendarVisible, true);
+        Refresh(Expenses_1);
+        Refresh(Expenses_Profile);
 
     Container1_2 As groupContainer.horizontalAutoLayoutContainer:
         Height: =Parent.Height

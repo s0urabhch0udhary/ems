@@ -7,6 +7,8 @@ Budget As screen:
         Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
         Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
         Set(_calendarVisible, true);
+        Refresh(Expenses_1);
+        Refresh(Expenses_Profile);
 
     Container1_5 As groupContainer.horizontalAutoLayoutContainer:
         Height: =Parent.Height
