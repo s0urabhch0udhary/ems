@@ -70,7 +70,7 @@ App As appinfo:
                 }
             )
         );
-        Set(budget,First(SortByColumns(Filter(Expenses_Profile, User.Email=User().Email), "Date", SortOrder.Descending)).'Monthly Budget');
+        Set(budget,If(IsEmpty(Filter(Expenses_Profile, User.Email=User().Email)),10000,First(SortByColumns(Filter(Expenses_Profile, User.Email=User().Email), "Date", SortOrder.Descending)).'Monthly Budget'));
     SizeBreakpoints: =[400,600, 900, 1340,1550]
     StartScreen: ='Splash Screen'
 

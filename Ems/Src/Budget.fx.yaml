@@ -174,7 +174,7 @@ Budget As screen:
                                 monthly_budget As text:
                                     BorderColor: =RGBA(112, 112, 112, 1)
                                     Color: =RGBA(0, 0, 0, 1)
-                                    Default: =First(SortByColumns(Filter(Expenses_Profile, User.Email=User().Email), "Date", SortOrder.Descending)).'Monthly Budget'
+                                    Default: =If(IsEmpty(Filter(Expenses_Profile, User.Email=User().Email)),10000,First(SortByColumns(Filter(Expenses_Profile, User.Email=User().Email), "Date", SortOrder.Descending)).'Monthly Budget')
                                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                     DisabledColor: =RGBA(166, 166, 166, 1)
                                     DisabledFill: =RGBA(244, 244, 244, 1)
