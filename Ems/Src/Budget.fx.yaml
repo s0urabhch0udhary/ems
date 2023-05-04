@@ -234,18 +234,6 @@ Budget As screen:
                                     Y: =TextInput3_12.Y+TextInput3_12.Height/2-Self.Height/2
                                     ZIndex: =7
 
-                                Icon7 As icon.ChevronDown:
-                                    BorderColor: =RGBA(32, 54, 71, 1)
-                                    Color: =RGBA(32, 54, 71, 1)
-                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                                    DisabledColor: =RGBA(244, 244, 244, 1)
-                                    Height: =17
-                                    Icon: =Icon.ChevronDown
-                                    Width: =32
-                                    X: =TextInput3_12.Width+TextInput3_12.X-Self.Width-10
-                                    Y: =TextInput3_12.Y+TextInput3_12.Height/2-Self.Height/2
-                                    ZIndex: =8
-
                                 select_currency As dropdown:
                                     BorderColor: =RGBA(0, 0, 0, 0)
                                     BorderThickness: =0
@@ -267,7 +255,7 @@ Budget As screen:
                                     PressedFill: =RGBA(32, 54, 71, 1)
                                     SelectionFill: =RGBA(9, 107, 107, 1)
                                     Size: =13
-                                    Width: =TextInput3_12.Width-70
+                                    Width: =(TextInput3_12.Width)-40
                                     X: =TextInput3_12.X+30
                                     Y: |
                                         =TextInput3_12.Y+1

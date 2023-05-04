@@ -1135,35 +1135,31 @@ Home As screen:
                             ExpenseTitle_14.Text="",
                             [
                                 Set(
-                                    errordisplay2,
+                                    expensetexcolor,
                                     true
-                                ),
-                                Set(
+                                )
+                            /*    Set(
                                     err,
                                     "Please Enter Expense Title"
-                                )
+                                ) */
                             ],
-                            amount_7.Text="",
+                            IsBlank(amount_7.Text),
                             [
                                 Set(
-                                    errordisplay2,
+                                    expenseamountcolor,
                                     true
-                                ),
-                                Set(
+                                )
+                               /* Set(
                                     err,
                                     "Please Enter Expense Amount"
                                 )
+                                */
                             ],
                                 DatePicker2_7.SelectedDate>Today(),
                             [
-                                Set(
-                                    errordisplay2,
-                                    true
-                                ),
-                                Set(
-                                    err,
-                                    "Please Select Valid Date."
-                                )
+                               Set(
+                                    expensedatecolor,
+                                    true)
                             ],
                             Set(expensesuccess,true);
                             Patch(
@@ -1195,7 +1191,9 @@ Home As screen:
                         Reset(AddMediaButton1_4);
                             Reset(ExpenseTitle_14);
                             Reset(amount_7);
-                            Reset(DatePicker2_7)
+                            Reset(DatePicker2_7);
+                            Set(expensetexcolor,false);
+                            Set(expenseamountcolor,false);
                         )
                     Size: =If(App.ActiveScreen.Size<=3,9,12)
                     Text: ="ADD EXPENSE"
@@ -1282,7 +1280,7 @@ Home As screen:
                             ZIndex: =1
 
                         ExpenseTitle_14 As text:
-                            BorderColor: =RGBA(112, 112, 112, 1)
+                            BorderColor: =If(Self.Text<>"",RGBA(112, 112, 112, 1),expensetexcolor=true,Color.Red,RGBA(112, 112, 112, 1))
                             Color: =RGBA(0, 0, 0, 1)
                             Default: =""
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -1314,7 +1312,7 @@ Home As screen:
                             ZIndex: =3
 
                         amount_7 As text:
-                            BorderColor: =RGBA(112, 112, 112, 1)
+                            BorderColor: =If(!IsBlank(Self.Text),RGBA(112, 112, 112, 1),expenseamountcolor=true,Color.Red,RGBA(112, 112, 112, 1))
                             Color: =RGBA(0, 0, 0, 1)
                             Default: =var2
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -1367,7 +1365,7 @@ Home As screen:
                             ZIndex: =1
 
                         TextInput3_9 As text:
-                            BorderColor: =RGBA(112, 112, 112, 1)
+                            BorderColor: =If(DatePicker2_7.SelectedDate<=Today(),RGBA(112, 112, 112, 1),expensedatecolor=true,Color.Red,RGBA(112, 112, 112, 1))
                             Color: =RGBA(0, 0, 0, 1)
                             Default: =""
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -2174,6 +2172,8 @@ Home As screen:
                     Reset(amount_7);
                     Set(var2,Blank());
                     Set(addexpensepop2,false);
+                    Set(expensetexcolor,false);
+                    Set(expenseamountcolor,false);
                 RadiusBottomLeft: =5
                 RadiusBottomRight: =5
                 RadiusTopLeft: =5

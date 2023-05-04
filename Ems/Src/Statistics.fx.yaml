@@ -101,7 +101,6 @@ Statistics As screen:
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                LayoutWrap: =true
                 PaddingRight: =0.00
                 PaddingTop: =0.00
                 Width: =Parent.Width*2/3
@@ -111,7 +110,7 @@ Statistics As screen:
                 Container19 As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =5
-                    LayoutMinHeight: =If(App.ActiveScreen.Size<=3,800,580)
+                    LayoutMinHeight: =If(App.ActiveScreen.Size<=3,800,600)
                     LayoutMinWidth: =360
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowY: =LayoutOverflow.Scroll
