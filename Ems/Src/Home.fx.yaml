@@ -2111,11 +2111,26 @@ Home As screen:
                 BorderColor: =RGBA(32, 54, 71, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =46
-                Size: =13
-                Text: ="Do you really"
+                Size: =15
+                Text: ="Want to cancel?"
                 Width: =396
                 X: =10
-                Y: =26
+                Y: =10
                 ZIndex: =1
+
+            Label11 As label:
+                BorderColor: =RGBA(32, 54, 71, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Segoe UI'
+                Height: =36
+                Size: =13
+                Text: ="Changes that you made may not be saved."
+                Width: =413
+                X: =10
+                Y: =50
+                ZIndex: =2
 
