@@ -1100,12 +1100,9 @@ Home As screen:
                     DisabledColor: =RGBA(244, 244, 244, 1)
                     Height: =If(App.ActiveScreen.Size<=3,20,30)
                     Icon: =Icon.Cancel
-                    OnSelect: |-
-                        =Set(addexpensepop2,false);
-                        Reset(AddMediaButton1_4);
-                        Reset(ExpenseTitle_14);
-                        Reset(amount_7);
-                        Set(var2,Blank());
+                    OnSelect: |+
+                        =Set(leavevis,true);
+                        
                     Width: =If(App.ActiveScreen.Size<=3,20,30)
                     X: =Container9_10.Width-Self.Width-20
                     Y: =10
@@ -2096,15 +2093,18 @@ Home As screen:
         ZIndex: =6
 
     Container14 As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(28, 37, 54, 0.4)
+        Fill: =RGBA(28, 37, 54, 0.2)
         Height: =Parent.Height
+        Visible: =leavevis
         Width: =Parent.Width
         ZIndex: =7
 
         Container15 As groupContainer.manualLayoutContainer:
             Fill: =RGBA(255, 255, 255, 1)
+            Height: =170
+            Width: =400
             X: =Parent.Width/2-Self.Width/2
-            Y: =Parent.Height/2-Self.Height/2
+            Y: =Container3.Height/2-Self.Height/2
             ZIndex: =1
 
             Label10 As label:
@@ -2115,7 +2115,7 @@ Home As screen:
                 FontWeight: =FontWeight.Semibold
                 Height: =46
                 Size: =15
-                Text: ="Want to cancel?"
+                Text: ="Want to leave?"
                 Width: =396
                 X: =10
                 Y: =10
@@ -2127,10 +2127,52 @@ Home As screen:
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Segoe UI'
                 Height: =36
-                Size: =13
+                Size: =11
                 Text: ="Changes that you made may not be saved."
-                Width: =413
+                Width: =290
                 X: =10
                 Y: =50
                 ZIndex: =2
+
+            Button7 As button:
+                BorderColor: =RGBA(29, 49, 64, 1)
+                BorderThickness: =0.5
+                Color: =RGBA(29, 49, 64, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =30
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                OnSelect: =Set(leavevis,false)
+                Text: ="Cancel"
+                Width: =100
+                X: =138
+                Y: =110
+                ZIndex: =3
+
+            Button7_1 As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =30
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                OnSelect: |-
+                    =Set(leavevis,false);
+                    Reset(AddMediaButton1_4);
+                    Reset(ExpenseTitle_14);
+                    Reset(amount_7);
+                    Set(var2,Blank());
+                    Set(addexpensepop2,false);
+                Text: ="Leave"
+                Width: =100
+                X: =266
+                Y: =110
+                ZIndex: =4
 
