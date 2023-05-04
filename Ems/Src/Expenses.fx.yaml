@@ -1736,7 +1736,7 @@ Expenses As screen:
                             ZIndex: =6
 
                         Dropdown1_8 As dropdown:
-                            BorderColor: =RGBA(255, 255, 255, 1)
+                            BorderColor: =RGBA(112, 112, 112, 1)
                             BorderThickness: =1
                             ChevronBackground: =RGBA(0, 0, 0, 0)
                             ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
@@ -1748,7 +1748,7 @@ Expenses As screen:
                             DisabledColor: =RGBA(0, 0, 0, 0)
                             DisabledFill: =RGBA(244, 244, 244, 1)
                             Font: =Font.'Segoe UI'
-                            Height: =ExpenseTitle_17.Height-4
+                            Height: =ExpenseTitle_17.Height
                             HoverColor: =RGBA(0, 0, 0, 1)
                             HoverFill: =RGBA(255, 255, 255, 1)
                             Items: =Choices([@Expenses_1].PaymentType)
@@ -1757,9 +1757,9 @@ Expenses As screen:
                             PressedFill: =RGBA(32, 54, 71, 1)
                             SelectionFill: =RGBA(39, 67, 125, 1)
                             Size: =If(App.ActiveScreen.Size<=3,8,12)
-                            Width: =ExpenseTitle_17.Width-1-
-                            X: =ExpenseTitle_17.X+2
-                            Y: =ExpenseTitle_17.Y+2
+                            Width: =ExpenseTitle_17.Width
+                            X: =ExpenseTitle_17.X
+                            Y: =ExpenseTitle_17.Y
                             ZIndex: =8
 
                 Label13_2 As label:

@@ -1192,7 +1192,7 @@ Home As screen:
                                 }
                             );
                         Set(addexpensepop2,false);
-                        
+                        Reset(AddMediaButton1_4);
                             Reset(ExpenseTitle_14);
                             Reset(amount_7);
                             Reset(DatePicker2_7)
