@@ -28,6 +28,7 @@ Expenses As screen:
             ZIndex: =1
 
         Container2_6 As groupContainer.verticalAutoLayoutContainer:
+            Fill: =RGBA(248, 248, 248, 1)
             LayoutDirection: =LayoutDirection.Vertical
             LayoutGap: =10
             LayoutMinHeight: =900
@@ -844,11 +845,11 @@ Expenses As screen:
                                     RadiusBottomRight: =2
                                     RadiusTopLeft: =2
                                     RadiusTopRight: =2
-                                    Size: =8
+                                    Size: =9
                                     Text: |-
                                         =If(Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount)<1000,"₹"&Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount),Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount)<1000000,Text(Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount)/1000,"₹#,###k"),Text(Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount)/1000000,"₹#,###M"))
-                                    Width: =Parent.Width-4
-                                    X: =1
+                                    Width: |
+                                        =Parent.Width-1
                                     ZIndex: =1
 
                             Subcircle1_9 As circle:
@@ -1010,7 +1011,9 @@ Expenses As screen:
                             LoadingSpinner: =LoadingSpinner.Data
                             ShowScrollbar: =false
                             TemplateSize: =Self.Height/2-5
-                            Width: =Parent.Width*4/5
+                            Width: |-
+                                =Parent.Width*4.3
+                                /5
                             X: =20
                             Y: =40
                             ZIndex: =6
@@ -1041,17 +1044,19 @@ Expenses As screen:
                                 Color: =RGBA(0, 0, 0, 1)
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 Font: =Font.'Segoe UI'
-                                Height: =15
+                                Height: =21
                                 LineHeight: =1
                                 OnSelect: =Select(Parent)
                                 PaddingBottom: =0
                                 PaddingTop: =0
-                                Size: =If(App.ActiveScreen.Size<=2,9,10)
+                                Size: |-
+                                    =If(App.ActiveScreen.Size<=2,10,11
+                                    )
                                 Text: =ThisItem.Title
                                 VerticalAlign: =VerticalAlign.Top
-                                Width: =110
+                                Width: =200
                                 X: =26
-                                Y: =Parent.TemplateHeight/2-Self.Height/2-5
+                                Y: =Parent.TemplateHeight/2-Self.Height/2-10
                                 ZIndex: =2
 
                             Label26_20 As label:
@@ -1060,9 +1065,11 @@ Expenses As screen:
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 Font: =Font.'Segoe UI'
                                 FontWeight: =FontWeight.Lighter
-                                Height: =16
+                                Height: =20
                                 OnSelect: =Select(Parent)
-                                Size: =If(App.ActiveScreen.Size<=2,7,8)
+                                Size: |-
+                                    =If(App.ActiveScreen.Size<=2,9,10
+                                    )
                                 Text: =Text(ThisItem.Date,DateTimeFormat.LongDate)
                                 Width: =130
                                 X: =26
@@ -1077,7 +1084,7 @@ Expenses As screen:
                                 Color: =RGBA(0, 0, 0, 1)
                                 DisabledColor: =RGBA(166, 166, 166, 1)
                                 Font: =Font.'Segoe UI'
-                                Height: =13
+                                Height: =20
                                 OnSelect: =Select(Parent)
                                 PaddingBottom: =0
                                 PaddingRight: =10
@@ -1097,7 +1104,6 @@ Expenses As screen:
                                 DisplayMode: =DisplayMode.Disabled
                                 Fill: =RGBA(100, 118, 132, 1)
                                 FontWeight: =FontWeight.Semibold
-                                Height: =35
                                 HoverColor: =RGBA(255, 255, 255, 1)
                                 HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
                                 OnSelect: =Select(Parent)

@@ -3092,7 +3092,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button9_3",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14679,7 +14679,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "380",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Width",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -14745,7 +14745,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label25_22",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
