@@ -1351,12 +1351,13 @@ Home As screen:
                             ZIndex: =1
 
                         TextInput3_9 As text:
-                            BorderColor: =If(DatePicker2_7.SelectedDate<=Today(),RGBA(112, 112, 112, 1),expensedatecolor=true,Color.Red,RGBA(112, 112, 112, 1))
+                            BorderColor: =
                             Color: =RGBA(0, 0, 0, 1)
                             Default: =""
-                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledBorderColor: =If(DatePicker2_7.SelectedDate<=Today(),RGBA(112, 112, 112, 1),Color.Red)
                             DisabledColor: =RGBA(166, 166, 166, 1)
-                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisabledFill: =RGBA(255, 255, 255, 1)
+                            DisplayMode: =DisplayMode.Disabled
                             FocusedBorderThickness: =4
                             Height: =If(App.ActiveScreen.Size<=3,40,56)
                             HoverBorderColor: =RGBA(32, 54, 71, 1)
@@ -1370,7 +1371,7 @@ Home As screen:
 
                         Icon4_7 As icon.CalendarBlank:
                             BorderColor: =RGBA(32, 54, 71, 1)
-                            Color: =If(DatePicker2_7.SelectedDate<=Today(),RGBA(112, 112, 112, 1),expensedatecolor=true,Color.Red,RGBA(112, 112, 112, 1))
+                            Color: =If(DatePicker2_7.SelectedDate<=Today(),RGBA(112, 112, 112, 1),Color.Red)
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             DisabledColor: =RGBA(244, 244, 244, 1)
                             Height: =DatePicker2_7.Height
@@ -1384,7 +1385,7 @@ Home As screen:
                             BorderColor: =RGBA(0, 0, 0, 0)
                             BorderThickness: =0
                             CalendarHeaderFill: =RGBA(100, 118, 132, 1)
-                            Color: =If(DatePicker2_7.SelectedDate<=Today(),RGBA(0, 0, 0, 1),expensedatecolor=true,Color.Red,RGBA(0,0,0, 1))
+                            Color: =If(DatePicker2_7.SelectedDate<=Today(),RGBA(0, 0, 0, 1),Color.Red)
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -1455,8 +1456,7 @@ Home As screen:
                             Items: =Choices([@Expenses_1].PaymentType)
                             PressedColor: =RGBA(255, 255, 255, 1)
                             PressedFill: =RGBA(32, 54, 71, 1)
-                            SelectionColor: =RGBA(153, 153, 153, 1)
-                            SelectionFill: =RGBA(39, 67, 125, 1)
+                            SelectionFill: =RGBA(77, 75, 114, 1)
                             Size: =If(App.ActiveScreen.Size<=3,8,12)
                             Width: =ExpenseTitle_15.Width
                             X: =ExpenseTitle_15.X
@@ -1469,9 +1469,10 @@ Home As screen:
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             Font: =Font.'Segoe UI'
                             Height: =25
+                            PaddingBottom: =0
                             Size: =9.5
                             Text: ="*Enter Valid Expense Date"
-                            Visible: =If(DatePicker2_7.SelectedDate<=Today(),false,expensedatecolor)
+                            Visible: =If(DatePicker2_7.SelectedDate<=Today(),false,true)
                             Width: =190
                             X: =168
                             Y: =ExpenseTitle_15.Y+ExpenseTitle_15.Height+10
@@ -2164,7 +2165,7 @@ Home As screen:
                 FontWeight: =FontWeight.Semibold
                 Height: =30
                 HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                HoverFill: =ColorFade(Self.Fill, -20%)
                 OnSelect: |-
                     =Set(leavevis,false);
                     Reset(AddMediaButton1_4);
