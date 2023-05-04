@@ -300,6 +300,7 @@ Budget As screen:
                             DisabledFill: =RGBA(244, 244, 244, 1)
                             Fill: =RGBA(77, 75, 114, 1)
                             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                            Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Semibold
                             Height: =38
                             HoverColor: =RGBA(255, 255, 255, 1)
@@ -550,7 +551,7 @@ Budget As screen:
                                     RadiusBottomRight: =2
                                     RadiusTopLeft: =2
                                     RadiusTopRight: =2
-                                    Size: =8
+                                    Size: =8.5
                                     Text: |-
                                         =If(Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount)<1000,"₹"&Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount),Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount)<1000000,Text(Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount)/1000,"₹#,###k"),Text(Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount)/1000000,"₹#,###M"))
                                     Width: =Parent.Width-1

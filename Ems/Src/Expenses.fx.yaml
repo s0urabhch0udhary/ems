@@ -845,7 +845,7 @@ Expenses As screen:
                                     RadiusBottomRight: =2
                                     RadiusTopLeft: =2
                                     RadiusTopRight: =2
-                                    Size: =9
+                                    Size: =8.5
                                     Text: |-
                                         =If(Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount)<1000,"₹"&Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount),Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount)<1000000,Text(Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount)/1000,"₹#,###k"),Text(Sum(Filter(Expenses_1,Date=ThisItem.Date&&User.Email=User().Email),Amount)/1000000,"₹#,###M"))
                                     Width: |
