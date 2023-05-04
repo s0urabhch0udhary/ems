@@ -1746,7 +1746,7 @@ Expenses As screen:
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
-                        Fill: =If(ThisItem.IsSelected,RGBA(0, 136, 209, 1),RGBA(242, 242, 242, 1))
+                        Fill: =If(ThisItem.IsSelected,RGBA(77, 75, 114, 1),RGBA(242, 242, 242, 1))
                         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                         FontWeight: =FontWeight.Semibold
                         Height: =If(App.ActiveScreen.Size<=2,20,40)
@@ -1805,7 +1805,7 @@ Expenses As screen:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: =RGBA(60, 132, 140, 1)
+                    Fill: =RGBA(77, 75, 114, 1)
                     FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                     FontWeight: =FontWeight.Semibold
                     Height: =If(App.ActiveScreen.Size<=3,30,40)
@@ -2283,7 +2283,7 @@ Expenses As screen:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =RGBA(100, 118, 132, 1)
+                Fill: =RGBA(77, 75, 114, 1)
                 FontWeight: =FontWeight.Semibold
                 Height: =30
                 HoverColor: =RGBA(255, 255, 255, 1)
