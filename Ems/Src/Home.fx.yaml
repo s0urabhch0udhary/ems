@@ -2148,6 +2148,10 @@ Home As screen:
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
                 OnSelect: =Set(leavevis,false)
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
                 Text: ="Cancel"
                 Width: =100
                 X: =138
@@ -2170,6 +2174,10 @@ Home As screen:
                     Reset(amount_7);
                     Set(var2,Blank());
                     Set(addexpensepop2,false);
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
                 Text: ="Leave"
                 Width: =100
                 X: =266
