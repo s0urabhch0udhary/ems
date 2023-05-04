@@ -1849,6 +1849,7 @@ Expenses As screen:
                                 {Title: ExpenseTitle_16.Text},
                                 {Amount: Value(amount_8.Text)},
                                 {Date: DatePicker2_8.SelectedDate},
+                                {Documents:UploadedImage1_3.Image},
                                 {PaymentType: Dropdown1_8.SelectedText},
                                 {
                                     Category: {
@@ -1868,7 +1869,7 @@ Expenses As screen:
                                     }
                                 }
                             );
-                        Set(addexpensepop2,false);
+                        Set(addexpensepop,false);
                         Reset(AddMediaButton1_5);
                             Reset(ExpenseTitle_16);
                             Reset(amount_8);

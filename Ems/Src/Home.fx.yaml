@@ -1176,6 +1176,7 @@ Home As screen:
                                 {Title: ExpenseTitle_14.Text},
                                 {Amount: Value(amount_7.Text)},
                                 {Date: DatePicker2_7.SelectedDate},
+                                {Documents:UploadedImage1_2},
                                 {PaymentType: Dropdown1_7.SelectedText},
                                 {
                                     Category: {
@@ -2145,7 +2146,7 @@ Home As screen:
                 FontWeight: =FontWeight.Semibold
                 Height: =30
                 HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                HoverFill: =ColorFade(Self.Fill, -20%)
                 OnSelect: =Set(leavevis,false)
                 RadiusBottomLeft: =5
                 RadiusBottomRight: =5
@@ -2176,6 +2177,7 @@ Home As screen:
                     Set(expensetexcolor,false);
                     Set(expenseamountcolor,false);
                     Set(expensedatecolor,false);
+                    Reset(DatePicker2_7);
                 RadiusBottomLeft: =5
                 RadiusBottomRight: =5
                 RadiusTopLeft: =5
