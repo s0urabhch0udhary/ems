@@ -667,6 +667,7 @@ Budget As screen:
                             ZIndex: =6
 
                         Label9_8 As label:
+                            Align: =Align.Center
                             BorderColor: =RGBA(32, 54, 71, 1)
                             Color: =RGBA(0, 0, 0, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)

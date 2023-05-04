@@ -182,7 +182,7 @@ Statistics As screen:
 
                         Label24_4 As label:
                             BorderColor: =RGBA(32, 54, 71, 1)
-                            Color: =RGBA(51, 51, 51, 1)
+                            Color: =RGBA(153, 153, 153, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             Height: =72
                             Size: =13
@@ -243,18 +243,6 @@ Statistics As screen:
                             X: =15
                             Y: =55
                             ZIndex: =3
-
-                            Image17 As image:
-                                BorderColor: =RGBA(32, 54, 71, 1)
-                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                                DisabledFill: =RGBA(244, 244, 244, 1)
-                                Height: =69
-                                Image: =ThisItem.Documents
-                                OnSelect: =Select(Parent)
-                                Width: =52
-                                X: =12
-                                Y: =8
-                                ZIndex: =1
 
                             Label17 As label:
                                 BorderColor: =RGBA(32, 54, 71, 1)
@@ -352,7 +340,7 @@ Statistics As screen:
 
                         Label24_5 As label:
                             BorderColor: =RGBA(32, 54, 71, 1)
-                            Color: =RGBA(51, 51, 51, 1)
+                            Color: =RGBA(153, 153, 153, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             Height: =72
                             Size: =13
@@ -651,6 +639,7 @@ Statistics As screen:
                             ZIndex: =6
 
                         Label9_7 As label:
+                            Align: =Align.Center
                             BorderColor: =RGBA(32, 54, 71, 1)
                             Color: =RGBA(0, 0, 0, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
