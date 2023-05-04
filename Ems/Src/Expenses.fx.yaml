@@ -986,18 +986,6 @@ Expenses As screen:
                             X: =20
                             ZIndex: =1
 
-                        Label24_14 As label:
-                            BorderColor: =RGBA(32, 54, 71, 1)
-                            Color: =RGBA(153, 153, 153, 1)
-                            DisabledColor: =RGBA(166, 166, 166, 1)
-                            Height: =96
-                            Size: =18
-                            Text: =If(IsEmpty(Filter(Expenses_1,User.Email=User().Email))=true,"No Notification","")
-                            Width: =441
-                            X: =32
-                            Y: =45
-                            ZIndex: =3
-
                         Gallery5_20 As gallery.galleryVertical:
                             BorderColor: =RGBA(32, 54, 71, 1)
                             DelayItemLoading: =true
@@ -1096,6 +1084,20 @@ Expenses As screen:
                                 X: =Parent.TemplateWidth-Self.Width-5
                                 Y: =Parent.TemplateHeight/2-Self.Height/2
                                 ZIndex: =5
+
+                        Label24_14 As label:
+                            BorderColor: =RGBA(32, 54, 71, 1)
+                            Color: =RGBA(153, 153, 153, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            Height: =50
+                            Size: =12
+                            Text: =If(IsEmpty(Filter(Expenses_1,User.Email=User().Email))=true,"No Notification","")
+                            Visible: =If(IsEmpty(Filter(Expenses_1,User.Email=User().Email))=true,true,false)
+                            Width: =441
+                            X: =36
+                            Y: =60
+                            ZIndex: =5
 
     Container9_4 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(28, 37, 54, 0.4)

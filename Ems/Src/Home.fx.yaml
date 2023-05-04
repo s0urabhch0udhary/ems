@@ -871,7 +871,7 @@ Home As screen:
                             Height: =50
                             Size: =12
                             Text: =If(IsEmpty(Filter(Expenses_1,User.Email=User().Email))=true,"No Notification","")
-                            Visible: =If(IsEmpty(Filter(Expenses_1,User.Email=User().Email))=true,"No Notification","")
+                            Visible: =If(IsEmpty(Filter(Expenses_1,User.Email=User().Email))=true,true,false)
                             Width: =441
                             X: =32
                             Y: =45
