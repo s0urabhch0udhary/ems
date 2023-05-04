@@ -591,7 +591,7 @@ Home As screen:
                             ZIndex: =1
 
                         iconPrevMonth1_8 As icon.ChevronLeft:
-                            BorderColor: =RGBA(32, 54, 71, 1)
+                            BorderColor: =RGBA(0, 0, 0, 0)
                             Color: =RGBA(32, 54, 71, 1)
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             DisabledColor: =RGBA(244, 244, 244, 1)
@@ -608,6 +608,7 @@ Home As screen:
                             PaddingLeft: =7
                             PaddingRight: =7
                             PaddingTop: =5
+                            PressedBorderColor: =
                             TabIndex: =0
                             Tooltip: ="View previous month"
                             Visible: =_calendarVisible
@@ -617,7 +618,7 @@ Home As screen:
                             ZIndex: =2
 
                         iconNextMonth1_8 As icon.ChevronRight:
-                            BorderColor: =RGBA(32, 54, 71, 1)
+                            BorderColor: =RGBA(0, 0, 0, 0)
                             Color: =RGBA(32, 54, 71, 1)
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             DisabledColor: =RGBA(244, 244, 244, 1)
@@ -824,6 +825,7 @@ Home As screen:
                             ZIndex: =6
 
                         Label9 As label:
+                            Align: =Align.Center
                             BorderColor: =RGBA(32, 54, 71, 1)
                             Color: =RGBA(0, 0, 0, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -869,6 +871,7 @@ Home As screen:
                             Height: =50
                             Size: =12
                             Text: =If(IsEmpty(Filter(Expenses_1,User.Email=User().Email))=true,"No Notification","")
+                            Visible: =If(IsEmpty(Filter(Expenses_1,User.Email=User().Email))=true,"No Notification","")
                             Width: =441
                             X: =32
                             Y: =45
