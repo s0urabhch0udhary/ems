@@ -1989,7 +1989,7 @@ Expenses As screen:
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             Font: =Font.'Segoe UI'
                             Height: =25
-                            Size: =9.5
+                            Size: =If(App.ActiveScreen.Size<=2,9.5,12)
                             Text: ="*Enter Valid Expense Amount"
                             Visible: =If(!IsBlank(amount_8.Text),false,expenseamountcolor)
                             Width: =190
@@ -2004,7 +2004,7 @@ Expenses As screen:
                             Font: =Font.'Segoe UI'
                             Height: =25
                             PaddingRight: =0
-                            Size: =9.5
+                            Size: =If(App.ActiveScreen.Size<=2,9.5,12)
                             Text: ="*Enter Expense Title"
                             Visible: =If(ExpenseTitle_16.Text<>"",false,expensetexcolor)
                             Width: =190
@@ -2152,7 +2152,7 @@ Expenses As screen:
                             Font: =Font.'Segoe UI'
                             Height: =25
                             PaddingBottom: =0
-                            Size: =9.5
+                            Size: =If(App.ActiveScreen.Size<=2,9.5,12)
                             Text: ="*Enter Valid Expense Date"
                             Visible: =If(DatePicker2_8.SelectedDate<=Today(),false,true)
                             Width: =190
