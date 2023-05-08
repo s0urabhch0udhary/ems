@@ -6,7 +6,7 @@
         Height: =Parent.Height
         HtmlText: |-
             ="<div
-            style= 'width:"&Text('Splash Screen'.Width)&"px;height:"&Text('Splash Screen'.Height-1)&"px;background-image: linear-gradient(to left bottom, #038387,#1c7e6d,#0d2d2b);'
+            style= 'width:"&Text('Splash Screen'.Width)&"px;height:"&Text('Splash Screen'.Height-1)&"px;background-image: linear-gradient(to left bottom, #4d4b72,#4d4b72,#100e2a);'
             ></div>"
         PaddingBottom: =0
         PaddingLeft: =0
